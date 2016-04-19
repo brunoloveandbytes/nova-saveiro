@@ -667,7 +667,7 @@
 				<div class="icon"></div>
 				<div class="text">MENU</div>
 			</div>
-			<div class="interessado" onclick="vwleads('open', {'modelId': '6A56K6'});">ESTOU INTERESSADO</div>
+			<div class="interessado" onclick="openLead()">ESTOU INTERESSADO</div>
 		</div>
 		<div class="secondary menu-mobile-transition">
 			<div class="item" onclick="window.stateMachine.askMove(window.stateMachine.Trigger.Home)"><!--
@@ -738,6 +738,10 @@
 	if (isMobile.apple.phone || isMobile.android.phone || isMobile.seven_inch) {
 		//alert('mobile!!!');
 		//alert(window.devicePixelRatio);
+	}
+	function openLead(){
+		console.log('willl open..');
+		vwleads('open', {"modelId": "6A56K6"});
 	}
 
 </script>
