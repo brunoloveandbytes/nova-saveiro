@@ -109,6 +109,7 @@ $(document).ready(function() {
 				currentIdx = 1;
 			}
 			$('.car'+currentIdx).css('left','0%');
+			window.tagManager.viuVersoes(currentIdx);
 			drag.snapOnce();
 		}
 		this.goToLeft = function(){
@@ -117,6 +118,7 @@ $(document).ready(function() {
 			if(currentIdx < 1){
 				currentIdx = maxIdx;
 			}
+			window.tagManager.viuVersoes(currentIdx);
 			$('.car'+currentIdx).css('left','0%');
 			drag.snapOnce();
 		}
@@ -125,6 +127,7 @@ $(document).ready(function() {
 				$('.car'+currentIdx).css('left','100%');
 				currentIdx=idx;
 				//console.log(idx);
+				window.tagManager.viuVersoes(currentIdx);
 				$('.car'+currentIdx).css('left','0%');
 			}
 		}

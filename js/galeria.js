@@ -88,9 +88,17 @@ $.fn.lightbox = function(){
 	return this;
 };
 
-$(".gallery .item:not(.item_small)").on("click", function(){ $(this).lightbox() });
+$(".gallery .item:not(.item_small)").on("click", function(){ 
+	$(this).lightbox();
+	if($(this).attr('data-image').search('trabalho')!=-1){
+		window.tagManager.viuFotos("TRABALHO","TRABALHO",$(this).index()+1);
+	}else{
+		window.tagManager.viuFotos("AVENTURA","AVENTURA",$(this).index()+1);
+	}
+});
 
 $(".gallery .item_small").on("click", function(){
+	window.tagManager.viuFotos('ACESSORIOS','ACESSORIO',$(this).index()+1);
 	var marginBottom = Math.ceil(parseFloat($(this).css("marginBottom").replace("px","")));
 	var marginLeft = Math.ceil(parseFloat($(this).css("marginLeft").replace("px","")));
 	var x = $(this).position().left + marginLeft;

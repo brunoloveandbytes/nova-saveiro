@@ -1,7 +1,10 @@
 $(document).ready(function() {
 	var InputManager = function(){
-		this.dealClick = function(event){
-			
+		this.dealClick = function(elem){
+			if(elem.target.className == "interessado"){
+				window.tagManager.estouInteressado();
+				vwleads('open', {"modelId": "6A56K6"});	
+			}
 		}
 		$('.menu .secondary').on('click', function() {
 			$('.secondary').removeClass('visible');

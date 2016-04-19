@@ -110,6 +110,7 @@ $(document).ready(function() {
 										"stateMachine":this,
 										"name":"hand",
 										"stage":1,
+										"welcomeFunction":function(){window.tagManager.acessouPagina("Trabalho");},
 										"transitions":[
 															new Transition({
 																"endStateName":"surf",
@@ -126,6 +127,7 @@ $(document).ready(function() {
 										"stateMachine":this,
 										"name":"surf",
 										"stage":2,
+										"welcomeFunction":function(){window.tagManager.acessouPagina("Aventura");window.tagManager.didScroll("25");},
 										"transitions":[
 															new Transition({
 																"endStateName":"hand",
@@ -151,6 +153,7 @@ $(document).ready(function() {
 										"stateMachine":this,
 										"name":"downCar",
 										"stage":3,
+										"welcomeFunction":function(){window.tagManager.acessouPagina("Inspirou");window.tagManager.didScroll("50");},
 										"transitions":[
 															new Transition({
 																"endStateName":"surf",
@@ -176,6 +179,7 @@ $(document).ready(function() {
 										"stateMachine":this,
 										"name":"upCar",
 										"stage":3,
+										"welcomeFunction":function(){window.tagManager.didScroll("75");},
 										"autoplay":true,
 										"transitions":[
 															new Transition({
@@ -196,6 +200,7 @@ $(document).ready(function() {
 										"name":"rotatedCar",
 										"stage":3,
 										"autoplay":true,
+										"welcomeFunction":function(){window.tagManager.didScroll("100");},
 										"transitions":[
 															new Transition({
 																"endStateName":"upCar",
@@ -219,6 +224,7 @@ $(document).ready(function() {
 										"stateMachine":this,
 										"name":"home",
 										"stage":4,
+										"welcomeFunction":function(){window.tagManager.acessouHome();},
 										"transitions":[
 															new Transition({
 																"endStateName":"rotatedCar",
@@ -324,7 +330,7 @@ $(document).ready(function() {
 		this.states.push(new State({
 										"stateMachine":this,
 										"name":"identidade",
-										"welcomeFunction":function(){window.identidadeManager.start();},
+										"welcomeFunction":function(){window.identidadeManager.start();window.tagManager.acessouPagina("Identidade");},
 										"goodbyeFunction":function(){window.identidadeManager.stop();},
 										"stage":5,
 										"transitions":[
@@ -410,6 +416,7 @@ $(document).ready(function() {
 										"stateMachine":this,
 										"name":"fatos",
 										"stage":6,
+										"welcomeFunction":function(){window.tagManager.acessouPagina("Fatos");},
 										"transitions":[
 															new Transition({
 																"endStateName":"home",
@@ -475,6 +482,7 @@ $(document).ready(function() {
 		this.states.push(new State({
 										"stateMachine":this,
 										"name":"versoes",
+										"welcomeFunction":function(){window.tagManager.acessouPagina("Versões");window.tagManager.viuVersoes(1);},
 										"goodbyeFunction":function(){setTimeout(function(){ window.versoesManager.stop();},1000);},
 										"stage":7,
 										"transitions":[
@@ -546,6 +554,7 @@ $(document).ready(function() {
 										"stateMachine":this,
 										"name":"tour",
 										"stage":4,
+										"welcomeFunction":function(){window.tagManager.acessouPagina("360°");},
 										"transitions":[
 															new Transition({
 																"endStateName":"home",
@@ -616,6 +625,7 @@ $(document).ready(function() {
 										"stateMachine":this,
 										"name":"galeria",
 										"stage":4,
+										"welcomeFunction":function(){window.tagManager.acessouPagina("Galeria");},
 										"transitions":[
 															new Transition({
 																"endStateName":"home",
@@ -688,7 +698,7 @@ $(document).ready(function() {
 										"stateMachine":this,
 										"name":"premios",
 										"stage":4,
-										"welcomeFunction":function(){window.premiosManager.setLastState(stateMachine.state)},
+										"welcomeFunction":function(){window.premiosManager.setLastState(stateMachine.state);window.tagManager.acessouPagina("Prêmios");},
 										"transitions":[
 															new Transition({
 																"endStateName":"home",
@@ -775,7 +785,7 @@ $(document).ready(function() {
 										"stateMachine":this,
 										"name":"robust",
 										"stage":4,
-										"welcomeFunction":function(){window.robustManager.setLastState(stateMachine.state)},
+										"welcomeFunction":function(){window.robustManager.setLastState(stateMachine.state);window.tagManager.acessouPagina("Robust");},
 										"transitions":[
 															new Transition({
 																"endStateName":"home",
@@ -876,7 +886,7 @@ $(document).ready(function() {
 										"stateMachine":this,
 										"name":"cross",
 										"stage":4,
-										"welcomeFunction":function(){window.crossManager.setLastState(stateMachine.state)},
+										"welcomeFunction":function(){window.crossManager.setLastState(stateMachine.state);window.tagManager.acessouPagina("Cross");},
 										"transitions":[
 															new Transition({
 																"endStateName":"home",

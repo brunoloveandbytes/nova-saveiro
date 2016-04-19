@@ -1,7 +1,13 @@
 // CAROUSEL
 
 $.fn.hideFrame = function(){ $(this).removeClass("visible").addClass("hidden"); return this; };
-$.fn.showFrame = function(){ $(this).removeClass("hidden").addClass("visible"); return this; };
+$.fn.showFrame = function(){ 
+							if($(this).index()>0){
+								window.tagManager.viuFatos($(this).index());
+							}
+							$(this).removeClass("hidden").addClass("visible");
+							return this; 
+						};
 $.fn.carousel = function(options) {
 	var $this = $(this);
 	var settings = $.extend({

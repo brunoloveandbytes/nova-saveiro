@@ -6,6 +6,7 @@
 	<meta name="apple-mobile-web-app-capable" content="yes"/>
 	<meta name="viewport" content="width=980,user-scalable=no"/>
 	<script src="js/jquery.js"></script>
+	<script src="js/gtm.js"></script>
 	<script src="js/ismobile.js"></script>
 	<script src="js/image-loader.js"></script>
 	<script src="js/state-machine.js"></script>
@@ -17,6 +18,7 @@
 	<script src="js/premios.js"></script>
 	<script src="js/robust.js"></script>
 	<script src="js/cross.js"></script>
+
 	<link rel="stylesheet" media="screen" href="css/normalize.css"/>
 	<link rel="stylesheet" media="screen" href="css/common.css"/>
 	<link rel="stylesheet" media="screen" href="css/letreiros.css"/>
@@ -244,7 +246,7 @@
 										<div class="description-switch" onclick="window.versoesManager.switchDescription(this)"></div>
 									</div>
 								</div>
-								<div class="interessado"><div>ESTOU INTERESSADO</div></div>
+								<div class="interessado" onclick="window.tagManager.estouInteressadoVersoes(1)"><div>ESTOU INTERESSADO</div></div>
 							</div>
 						</div>
 					</div>
@@ -277,7 +279,7 @@
 										<div class="description-switch" onclick="window.versoesManager.switchDescription(this)"></div>
 									</div>
 								</div>
-								<div class="interessado"><div>ESTOU INTERESSADO</div></div>
+								<div class="interessado" onclick="window.tagManager.estouInteressadoVersoes(2)"><div>ESTOU INTERESSADO</div></div>
 							</div>
 						</div>
 					</div>
@@ -310,7 +312,7 @@
 										<div class="description-switch" onclick="window.versoesManager.switchDescription(this)"></div>
 									</div>
 								</div>
-								<div class="interessado"><div>ESTOU INTERESSADO</div></div>
+								<div class="interessado" onclick="window.tagManager.estouInteressadoVersoes(3)"><div>ESTOU INTERESSADO</div></div>
 							</div>
 						</div>
 					</div>
@@ -343,7 +345,7 @@
 										<div class="description-switch" onclick="window.versoesManager.switchDescription(this)"></div>
 									</div>
 								</div>
-								<div class="interessado"><div>ESTOU INTERESSADO</div></div>
+								<div class="interessado" onclick="window.tagManager.estouInteressadoVersoes(4)"><div>ESTOU INTERESSADO</div></div>
 							</div>
 						</div>
 					</div>
@@ -376,7 +378,7 @@
 										<div class="description-switch" onclick="window.versoesManager.switchDescription(this)"></div>
 									</div>
 								</div>
-								<div class="interessado"><div>ESTOU INTERESSADO</div></div>
+								<div class="interessado" onclick="window.tagManager.estouInteressadoVersoes(5)"><div>ESTOU INTERESSADO</div></div>
 							</div>
 						</div>
 					</div>
@@ -409,7 +411,7 @@
 										<div class="description-switch" onclick="window.versoesManager.switchDescription(this)"></div>
 									</div>
 								</div>
-								<div class="interessado"><div>ESTOU INTERESSADO</div></div>
+								<div class="interessado" onclick="window.tagManager.estouInteressadoVersoes(6)"><div>ESTOU INTERESSADO</div></div>
 							</div>
 						</div>
 					</div>
@@ -442,7 +444,7 @@
 										<div class="description-switch" onclick="window.versoesManager.switchDescription(this)"></div>
 									</div>
 								</div>
-								<div class="interessado"><div>ESTOU INTERESSADO</div></div>
+								<div class="interessado" onclick="window.tagManager.estouInteressadoVersoes(7)"><div>ESTOU INTERESSADO</div></div>
 							</div>
 						</div>
 					</div>
@@ -481,8 +483,8 @@
 					<div class="tour_title">EXCELÊNCIA EM QUALQUER FINALIDADE.</div>
 					<div class="tour_description">A Saveiro traz a verdadeira combinação entre trabalho e diversão. Se por fora, ela é robusta e forte, é por dentro que seu design exclusivo agrega conforto e praticidade. Um dia cansativo fica um pouco melhor quando você volta pra casa num interior como esse. Escolha a versão e veja por si mesmo.</div>
 					<div class="tour_cars">
-						<div class="tour_left_car" onclick="$('.tour_sequence').addClass('onMiddle');$('.tour_principal').removeClass('onMiddle');"></div>
-						<div class="tour_right_car" onclick="$('.tour_sequence').addClass('onMiddle');$('.tour_principal').removeClass('onMiddle');"></div>
+						<div class="tour_left_car" onclick="$('.tour_sequence').addClass('onMiddle');$('.tour_principal').removeClass('onMiddle');window.tagManager.viu360('TRABALHO');"></div>
+						<div class="tour_right_car" onclick="$('.tour_sequence').addClass('onMiddle');$('.tour_principal').removeClass('onMiddle');window.tagManager.viu360('AVENTURA');"></div>
 					</div>
 					<div class="tour_down_bar"></div>
 				</div>
@@ -667,7 +669,7 @@
 				<div class="icon"></div>
 				<div class="text">MENU</div>
 			</div>
-			<div class="interessado" onclick="openLead()">ESTOU INTERESSADO</div>
+			<div class="interessado" onclick="window.inputManager.dealClick(event)">ESTOU INTERESSADO</div>
 		</div>
 		<div class="secondary menu-mobile-transition">
 			<div class="item" onclick="window.stateMachine.askMove(window.stateMachine.Trigger.Home)"><!--
@@ -738,10 +740,6 @@
 	if (isMobile.apple.phone || isMobile.android.phone || isMobile.seven_inch) {
 		//alert('mobile!!!');
 		//alert(window.devicePixelRatio);
-	}
-	function openLead(){
-		console.log('willl open..');
-		vwleads('open', {"modelId": "6A56K6"});
 	}
 
 </script>
