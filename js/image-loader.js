@@ -4,7 +4,8 @@ $(document).ready(function() {
 	var LoadState = {"StandBy":0,"Loading":1,"SmartyLoading":2}
 	var ChangeStage = {"Prev":0,"Next":1,"Small":2,"Medium":3,"Large":4,"Any":5}
 	var ImagePathProperties = function(){
-		var commun_path = 'http://glasstecnologia.com.br/saveiro_remote/';
+		//var commun_path = 'http://glasstecnologia.com.br/saveiro_remote/';
+		var commun_path = 'img/';
 		/*
 		this.getFolder = function(band,size){
 			switch(size){
@@ -30,20 +31,20 @@ $(document).ready(function() {
 		this.getFolder = function(band,size){
 			switch(size){
 				case Size.Micro:
-					if(band == Bandwidth.Low) return commun_path+'high/large/';
-					if(band == Bandwidth.High) return commun_path+'high/large/';
+					if(band == Bandwidth.Low) return commun_path+'dynamic/';
+					if(band == Bandwidth.High) return commun_path+'dynamic/';
 					break;
 				case Size.Small:
-					if(band == Bandwidth.Low) return commun_path+'high/large/';
-					if(band == Bandwidth.High) return commun_path+'high/large/';
+					if(band == Bandwidth.Low) return commun_path+'dynamic/';
+					if(band == Bandwidth.High) return commun_path+'dynamic/';
 					break;
 				case Size.Medium:
-					if(band == Bandwidth.Low) return commun_path+'high/large/';
-					if(band == Bandwidth.High) return commun_path+'high/large/';
+					if(band == Bandwidth.Low) return commun_path+'dynamic/';
+					if(band == Bandwidth.High) return commun_path+'dynamic/';
 					break;
 				case Size.Large:
-					if(band == Bandwidth.Low) return commun_path+'high/large/';
-					if(band == Bandwidth.High) return commun_path+'high/large/';
+					if(band == Bandwidth.Low) return commun_path+'dynamic/';
+					if(band == Bandwidth.High) return commun_path+'dynamic/';
 					break;
 			}
 		}
@@ -74,8 +75,7 @@ $(document).ready(function() {
 		var loadClassName = "load";
 		//Stage 00
 		var stages = new StagesCreator({'imageLoader':this, 'readyFunction':function(){$('.main-header').addClass('show');}, 'classes':[
-																		{'className':'vw-logo','imgName':'tiles.png','sizes':{'ll':140,'lm':140,'ls':140,'lmi':140,'hl':140,'hm':140,'hs':140,'hmi':140}},
-																		{'className':'gallery .item.trabalho1','imgName':'06_Galeria_01_Trabalho_Saveiro_Robust_Volkswagen.jpg','sizes':{'ll':140,'lm':140,'ls':140,'lmi':140,'hl':140,'hm':140,'hs':140,'hmi':140}}
+																		{'className':'vw-logo','imgName':'tiles.png','sizes':{'ll':140,'lm':140,'ls':140,'lmi':140,'hl':140,'hm':140,'hs':140,'hmi':140}}
 																	]});
 		this.microStages.push(stages.micro);this.smallStages.push(stages.small);this.mediumStages.push(stages.medium);this.largeStages.push(stages.large);
 		//Stage 01
@@ -97,8 +97,10 @@ $(document).ready(function() {
 		//Stage 04
 		stages = new StagesCreator({'imageLoader':this, 'readyFunction':function(){}, 'classes':[
 																		{'className':'home','imgName':'01_Home_01_Fundo_Volkswagen.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
-																		{'className':'premios_button','imgName':'tiles.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
-																		{'className':'cars-home','imgName':'01_Home_02_Carros_Volkswagen.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}}
+																		{'className':'cars-home','imgName':'01_Home_02_Carros_Volkswagen.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'basic-icon','imgName':'tiles.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'home-content .car-button .plus','imgName':'tiles.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'menu .item :nth-child(1)','imgName':'tiles.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}}
 																	]});
 		this.microStages.push(stages.micro);this.smallStages.push(stages.small);this.mediumStages.push(stages.medium);this.largeStages.push(stages.large);
 		//Stage 05
@@ -112,7 +114,7 @@ $(document).ready(function() {
 		this.microStages.push(stages.micro);this.smallStages.push(stages.small);this.mediumStages.push(stages.medium);this.largeStages.push(stages.large);
 		//Stage 06
 		stages = new StagesCreator({'imageLoader':this, 'readyFunction':function(){}, 'classes':[
-																		{'className':'carousel','imgName':'02_Identidade_01_Fundo_Volkswagen.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}}
+																		{'className':'fatos','imgName':'02_Identidade_01_Fundo_Volkswagen.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}}
 																	]});
 		this.microStages.push(stages.micro);this.smallStages.push(stages.small);this.mediumStages.push(stages.medium);this.largeStages.push(stages.large);
 		//Stage 07
@@ -130,7 +132,43 @@ $(document).ready(function() {
 																		{'className':'versoes .cross_estendida .image-car','imgName':'04_Versoes_07_Saveiro_Cross_CE_Volkswagen.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
 																		{'className':'versoes .image-left-car','imgName':'04_Versoes_09_Saveiro_Robust_Volkswagen.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
 																		{'className':'versoes .image-middle-car','imgName':'04_Versoes_10_Saveiro_Robust_Volkswagen.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
-																		{'className':'versoes .image-right-car','imgName':'04_Versoes_11_Saveiro_Robust_Volkswagen.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}}
+																		{'className':'versoes .image-right-car','imgName':'04_Versoes_11_Saveiro_Robust_Volkswagen.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'versoes .description-container .description-switch','imgName':'tiles.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																	]});
+		this.microStages.push(stages.micro);this.smallStages.push(stages.small);this.mediumStages.push(stages.medium);this.largeStages.push(stages.large);
+		//Stage 08
+		stages = new StagesCreator({'imageLoader':this, 'readyFunction':function(){}, 'classes':[
+																		{'className':'tour','imgName':'05_360_01_Fundo.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'tour_left_car','imgName':'car_trabalho.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'tour_right_car','imgName':'car_aventura.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'shadow_item1','imgName':'sombra00.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'shadow_item2','imgName':'sombra01.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'shadow_item3','imgName':'sombra02.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'shadow_item4','imgName':'sombra03.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'shadow_item5','imgName':'sombra04.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'aventura_car_item1','imgName':'cross00.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'aventura_car_item2','imgName':'cross01.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'aventura_car_item3','imgName':'cross02.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'aventura_car_item4','imgName':'cross03.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'aventura_car_item5','imgName':'cross04.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'trabalho_car_item1','imgName':'trend00.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'trabalho_car_item2','imgName':'trend01.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'trabalho_car_item3','imgName':'trend02.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'trabalho_car_item4','imgName':'trend03.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'trabalho_car_item5','imgName':'trend04.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'tour_handle_sequence','imgName':'tiles.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'tour_mobile_externo_trabalho','imgName':'trend00.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'tour_mobile_externo_aventura','imgName':'cross00.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}}
+																	]});
+		this.microStages.push(stages.micro);this.smallStages.push(stages.small);this.mediumStages.push(stages.medium);this.largeStages.push(stages.large);
+		//Stage 09
+		stages = new StagesCreator({'imageLoader':this, 'readyFunction':function(){}, 'classes':[
+																		{'className':'cube .back','imgName':'back.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'cube .front','imgName':'front.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'cube .right','imgName':'right.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'cube .left','imgName':'left.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'cube .top','imgName':'top.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'cube .bottom','imgName':'down.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
 																	]});
 		this.microStages.push(stages.micro);this.smallStages.push(stages.small);this.mediumStages.push(stages.medium);this.largeStages.push(stages.large);
 
@@ -502,33 +540,6 @@ $(document).ready(function() {
 
 
 	setInterval(function(){ imageLoader.unleashStage(); }, 1000);
-	/*
-
-	$(document).keydown(function(e) {
-	    switch(e.which) {
-	        case 38: // up
-	        	imageLoader.askToChangeStage(ChangeStage.Prev);
-	        break;
-	        case 40: // down
-	        	imageLoader.askToChangeStage(ChangeStage.Next);
-	        break;
-	        case 49: // down
-	        	imageLoader.askToChangeStage(ChangeStage.Any,1);
-	        break;
-	        case 50: // down
-	        	imageLoader.askToChangeStage(ChangeStage.Any,2);
-	        break;
-	        case 51: // down
-	        	imageLoader.askToChangeStage(ChangeStage.Any,3);
-	        break;
-	        case 52: // down
-	        	imageLoader.askToChangeStage(ChangeStage.Any,4);
-	        break;
-	        default: return; // exit this handler for other keys
-	    }
-	    e.preventDefault(); // prevent the default action (scroll / move caret)
-	});
-*/
 
 	$(function () {
 	  $(document).keyup(function (e) {

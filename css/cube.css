@@ -59,42 +59,36 @@
 }
 
 .cube .back  {
-  background-image:url('../img/back.jpg');
   -webkit-transform: rotateY(180deg) translateZ( -1249px );
    -moz-transform: rotateY(180deg) translateZ( -1249px );
      -o-transform: rotateY(180deg) translateZ( -1249px );
       transform: rotateY(180deg) translateZ( -1249px );
 }
 .cube .front   {
-  background-image:url('../img/front.jpg');
   -webkit-transform: translateZ( -1249px );
    -moz-transform: translateZ( -1249px );
      -o-transform: translateZ( -1249px );
       transform: translateZ( -1249px );
 }
 .cube .right {
-  background-image:url('../img/right.jpg');
   -webkit-transform: rotateY( -90deg ) translateZ(-1249px);
    -moz-transform: rotateY( -90deg ) translateZ(-1249px);
      -o-transform: rotateY( -90deg ) translateZ(-1249px);
       transform: rotateY( -90deg ) translateZ(-1249px);
 }
 .cube .left {
-  background-image:url('../img/left.jpg');
   -webkit-transform: rotateY(  90deg ) translateZ( -1249px );
    -moz-transform: rotateY(  90deg ) translateZ( -1249px );
      -o-transform: rotateY(  90deg ) translateZ( -1249px );
       transform: rotateY(  90deg ) translateZ( -1249px );
 }
 .cube .top {
-  background-image:url('../img/top.jpg');
   -webkit-transform: rotateX( -90deg ) translateZ( -1249px );
    -moz-transform: rotateX( -90deg ) translateZ( -1249px );
      -o-transform: rotateX( -90deg ) translateZ( -1249px );
       transform: rotateX( -90deg ) translateZ( -1249px );
 }
 .cube .bottom {
-  background-image:url('../img/down.jpg');
   -webkit-transform: rotateX( 90deg ) translateZ( -1249px );
    -moz-transform: rotateX( 90deg ) translateZ( -1249px );
      -o-transform: rotateX( 90deg ) translateZ( -1249px );

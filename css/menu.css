@@ -36,7 +36,7 @@
     position: absolute;
     width: 64px;
     height: 100%;
-    background-image: url('../img/tiles.png');
+    /*background-image: url('../img/tiles.png');*/
     -webkit-background-size: 1000% 1000%;
        -moz-background-size: 1000% 1000%;
          -o-background-size: 1000% 1000%;
@@ -88,18 +88,9 @@
     border: 2px solid #00a4e3;
 }
 
-.menu-background{
-  position: absolute;
-  top:100px;
-  background-color: #191919;
-  width: 100%;
-  min-height: 130px;
-}
-
 /*controle de altura*/
 @media screen and (max-height: 700px){
     .menu{top:84px;}
-    .menu-background{top:50px;}
 }
 
 
@@ -138,7 +129,6 @@
 .menu .secondary :nth-child(4).item{left:340px;width:140px;}
 .menu .secondary :nth-child(5).item{left:480px;width:96px;}
 .menu .secondary :nth-child(6).item{left:590px;width:140px;}
-.menu-background{min-height: 110px;}
 }
 /*Small*/
 @media screen and (max-width: 960px){
@@ -151,7 +141,6 @@
 .menu .secondary :nth-child(4).item{left:132px;width:44px;}
 .menu .secondary :nth-child(5).item{left:176px;width:44px;}
 .menu .secondary :nth-child(6).item{left:220px;width:44px;}
-.menu-background{min-height: 98px;top:50px;}
 }
 
 /*Mobile portrait and landscape*/
@@ -192,7 +181,6 @@
       border: 2px solid #fff;
   }
   .menu .primary .interessado:hover{border: 2px solid #fff;color:#fff;}
-  .menu-background{display:none;}
 }
 
 /*Mobile portrait*/

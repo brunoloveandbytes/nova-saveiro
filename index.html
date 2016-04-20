@@ -8,6 +8,11 @@
 	<script src="js/jquery.js"></script>
 	<script src="js/gtm.js"></script>
 	<script src="js/ismobile.js"></script>
+	<script type="text/javascript">
+		if (isMobile.apple.phone || isMobile.android.phone || isMobile.seven_inch) {
+			window.location="http://novidades.vw.com.br/";
+		}
+	</script>
 	<script src="js/image-loader.js"></script>
 	<script src="js/state-machine.js"></script>
 	<script src="js/input-manager.js"></script>
@@ -18,7 +23,6 @@
 	<script src="js/premios.js"></script>
 	<script src="js/robust.js"></script>
 	<script src="js/cross.js"></script>
-
 	<link rel="stylesheet" media="screen" href="css/normalize.css"/>
 	<link rel="stylesheet" media="screen" href="css/common.css"/>
 	<link rel="stylesheet" media="screen" href="css/letreiros.css"/>
@@ -27,7 +31,6 @@
 	<link rel="stylesheet" media="screen" href="css/menu.css"/>
 	<link rel="stylesheet" media="screen" href="css/identidade.css"/>
 	<link rel="stylesheet" media="screen" href="css/versoes.css"/>
-	<link rel="stylesheet" media="screen" href="css/fatos.css"/>
 	<link rel="stylesheet" media="screen" href="css/galeria.css"/>
 	<link rel="stylesheet" media="screen" href="css/premios.css"/>
 	<link rel="stylesheet" media="screen" href="css/robust.css"/>
@@ -46,7 +49,7 @@
 	var js=ajs=w.getElementsByTagName(l)[0]; (w.getElementById(g)) ? "" :
 	v['VWLeadsGlobalObject']=g; v[g]=g[g]||function(){(v[g].v=v[g].v||[]).push(arguments)};
 	js=w.createElement(l); js.id = g; js.async=1;js.src =
-	"//leads‐cdn.ageriservicos.com.br/static/js/vw‐leads.global.min.js?version=v1.0";
+	"//leads-cdn.ageriservicos.com.br/static/js/vw-leads.global.min.js?version=v1.0";
 	ajs.parentNode.insertBefore(js, ajs); }(window, document, 'script', 'vwleads'));
 	vwleads('site', 'nova_saveiro');vwleads('debug');</script>
 
@@ -56,7 +59,7 @@
 			<div class="vwCarName"><p>Nova Saveiro</p></div>
 		</div>
 	</div>
-	<div class="main-content" onclick="window.inputManager.dealClick(event)">
+	<div class="intro-content main-content">
 		<section id="slide1" class="slide slide1">
 			<div class="letreiro">
 				<p>
@@ -109,11 +112,14 @@
 				</div>
 			</div>
 		</section>
+	</div>
+	<div id="menu-bar" class="menu-bar"></div>
+	<div class="general-content main-content" onclick="window.inputManager.dealClick(event)">
 		<section id="home" class="slide home">
 			<div class="cars-home slide"></div>
 			<div class="sub-slide">
 				<div class="home-content">
-					<div class="premios_button" onclick="window.stateMachine.move(window.stateMachine.Trigger.Premios)"></div>	
+					<!--<div class="premios_button" onclick="window.stateMachine.move(window.stateMachine.Trigger.Premios)"></div>-->
 					<div class="robust-button car-button" onclick="window.stateMachine.move(window.stateMachine.Trigger.Robust)">
 						<div class="plus"></div>
 						<div class="bar"></div>
@@ -146,72 +152,11 @@
 					<div class="description">Com um milhão de unidade produzidas, a Nova Saveiro ainda consegue se superar. Por fora, você encontra um design único mas isso não quer dizer que é é só mais uma picape bonita. A Nova Saveiro é forte e aguenta o tranco do seu trabalho, qualquer que seja o tamanho da carga. Já por dentro, vai ser difícil encontrar um carro com tanto conforto e tecnologia. Com isso a Nova Saveiro consegue melhorar outro desempenho: o seu.
 					</div>
 					<div class="close basic-icon" onclick="window.identidadeManager.closeDescription()"></div>
-					<div class="premios_button" onclick="window.stateMachine.move(window.stateMachine.Trigger.Premios)"></div>	
 				</div>
 			</div>
 		</section>
 		<section id="fatos" class="slide fatos onBottom">
 			<div class="sub-slide">
-				<div id="carousel">
-					<div id="wrap">
-						<!-- ************** FRAME INTRO ************** -->
-						<div class="item">
-							<div class="title">FATOS</div>
-							<div class="content intro center">
-								<p class="upper blue spaced medium head_bold">tem muita coisa sendo dita sobre a saveiro por a&iacute;.</p><br/>
-								<p class="medium text_light">Chegou a hora de voc&ecirc; ouvir o que realmente &eacute; verdade. Escolha um dos cinco fatos<br class="h" />
-								sobre a Saveiro e descubra porque essa &eacute; uma das pick ups mais vendidas do Brasil.</p>
-								<div class="wrap_icons full head_bold upper">
-									<div class="icon icon_suspensao"><div class="desc"><span class="blue">#1</span> suspens&atilde;o</div></div><!--
-								 --><div class="icon icon_desempenho"><div class="desc"><span class="blue">#2</span> desempenho</div></div><!--
-								 --><div class="icon icon_offroad"><div class="desc"><span class="blue">#3</span> abs<br />off-road</div></div><!--
-								 --><div class="icon icon_hdc"><div class="desc"><span class="blue">#4</span> hdc</div></div><!--
-								 --><div class="icon icon_eds"><div class="desc"><span class="blue">#5</span> eds</div></div>
-								</div>
-							</div>
-						</div>
-						<!-- ************** FRAME 1 ************** -->
-						<div class="item">
-							<div class="title">FATOS<div class="right"><span class="gray">#1</span> <div class="inline description big upper text_bold">suspens&atilde;o</div></div></div>
-							<div class="content center">
-								<div class="frame1_bg"></div>
-								<div class="frame1_text small text_light"><div class="env1 upper small">Procurando por robustez de um ve&iacute;culo de carga com a<br />dirigibilidade de um autom&oacute;vel? Ent&atilde;o voc&ecirc; acabou de achar.</div><div class="env2"><div class="m_title upper text_bold big"><span class="blue">#1</span> suspens&atilde;o</div>A Saveiro &eacute; a pick up com o melhor desempenho, n&atilde;o importa qual seja o terreno ou a carga. Ela passa por cima tranquilamente. Isso gra&ccedil;as ao seu sistema de suspens&atilde;o Helicoidal. Suas molas refor&ccedil;adas fazem cargas pesadas serem transportadas como se fossem leves, e sua flexibilidade e amortecimento garantem confian&ccedil;a na hora de transportar as cargas mais delicadas.</div><div class="env3"></div></div>
-							</div>
-						</div>
-						<!-- ************** FRAME 2 ************** -->
-						<div class="item">
-							<div class="title">FATOS<div class="right"><span class="gray">#2</span> <div class="inline description big upper text_bold">desempenho</div></div></div>
-							<div class="content center">
-								<div class="frame2_bg"></div>
-								<div class="frame2_text small text_light"><div class="env1"></div><div class="env2"><div class="m_title upper text_bold big"><span class="blue">#2</span> desempenho</div>A Saveiro Cross possui o melhor desempenho de seu segmento. Seu novo motor 1.6l MSI agora chega na velocidade m&aacute;xima de 173 km/h (se abastecido com gasolina) e de 176 km/h (se abastecido com etanol). J&aacute; de 0 a 100 Km/h, ela vai mais ou menos no tempo que demora para ler esse textinho: 10,6 segundos com gasolina e 10,1 segundos com etanol. Chegou at&eacute; aqui? Ent&atilde;o a Saveiro j&aacute; estaria a 100 km/h.</div></div>
-							</div>
-						</div>
-						<!-- ************** FRAME 3 ************** -->
-						<div class="item">
-							<div class="title">FATOS<div class="right"><span class="gray">#3</span> <div class="inline description big upper text_bold">abs off-road</div></div></div>
-							<div class="content center">
-								<div class="frame3_bg"></div>
-								<div class="frame3_text small text_light"><div class="env1 small">Outra inova&ccedil;&atilde;o do utilit&aacute;rio s&atilde;o os freios ABS com fun&ccedil;&atilde;o off-road. Esse recurso refor&ccedil;a os freios em estradas n&atilde;o pavimentadas, uma exclusividade que estreia no segmento das picapes compactas de cabine dupla.</div><div class="env2"></div><div class="env3"><div class="m_title upper text_bold big"><span class="blue">#3</span> abs off-road</div><span class="s_mobile" style="display:inline">Esse recurso refor&ccedil;a os freios em estradas n&atilde;o pavimentadas, uma exclusividade que estreia no segmento das picapes compactas de cabine dupla.</span> Ativado pelo bot&atilde;o off-road no painel, o software de controle do ABS e do ESC provoca um curto travamento da roda, criando uma &quot;pequena cunha&quot;, com o material do piso, &agrave; frente do pneu, o que ajuda a reduzir o espa&ccedil;o de frenagem nessas condi&ccedil;ões de piso &quot;solto&quot;.</div></div>
-							</div>
-						</div>
-						<!-- ************** FRAME 4 ************** -->
-						<div class="item">
-							<div class="title">FATOS<div class="right"><span class="gray">#4</span> <div class="inline description big upper text_bold">hdc</div></div></div>
-							<div class="content center">
-								<div class="frame4_bg"></div>
-								<div class="frame4_text small text_light"><div class="env1 small"><h3 class="upper medium text_bold h_mobile">Controle de descida</h3><div class="m_title upper text_bold big"><span class="blue">#4</span> hdc</div>Quem trabalha com transporte de carga, sabe: a pick up deve segurar o tranco e manter tudo no lugar, sem sustos. &Eacute; isso que o HDC faz e a Saveiro &eacute; a primeira pick up a ter esse recurso no Brasil. Quando voc&ecirc; estiver na descida em baixa velocidade, um toque no bot&atilde;o off-road no painel fazem os freios serem acionados automaticamente. Sua descida fica mais segura e controlada, n&atilde;o importando a condi&ccedil;&atilde;o do piso. Viu? Com a Saveiro, as &uacute;nicas surpresas que voc&ecirc; vai ter s&atilde;o positivas.</div><div class="env3"></div></div>
-							</div>
-						</div>
-						<!-- ************** FRAME 5 ************** -->
-						<div class="item">
-							<div class="title">FATOS<div class="right"><span class="gray">#5</span> <div class="inline description big upper text_bold">eds</div></div></div>
-							<div class="content center">
-								<div class="frame5_bg"></div>
-								<div class="frame5_text small text_light"><div class="env1 small"><h3 class="upper medium text_bold h_mobile">Bloqueio eletr&ocirc;nico do diferencial</h3><div class="m_title upper text_bold big"><span class="blue">#5</span> eds</div>O Bloqueio eletr&ocirc;nico do diferencial &eacute; um sistema de &quot;tra&ccedil;&atilde;o inteligente&quot; autom&aacute;tico, voc&ecirc; n&atilde;o precisa apertar nenhum bot&atilde;o pra ele funcionar. Assim que voc&ecirc; entrar na sua Saveiro, quando for preciso, ele ativa o freio da roda com menor tra&ccedil;&atilde;o, transferindo o torque para a roda com maior tra&ccedil;&atilde;o. Voc&ecirc; n&atilde;o vai querer ficar parado no meio do caminho, n&eacute;?</div></div>
-							</div>
-						</div>
-					</div>
-				</div>
 			</div>
 		</section>
 		<section id="versoes" class="slide versoes">
@@ -475,8 +420,6 @@
 				</div>
 			</div>
 		</section>
-
-		<!--<div id="background_clean" class="slide background_clean"></div>-->
 		<section id="tour" class="slide tour onBottom">
 			<div class="tour_desktop">
 				<div class="tour_principal onMiddle default-transition">
@@ -662,7 +605,7 @@
 			</div>
 		</section>
 	</div>
-	<div class="menu-background"></div>
+	
 	<div id="menu" class="menu">
 		<div class="primary">
 			<div class="item open">
@@ -721,26 +664,17 @@
 	    </svg>
 	  </div>
 	</div>
-	<div class="vw‐leads‐global"></div>
+	<div class="vw-leads-global"></div>
 </body>
-
-<!-- Fabio -->
-<!--Scripts-->
-<!--       -->
-<script src="js/fatos.js"></script>
 <script src="js/galeria.js"></script>
 <script type="text/javascript">
     $(document).ready(function(){ $(".gallery .item").append('<div class="alpha_b" />') });
 </script>
-<!-- Fabio -->
-<!--Scripts-->
-<!--       -->
-<script type="text/javascript">
-	document.addEventListener("touchmove", function(e) { e.preventDefault() });
-	if (isMobile.apple.phone || isMobile.android.phone || isMobile.seven_inch) {
-		//alert('mobile!!!');
-		//alert(window.devicePixelRatio);
-	}
 
-</script>
+
+
+
+
+
+
 </html>

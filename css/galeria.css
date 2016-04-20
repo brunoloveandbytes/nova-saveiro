@@ -132,9 +132,7 @@ body, html,
     filter: grayscale(0);
 }
 
-/*.gallery .item.trabalho1{  background-image: url(../img/trabalho/img1.jpg) }*/
-
-
+.gallery .item.trabalho1{  background-image: url(../img/trabalho/img1.jpg) }
 .gallery .item.trabalho2{  background-image: url(../img/trabalho/img2.jpg) }
 .gallery .item.trabalho3{  background-image: url(../img/trabalho/img3.jpg) }
 .gallery .item.trabalho4{  background-image: url(../img/trabalho/img4.jpg) }
@@ -145,7 +143,6 @@ body, html,
 .gallery .item.trabalho9{  background-image: url(../img/trabalho/img9.jpg) }
 .gallery .item.trabalho10{ background-image: url(../img/trabalho/img10.jpg) }
 .gallery .item.trabalho11{ background-image: url(../img/trabalho/img11.jpg) }
-
 .gallery .item.aventura1{  background-image: url(../img/aventura/img1.jpg) }
 .gallery .item.aventura2{  background-image: url(../img/aventura/img2.jpg) }
 .gallery .item.aventura3{  background-image: url(../img/aventura/img3.jpg) }
@@ -158,7 +155,6 @@ body, html,
 .gallery .item.aventura10{ background-image: url(../img/aventura/img10.jpg) }
 .gallery .item.aventura11{ background-image: url(../img/aventura/img11.jpg) }
 .gallery .item.aventura12{ background-image: url(../img/aventura/img12.jpg) }
-
 .gallery .item.acessorios1{  background-image: url(../img/acessorios/img1.jpg) }
 .gallery .item.acessorios2{  background-image: url(../img/acessorios/img2.jpg) }
 .gallery .item.acessorios3{  background-image: url(../img/acessorios/img3.jpg) }

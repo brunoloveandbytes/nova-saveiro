@@ -50,5 +50,5 @@ $(document).ready(function() {
 	        window.cubeManager.setActive(false);
 	    }
 	});
-
+	document.addEventListener("touchmove", function(e) { e.preventDefault() });
 });

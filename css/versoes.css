@@ -225,7 +225,6 @@
     width: 64px;
     height: 64px;
     cursor: pointer;
-    background-image: url('../img/tiles.png');
     background-position: -400% -200%;
     background-size: 1000% 1000%;
 }

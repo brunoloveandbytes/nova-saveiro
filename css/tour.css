@@ -1,5 +1,4 @@
 /*Default*/
-.tour{top:0%;background-image:url('../img/home_bg_clean.jpg');}
 .tour_desktop{
     position: absolute;
     left: -640px;
@@ -57,11 +56,9 @@
 
 .tour_left_car{
     left: 0px;
-    background-image: url('../img/car_trabalho.png');
 }
 .tour_right_car{
     right: 0px;
-    background-image: url('../img/car_aventura.png');
 }
 .tour_down_bar{
     position: absolute;
@@ -104,24 +101,6 @@
   background-size: contain;
 }
 
-.shadow_item1{background-image: url('../img/sombra00.png');}
-.shadow_item2{background-image: url('../img/sombra01.png');}
-.shadow_item3{background-image: url('../img/sombra02.png');}
-.shadow_item4{background-image: url('../img/sombra03.png');}
-.shadow_item5{background-image: url('../img/sombra04.png');}
-
-.aventura_car_item1{background-image: url('../img/cross00.png');}
-.aventura_car_item2{background-image: url('../img/cross01.png');}
-.aventura_car_item3{background-image: url('../img/cross02.png');}
-.aventura_car_item4{background-image: url('../img/cross03.png');}
-.aventura_car_item5{background-image: url('../img/cross04.png');}
-
-.trabalho_car_item1{background-image: url('../img/trend00.png');}
-.trabalho_car_item2{background-image: url('../img/trend01.png');}
-.trabalho_car_item3{background-image: url('../img/trend02.png');}
-.trabalho_car_item4{background-image: url('../img/trend03.png');}
-.trabalho_car_item5{background-image: url('../img/trend04.png');}
-
 .tour_slider_sequence{
   position: absolute;
   width: 650px;
@@ -157,7 +136,6 @@
   cursor: pointer;
 }
 .tour_handle_sequence{
-  background-image: url('../img/tiles.png');
   background-position: -800% 0%;
   background-size: 1000% 1000%;
   position: absolute;
@@ -227,10 +205,8 @@
     background-size: contain;
   }
   .tour_mobile_externo_trabalho{
-    background-image: url('../img/trend00.png');
   }
   .tour_mobile_externo_aventura{
-    background-image: url('../img/cross00.png');
     display: none;
   }
   .tour_mobile_arrow{

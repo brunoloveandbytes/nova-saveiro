@@ -32,6 +32,9 @@ $(document).ready(function() {
 															new Transition({
 																"endStateName":"home",
 																"trigger":Trigger.Home,
+																"startFunction":function(){
+																	$('#menu-bar').addClass('show');
+																},
 																"endFunction":function(){
 																	$('#slide1').addClass('onTop');
 																	$('#slide1').addClass('showWord');
@@ -66,6 +69,7 @@ $(document).ready(function() {
 																	$('#rotational').addClass('rotate');
 																	$('#blue_car').removeClass('zoomCar');
 																	$('#home').addClass('show');
+																	$('#menu-bar').addClass('show');
 																},
 																"animatedProperties":[
 																	new AnimatedProperty({'idName':'menu','className':'show','classTransitionName':'opacity-transition','add':true, 'duration':500}),
@@ -90,6 +94,7 @@ $(document).ready(function() {
 																	$('#rotational').addClass('rotate');
 																	$('#blue_car').removeClass('zoomCar');
 																	$('#home').addClass('show');
+																	$('#menu-bar').addClass('show');
 																},
 																"animatedProperties":[
 																	new AnimatedProperty({'idName':'menu','className':'show','classTransitionName':'opacity-transition','add':true, 'duration':500}),
@@ -214,7 +219,8 @@ $(document).ready(function() {
 																"animatedProperties":[
 																						new AnimatedProperty({'idName':'blue_car','className':'zoomCar','classTransitionName':'default-transition','remove':true}),
 																						new AnimatedProperty({'idName':'home','className':'show','classTransitionName':'default-transition','add':true}),
-																						new AnimatedProperty({'idName':'menu','className':'show','classTransitionName':'opacity-transition','add':true, 'delay':2000, 'duration':1400})
+																						new AnimatedProperty({'idName':'menu-bar','className':'show','classTransitionName':'default-transition','add':true}),
+																						new AnimatedProperty({'idName':'menu','className':'show','classTransitionName':'opacity-transition','add':true, 'delay':500, 'duration':900})
 																						]
 															})
 														]
@@ -232,6 +238,7 @@ $(document).ready(function() {
 																"animatedProperties":[
 																						new AnimatedProperty({'idName':'blue_car','className':'zoomCar','classTransitionName':'default-transition','add':true, 'delay':1000}),
 																						new AnimatedProperty({'idName':'home','className':'show','classTransitionName':'default-transition','remove':true, 'delay':1000}),
+																						new AnimatedProperty({'idName':'menu-bar','className':'show','classTransitionName':'default-transition','remove':true, 'delay':1000}),
 																						new AnimatedProperty({'idName':'menu','className':'show','classTransitionName':'opacity-transition','remove':true})
 																						]
 															}),
@@ -247,7 +254,10 @@ $(document).ready(function() {
 															new Transition({
 																"endStateName":"fatos",
 																"trigger":Trigger.Fatos,
-																"endFunction":function(){if(window.location.href.indexOf('com.br') > -1 && !oldIE)window.history.pushState("", "", '#fatos');},
+																"endFunction":function(){
+																						if(window.location.href.indexOf('com.br') > -1 && !oldIE)window.history.pushState("", "", '#fatos');
+																						stateMachine.upSlides(['identidade']);
+																					},
 																"animatedProperties":[
 																						new AnimatedProperty({'idName':'fatos','className':'onBottom','classTransitionName':'default-transition','remove':true}),
 																						new AnimatedProperty({'idName':'fatos','className':'onMiddle','classTransitionName':'default-transition','add':true})
@@ -553,7 +563,7 @@ $(document).ready(function() {
 		this.states.push(new State({
 										"stateMachine":this,
 										"name":"tour",
-										"stage":4,
+										"stage":9,
 										"welcomeFunction":function(){window.tagManager.acessouPagina("360°");},
 										"transitions":[
 															new Transition({
@@ -785,7 +795,7 @@ $(document).ready(function() {
 										"stateMachine":this,
 										"name":"robust",
 										"stage":4,
-										"welcomeFunction":function(){window.robustManager.setLastState(stateMachine.state);window.tagManager.acessouPagina("Robust");},
+										"welcomeFunction":function(){window.robustManager.setLastState(stateMachine.state);window.tagManager.acessouModelo("SAVEIRO ROBUST");},
 										"transitions":[
 															new Transition({
 																"endStateName":"home",
@@ -886,7 +896,7 @@ $(document).ready(function() {
 										"stateMachine":this,
 										"name":"cross",
 										"stage":4,
-										"welcomeFunction":function(){window.crossManager.setLastState(stateMachine.state);window.tagManager.acessouPagina("Cross");},
+										"welcomeFunction":function(){window.crossManager.setLastState(stateMachine.state);window.tagManager.acessouModelo("SAVEIRO CROSS");},
 										"transitions":[
 															new Transition({
 																"endStateName":"home",
@@ -986,8 +996,6 @@ $(document).ready(function() {
 															})
 														]
 									}));
-		
-		
 		
 		this.askMove = function(trigger){
 			//console.log(this.state.transitions);
@@ -1148,7 +1156,7 @@ $(document).ready(function() {
 				if(add) $('#'+idName).addClass(className);
 				if(remove) $('#'+idName).removeClass(className);
 				var id = idName;
-				setTimeout(function(){ callback(idName,classTransitionName); }, duration);
+				setTimeout(function(){ callback(idName,classTransitionName);}, duration);
 			}, this.delay);
 		}
 	}

@@ -229,6 +229,26 @@ $(document).ready(function() {
 			});
 		}
 
+		//TAG 15 e 16
+		this.acessouModelo = function(modelo){
+			console.log("Acessou modelo: "+modelo);
+			dataLayer.push({
+				'eventFLD' : 'viu_modelo | nova-saveiro | nova-saveiro | '+modelo,
+				'siteName': 'nova-saveiro',
+				'modelName': 'nova-saveiro',
+				'event': 'GAEvent',
+				'eventCategory': 'viu_modelo',
+				'eventAction': 'visualizou',
+				'eventLabel': 'nova-saveiro | nova-saveiro | '+modelo
+			});
+			dataLayer.push({
+				'event': 'VirtualPageview',
+				'VirtualPageURL': '/vpv/ nova-saveiro / nova- saveiro / '+modelo,
+				'VirtualPageTitle': 'VPV – nova-saveiro – nova- saveiro / '+modelo,
+				'eventFLD' : 'photoview | nova-saveiro | nova- saveiro | '+modelo,
+				'siteName': 'nova-saveiro pageName: home modelName: nova-saveiro'
+			});
+		}
 	}
 	var tagManager = new TagManager();
 	window.tagManager = tagManager;
