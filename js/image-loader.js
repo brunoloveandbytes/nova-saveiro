@@ -492,7 +492,7 @@ $(document).ready(function() {
 						}
 					break;
 				case ChangeStage.Any:
-						console.log('tentando...');
+						//console.log('tentando...');
 						if(idx >0 && idx < this.currentStages.length){
 							if(this.currentStages[idx].ready){
 								this.currentStage = this.currentStages[idx];
@@ -504,9 +504,9 @@ $(document).ready(function() {
 								//console.log("%cNew "+((size==0)?('Micro'):((size==1)?('Small'):((size==2)?('Medium'):('Large'))))+" stage: "+this.currentStage.idx, 'color: #cc0');
 								this.printNewStage(this.currentStage.idx);
 							}else{
-								console.log('vai esperar..');
+								//console.log('vai esperar..');
 								if(this.onWaitStage == null){
-									console.log('esperando...');
+									//console.log('esperando...');
 									this.onWaitStage = this.currentStages[idx];
 									$('.'+loadClassName).removeClass('hide-load');
 									this.onLoading = true;
