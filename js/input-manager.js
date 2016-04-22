@@ -1,11 +1,14 @@
 $(document).ready(function() {
 	var InputManager = function(){
-		this.dealClick = function(elem){
-			if(elem.target.className == "interessado"){
-				window.tagManager.estouInteressado();
-				vwleads('open', {"modelId": "6A56K6"});	
-			}
+		this.interessado = function(){
+			window.tagManager.estouInteressado();
+			vwleads('open', {"modelId": "6A56K6"});
 		}
+		this.interessadoVersoes = function(idx){
+			window.tagManager.estouInteressadoVersoes(idx);
+			vwleads('open', {"modelId": "6A56K6"});
+		}
+
 		$('.menu .secondary').on('click', function() {
 			$('.secondary').removeClass('visible');
 		});

@@ -32,7 +32,7 @@ $(document).ready(function() {
 			}else{
 				$('.versoes .handle').css('left',novo+'px');	
 			}
-			console.log('running...');
+			//console.log('running...');
 		},
 		snapOnce: function(){
 			var idx = versoesManager.getCurrentIdx();

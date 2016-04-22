@@ -3,7 +3,7 @@ $(document).ready(function() {
 	var TagManager = function(){
 		//TAG 1
 		this.acessouHome = function(){
-			console.log('Acessou Home');
+			//console.log('Acessou Home');
 			dataLayer.push({
 				'event': 'GAEvent', 
 				'eventFLD' : 'acesso_home | nova-saveiro | nova-saveiro',
@@ -16,7 +16,7 @@ $(document).ready(function() {
 		}
 		//TAG 2
 		this.acessouPagina = function(pagina){
-			console.log('Acessou página: '+pagina);
+			//console.log('Acessou página: '+pagina);
 			dataLayer.push({
 				'eventFLD' : 'acesso_pagina | nova-saveiro | nova-saveiro | '+pagina,
 				'siteName': 'nova-saveiro',
@@ -31,7 +31,7 @@ $(document).ready(function() {
 
 		//TAG 3
 		this.estouInteressado = function(){
-			console.log('tag interessado');
+			//console.log('tag interessado');
 			dataLayer.push({
 				'eventFLD': 'estou_interessado | nova- saveiro | nova-saveiro',
 				'siteName': 'nova-saveiro',
@@ -64,7 +64,7 @@ $(document).ready(function() {
 					fato = '#5 EDS';
 					break;
 			}
-			console.log('viu fatos: '+fato);
+			//console.log('viu fatos: '+fato);
 			dataLayer.push({
 				'eventFLD' : 'viu_fatos | nova-saveiro | '+fato,
 				'siteName': 'nova-saveiro',
@@ -111,7 +111,7 @@ $(document).ready(function() {
 					versao = 'CROSS CABINE ESTENDIDA';
 					break;
 			}
-			console.log('viu versoes: '+versao);
+			//console.log('viu versoes: '+versao);
 			dataLayer.push({
 				'eventFLD' : 'viu_fatos | nova-saveiro | '+versao,
 				'siteName': 'nova-saveiro',
@@ -158,7 +158,7 @@ $(document).ready(function() {
 					versao = 'CROSS CABINE ESTENDIDA';
 					break;
 			}
-			console.log('estou interessado na versão: '+versao);
+			//console.log('estou interessado na versão: '+versao);
 			dataLayer.push({
 				'eventFLD' : 'estou_interessado | nova- saveiro | nova-saveiro',
 				'siteName': 'nova-saveiro',
@@ -171,7 +171,7 @@ $(document).ready(function() {
 
 		//TAG 10 e 11
 		this.viu360 = function(categoria){
-			console.log('Viu 360: ' + categoria);
+			//console.log('Viu 360: ' + categoria);
 			dataLayer.push({
 				'eventFLD' : 'viu_360° | nova-saveiro | nova- saveiro | '+categoria,
 				'siteName': 'nova-saveiro',
@@ -195,7 +195,7 @@ $(document).ready(function() {
 
 		//TAG 12 e 13
 		this.viuFotos = function(categoria,nome,numero){
-			console.log('Viu foto: ' + categoria + '-' + nome + '-' + numero);
+			//console.log('Viu foto: ' + categoria + '-' + nome + '-' + numero);
 			dataLayer.push({
 				'eventFLD' : 'photoview | nova-saveiro | nova-saveiro | '+nome,
 				'siteName': 'nova-saveiro',
@@ -220,7 +220,7 @@ $(document).ready(function() {
 
 		//TAG 14
 		this.didScroll = function(percent){
-			console.log('Scroll: ' + percent + '%');
+			//console.log('Scroll: ' + percent + '%');
 			dataLayer.push({
 				'event': 'GAEvent',
 				'eventCategory': 'scroll | nova-saveiro | nova-saveiro',
@@ -231,7 +231,7 @@ $(document).ready(function() {
 
 		//TAG 15 e 16
 		this.acessouModelo = function(modelo){
-			console.log("Acessou modelo: "+modelo);
+			//console.log("Acessou modelo: "+modelo);
 			dataLayer.push({
 				'eventFLD' : 'viu_modelo | nova-saveiro | nova-saveiro | '+modelo,
 				'siteName': 'nova-saveiro',

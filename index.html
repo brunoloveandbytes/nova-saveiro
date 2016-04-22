@@ -122,7 +122,7 @@
 		</section>
 	</div>
 	<div id="menu-bar" class="menu-bar"></div>
-	<div class="general-content main-content" onclick="window.inputManager.dealClick(event)">
+	<div class="general-content main-content">
 		<div class="sub-slide">
 				<div class="home-content">
 					<div class="robust-button car-button opacity-fast-transition" onclick="window.stateMachine.askMove(window.stateMachine.Trigger.Robust)">
@@ -189,11 +189,12 @@
 							</div>
 							<div class="eds fatos-buttom" onclick="window.fatosManager.goToIdx(5);">
 								<div class="icon"></div>
-								<div class="texto"><span>#4 </span>EDS</div>
+								<div class="texto"><span>#5 </span>EDS</div>
 							</div>
 						</div>
 					</div>
 					<div class="frame frame1">
+						<div class="frame-title"><span>#1 </span>SUSPENSÃO</div>
 						<div class="texto text-ld">
 							A Nova Saveiro é a picape com o melhor desempenho, não importa qual seja
 o terreno ou a carga. Ela passa por cima tranquilamente. Isso graças ao seu
@@ -205,12 +206,13 @@ sistema de suspensão Helicoidal. Suas molas reforçadas fazem cargas pesadas se
 
 					</div>
 					<div class="frame frame2">
+						<div class="frame-title"><span>#2 </span>DESEMPENHO</div>
 						<div class="texto text-ru">
 							A Nova Saveiro Cross possui o melhor desempenho de seu segmento. Seu novo motor 1.6l 16V não te deixa não mão e faz a aceleração dela ir de 0 a 100 Km/h em mais ou menos o tempo que demora para ler esse texto: 10,6 segundos com gasolina e 10,1 segundos com etanol. Chegou até aqui? Então a Nova Saveiro já estaria a 100 km/h.
 						</div>
 					</div>
 					<div class="frame frame3">
-						
+						<div class="frame-title"><span>#3 </span>ABS OFF-ROAD</div>
 						<div class="texto text-lu">
 							Outra inovação do utilitário são os freios ABS com função off-road.
 Esse recurso, que você só encontra na Nova Saveiro, reforça os freios em estradas não pavimentadas.
@@ -221,6 +223,7 @@ Esse recurso, que você só encontra na Nova Saveiro, reforça os freios em estr
 						</div>
 					</div>
 					<div class="frame frame4">
+						<div class="frame-title"><span>#4 </span>HDC</div>
 						<div class="texto text-lu">
 							<span class="super-title">CONTROLE DE DESCIDA</span> </br>
 Quem trabalha com transporte de carga, sabe: a picape deve segurar o tranco e manter tudo no lugar. É isso que o HDC faz e a Nova Saveiro é a primeira picape a ter esse recurso no Brasil. Quando estiver descendo em baixa velocidade, um toque no botão off-road e os freios são acionados automaticamente. Sua descida fica mais segura
@@ -228,6 +231,7 @@ e controlada, não importando a condição do piso.
 						</div>
 					</div>
 					<div class="frame frame5">
+						<div class="frame-title"><span>#5 </span>EDS</div>
 						<div class="texto text-ru">
 							<span class="super-title">BLOQUEIO ELETRÔNICO DO DIFERENCIAL</span> </br>
 Com esse sistema de “tração inteligente” automático, você não precisa apertar nenhum botão pra ele funcionar. Assim que você entrar na sua Nova Saveiro, quando for preciso, ele ativa o freio da roda com menor tração, transferindo o torque para a roda com maior tração. Você não vai querer ficar parado no meio do caminho, né?
@@ -337,7 +341,7 @@ Com esse sistema de “tração inteligente” automático, você não precisa a
 										<div class="description-switch" onclick="window.versoesManager.switchDescription(this)"></div>
 									</div>
 								</div>
-								<div class="interessado" onclick="window.tagManager.estouInteressadoVersoes(1);window.inputManager.dealClick(event);"><div>ESTOU INTERESSADO</div></div>
+								<div class="interessado" onclick="window.inputManager.interessadoVersoes(1);"><div>ESTOU INTERESSADO</div></div>
 							</div>
 						</div>
 					</div>
@@ -441,11 +445,114 @@ Com esse sistema de “tração inteligente” automático, você não precisa a
 										<div class="description-switch" onclick="window.versoesManager.switchDescription(this)"></div>
 									</div>
 								</div>
-								<div class="interessado" onclick="window.tagManager.estouInteressadoVersoes(2);window.inputManager.dealClick(event);"><div>ESTOU INTERESSADO</div></div>
+								<div class="interessado" onclick="window.inputManager.interessadoVersoes(2);"><div>ESTOU INTERESSADO</div></div>
 							</div>
 						</div>
 					</div>
-					<div class="car car3 trend_dupla">
+					<div class="car car3 trend_estendida">
+						<div class="title"><span class="main-title">TRENDLINE</span><span class="sub-title"> CABINE ESTENDIDA</span></div>
+						<div class="container">
+							<div class="up-car default-fast-transition">
+								<div class="image-car"></div>
+							</div>
+							<div class="down-car default-fast-transition">
+								<div class="images-car">
+									<div class="image-left-car"></div>
+									<div class="image-middle-car"></div>
+									<div class="image-right-car"></div>
+								</div>
+								<div class="descriptions">
+									<div class="itens description-container open">
+										<div class="description-title" onclick="window.versoesManager.switchDescription(this)"><div>&nbsp;&nbsp;&nbsp;ITENS DE SÉRIE</div></div>
+										<div class="description-body">
+											<div class="description-left">
+												<ul>
+													<li>Motor 1.6l (EA111 Total Flex 104hp)</li>
+													<li>5 velocidades (manual)</li>
+													<li>"ABS" - freios com sistema anti travamento</li>
+													<li>"Aerowischer" – palhetas do limpadorde para-brisa com melhor performance</li>
+													<li>"EBD" - freios com distribuição eletrônica de frenagem</li>
+													<li>"ESS" - alerta de frenagem de emergência</li>
+													<li>"I-System com Eco-Comfort" - computador de bordo</li>
+													<li>2 airbags (passageiro e motorista)</li>
+													<li>Alça de segurança no teto para passageiro</li>
+													<li>Alerta sonoro de faróis acesos</li>
+													<li>Antena no teto</li>
+													<li>Apoio lateral para acesso a caçamba</li>
+													<li>Bagageiro longitudinal no teto (somente para CE)</li>
+													<li>Banco do motorista com ajuste de altura</li>
+													<li>Barra para apoio de carga no teto</li>
+													<li>Chave tipo "canivete" sem controle remoto</li>
+													<li>Console central com prolongador e porta-copo traseiro</li>
+													<li>Direção hidráulica</li>
+													<li>Emblema "Saveiro" na tampa traseira</li>
+													<li>Espaçador para suspensão</li>
+												</ul>  
+											</div>
+											<div class="description-right">
+												<ul>
+													<li>Estepe sob a caçamba</li>
+													<li>Faróis duplos com máscara escurecida</li>
+													<li>Freio a disco nas quatro rodas</li>
+													<li>Grade dianteira em preto brilhante com detalhes cromados</li>
+													<li>Grade protetora da janela traseira</li>
+													<li>Indicador de troca de marcha</li>
+													<li>Luzes indicadoras de direção com função "Comfort blinker“</li>
+													<li>Maçanetas e espelhos retrovisores externos self color</li>
+													<li>Moldura nas caixas de rodas</li>
+													<li>Para-choques na cor do veículo</li>
+													<li>Para-sol com espelho para motorista e passageiro</li>
+													<li>Pneus 205/60R15</li>
+													<li>Porta-objetos nas laterais das portas</li>
+													<li>Porta-revistas atrás do banco do passageiro</li>
+													<li>Retrovisores externos com controle interno manual</li>
+													<li>Retrorrefletores no para-choque traseiro</li>
+													<li>Rodas de aço aro15”</li>
+													<li>Tampa da caçamba com amortecedor e chave</li>
+													<li>Tomada 12V no console central</li>
+													<li>Travamento elétrico das portas</li>
+													<li>Vidros elétricos</li>
+												</ul>  
+											</div>
+										</div>
+										<div class="description-switch" onclick="window.versoesManager.switchDescription(this)"></div>
+									</div>
+									<div class="opcionais description-container closed-serie">
+										<div class="description-title" onclick="window.versoesManager.switchDescription(this)"><div>&nbsp;&nbsp;&nbsp;OPCIONAIS</div></div>
+										<div class="description-body">
+											<div class="description-center">
+												<ul>
+													<li><span>Conforto Completo</span> - Alarme Keyless, Chave tipo "canivete" com controle remoto, Espelhos retrovisores externos elétricos com tilt down LD, Espelhos retrovisores externos e maçaneta das portas na cor do veículo, Luzes de leitura dianteiras, Para-sol c/ espelho iluminado LE/ LD, Side blinker, Travamento elétrico c/ controle remoto, Coming & Leaving Home, Vidros elétricos, Ar-condicionado</li>
+													<li><span>Interatividade Trendline</span> - Rádio R140G, 4 alto-falantes e 2 tweeters, Dock Station</li>
+													<li><span>Interatividade ‘Composition Touch’</span> - Rádio RCD330, 4 alto- falantes e 2 tweeters, Dock Station, Volante multifuncional</li>
+													<li><span>Módulo plus</span> - Espelhos retrovisores externos e maçaneta das portas na cor do veículo, Faróis e lanterna de neblina, Lanterna de freio elevada (break-light) e iluminação da caçamba, “park pilot” - sensor de estacionamento traseiro, Tomada 12V no console na parte de trás e caçamba (somente para CE), Coluna de direção com ajuste de altura e profundidade, Capota marítima, janela traseira corrediça, ganchos deslizantes na caçamba, Rodas de liga leve 15” </li>
+												</ul>
+											</div>
+										</div>
+										<div class="description-switch" onclick="window.versoesManager.switchDescription(this)"></div>
+									</div>
+									<div class="cores description-container">
+										<div class="description-title" onclick="window.versoesManager.switchDescription(this)"><div>&nbsp;&nbsp;&nbsp;CORES</div></div>
+										<div class="description-body">
+											<div class="cores-description cores-simples">
+												<div class="cores-solidas">
+													<div class="cores-title">SÓLIDAS</div>
+													<div class="cores-img"></div>
+												</div>
+												<div class="cores-metalizadas">
+													<div class="cores-title">METALIZADAS</div>
+													<div class="cores-img"></div>
+												</div>
+											</div>
+										</div>
+										<div class="description-switch" onclick="window.versoesManager.switchDescription(this)"></div>
+									</div>
+								</div>
+								<div class="interessado" onclick="window.inputManager.interessadoVersoes(4);"><div>ESTOU INTERESSADO</div></div>
+							</div>
+						</div>
+					</div>
+					<div class="car car4 trend_dupla">
 						<div class="title"><span class="main-title">TRENDLINE</span><span class="sub-title"> CABINE DUPLA</span></div>
 						<div class="container">
 							<div class="up-car default-fast-transition">
@@ -548,115 +655,12 @@ Com esse sistema de “tração inteligente” automático, você não precisa a
 										<div class="description-switch" onclick="window.versoesManager.switchDescription(this)"></div>
 									</div>
 								</div>
-								<div class="interessado" onclick="window.tagManager.estouInteressadoVersoes(3);window.inputManager.dealClick(event);"><div>ESTOU INTERESSADO</div></div>
-							</div>
-						</div>
-					</div>
-					<div class="car car4 trend_estendida">
-						<div class="title"><span class="main-title">TRENDLINE</span><span class="sub-title"> CABINE ESTENDIDA</span></div>
-						<div class="container">
-							<div class="up-car default-fast-transition">
-								<div class="image-car"></div>
-							</div>
-							<div class="down-car default-fast-transition">
-								<div class="images-car">
-									<div class="image-left-car"></div>
-									<div class="image-middle-car"></div>
-									<div class="image-right-car"></div>
-								</div>
-								<div class="descriptions">
-									<div class="itens description-container open">
-										<div class="description-title" onclick="window.versoesManager.switchDescription(this)"><div>&nbsp;&nbsp;&nbsp;ITENS DE SÉRIE</div></div>
-										<div class="description-body">
-											<div class="description-left">
-												<ul>
-													<li>Motor 1.6l (EA111 Total Flex 104hp)</li>
-													<li>5 velocidades (manual)</li>
-													<li>"ABS" - freios com sistema anti travamento</li>
-													<li>"Aerowischer" – palhetas do limpadorde para-brisa com melhor performance</li>
-													<li>"EBD" - freios com distribuição eletrônica de frenagem</li>
-													<li>"ESS" - alerta de frenagem de emergência</li>
-													<li>"I-System com Eco-Comfort" - computador de bordo</li>
-													<li>2 airbags (passageiro e motorista)</li>
-													<li>Alça de segurança no teto para passageiro</li>
-													<li>Alerta sonoro de faróis acesos</li>
-													<li>Antena no teto</li>
-													<li>Apoio lateral para acesso a caçamba</li>
-													<li>Bagageiro longitudinal no teto (somente para CE)</li>
-													<li>Banco do motorista com ajuste de altura</li>
-													<li>Barra para apoio de carga no teto</li>
-													<li>Chave tipo "canivete" sem controle remoto</li>
-													<li>Console central com prolongador e porta-copo traseiro</li>
-													<li>Direção hidráulica</li>
-													<li>Emblema "Saveiro" na tampa traseira</li>
-													<li>Espaçador para suspensão</li>
-												</ul>  
-											</div>
-											<div class="description-right">
-												<ul>
-													<li>Estepe sob a caçamba</li>
-													<li>Faróis duplos com máscara escurecida</li>
-													<li>Freio a disco nas quatro rodas</li>
-													<li>Grade dianteira em preto brilhante com detalhes cromados</li>
-													<li>Grade protetora da janela traseira</li>
-													<li>Indicador de troca de marcha</li>
-													<li>Luzes indicadoras de direção com função "Comfort blinker“</li>
-													<li>Maçanetas e espelhos retrovisores externos self color</li>
-													<li>Moldura nas caixas de rodas</li>
-													<li>Para-choques na cor do veículo</li>
-													<li>Para-sol com espelho para motorista e passageiro</li>
-													<li>Pneus 205/60R15</li>
-													<li>Porta-objetos nas laterais das portas</li>
-													<li>Porta-revistas atrás do banco do passageiro</li>
-													<li>Retrovisores externos com controle interno manual</li>
-													<li>Retrorrefletores no para-choque traseiro</li>
-													<li>Rodas de aço aro15”</li>
-													<li>Tampa da caçamba com amortecedor e chave</li>
-													<li>Tomada 12V no console central</li>
-													<li>Travamento elétrico das portas</li>
-													<li>Vidros elétricos</li>
-												</ul>  
-											</div>
-										</div>
-										<div class="description-switch" onclick="window.versoesManager.switchDescription(this)"></div>
-									</div>
-									<div class="opcionais description-container closed-serie">
-										<div class="description-title" onclick="window.versoesManager.switchDescription(this)"><div>&nbsp;&nbsp;&nbsp;OPCIONAIS</div></div>
-										<div class="description-body">
-											<div class="description-center">
-												<ul>
-													<li><span>Conforto Completo</span> - Alarme Keyless, Chave tipo "canivete" com controle remoto, Espelhos retrovisores externos elétricos com tilt down LD, Espelhos retrovisores externos e maçaneta das portas na cor do veículo, Luzes de leitura dianteiras, Para-sol c/ espelho iluminado LE/ LD, Side blinker, Travamento elétrico c/ controle remoto, Coming & Leaving Home, Vidros elétricos, Ar-condicionado</li>
-													<li><span>Interatividade Trendline</span> - Rádio R140G, 4 alto-falantes e 2 tweeters, Dock Station</li>
-													<li><span>Interatividade ‘Composition Touch’</span> - Rádio RCD330, 4 alto- falantes e 2 tweeters, Dock Station, Volante multifuncional</li>
-													<li><span>Módulo plus</span> - Espelhos retrovisores externos e maçaneta das portas na cor do veículo, Faróis e lanterna de neblina, Lanterna de freio elevada (break-light) e iluminação da caçamba, “park pilot” - sensor de estacionamento traseiro, Tomada 12V no console na parte de trás e caçamba (somente para CE), Coluna de direção com ajuste de altura e profundidade, Capota marítima, janela traseira corrediça, ganchos deslizantes na caçamba, Rodas de liga leve 15” </li>
-												</ul>
-											</div>
-										</div>
-										<div class="description-switch" onclick="window.versoesManager.switchDescription(this)"></div>
-									</div>
-									<div class="cores description-container">
-										<div class="description-title" onclick="window.versoesManager.switchDescription(this)"><div>&nbsp;&nbsp;&nbsp;CORES</div></div>
-										<div class="description-body">
-											<div class="cores-description cores-simples">
-												<div class="cores-solidas">
-													<div class="cores-title">SÓLIDAS</div>
-													<div class="cores-img"></div>
-												</div>
-												<div class="cores-metalizadas">
-													<div class="cores-title">METALIZADAS</div>
-													<div class="cores-img"></div>
-												</div>
-											</div>
-										</div>
-										<div class="description-switch" onclick="window.versoesManager.switchDescription(this)"></div>
-									</div>
-								</div>
-								<div class="interessado" onclick="window.tagManager.estouInteressadoVersoes(4);window.inputManager.dealClick(event);"><div>ESTOU INTERESSADO</div></div>
+								<div class="interessado" onclick="window.inputManager.interessadoVersoes(3);"><div>ESTOU INTERESSADO</div></div>
 							</div>
 						</div>
 					</div>
 					<div class="car car5 highline">
-						<div class="title"><span class="main-title">HIGHLINE</span><span class="sub-title"> COMPLETA</span></div>
+						<div class="title"><span class="main-title">HIGHLINE</span><span class="sub-title"> CABINE DUPLA</span></div>
 						<div class="container">
 							<div class="up-car default-fast-transition">
 								<div class="image-car"></div>
@@ -777,7 +781,7 @@ Com esse sistema de “tração inteligente” automático, você não precisa a
 										<div class="description-switch" onclick="window.versoesManager.switchDescription(this)"></div>
 									</div>
 								</div>
-								<div class="interessado" onclick="window.tagManager.estouInteressadoVersoes(5);window.inputManager.dealClick(event);"><div>ESTOU INTERESSADO</div></div>
+								<div class="interessado" onclick="window.inputManager.interessadoVersoes(5);"><div>ESTOU INTERESSADO</div></div>
 							</div>
 						</div>
 					</div>
@@ -862,7 +866,7 @@ Com esse sistema de “tração inteligente” automático, você não precisa a
 										<div class="description-switch" onclick="window.versoesManager.switchDescription(this)"></div>
 									</div>
 								</div>
-								<div class="interessado" onclick="window.tagManager.estouInteressadoVersoes(6);window.inputManager.dealClick(event);"><div>ESTOU INTERESSADO</div></div>
+								<div class="interessado" onclick="window.inputManager.interessadoVersoes(6);"><div>ESTOU INTERESSADO</div></div>
 							</div>
 						</div>
 					</div>
@@ -951,7 +955,7 @@ Com esse sistema de “tração inteligente” automático, você não precisa a
 										<div class="description-switch" onclick="window.versoesManager.switchDescription(this)"></div>
 									</div>
 								</div>
-								<div class="interessado" onclick="window.tagManager.estouInteressadoVersoes(7);window.inputManager.dealClick(event);"><div>ESTOU INTERESSADO</div></div>
+								<div class="interessado" onclick="window.inputManager.interessadoVersoes(7);"><div>ESTOU INTERESSADO</div></div>
 							</div>
 						</div>
 					</div>
@@ -968,9 +972,9 @@ Com esse sistema de “tração inteligente” automático, você não precisa a
 							</div>
 							<div class="car-name robust">ROBUST CS</div>
 							<div class="car-name trendline-cs">TRENDLINE CS</div>
-							<div class="car-name trendline-cd">TRENDLINE CD</div>
-							<div class="car-name trendline-ce">TRENDLINE CE</div>
-							<div class="car-name highline">HIGHLINE</div>
+							<div class="car-name trendline-cd">TRENDLINE CE</div>
+							<div class="car-name trendline-ce">TRENDLINE CD</div>
+							<div class="car-name highline">HIGHLINE CD</div>
 							<div class="car-name cross-ce">CROSS CD</div>
 							<div class="car-name cross-cd">CROSS CE</div>
 						</div>
@@ -1339,7 +1343,7 @@ Com esse sistema de “tração inteligente” automático, você não precisa a
 				<div class="icon"></div>
 				<div class="text">MENU</div>
 			</div>
-			<div class="interessado" onclick="window.inputManager.dealClick(event)">ESTOU INTERESSADO</div>
+			<div class="interessado" onclick="window.inputManager.interessado()">ESTOU INTERESSADO</div>
 		</div>
 		<div class="secondary menu-mobile-transition">
 			<div class="item" onclick="window.stateMachine.askMove(window.stateMachine.Trigger.Home)"><!--
@@ -1359,7 +1363,7 @@ Com esse sistema de “tração inteligente” automático, você não precisa a
 		</div>
 	</div>
 
-	<div class="down-arrow" onclick="window.stateMachine.askMove(window.stateMachine.Trigger.NextButtom)"></div>
+	<div class="down-arrow" onclick="window.stateMachine.askMove(window.stateMachine.Trigger.Next)"></div>
 	<div id="premios_button" class="premios_button" onclick="window.stateMachine.move(window.stateMachine.Trigger.Premios)"></div>
 	<div class="load load-transition">
 	  <div class="load-gear">

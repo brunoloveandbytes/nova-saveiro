@@ -160,12 +160,13 @@ $(document).ready(function() {
 																		{'className':'car2 .image-left-car','imgName':'04_Versoes_21_Saveiro_Trend_CS_Volkswagen.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
 																		{'className':'car2 .image-middle-car','imgName':'04_Versoes_22_Saveiro_Trend_CS_Volkswagen.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
 																		{'className':'car2 .image-right-car','imgName':'04_Versoes_23_Saveiro_Trend_CS_Volkswagen.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
-																		{'className':'car3 .image-left-car','imgName':'04_Versoes_12_Saveiro_Trend_Volkswagen.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
-																		{'className':'car3 .image-middle-car','imgName':'04_Versoes_13_Saveiro_Trend_Volkswagen.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
-																		{'className':'car3 .image-right-car','imgName':'04_Versoes_14_Saveiro_Trend_Volkswagen.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
-																		{'className':'car4 .image-left-car','imgName':'04_Versoes_24_Saveiro_Trend_CE_Volkswagen.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
-																		{'className':'car4 .image-middle-car','imgName':'04_Versoes_25_Saveiro_Trend_CE_Volkswagen.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
-																		{'className':'car4 .image-right-car','imgName':'04_Versoes_26_Saveiro_Trend_CE_Volkswagen.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		
+																		{'className':'car3 .image-left-car','imgName':'04_Versoes_24_Saveiro_Trend_CE_Volkswagen.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'car3 .image-middle-car','imgName':'04_Versoes_25_Saveiro_Trend_CE_Volkswagen.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'car3 .image-right-car','imgName':'04_Versoes_26_Saveiro_Trend_CE_Volkswagen.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'car4 .image-left-car','imgName':'04_Versoes_12_Saveiro_Trend_Volkswagen.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'car4 .image-middle-car','imgName':'04_Versoes_13_Saveiro_Trend_Volkswagen.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'car4 .image-right-car','imgName':'04_Versoes_14_Saveiro_Trend_Volkswagen.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
 																		{'className':'car5 .image-left-car','imgName':'04_Versoes_15_Saveiro_Highline_Volkswagen.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
 																		{'className':'car5 .image-middle-car','imgName':'04_Versoes_16_Saveiro_Highline_Volkswagen.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
 																		{'className':'car5 .image-right-car','imgName':'04_Versoes_17_Saveiro_Highline_Volkswagen.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
@@ -593,7 +594,7 @@ $(document).ready(function() {
 		}
 		this.loadNextStage = function(){
 			var idx = imageLoader.currentLoadingStage.idx;
-			console.log('loading:'+ idx);
+			//console.log('loading:'+ idx);
 			var founded = false;
 			switch(loadState){
 				case LoadState.Loading:

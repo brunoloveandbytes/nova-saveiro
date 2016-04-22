@@ -13,8 +13,7 @@ $(document).ready(function() {
 			Entrance:8,
 			Premios:9,
 			Robust:10,
-			Cross:11,
-			NextButtom: 12,
+			Cross:11
 		}
 		var loadClassName = "load";
 		this.Trigger = Trigger;
@@ -212,15 +211,6 @@ $(document).ready(function() {
 																	new AnimatedProperty({'idName':'slide2','className':'onMiddle','classTransitionName':'default-transition','add':true}),
 																	new AnimatedProperty({'idName':'slide1','className':'onTop','classTransitionName':'default-transition','add':true})
 																]
-															}),
-															new Transition({
-																"endStateName":"surf",
-																"trigger":Trigger.NextButtom,
-																"endFunction":function(){$('#slide2').addClass('showWord');startGears('slide2');},
-																"animatedProperties":[
-																	new AnimatedProperty({'idName':'slide2','className':'onMiddle','classTransitionName':'default-transition','add':true}),
-																	new AnimatedProperty({'idName':'slide1','className':'onTop','classTransitionName':'default-transition','add':true})
-																]
 															})
 														]
 									}));
@@ -244,16 +234,6 @@ $(document).ready(function() {
 															new Transition({
 																"endStateName":"downCar",
 																"trigger":Trigger.Next,
-																"endFunction":function(){$('#slide3').addClass('showWord');startGears('slide3');},
-																"animatedProperties":[
-																						new AnimatedProperty({'idName':'slide2','className':'onMiddle','classTransitionName':'default-transition','remove':true}),
-																						new AnimatedProperty({'idName':'slide2','className':'onTop','classTransitionName':'default-transition','add':true}),
-																						new AnimatedProperty({'idName':'slide3','className':'onMiddle','classTransitionName':'default-transition','add':true})
-																						]
-															}),
-															new Transition({
-																"endStateName":"downCar",
-																"trigger":Trigger.NextButtom,
 																"endFunction":function(){$('#slide3').addClass('showWord');startGears('slide3');},
 																"animatedProperties":[
 																						new AnimatedProperty({'idName':'slide2','className':'onMiddle','classTransitionName':'default-transition','remove':true}),
@@ -288,14 +268,6 @@ $(document).ready(function() {
 																						new AnimatedProperty({'idName':'rotational','className':'upCar','classTransitionName':'default-transition','add':true}),
 																						new AnimatedProperty({'idName':'slide3','className':'showWord','classTransitionName':'default-transition','remove':true})
 																						]
-															}),
-															new Transition({
-																"endStateName":"upCar",
-																"trigger":Trigger.NextButtom,
-																"animatedProperties":[
-																						new AnimatedProperty({'idName':'rotational','className':'upCar','classTransitionName':'default-transition','add':true}),
-																						new AnimatedProperty({'idName':'slide3','className':'showWord','classTransitionName':'default-transition','remove':true})
-																						]
 															})
 														]
 									}));
@@ -315,12 +287,6 @@ $(document).ready(function() {
 															new Transition({
 																"endStateName":"rotatedCar",
 																"trigger":Trigger.Next,
-																"animatedProperties":[new AnimatedProperty({'idName':'rotational','className':'rotate','classTransitionName':'default-transition','add':true})]
-															})
-															,
-															new Transition({
-																"endStateName":"rotatedCar",
-																"trigger":Trigger.NextButtom,
 																"animatedProperties":[new AnimatedProperty({'idName':'rotational','className':'rotate','classTransitionName':'default-transition','add':true})]
 															})
 														]
@@ -348,16 +314,6 @@ $(document).ready(function() {
 																						new AnimatedProperty({'idName':'blue_car','className':'zoomCar','classTransitionName':'default-transition','remove':true}),
 																						new AnimatedProperty({'idName':'home','className':'show','classTransitionName':'default-transition','add':true}),
 																						new AnimatedProperty({'idName':'menu','className':'show','classTransitionName':'opacity-transition','add':true, 'delay':500, 'duration':900})
-																						]
-															}),
-															new Transition({
-																"endStateName":"home",
-																"trigger":Trigger.NextButtom,
-																"animatedProperties":[
-																						new AnimatedProperty({'idName':'blue_car','className':'zoomCar','classTransitionName':'default-transition','remove':true}),
-																						new AnimatedProperty({'idName':'home','className':'show','classTransitionName':'default-transition','add':true}),
-																						new AnimatedProperty({'idName':'menu','className':'show','classTransitionName':'opacity-transition','add':true, 'delay':500, 'duration':900}),
-																						new AnimatedProperty({'idName':'premios_button','className':'show','classTransitionName':'opacity-transition','add':true, 'duration':900})
 																						]
 															})
 														]
@@ -401,7 +357,7 @@ $(document).ready(function() {
 															}),
 															new Transition({
 																"endStateName":"identidade",
-																"trigger":Trigger.NextButtom,
+																"trigger":Trigger.Next,
 																"endFunction":function(){if(!oldIE)window.history.pushState("", "", '#identidade');},
 																"animatedProperties":[
 																						new AnimatedProperty({'idName':'identidade','className':'onBottom','classTransitionName':'default-transition','remove':true}),
@@ -532,7 +488,7 @@ $(document).ready(function() {
 															}),
 															new Transition({
 																"endStateName":"fatos",
-																"trigger":Trigger.NextButtom,
+																"trigger":Trigger.Next,
 																"endFunction":function(){if(!oldIE)window.history.pushState("", "", '#fatos');},
 																"animatedProperties":[
 																						new AnimatedProperty({'idName':'identidade','className':'onTop','classTransitionName':'default-transition','add':true}),
@@ -643,7 +599,7 @@ $(document).ready(function() {
 															}),
 															new Transition({
 																"endStateName":"versoes",
-																"trigger":Trigger.NextButtom,
+																"trigger":Trigger.Next,
 																"endFunction":function(){if(!oldIE)window.history.pushState("", "", '#versoes');},
 																"animatedProperties":[
 																						new AnimatedProperty({'idName':'fatos','className':'onTop','classTransitionName':'default-transition','add':true}),
@@ -754,7 +710,7 @@ $(document).ready(function() {
 															}),
 															new Transition({
 																"endStateName":"tour",
-																"trigger":Trigger.NextButtom,
+																"trigger":Trigger.Next,
 																"endFunction":function(){if(!oldIE)window.history.pushState("", "", '#tour');},
 																"animatedProperties":[
 																						new AnimatedProperty({'idName':'versoes','className':'onMiddle','classTransitionName':'default-transition','remove':true}),
@@ -866,7 +822,7 @@ $(document).ready(function() {
 															}),
 															new Transition({
 																"endStateName":"galeria",
-																"trigger":Trigger.NextButtom,
+																"trigger":Trigger.Next,
 																"endFunction":function(){if(!oldIE)window.history.pushState("", "", '#galeria');},
 																"animatedProperties":[
 																						new AnimatedProperty({'idName':'tour','className':'onMiddle','classTransitionName':'default-transition','remove':true}),
@@ -1351,7 +1307,7 @@ $(document).ready(function() {
 			}
 		}
 		this.switchEntrance = function(){
-			var page = window.location.href.substring(window.location.href.indexOf("#")+1);
+			//var page = window.location.href.substring(window.location.href.indexOf("#")+1);
 			/*
 			var page = window.location.href.substring(window.location.href.indexOf("#")+1);
 		    switch(page){
