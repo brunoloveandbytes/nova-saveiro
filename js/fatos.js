@@ -1,1 +1,56 @@
-$(document).ready(function(){var s=function(){var s=0,t=5;this.getCurrentIdx=function(){return s},this.goToIdx=function(t){$(".fatos .frame"+s).css("left","100%"),s=t,$(".fatos .frame"+s).css("left","0%"),this.setArrows(),s>0&&tagManager.viuFatos(s)},this.goToRight=function(){$(".fatos .frame"+s).css("left","100%"),s++,s>t&&(s=0),$(".fatos .frame"+s).css("left","0%"),this.setArrows(),s>0&&tagManager.viuFatos(s)},this.goToLeft=function(){$(".fatos .frame"+s).css("left","100%"),s--,0>s&&(s=t),$(".fatos .frame"+s).css("left","0%"),this.setArrows(),s>0&&tagManager.viuFatos(s)},this.setArrows=function(){0==s?$(".fatos .left-arrow").css("display","none"):$(".fatos .left-arrow").css("display","inline"),5==s?$(".fatos .right-arrow").css("display","none"):$(".fatos .right-arrow").css("display","inline")},this.stop=function(){this.goToIdx(0)}},t=new s;window.fatosManager=t});
+
+$(document).ready(function() {
+
+	var FatosManager = function(){
+		var currentIdx = 0;
+		var maxIdx = 5;
+		this.getCurrentIdx = function(){
+			return currentIdx;
+		}
+		this.goToIdx = function(idx){
+			$('.fatos .frame'+currentIdx).css('left','100%');
+			currentIdx = idx;
+			$('.fatos .frame'+currentIdx).css('left','0%');
+			this.setArrows();
+			if(currentIdx > 0) tagManager.viuFatos(currentIdx);
+		}
+		this.goToRight = function(){
+			$('.fatos .frame'+currentIdx).css('left','100%');
+			currentIdx++;
+			if(currentIdx > maxIdx){
+				currentIdx = 0;
+			}
+			$('.fatos .frame'+currentIdx).css('left','0%');
+			this.setArrows();
+			if(currentIdx > 0) tagManager.viuFatos(currentIdx);
+		}
+		this.goToLeft = function(){
+			$('.fatos .frame'+currentIdx).css('left','100%');
+			currentIdx--;
+			if(currentIdx < 0){
+				currentIdx = maxIdx;
+			}
+			$('.fatos .frame'+currentIdx).css('left','0%');
+			this.setArrows();
+			if(currentIdx > 0) tagManager.viuFatos(currentIdx);
+		}
+		this.setArrows = function(){
+			if(currentIdx == 0){
+				$('.fatos .left-arrow').css('display','none');
+			}else{
+				$('.fatos .left-arrow').css('display','inline');
+			}
+			if(currentIdx == 5){
+				$('.fatos .right-arrow').css('display','none');
+			}else{
+				$('.fatos .right-arrow').css('display','inline');
+			}
+		}
+		this.stop = function(){
+			this.goToIdx(0);
+		}
+		
+	}
+	var fatosManager = new FatosManager();
+	window.fatosManager = fatosManager;
+});
