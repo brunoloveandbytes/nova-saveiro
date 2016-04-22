@@ -589,7 +589,7 @@ $(document).ready(function() {
 			
 		}
 		this.printNewStage = function(stage){
-			console.log("%cNew "+((size==0)?('Micro'):((size==1)?('Small'):((size==2)?('Medium'):('Large'))))+" stage: "+stage, 'color: #cc0');
+			//console.log("%cNew "+((size==0)?('Micro'):((size==1)?('Small'):((size==2)?('Medium'):('Large'))))+" stage: "+stage, 'color: #cc0');
 		}
 		this.loadNextStage = function(){
 			var idx = imageLoader.currentLoadingStage.idx;
@@ -719,7 +719,7 @@ $(document).ready(function() {
 		        var elapsedTime = (new Date().getTime()) - startTime;
 				userProperties.refreshSpeed(imageProperty.weights.low/(elapsedTime/1000));
 				imageProperty.loadHighImage(imageProperty,stage);
-				console.log('Load low: '+ url);
+				//console.log('Load low: '+ url);
 				stage.completeProperty();
 		    };
 		    startTime = new Date().getTime();

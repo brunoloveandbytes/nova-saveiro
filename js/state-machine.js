@@ -1352,6 +1352,8 @@ $(document).ready(function() {
 		}
 		this.switchEntrance = function(){
 			var page = window.location.href.substring(window.location.href.indexOf("#")+1);
+			/*
+			var page = window.location.href.substring(window.location.href.indexOf("#")+1);
 		    switch(page){
 		    	case "home":
 		    		this.askMove(Trigger.Home);
@@ -1375,8 +1377,9 @@ $(document).ready(function() {
 		    		this.askMove(Trigger.Entrance);
 		    		break;
 		    }
+		    */
 		    
-		    //this.askMove(Trigger.Galeria);
+		    this.askMove(Trigger.Entrance);
 		}
 		this.upSlides = function(slides){
 			for(var i=0;i<slides.length;i++){
