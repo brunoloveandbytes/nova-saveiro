@@ -87,7 +87,7 @@
 .versoes .versoes_content .image-car{
     position: absolute;
     top: 0;
-    bottom: 50px;
+    bottom: 80px;
     width: 100%;
     background-repeat: no-repeat;
     background-position: center;
@@ -100,7 +100,7 @@
     left:-320px;
     width: 640px;
     height: 64px;
-    bottom: 50px;
+    bottom: 80px;
     cursor: pointer;
     visibility: visible;
     opacity: 1;
@@ -143,6 +143,20 @@
     border-left: 1px solid #fff;
     float:left;
 }
+.versoes .ruler .car-name{
+    font-family: 'vw_headregular_italic';
+    font-size: 12px;
+    position: absolute;
+}
+.versoes .ruler .robust{top:-22px;left:-28px;}
+.versoes .ruler .trendline-cs{top:22px;left:61px;}
+.versoes .ruler .trendline-cd{top:-22px;left:141px;}
+.versoes .ruler .trendline-ce{top:22px;left:237px;}
+.versoes .ruler .highline{top:-22px;left:337px;}
+.versoes .ruler .cross-ce{top:22px;left:427px;}
+.versoes .ruler .cross-cd{top:-22px;left:516px;width: 60px;}
+
+
 
 .versoes .ruler .image-trabalho{
    background-position: -800% -100%;
@@ -269,14 +283,39 @@
     top: 50px;
     bottom: 0;
     overflow: hidden;
+    overflow-y: scroll; 
     width: 100%;
 }
+
+.versoes .description-body .description-left{
+    position: absolute;
+    font-family: 'vw_textregular';
+    font-size: 13px;
+    line-height: 26px;
+    width: 50%;
+}
+.versoes .description-body .description-right{
+    position: absolute;
+    font-family: 'vw_textregular';
+    font-size: 13px;
+    line-height: 26px;
+    width: 50%;
+    left:50%;
+}
+.versoes .description-body .description-center{
+    position: absolute;
+    font-family: 'vw_textregular';
+    font-size: 13px;
+    line-height: 26px;
+    width: 95%;
+}
+.versoes .description-body .description-center span{font-family: 'vw_textbold';}
 
 .versoes .interessado{
     font-family: 'vw_headregular';
     line-height: 50px;
     position: absolute;
-    bottom: 75px;
+    bottom: 85px;
     left: -125px;
     width: 250px;
     height: 50px;
@@ -291,14 +330,41 @@
 .versoes .versoes_content.on-description .up-car{top:-100%;}
 .versoes .versoes_content.on-description .down-car{top:0%;}
 .versoes .versoes_content.on-description .plus{background-position: -500% -200%;}
-
 .display-transition{
   -webkit-transition: visibility 0s, opacity 0s linear 700ms;
    -moz-transition: visibility 0s, opacity 0s linear 700ms;
      -o-transition: visibility 0s, opacity 0s linear 700ms;
         transition: visibility 0s, opacity 0s linear 700ms;
 }
-
+.versoes .cores-description{position:absolute;width:100%;min-height:100px;}
+.versoes .cores-description > div{position:absolute;height:100%;}
+.versoes .cores-description.cores-simples > div{width:50%;}
+.versoes .cores-description.cores-complexas .cores-solidas{width:50%;}
+.versoes .cores-description.cores-complexas .cores-metalizadas{width:35%;}
+.versoes .cores-description.cores-complexas .cores-especiais{width:15%;}
+.versoes .cores-simples .cores-metalizadas{left:50%;}
+.versoes .cores-complexas .cores-metalizadas{left:48%;}
+.versoes .cores-complexas .cores-especiais{left:83%;}
+.versoes .cores-title{
+    font-family: 'vw_headbold';
+    font-size: 12px;
+    line-height: 29px;
+    position: absolute;
+    left: 5%;
+    width: 90%;
+    height: 30px;
+    text-align: center;
+    letter-spacing: 2px;
+    border-bottom: 1px solid #fff;
+}
+.versoes .cores-description .cores-img{
+    position: absolute;
+    top: 37px;
+    left: 5%;
+    width: 90%;
+    height: 30px;
+    background-size: 100% 100%;
+}
 
 /*Small*/
 @media screen and (max-width: 960px){
@@ -314,6 +380,13 @@
     .versoes .ruler .trail{left:-168px;width:336px;}
     .versoes .ruler .trail-subdivisions > div{width:55px;}
     .versoes .ruler .handle{left:21px;}
+    .versoes .ruler .robust{left:-28px;}
+    .versoes .ruler .trendline-cs{left:20px;}
+    .versoes .ruler .trendline-cd{left:75px;}
+    .versoes .ruler .trendline-ce{left:134px;}
+    .versoes .ruler .highline{left:198px;}
+    .versoes .ruler .cross-ce{left:257px;}
+    .versoes .ruler .cross-cd{left:316px;}
 }
 
 /*Medium*/

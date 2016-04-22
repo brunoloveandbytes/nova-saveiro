@@ -9,10 +9,13 @@
 .tour_interno_container .close{
   position: absolute;
   z-index: 5;
-  font-size: 40px;
-  background-color: #f00;
   cursor: pointer;
-  right: 0px;
+  top:100px;
+  right: 100px;
+  height: 64px;
+  width: 64px;
+  background-size: 1000% 1000%;
+  background-position: 0% -300%;
 }
 
 

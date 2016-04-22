@@ -17,6 +17,7 @@
 	<script src="js/state-machine.js"></script>
 	<script src="js/input-manager.js"></script>
 	<script src="js/identidade.js"></script>
+	<script src="js/fatos.js"></script>
 	<script src="js/versoes.js"></script>
 	<script src="js/tour.js"></script>
 	<script src="js/cube.js"></script>
@@ -30,6 +31,7 @@
 	<link rel="stylesheet" media="screen" href="css/cube.css"/>
 	<link rel="stylesheet" media="screen" href="css/menu.css"/>
 	<link rel="stylesheet" media="screen" href="css/identidade.css"/>
+	<link rel="stylesheet" media="screen" href="css/fatos.css"/>
 	<link rel="stylesheet" media="screen" href="css/versoes.css"/>
 	<link rel="stylesheet" media="screen" href="css/galeria.css"/>
 	<link rel="stylesheet" media="screen" href="css/premios.css"/>
@@ -71,8 +73,8 @@
 				</p>
 				<div class="letreiro-bar underline-transition"></div>
 				<div class="gear gear-transition">
-					<div class="gear_big rotating"></div>
-				<div class="gear_small rotating-inverted"></div>
+					<div class="gear_big"></div>
+				<div class="gear_small"></div>
 				</div>
 			</div>
 		</section>
@@ -87,8 +89,8 @@
 				</p>
 				<div class="letreiro-bar underline-transition"></div>
 				<div class="gear gear-transition">
-					<div class="gear_big rotating"></div>
-				<div class="gear_small rotating-inverted"></div>
+					<div class="gear_big"></div>
+				<div class="gear_small"></div>
 				</div>
 			</div>
 		</section>
@@ -107,32 +109,34 @@
 				</p>
 				<div class="letreiro-bar underline-transition"></div>
 				<div class="gear gear-transition">
-					<div class="gear_big rotating"></div>
-				<div class="gear_small rotating-inverted"></div>
+					<div class="gear_big"></div>
+				<div class="gear_small"></div>
+				</div>
+			</div>
+		</section>
+		<section id="home" class="slide home">
+			<div class="sub-slide">
+				<div class="home-content">
 				</div>
 			</div>
 		</section>
 	</div>
 	<div id="menu-bar" class="menu-bar"></div>
 	<div class="general-content main-content" onclick="window.inputManager.dealClick(event)">
-		<section id="home" class="slide home">
-			<div class="cars-home slide"></div>
-			<div class="sub-slide">
+		<div class="sub-slide">
 				<div class="home-content">
-					<!--<div class="premios_button" onclick="window.stateMachine.move(window.stateMachine.Trigger.Premios)"></div>-->
-					<div class="robust-button car-button" onclick="window.stateMachine.move(window.stateMachine.Trigger.Robust)">
+					<div class="robust-button car-button opacity-fast-transition" onclick="window.stateMachine.move(window.stateMachine.Trigger.Robust)">
 						<div class="plus"></div>
 						<div class="bar"></div>
 						<div class="texto">SAVEIRO ROBUST</div>
 					</div>
-					<div class="cross-button car-button" onclick="window.stateMachine.move(window.stateMachine.Trigger.Cross)">
+					<div class="cross-button car-button opacity-fast-transition" onclick="window.stateMachine.move(window.stateMachine.Trigger.Cross)">
 						<div class="plus"></div>
 						<div class="bar"></div>
 						<div class="texto">SAVEIRO CROSS</div>
 					</div>
 				</div>
 			</div>
-		</section>
 		<section id="identidade" class="slide identidade onBottom">
 			<div class="sub-slide">
 				<div class="identidade_content">
@@ -155,8 +159,83 @@
 				</div>
 			</div>
 		</section>
-		<section id="fatos" class="slide fatos onBottom">
+		<section id="fatos" class="slide fatos">
 			<div class="sub-slide">
+				<div class="fatos-content">
+					<div class="title">FATOS</div>
+					<div class="bar"></div>
+					<div class="fatos-menu"></div>
+					<div class="frame grid" style="left:0%;"></div>
+					<div class="frame frame0" style="left:0%;">
+						<div class="main-text">TEM MUITA COISA SENDO DITA SOBRE A SAVEIRO POR AÍ.</div>
+						<div class="sub-text">Chegou a hora de você ouvir o que realmente é verdade. Escolha um dos cinco fatos sobre a Saveiro e descubra porque essa é uma das picapes mais vendidas do Brasil.</div>
+						<div class="middle-bar"></div>
+						<div class="buttons">
+							<div class="suspensao fatos-buttom" onclick="window.fatosManager.goToIdx(1);">
+								<div class="icon"></div>
+								<div class="texto"><span>#1 </span>SUSPENSÃO</div>
+							</div>
+							<div class="desempenho fatos-buttom" onclick="window.fatosManager.goToIdx(2);">
+								<div class="icon"></div>
+								<div class="texto"><span>#2 </span>DESEMPENHO</div>
+							</div>
+							<div class="abs fatos-buttom" onclick="window.fatosManager.goToIdx(3);">
+								<div class="icon"></div>
+								<div class="texto"><span>#3 </span>ABS OFF-ROAD</div>
+							</div>
+							<div class="hdc fatos-buttom" onclick="window.fatosManager.goToIdx(4);">
+								<div class="icon"></div>
+								<div class="texto"><span>#4 </span>HDC</div>
+							</div>
+							<div class="eds fatos-buttom" onclick="window.fatosManager.goToIdx(5);">
+								<div class="icon"></div>
+								<div class="texto"><span>#4 </span>EDS</div>
+							</div>
+						</div>
+					</div>
+					<div class="frame frame1">
+						<div class="texto text-ld">
+							A Nova Saveiro é a picape com o melhor desempenho, não importa qual seja
+o terreno ou a carga. Ela passa por cima tranquilamente. Isso graças ao seu
+sistema de suspensão Helicoidal. Suas molas reforçadas fazem cargas pesadas serem transportadas como se fossem leves, e sua flexibilidade e amortecimento garantem confiança na hora de transportar as cargas mais delicadas.
+						</div>
+						<div class="texto text-ru">
+							PROCURANDO POR ROBUSTEZ EM UM VEÍCULO DE CARGA COM A DIRIGIBILIDADE DE UM AUTOMÓVEL? ENTÃO VOCÊ ACABOU DE ACHAR.
+						</div>
+
+					</div>
+					<div class="frame frame2">
+						<div class="texto text-ru">
+							A Nova Saveiro Cross possui o melhor desempenho de seu segmento. Seu novo motor 1.6l 16V não te deixa não mão e faz a aceleração dela ir de 0 a 100 Km/h em mais ou menos o tempo que demora para ler esse texto: 10,6 segundos com gasolina e 10,1 segundos com etanol. Chegou até aqui? Então a Nova Saveiro já estaria a 100 km/h.
+						</div>
+					</div>
+					<div class="frame frame3">
+						
+						<div class="texto text-lu">
+							Outra inovação do utilitário são os freios ABS com função off-road.
+Esse recurso, que você só encontra na Nova Saveiro, reforça os freios em estradas não pavimentadas.
+						</div>
+
+						<div class="texto text-rd">
+							A estrada em que você anda pode mudar, mas a confiança no freio do seu carro, não. Essa tecnologia reduz o espaço de frenagem em condições de piso “solto”, para você sempre frear de maneira mais rápida e segura.
+						</div>
+					</div>
+					<div class="frame frame4">
+						<div class="texto text-lu">
+							<span class="super-title">CONTROLE DE DESCIDA</span> </br>
+Quem trabalha com transporte de carga, sabe: a picape deve segurar o tranco e manter tudo no lugar. É isso que o HDC faz e a Nova Saveiro é a primeira picape a ter esse recurso no Brasil. Quando estiver descendo em baixa velocidade, um toque no botão off-road e os freios são acionados automaticamente. Sua descida fica mais segura
+e controlada, não importando a condição do piso. 
+						</div>
+					</div>
+					<div class="frame frame5">
+						<div class="texto text-ru">
+							<span class="super-title">BLOQUEIO ELETRÔNICO DO DIFERENCIAL</span> </br>
+Com esse sistema de “tração inteligente” automático, você não precisa apertar nenhum botão pra ele funcionar. Assim que você entrar na sua Nova Saveiro, quando for preciso, ele ativa o freio da roda com menor tração, transferindo o torque para a roda com maior tração. Você não vai querer ficar parado no meio do caminho, né?
+						</div>
+					</div>
+					<div class="arrow left-arrow" onclick="window.fatosManager.goToLeft();" style="display:none;"></div>
+					<div class="arrow right-arrow" onclick="window.fatosManager.goToRight();"></div>
+				</div>
 			</div>
 		</section>
 		<section id="versoes" class="slide versoes">
@@ -177,17 +256,84 @@
 								<div class="descriptions">
 									<div class="itens description-container open">
 										<div class="description-title" onclick="window.versoesManager.switchDescription(this)"><div>&nbsp;&nbsp;&nbsp;ITENS DE SÉRIE</div></div>
-										<div class="description-body">Loren série</div>
+										<div class="description-body">
+											<div class="description-left">
+												<ul>
+													<li>Motor 1.6l (EA111 Total Flex 104hp)</li>
+													<li>5 velocidades (manual)</li>
+													<li>"ABS" - freios com sistema anti travamento</li>
+													<li>"Aerowischer"– palhetas do limpador de para-brisa com melhor performance</li>
+													<li>"EBD" - freios com distribuição eletrônica de frenagem</li>
+													<li>"ESS" - alerta de frenagem de emergência</li>
+													<li>2 airbags (passageiro e motorista)</li>
+													<li>Alça de segurança no teto para passageiro</li>
+													<li>Alerta sonoro de faróis acesos</li>
+													<li>Antena no teto</li>
+													<li>Apoio lateral para acesso a caçamba</li>
+													<li>Banco do motorista com ajuste de altura</li>
+													<li>Barra para apoio de carga no teto</li>
+													<li>Console central com porta-copos</li>
+													<li>Direção mecânica</li>
+													<li>Emblema lateral com a inscrição “Robust”</li>
+													<li>Espaçador para suspensão</li>
+												</ul>  
+											</div>
+											<div class="description-right">
+												<ul>
+													<li>Estepe sob a caçamba</li>
+													<li>Faróis simples com máscara escurecida</li>
+													<li>Freio a disco nas quatro rodas</li>
+													<li>Grade dianteira em preto fosco </li>
+													<li>Indicador de troca de marcha</li>
+													<li>Luzes indicadoras de direção com função "Comfort blinker“</li>
+													<li>Maçanetas e espelhos retrovisores externos self color</li>
+													<li>Moldura nas caixas de rodas</li>
+													<li>Para-choques em preto fosco</li>
+													<li>Para-sol com espelho para motorista e passageiro </li>
+													<li>Pneus 175/70 R14</li>
+													<li>Porta-objetos nas laterais das portas </li>
+													<li>Porta-revistas atrás do banco do passageiro</li>
+													<li>Preparação para sistema de som com fiação</li>
+													<li>Retrovisores externos com controle interno manual</li>
+													<li>Rodas de aço aro14” com pintura escurecida</li>
+													<li>Tampa da caçamba com amortecedor e chave</li>
+													<li>Tomada 12V no console central</li>
+												</ul>  
+											</div>
+										</div>
 										<div class="description-switch" onclick="window.versoesManager.switchDescription(this)"></div>
 									</div>
 									<div class="opcionais description-container closed-serie">
 										<div class="description-title" onclick="window.versoesManager.switchDescription(this)"><div>&nbsp;&nbsp;&nbsp;OPCIONAIS</div></div>
-										<div class="description-body"><div>LOREM OPCIONAIS</div></div>
+										<div class="description-body">
+											<div class="description-center">
+												<ul>
+													<li><span>Ar condicionado </span></li>
+													<li><span>Direção Hidráulica </span></li>
+													<li><span>Acesso Fácil</span> -  Vidros elétricos, Travamento elétrico sem controle remoto, Chave tipo “canivete“ sem controle remoto </li>
+													<li><span>Conectividade I </span> - 2 alto-falantes e 2 tweeters, Rádio MIB G1 </li>
+													<li><span>Módulo Work</span> - Lanterna de freio elevada (break-light), Iluminação da caçamba, Santantônio (aro de proteção da cabine) e grade protetora da janela traseira</li>
+													<li><span>Pacote Robusto</span> - Rodas de aço aro 15”, Pneus 205/60 R15, Direção Hidráulica</li>
+													<li><span>Acesso Fácil + Conectividade I</span> - Vidros elétricos, Travamento elétrico sem controle remoto, Chave tipo “canivete“ sem controle remoto, 2 alto-falantes e 2 tweeters, Rádio MIB G1 </li>
+												</ul>
+											</div>
+										</div>
 										<div class="description-switch" onclick="window.versoesManager.switchDescription(this)"></div>
 									</div>
 									<div class="cores description-container">
 										<div class="description-title" onclick="window.versoesManager.switchDescription(this)"><div>&nbsp;&nbsp;&nbsp;CORES</div></div>
-										<div class="description-body">Loren cores</div>
+										<div class="description-body">
+											<div class="cores-description cores-simples">
+												<div class="cores-solidas">
+													<div class="cores-title">SÓLIDAS</div>
+													<div class="cores-img"></div>
+												</div>
+												<div class="cores-metalizadas">
+													<div class="cores-title">METALIZADAS</div>
+													<div class="cores-img"></div>
+												</div>
+											</div>
+										</div>
 										<div class="description-switch" onclick="window.versoesManager.switchDescription(this)"></div>
 									</div>
 								</div>
@@ -195,6 +341,7 @@
 							</div>
 						</div>
 					</div>
+
 					<div class="car car2 trend_simples">
 						<div class="title"><span class="main-title">TRENDLINE</span><span class="sub-title"> CABINE SIMPLES</span></div>
 						<div class="container">
@@ -209,18 +356,88 @@
 								</div>
 								<div class="descriptions">
 									<div class="itens description-container open">
-										<div class="description-title" onclick="window.versoesManager.switchDescription(this)"><div>ITENS DE SÉRIE</div></div>
-										<div class="description-body">Loren série</div>
+										<div class="description-title" onclick="window.versoesManager.switchDescription(this)"><div>&nbsp;&nbsp;&nbsp;ITENS DE SÉRIE</div></div>
+										<div class="description-body">
+											<div class="description-left">
+												<ul>
+													<li>Motor 1.6l (EA111 Total Flex 104hp)</li>
+													<li>5 velocidades (manual)</li>
+													<li>"ABS" - freios com sistema anti travamento</li>
+													<li>"Aerowischer" – palhetas do limpadorde para-brisa com melhor performance</li>
+													<li>"EBD" - freios com distribuição eletrônica de frenagem</li>
+													<li>"ESS" - alerta de frenagem de emergência</li>
+													<li>"I-System com Eco-Comfort" - computador de bordo</li>
+													<li>2 airbags (passageiro e motorista)</li>
+													<li>Alça de segurança no teto para passageiro</li>
+													<li>Alerta sonoro de faróis acesos</li>
+													<li>Antena no teto</li>
+													<li>Apoio lateral para acesso a caçamba</li>
+													<li>Bagageiro longitudinal no teto (somente para CE)</li>
+													<li>Banco do motorista com ajuste de altura</li>
+													<li>Barra para apoio de carga no teto</li>
+													<li>Chave tipo "canivete" sem controle remoto</li>
+													<li>Console central com prolongador e porta-copo traseiro</li>
+													<li>Direção hidráulica</li>
+													<li>Emblema "Saveiro" na tampa traseira</li>
+													<li>Espaçador para suspensão</li>
+												</ul>  
+											</div>
+											<div class="description-right">
+												<ul>
+													<li>Estepe sob a caçamba</li>
+													<li>Faróis duplos com máscara escurecida</li>
+													<li>Freio a disco nas quatro rodas</li>
+													<li>Grade dianteira em preto brilhante com detalhes cromados</li>
+													<li>Grade protetora da janela traseira</li>
+													<li>Indicador de troca de marcha</li>
+													<li>Luzes indicadoras de direção com função "Comfort blinker“</li>
+													<li>Maçanetas e espelhos retrovisores externos self color</li>
+													<li>Moldura nas caixas de rodas</li>
+													<li>Para-choques na cor do veículo</li>
+													<li>Para-sol com espelho para motorista e passageiro</li>
+													<li>Pneus 205/60R15</li>
+													<li>Porta-objetos nas laterais das portas</li>
+													<li>Porta-revistas atrás do banco do passageiro</li>
+													<li>Retrovisores externos com controle interno manual</li>
+													<li>Retrorrefletores no para-choque traseiro</li>
+													<li>Rodas de aço aro15”</li>
+													<li>Tampa da caçamba com amortecedor e chave</li>
+													<li>Tomada 12V no console central</li>
+													<li>Travamento elétrico das portas</li>
+													<li>Vidros elétricos</li>
+												</ul>  
+											</div>
+										</div>
 										<div class="description-switch" onclick="window.versoesManager.switchDescription(this)"></div>
 									</div>
 									<div class="opcionais description-container closed-serie">
-										<div class="description-title" onclick="window.versoesManager.switchDescription(this)"><div>OPCIONAIS</div></div>
-										<div class="description-body"><div>LOREM OPCIONAIS</div></div>
+										<div class="description-title" onclick="window.versoesManager.switchDescription(this)"><div>&nbsp;&nbsp;&nbsp;OPCIONAIS</div></div>
+										<div class="description-body">
+											<div class="description-center">
+												<ul>
+													<li><span>Conforto Completo</span> - Alarme Keyless, Chave tipo "canivete" com controle remoto, Espelhos retrovisores externos elétricos com tilt down LD, Espelhos retrovisores externos e maçaneta das portas na cor do veículo, Luzes de leitura dianteiras, Para-sol c/ espelho iluminado LE/ LD, Side blinker, Travamento elétrico c/ controle remoto, Coming & Leaving Home, Vidros elétricos, Ar-condicionado</li>
+													<li><span>Interatividade Trendline</span> - Rádio R140G, 4 alto-falantes e 2 tweeters, Dock Station</li>
+													<li><span>Interatividade ‘Composition Touch’</span> - Rádio RCD330, 4 alto- falantes e 2 tweeters, Dock Station, Volante multifuncional</li>
+													<li><span>Módulo plus</span> - Espelhos retrovisores externos e maçaneta das portas na cor do veículo, Faróis e lanterna de neblina, Lanterna de freio elevada (break-light) e iluminação da caçamba, “park pilot” - sensor de estacionamento traseiro, Tomada 12V no console na parte de trás e caçamba (somente para CE), Coluna de direção com ajuste de altura e profundidade, Capota marítima, janela traseira corrediça, ganchos deslizantes na caçamba, Rodas de liga leve 15” </li>
+												</ul>
+											</div>
+										</div>
 										<div class="description-switch" onclick="window.versoesManager.switchDescription(this)"></div>
 									</div>
 									<div class="cores description-container">
-										<div class="description-title" onclick="window.versoesManager.switchDescription(this)"><div>CORES</div></div>
-										<div class="description-body">Loren cores</div>
+										<div class="description-title" onclick="window.versoesManager.switchDescription(this)"><div>&nbsp;&nbsp;&nbsp;CORES</div></div>
+										<div class="description-body">
+											<div class="cores-description cores-simples">
+												<div class="cores-solidas">
+													<div class="cores-title">SÓLIDAS</div>
+													<div class="cores-img"></div>
+												</div>
+												<div class="cores-metalizadas">
+													<div class="cores-title">METALIZADAS</div>
+													<div class="cores-img"></div>
+												</div>
+											</div>
+										</div>
 										<div class="description-switch" onclick="window.versoesManager.switchDescription(this)"></div>
 									</div>
 								</div>
@@ -242,18 +459,92 @@
 								</div>
 								<div class="descriptions">
 									<div class="itens description-container open">
-										<div class="description-title" onclick="window.versoesManager.switchDescription(this)"><div>ITENS DE SÉRIE</div></div>
-										<div class="description-body">Loren série</div>
+										<div class="description-title" onclick="window.versoesManager.switchDescription(this)"><div>&nbsp;&nbsp;&nbsp;ITENS DE SÉRIE</div></div>
+										<div class="description-body">
+											<div class="description-left">
+												<ul>
+													<li>Motor 1.6l (EA111 Total Flex 104hp)</li>
+													<li>5 velocidades (manual)</li>
+													<li>"ABS" - freios com sistema antitravamento</li>
+													<li>"Aerowischer" – palhetas do limpador de para-brisa com melhor performance</li>
+													<li>"EBD" - freios com distribuição eletrônica de frenagem</li>
+													<li>"ESS" - alerta de frenagem de emergência</li>
+													<li>"I-System com Eco-Comfort" - computador de bordo</li>
+													<li>2 airbags (passageiro e motorista)</li>
+													<li>Alça de segurança no teto para passageiro</li>
+													<li>Alerta sonoro de faróis acesos</li>
+													<li>Antena no teto</li>
+													<li>Bagageiro longitudinal no teto</li>
+													<li>Banco do motorista com ajuste de altura</li>
+													<li>Banco traseiro para 3 passageiros com 3 apoios de cabeça</li>
+													<li>Barra para apoio da carga no teto</li>
+													<li>Chave tipo "canivete" sem controle remoto</li>
+													<li>Cintos de segurança traseiros de 3 pontos (inclusive o central)</li>
+													<li>Console central com prolongador e porta-copo traseiro</li>
+													<li>Desembaçador do vidro traseiro</li>
+													<li>Direção hidráulica</li>
+													<li>Emblema "Saveiro" na tampa traseira</li>
+													<li>Espaçador para suspensão</li>
+												</ul>  
+											</div>
+											<div class="description-right">
+												<ul>
+													<li>Estepe sob a caçamba</li>
+													<li>Faróis duplos com máscara escurecida</li>
+													<li>Freio a disco nas quatro rodas</li>
+													<li>Grade dianteira em preto brilhante com detalhes cromados</li>
+													<li>Iluminação da caçamba</li>
+													<li>Indicador de troca de marcha</li>
+													<li>Janelas laterais traseiras basculantes</li>
+													<li>Lanterna de freio elevada (break-light)</li>
+													<li>Luzes indicadoras de direção com função "Comfortblinker“ </li>
+													<li>Maçanetas e espelhos retrovisores externos selfcolor</li>
+													<li>Moldura nas caixas de rodas</li>
+													<li>Para-choques na cor do veículo</li>
+													<li>Para-sol com espelho para motorista e passageiro</li>
+													<li>Pneus 205/60R15</li>
+													<li>Porta-objetos nas laterais das portas</li>
+													<li>Porta-revistas atrás do banco do passageiro</li>
+													<li>Retrovisores externos com controle interno manual</li>
+													<li>Retrorrefletores no para-choque traseiro</li>
+													<li>Rodas de aço aro 15”</li>
+													<li>Tampa da caçamba com amortecedor e chave</li>
+													<li>Tomada 12V no console central </li>
+													<li>Travamento elétrico das portas</li>
+													<li>Vidros elétricos</li>
+												</ul>  
+											</div>
+										</div>
 										<div class="description-switch" onclick="window.versoesManager.switchDescription(this)"></div>
 									</div>
 									<div class="opcionais description-container closed-serie">
-										<div class="description-title" onclick="window.versoesManager.switchDescription(this)"><div>OPCIONAIS</div></div>
-										<div class="description-body"><div>LOREM OPCIONAIS</div></div>
+										<div class="description-title" onclick="window.versoesManager.switchDescription(this)"><div>&nbsp;&nbsp;&nbsp;OPCIONAIS</div></div>
+										<div class="description-body">
+											<div class="description-center">
+												<ul>
+													<li><span>Acesso Completo</span> - Alarme Keyless, Chave tipo "canivete" com controle remoto, Espelhos retrovisores externos elétricos com tilt down LD, Espelhos retrovisores externos e maçaneta das portas na cor do veículo, Luzes de leitura dianteiras, Para-sol c/ espelho iluminado LE/ LD, Side blinker, Travamento elétrico c/ controle remoto, Coming & Leaving Home, Vidros elétricos, Ar-condicionado </li>
+													<li><span>Interatividade Trendline</span> - Rádio R140G, 4 alto-falantes e 2 tweeters, Dock Station</li>
+													<li><span>Interatividade ‘Composition Touch’</span> - Rádio RCD330, 4 alto- falantes e 2 tweeters, Dock Station, Volante multifuncional</li>
+													<li><span>Módulo plus</span> - Espelhos retrovisores externos e maçaneta das portas na cor do veículo, faróis e lanterna de neblina, lanterna de freio elevada (break-light) e iluminação da caçamba, “park pilot” - sensor de estacionamento traseiro, tomada 12V no console na parte de trás e caçamba, coluna de direção com ajuste de altura e profundidade, capota marítima, ganchos deslizantes na caçamba, Rodas de liga leve 15” </li>
+												</ul>
+											</div>
+										</div>
 										<div class="description-switch" onclick="window.versoesManager.switchDescription(this)"></div>
 									</div>
 									<div class="cores description-container">
-										<div class="description-title" onclick="window.versoesManager.switchDescription(this)"><div>CORES</div></div>
-										<div class="description-body">Loren cores</div>
+										<div class="description-title" onclick="window.versoesManager.switchDescription(this)"><div>&nbsp;&nbsp;&nbsp;CORES</div></div>
+										<div class="description-body">
+											<div class="cores-description cores-simples">
+												<div class="cores-solidas">
+													<div class="cores-title">SÓLIDAS</div>
+													<div class="cores-img"></div>
+												</div>
+												<div class="cores-metalizadas">
+													<div class="cores-title">METALIZADAS</div>
+													<div class="cores-img"></div>
+												</div>
+											</div>
+										</div>
 										<div class="description-switch" onclick="window.versoesManager.switchDescription(this)"></div>
 									</div>
 								</div>
@@ -275,18 +566,88 @@
 								</div>
 								<div class="descriptions">
 									<div class="itens description-container open">
-										<div class="description-title" onclick="window.versoesManager.switchDescription(this)"><div>ITENS DE SÉRIE</div></div>
-										<div class="description-body">Loren série</div>
+										<div class="description-title" onclick="window.versoesManager.switchDescription(this)"><div>&nbsp;&nbsp;&nbsp;ITENS DE SÉRIE</div></div>
+										<div class="description-body">
+											<div class="description-left">
+												<ul>
+													<li>Motor 1.6l (EA111 Total Flex 104hp)</li>
+													<li>5 velocidades (manual)</li>
+													<li>"ABS" - freios com sistema anti travamento</li>
+													<li>"Aerowischer" – palhetas do limpadorde para-brisa com melhor performance</li>
+													<li>"EBD" - freios com distribuição eletrônica de frenagem</li>
+													<li>"ESS" - alerta de frenagem de emergência</li>
+													<li>"I-System com Eco-Comfort" - computador de bordo</li>
+													<li>2 airbags (passageiro e motorista)</li>
+													<li>Alça de segurança no teto para passageiro</li>
+													<li>Alerta sonoro de faróis acesos</li>
+													<li>Antena no teto</li>
+													<li>Apoio lateral para acesso a caçamba</li>
+													<li>Bagageiro longitudinal no teto (somente para CE)</li>
+													<li>Banco do motorista com ajuste de altura</li>
+													<li>Barra para apoio de carga no teto</li>
+													<li>Chave tipo "canivete" sem controle remoto</li>
+													<li>Console central com prolongador e porta-copo traseiro</li>
+													<li>Direção hidráulica</li>
+													<li>Emblema "Saveiro" na tampa traseira</li>
+													<li>Espaçador para suspensão</li>
+												</ul>  
+											</div>
+											<div class="description-right">
+												<ul>
+													<li>Estepe sob a caçamba</li>
+													<li>Faróis duplos com máscara escurecida</li>
+													<li>Freio a disco nas quatro rodas</li>
+													<li>Grade dianteira em preto brilhante com detalhes cromados</li>
+													<li>Grade protetora da janela traseira</li>
+													<li>Indicador de troca de marcha</li>
+													<li>Luzes indicadoras de direção com função "Comfort blinker“</li>
+													<li>Maçanetas e espelhos retrovisores externos self color</li>
+													<li>Moldura nas caixas de rodas</li>
+													<li>Para-choques na cor do veículo</li>
+													<li>Para-sol com espelho para motorista e passageiro</li>
+													<li>Pneus 205/60R15</li>
+													<li>Porta-objetos nas laterais das portas</li>
+													<li>Porta-revistas atrás do banco do passageiro</li>
+													<li>Retrovisores externos com controle interno manual</li>
+													<li>Retrorrefletores no para-choque traseiro</li>
+													<li>Rodas de aço aro15”</li>
+													<li>Tampa da caçamba com amortecedor e chave</li>
+													<li>Tomada 12V no console central</li>
+													<li>Travamento elétrico das portas</li>
+													<li>Vidros elétricos</li>
+												</ul>  
+											</div>
+										</div>
 										<div class="description-switch" onclick="window.versoesManager.switchDescription(this)"></div>
 									</div>
 									<div class="opcionais description-container closed-serie">
-										<div class="description-title" onclick="window.versoesManager.switchDescription(this)"><div>OPCIONAIS</div></div>
-										<div class="description-body"><div>LOREM OPCIONAIS</div></div>
+										<div class="description-title" onclick="window.versoesManager.switchDescription(this)"><div>&nbsp;&nbsp;&nbsp;OPCIONAIS</div></div>
+										<div class="description-body">
+											<div class="description-center">
+												<ul>
+													<li><span>Conforto Completo</span> - Alarme Keyless, Chave tipo "canivete" com controle remoto, Espelhos retrovisores externos elétricos com tilt down LD, Espelhos retrovisores externos e maçaneta das portas na cor do veículo, Luzes de leitura dianteiras, Para-sol c/ espelho iluminado LE/ LD, Side blinker, Travamento elétrico c/ controle remoto, Coming & Leaving Home, Vidros elétricos, Ar-condicionado</li>
+													<li><span>Interatividade Trendline</span> - Rádio R140G, 4 alto-falantes e 2 tweeters, Dock Station</li>
+													<li><span>Interatividade ‘Composition Touch’</span> - Rádio RCD330, 4 alto- falantes e 2 tweeters, Dock Station, Volante multifuncional</li>
+													<li><span>Módulo plus</span> - Espelhos retrovisores externos e maçaneta das portas na cor do veículo, Faróis e lanterna de neblina, Lanterna de freio elevada (break-light) e iluminação da caçamba, “park pilot” - sensor de estacionamento traseiro, Tomada 12V no console na parte de trás e caçamba (somente para CE), Coluna de direção com ajuste de altura e profundidade, Capota marítima, janela traseira corrediça, ganchos deslizantes na caçamba, Rodas de liga leve 15” </li>
+												</ul>
+											</div>
+										</div>
 										<div class="description-switch" onclick="window.versoesManager.switchDescription(this)"></div>
 									</div>
 									<div class="cores description-container">
-										<div class="description-title" onclick="window.versoesManager.switchDescription(this)"><div>CORES</div></div>
-										<div class="description-body">Loren cores</div>
+										<div class="description-title" onclick="window.versoesManager.switchDescription(this)"><div>&nbsp;&nbsp;&nbsp;CORES</div></div>
+										<div class="description-body">
+											<div class="cores-description cores-simples">
+												<div class="cores-solidas">
+													<div class="cores-title">SÓLIDAS</div>
+													<div class="cores-img"></div>
+												</div>
+												<div class="cores-metalizadas">
+													<div class="cores-title">METALIZADAS</div>
+													<div class="cores-img"></div>
+												</div>
+											</div>
+										</div>
 										<div class="description-switch" onclick="window.versoesManager.switchDescription(this)"></div>
 									</div>
 								</div>
@@ -308,18 +669,111 @@
 								</div>
 								<div class="descriptions">
 									<div class="itens description-container open">
-										<div class="description-title" onclick="window.versoesManager.switchDescription(this)"><div>ITENS DE SÉRIE</div></div>
-										<div class="description-body">Loren série</div>
+										<div class="description-title" onclick="window.versoesManager.switchDescription(this)"><div>&nbsp;&nbsp;&nbsp;ITENS DE SÉRIE</div></div>
+										<div class="description-body">
+											<div class="description-left">
+												<ul>
+													<li>Motor 1.6l (EA111 Total Flex 104hp)</li>
+													<li>5 velocidades (manual)</li>
+													<li>"ABS" - freios com sistema antitravamento</li>
+													<li>"Aerowischer" – palhetas do limpador de para-brisa com melhor performance</li>
+													<li>"EBD" - freios com distribuição eletrônica de frenagem</li>
+													<li>"ESS" - alerta de frenagem de emergência</li>
+													<li>"I-System com Eco-Comfort" - computador de bordo</li>
+													<li>2 airbags (passageiro e motorista)</li>
+													<li>Alça de segurança no teto para passageiro</li>
+													<li>Alerta sonoro de faróis acesos</li>
+													<li>Antena no teto</li>
+													<li>Bagageiro longitudinal no teto</li>
+													<li>Banco do motorista com ajuste de altura</li>
+													<li>Banco traseiro para 3 passageiros com 3 apoios de cabeça</li>
+													<li>Barra para apoio da carga no teto</li>
+													<li>Chave tipo "canivete" sem controle remoto</li>
+													<li>Cintos de segurança traseiros de 3 pontos (inclusive o central)</li>
+													<li>Console central com prolongador e porta-copo traseiro</li>
+													<li>Desembaçador do vidro traseiro</li>
+													<li>Direção hidráulica</li>
+													<li>Emblema "Saveiro" na tampa traseira</li>
+													<li>Espaçador para suspensão</li>
+													<li>Estepe sob a caçamba</li>
+													<li>Faróis duplos com máscara escurecida</li>
+													<li>Freio a disco nas quatro rodas</li>
+													<li>Grade dianteira em preto brilhante com detalhes cromados</li>
+													<li>Iluminação da caçamba</li>
+													<li>Indicador de troca de marcha</li>
+													<li>Janelas laterais traseiras basculantes</li>
+													<li>Lanterna de freio elevada (break-light)</li>
+													<li>Luzes indicadoras de direção com função "Comfortblinker“ </li>
+													<li>Maçanetas e espelhos retrovisores externos selfcolor</li>
+												</ul>  
+											</div>
+											<div class="description-right">
+												<ul>
+													<li>Moldura nas caixas de rodas</li>
+													<li>Para-choques na cor do veículo</li>
+													<li>Para-sol com espelho para motorista e passageiro</li>
+													<li>Pneus 205/60R15</li>
+													<li>Porta-objetos nas laterais das portas</li>
+													<li>Porta-revistas atrás do banco do passageiro</li>
+													<li>Retrovisores externos com controle interno manual</li>
+													<li>Retrorrefletores no para-choque traseiro</li>
+													<li>Rodas de aço aro 15”</li>
+													<li>Tampa da caçamba com amortecedor e chave</li>
+													<li>Tomada 12V no console central </li>
+													<li>Travamento elétrico das portas</li>
+													<li>Vidros elétricos</li>
+													<li>"Keyless" - sistema de alarme com comando remoto</li>
+													<li>Ar-condicionado</li>
+													<li>Chave tipo "canivete" com controle remoto</li>
+													<li>Coluna de direção com ajuste de altura e profundidade</li>
+													<li>Colunas centrais externas com aplique preto</li>
+													<li>Coming & leaving home</li>
+													<li>Espelhos retrovisores externos com luzes indicadoras de direção integradas</li>
+													<li>Espelhos retrovisores externos na cor do veículo</li>
+													<li>Espelhos retrovisores externos elétricos com função tilt down no lado direito</li>
+													<li>Faróis e lanterna de neblina</li>
+													<li>Friso lateral cromado</li>
+													<li>Lanternas traseiras escurecidas</li>
+													<li>Luzes de leitura dianteiras e traseiras</li>
+													<li>Maçaneta das portas na cor do veículo</li>
+													<li>Para-sol com espelho iluminado para motorista e passageiro</li>
+													<li>Rádio RCD320</li>
+													<li>Travamento elétrico das portas com controle remoto</li>
+													<li>Vidros elétricos com comando conforto</li>
+													<li>Volante multi funcional com comando de sistema de som e‘I-System' </li>
+												</ul>  
+											</div>
+										</div>
 										<div class="description-switch" onclick="window.versoesManager.switchDescription(this)"></div>
 									</div>
 									<div class="opcionais description-container closed-serie">
-										<div class="description-title" onclick="window.versoesManager.switchDescription(this)"><div>OPCIONAIS</div></div>
-										<div class="description-body"><div>LOREM OPCIONAIS</div></div>
+										<div class="description-title" onclick="window.versoesManager.switchDescription(this)"><div>&nbsp;&nbsp;&nbsp;OPCIONAIS</div></div>
+										<div class="description-body">
+											<div class="description-center">
+												<ul>
+													<li><span>Interatividade ‘Composition Touch’</span> - Rádio RCD330, Dock Station </li>
+													<li><span>Highline Completo</span> - Capota marítima, ganchos deslizantes, tomada 12V na caçamba, Revestimento dos bancos em couro sintético "Native”, Rodas de liga leve aro 15“, "Park Pilot” - sensor de estacionamento traseiro, Tapetes </li>
+													<li><span>Dock Station</span></li>
+													<li><span>Módulo navegação</span> - Sistema de infotainment “Discover Media’ NAV, Dock Station</li>
+												</ul>
+											</div>
+										</div>
 										<div class="description-switch" onclick="window.versoesManager.switchDescription(this)"></div>
 									</div>
 									<div class="cores description-container">
-										<div class="description-title" onclick="window.versoesManager.switchDescription(this)"><div>CORES</div></div>
-										<div class="description-body">Loren cores</div>
+										<div class="description-title" onclick="window.versoesManager.switchDescription(this)"><div>&nbsp;&nbsp;&nbsp;CORES</div></div>
+										<div class="description-body">
+											<div class="cores-description cores-simples">
+												<div class="cores-solidas">
+													<div class="cores-title">SÓLIDAS</div>
+													<div class="cores-img"></div>
+												</div>
+												<div class="cores-metalizadas">
+													<div class="cores-title">METALIZADAS</div>
+													<div class="cores-img"></div>
+												</div>
+											</div>
+										</div>
 										<div class="description-switch" onclick="window.versoesManager.switchDescription(this)"></div>
 									</div>
 								</div>
@@ -341,18 +795,70 @@
 								</div>
 								<div class="descriptions">
 									<div class="itens description-container open">
-										<div class="description-title" onclick="window.versoesManager.switchDescription(this)"><div>ITENS DE SÉRIE</div></div>
-										<div class="description-body">Loren série</div>
+										<div class="description-title" onclick="window.versoesManager.switchDescription(this)"><div>&nbsp;&nbsp;&nbsp;ITENS DE SÉRIE</div></div>
+										<div class="description-body">
+											<div class="description-left">
+												<ul>
+													<li>Motor 1.6l (EA211 Total Flex 120hp)</li>
+													<li>5 velocidades (manual)</li>
+													<li>"E-Flex" – sistema de partida a frio sem tanque auxiliar de gasolina</li>
+													<li>"ESC" - controle eletrônico de estabilidade</li>
+													<li>"HSA" - assistente para partida em subida</li>
+													<li>"ParkPilot" - sensor de estacionamento traseiro</li>
+													<li>Capota marítima e ganchos deslizantes na caçamba</li>
+													<li>Emblema "SaveiroCross" na tampa traseira</li>
+													<li>Espelhos retrovisores externo sem "chrome effect" (exceto para a cor Prata Sírius)</li>
+													<li>Faróis auxiliares com dupla função: neblina e longo alcance e lanterna de neblina</li>
+													<li>Friso lateral com inscrição "Saveiro Cross"</li>
+													<li>Inscrição "Cross" em aluminio na soleira interna</li>
+												</ul>  
+											</div>
+											<div class="description-right">
+												<ul>
+													<li>Friso lateral cromado</li>
+													<li>Janelas laterais traseiras basculantes (CD)</li>
+													<li>Janela traseira deslizante com grade de proteção (CE)</li>
+													<li>Molduras alargadas nas caixas de rodas</li>
+													<li>Para-choques dianteiros "off-road" na cor do veículo</li>
+													<li>Pedaleiras esportivas</li>
+													<li>Rede para retenção de carga no painel traseiro da cabine </li>
+													<li>Rodas de liga leve aro 15” e pneus on road</li>
+													<li>Santantônio com função de aerofólio e braços estendidos sobre as laterais da caçamba</li>
+													<li>Rádio MIB-G Gen2 (RCD 330G)</li>
+													<li>Volante multifuncional em couro com comando de sistema desom e ‘I-System' </li>
+												</ul>  
+											</div>
+										</div>
 										<div class="description-switch" onclick="window.versoesManager.switchDescription(this)"></div>
 									</div>
 									<div class="opcionais description-container closed-serie">
-										<div class="description-title" onclick="window.versoesManager.switchDescription(this)"><div>OPCIONAIS</div></div>
-										<div class="description-body"><div>LOREM OPCIONAIS</div></div>
+										<div class="description-title" onclick="window.versoesManager.switchDescription(this)"><div>&nbsp;&nbsp;&nbsp;OPCIONAIS</div></div>
+										<div class="description-body">
+											<div class="description-center">
+												<ul>
+													<li><span>Dock Station</span></li>
+													<li><span>Cross Completo</span> - Espelho retrovisor interno antiofuscante (eletrocrômico), ‘Piloto automático’ controle automático de velocidades, Tomada 12V no console na parte de trás e caçamba, Sensores de chuva e crepuscular, Tapetes, Revestimento dos bancos em couro sintético "Native”, "Park Pilot” - sensor de estacionamento traseiro</li>
+													<li><span>Pneus 205/60 R15 All Terrain (off road)</span></li>
+													<li><span>Módulo navegação</span> - Sistema de infotainment “Discover Media’ NAV, Dock Station</li>
+												</ul>
+											</div>
+										</div>
 										<div class="description-switch" onclick="window.versoesManager.switchDescription(this)"></div>
 									</div>
 									<div class="cores description-container">
-										<div class="description-title" onclick="window.versoesManager.switchDescription(this)"><div>CORES</div></div>
-										<div class="description-body">Loren cores</div>
+										<div class="description-title" onclick="window.versoesManager.switchDescription(this)"><div>&nbsp;&nbsp;&nbsp;CORES</div></div>
+										<div class="description-body">
+											<div class="cores-description cores-simples">
+												<div class="cores-solidas">
+													<div class="cores-title">SÓLIDAS</div>
+													<div class="cores-img"></div>
+												</div>
+												<div class="cores-metalizadas">
+													<div class="cores-title">METALIZADAS</div>
+													<div class="cores-img"></div>
+												</div>
+											</div>
+										</div>
 										<div class="description-switch" onclick="window.versoesManager.switchDescription(this)"></div>
 									</div>
 								</div>
@@ -374,18 +880,74 @@
 								</div>
 								<div class="descriptions">
 									<div class="itens description-container open">
-										<div class="description-title" onclick="window.versoesManager.switchDescription(this)"><div>ITENS DE SÉRIE</div></div>
-										<div class="description-body">Loren série</div>
+										<div class="description-title" onclick="window.versoesManager.switchDescription(this)"><div>&nbsp;&nbsp;&nbsp;ITENS DE SÉRIE</div></div>
+										<div class="description-body">
+											<div class="description-left">
+												<ul>
+													<li>Motor 1.6l (EA211 Total Flex 120hp)</li>
+													<li>5 velocidades (manual)</li>
+													<li>"E-Flex" – sistema de partida a frio sem tanque auxiliar de gasolina</li>
+													<li>"ESC" - controle eletrônico de estabilidade</li>
+													<li>"HSA" - assistente para partida em subida</li>
+													<li>"ParkPilot" - sensor de estacionamento traseiro</li>
+													<li>Capota marítima e ganchos deslizantes na caçamba</li>
+													<li>Emblema "SaveiroCross" na tampa traseira</li>
+													<li>Espelhos retrovisores externo sem "chrome effect" (exceto para a cor Prata Sírius)</li>
+													<li>Faróis auxiliares com dupla função: neblina e longo alcance e lanterna de neblina</li>
+													<li>Friso lateral com inscrição "Saveiro Cross"</li>
+													<li>Inscrição "Cross" em aluminio na soleira interna</li>
+												</ul>  
+											</div>
+											<div class="description-right">
+												<ul>
+													<li>Friso lateral cromado</li>
+													<li>Janelas laterais traseiras basculantes (CD)</li>
+													<li>Janela traseira deslizante com grade de proteção (CE)</li>
+													<li>Molduras alargadas nas caixas de rodas</li>
+													<li>Para-choques dianteiros "off-road" na cor do veículo</li>
+													<li>Pedaleiras esportivas</li>
+													<li>Rede para retenção de carga no painel traseiro da cabine </li>
+													<li>Rodas de liga leve aro 15” e pneus on road</li>
+													<li>Santantônio com função de aerofólio e braços estendidos sobre as laterais da caçamba</li>
+													<li>Rádio MIB-G Gen2 (RCD 330G)</li>
+													<li>Volante multifuncional em couro com comando de sistema desom e ‘I-System' </li>
+												</ul>  
+											</div>
+										</div>
 										<div class="description-switch" onclick="window.versoesManager.switchDescription(this)"></div>
 									</div>
 									<div class="opcionais description-container closed-serie">
-										<div class="description-title" onclick="window.versoesManager.switchDescription(this)"><div>OPCIONAIS</div></div>
-										<div class="description-body"><div>LOREM OPCIONAIS</div></div>
+										<div class="description-title" onclick="window.versoesManager.switchDescription(this)"><div>&nbsp;&nbsp;&nbsp;OPCIONAIS</div></div>
+										<div class="description-body">
+											<div class="description-center">
+												<ul>
+													<li><span>Dock Station</span></li>
+													<li><span>Cross Completo</span> - Espelho retrovisor interno antiofuscante (eletrocrômico), ‘Piloto automático’ controle automático de velocidades, Tomada 12V no console na parte de trás e caçamba, Sensores de chuva e crepuscular, Tapetes, Revestimento dos bancos em couro sintético "Native”, "Park Pilot” - sensor de estacionamento traseiro</li>
+													<li><span>Pneus 205/60 R15 All Terrain (off road)</span></li>
+													<li><span>Módulo navegação</span> - Sistema de infotainment “Discover Media’ NAV, Dock Station</li>
+												</ul>
+											</div>
+										</div>
 										<div class="description-switch" onclick="window.versoesManager.switchDescription(this)"></div>
 									</div>
 									<div class="cores description-container">
-										<div class="description-title" onclick="window.versoesManager.switchDescription(this)"><div>CORES</div></div>
-										<div class="description-body">Loren cores</div>
+										<div class="description-title" onclick="window.versoesManager.switchDescription(this)"><div>&nbsp;&nbsp;&nbsp;CORES</div></div>
+										<div class="description-body">
+											<div class="cores-description cores-complexas">
+												<div class="cores-solidas">
+													<div class="cores-title">SÓLIDAS</div>
+													<div class="cores-img"></div>
+												</div>
+												<div class="cores-metalizadas">
+													<div class="cores-title">METALIZADAS</div>
+													<div class="cores-img"></div>
+												</div>
+												<div class="cores-especiais">
+													<div class="cores-title">ESPECIAL</div>
+													<div class="cores-img"></div>
+												</div>
+											</div>
+										</div>
 										<div class="description-switch" onclick="window.versoesManager.switchDescription(this)"></div>
 									</div>
 								</div>
@@ -404,6 +966,13 @@
 								<div></div>
 								<div></div>
 							</div>
+							<div class="car-name robust">ROBUST CS</div>
+							<div class="car-name trendline-cs">TRENDLINE CS</div>
+							<div class="car-name trendline-cd">TRENDLINE CD</div>
+							<div class="car-name trendline-ce">TRENDLINE CE</div>
+							<div class="car-name highline">HIGHLINE</div>
+							<div class="car-name cross-ce">CROSS CD</div>
+							<div class="car-name cross-cd">CROSS CE</div>
 						</div>
 						<div class="basic-icon image-trabalho"></div>
 						<div class="basic-icon image-aventura"></div>
@@ -426,50 +995,171 @@
 					<div class="tour_title">EXCELÊNCIA EM QUALQUER FINALIDADE.</div>
 					<div class="tour_description">A Saveiro traz a verdadeira combinação entre trabalho e diversão. Se por fora, ela é robusta e forte, é por dentro que seu design exclusivo agrega conforto e praticidade. Um dia cansativo fica um pouco melhor quando você volta pra casa num interior como esse. Escolha a versão e veja por si mesmo.</div>
 					<div class="tour_cars">
-						<div class="tour_left_car" onclick="$('.tour_sequence').addClass('onMiddle');$('.tour_principal').removeClass('onMiddle');window.tagManager.viu360('TRABALHO');"></div>
-						<div class="tour_right_car" onclick="$('.tour_sequence').addClass('onMiddle');$('.tour_principal').removeClass('onMiddle');window.tagManager.viu360('AVENTURA');"></div>
+						<div class="tour_left_car" onclick="window.tourManager.goToSequence(window.tourManager.Car.Trabalho);window.tagManager.viu360('TRABALHO');"></div>
+						<div class="tour_right_car" onclick="window.tourManager.goToSequence(window.tourManager.Car.Aventura);window.tagManager.viu360('AVENTURA');"></div>
 					</div>
 					<div class="tour_down_bar"></div>
 				</div>
-				<div class="tour_sequence default-transition">	
-					<div id="tour_trabalho_sequence" class="tour_car_container_sequence">
-						<div class="tour_shadow_sequence">
-							<div class="shadow_item1" style="left:0%;"></div>
-							<div class="shadow_item2"></div>
-							<div class="shadow_item3"></div>
-							<div class="shadow_item4"></div>
-							<div class="shadow_item5"></div>
-						</div>
+				<div class="tour_sequence">	
+					<div id="tour_trabalho_sequence" class="tour_car_container_sequence trabalho_sequence default-transition">
 						<div class="tour_car_sequence">
 							<div class="trabalho_car_item1" style="left:0%;"></div>
 							<div class="trabalho_car_item2"></div>
 							<div class="trabalho_car_item3"></div>
 							<div class="trabalho_car_item4"></div>
 							<div class="trabalho_car_item5"></div>
+							<div class="trabalho_car_item6"></div>
+							<div class="trabalho_car_item7"></div>
+							<div class="trabalho_car_item8"></div>
+							<div class="trabalho_car_item9"></div>
+							<div class="trabalho_car_item10"></div>
+							<div class="trabalho_car_item11"></div>
+							<div class="trabalho_car_item12"></div>
+							<div class="trabalho_car_item13"></div>
+							<div class="trabalho_car_item14"></div>
+							<div class="trabalho_car_item15"></div>
+							<div class="trabalho_car_item16"></div>
+							<div class="trabalho_car_item17"></div>
+							<div class="trabalho_car_item18"></div>
+							<div class="trabalho_car_item19"></div>
+							<div class="trabalho_car_item20"></div>
+							<div class="trabalho_car_item21"></div>
+							<div class="trabalho_car_item22"></div>
+							<div class="trabalho_car_item23"></div>
+							<div class="trabalho_car_item24"></div>
+							<div class="trabalho_car_item25"></div>
+							<div class="trabalho_car_item26"></div>
+							<div class="trabalho_car_item27"></div>
+							<div class="trabalho_car_item28"></div>
+							<div class="trabalho_car_item29"></div>
+							<div class="trabalho_car_item30"></div>
+							<div class="trabalho_car_item31"></div>
+							<div class="trabalho_car_item32"></div>
+							<div class="trabalho_car_item33"></div>
+							<div class="trabalho_car_item34"></div>
+							<div class="trabalho_car_item35"></div>
+							<div class="trabalho_car_item36"></div>
+							<div class="trabalho_car_item37"></div>
+							<div class="trabalho_car_item38"></div>
+							<div class="trabalho_car_item39"></div>
+							<div class="trabalho_car_item40"></div>
+							<div class="trabalho_car_item41"></div>
+							<div class="trabalho_car_item42"></div>
+							<div class="trabalho_car_item43"></div>
+							<div class="trabalho_car_item44"></div>
+							<div class="trabalho_car_item45"></div>
+							<div class="trabalho_car_item46"></div>
+							<div class="trabalho_car_item47"></div>
+							<div class="trabalho_car_item48"></div>
+							<div class="trabalho_car_item49"></div>
+							<div class="trabalho_car_item50"></div>
+							<div class="trabalho_car_item51"></div>
+							<div class="trabalho_car_item52"></div>
+							<div class="trabalho_car_item53"></div>
+							<div class="trabalho_car_item54"></div>
+							<div class="trabalho_car_item55"></div>
+							<div class="trabalho_car_item56"></div>
+							<div class="trabalho_car_item57"></div>
+							<div class="trabalho_car_item58"></div>
+							<div class="trabalho_car_item59"></div>
+							<div class="trabalho_car_item60"></div>
+							<div class="trabalho_car_item61"></div>
+							<div class="trabalho_car_item62"></div>
+							<div class="trabalho_car_item63"></div>
+							<div class="trabalho_car_item64"></div>
+							<div class="trabalho_car_item65"></div>
+							<div class="trabalho_car_item66"></div>
+							<div class="trabalho_car_item67"></div>
+							<div class="trabalho_car_item68"></div>
+							<div class="trabalho_car_item69"></div>
+							<div class="trabalho_car_item70"></div>
+							<div class="trabalho_car_item71"></div>
+							<div class="trabalho_car_item72"></div>
+							<div class="trabalho_car_item73"></div>
+							<div class="trabalho_car_item74"></div>
+							<div class="trabalho_car_item75"></div>
+							<div class="trabalho_car_item76"></div>
 						</div>
 					</div>
-					<div id="tour_aventura_sequence" class="tour_car_container_sequence">
-						<div class="tour_shadow_sequence">
-							<div class="shadow_item1" style="left:0%;"></div>
-							<div class="shadow_item2"></div>
-							<div class="shadow_item3"></div>
-							<div class="shadow_item4"></div>
-							<div class="shadow_item5"></div>
-						</div>
+					<div id="tour_aventura_sequence" class="tour_car_container_sequence aventura_sequence default-transition">
 						<div class="tour_car_sequence">
 							<div class="aventura_car_item1" style="left:0%;"></div>
 							<div class="aventura_car_item2"></div>
 							<div class="aventura_car_item3"></div>
 							<div class="aventura_car_item4"></div>
 							<div class="aventura_car_item5"></div>
+							<div class="aventura_car_item6"></div>
+							<div class="aventura_car_item7"></div>
+							<div class="aventura_car_item8"></div>
+							<div class="aventura_car_item9"></div>
+							<div class="aventura_car_item10"></div>
+							<div class="aventura_car_item11"></div>
+							<div class="aventura_car_item12"></div>
+							<div class="aventura_car_item13"></div>
+							<div class="aventura_car_item14"></div>
+							<div class="aventura_car_item15"></div>
+							<div class="aventura_car_item16"></div>
+							<div class="aventura_car_item17"></div>
+							<div class="aventura_car_item18"></div>
+							<div class="aventura_car_item19"></div>
+							<div class="aventura_car_item20"></div>
+							<div class="aventura_car_item21"></div>
+							<div class="aventura_car_item22"></div>
+							<div class="aventura_car_item23"></div>
+							<div class="aventura_car_item24"></div>
+							<div class="aventura_car_item25"></div>
+							<div class="aventura_car_item26"></div>
+							<div class="aventura_car_item27"></div>
+							<div class="aventura_car_item28"></div>
+							<div class="aventura_car_item29"></div>
+							<div class="aventura_car_item30"></div>
+							<div class="aventura_car_item31"></div>
+							<div class="aventura_car_item32"></div>
+							<div class="aventura_car_item33"></div>
+							<div class="aventura_car_item34"></div>
+							<div class="aventura_car_item35"></div>
+							<div class="aventura_car_item36"></div>
+							<div class="aventura_car_item37"></div>
+							<div class="aventura_car_item38"></div>
+							<div class="aventura_car_item39"></div>
+							<div class="aventura_car_item40"></div>
+							<div class="aventura_car_item41"></div>
+							<div class="aventura_car_item42"></div>
+							<div class="aventura_car_item43"></div>
+							<div class="aventura_car_item44"></div>
+							<div class="aventura_car_item45"></div>
+							<div class="aventura_car_item46"></div>
+							<div class="aventura_car_item47"></div>
+							<div class="aventura_car_item48"></div>
+							<div class="aventura_car_item49"></div>
+							<div class="aventura_car_item50"></div>
+							<div class="aventura_car_item51"></div>
+							<div class="aventura_car_item52"></div>
+							<div class="aventura_car_item53"></div>
+							<div class="aventura_car_item54"></div>
+							<div class="aventura_car_item55"></div>
+							<div class="aventura_car_item56"></div>
+							<div class="aventura_car_item57"></div>
+							<div class="aventura_car_item58"></div>
+							<div class="aventura_car_item59"></div>
+							<div class="aventura_car_item60"></div>
+							<div class="aventura_car_item61"></div>
+							<div class="aventura_car_item62"></div>
+							<div class="aventura_car_item63"></div>
+							<div class="aventura_car_item64"></div>
+							<div class="aventura_car_item65"></div>
+							<div class="aventura_car_item66"></div>
+							<div class="aventura_car_item67"></div>
+							<div class="aventura_car_item68"></div>
+							<div class="aventura_car_item69"></div>
+							<div class="aventura_car_item70"></div>
+							<div class="aventura_car_item71"></div>
+							<div class="aventura_car_item72"></div>
+							<div class="aventura_car_item73"></div>
+							<div class="aventura_car_item74"></div>
+							<div class="aventura_car_item75"></div>
+							<div class="aventura_car_item76"></div>
 						</div>
-					</div>
-					<div class="tour_slider_sequence">
-						<div class="tour_left_bar_sequence">
-							<div class="tour_handle_sequence"></div>
-							EXTERNO
-						</div>
-						<div class="tour_right_bar_sequence" onclick="window.cubeManager.setActive(true);window.cubeManager.setCubeName('saveiro_aventura_interno');">INTERNO</div>
 					</div>
 				</div>
 			</div>
@@ -489,54 +1179,56 @@
 				<div id="vw-tabs">
 				    <div class="tab" data-tab="trabalho">
 				    	<div class="gallery group">
-							<div class="item trabalho1 col span_1_of_4" data-image="img/trabalho/g/img1.jpg" ></div>
-							<div class="item trabalho2 col span_1_of_4" data-image="img/trabalho/g/img2.jpg" ></div>
-							<div class="item trabalho3 col span_1_of_4" data-image="img/trabalho/g/img3.jpg" ></div>
-							<div class="item trabalho4 col span_1_of_4" data-image="img/trabalho/g/img4.jpg" ></div>
-							<div class="item trabalho5 col span_1_of_4" data-image="img/trabalho/g/img5.jpg" ></div>
-							<div class="item trabalho6 col span_1_of_4" data-image="img/trabalho/g/img6.jpg" ></div>
-							<div class="item trabalho7 col span_1_of_4" data-image="img/trabalho/g/img7.jpg" ></div>
-							<div class="item trabalho8 col span_1_of_4" data-image="img/trabalho/g/img8.jpg" ></div>
-							<div class="item trabalho9 col span_1_of_4" data-image="img/trabalho/g/img9.jpg" ></div>
-							<div class="item trabalho10 col span_1_of_4" data-image="img/trabalho/g/img10.jpg" ></div>
+							<div class="item trabalho1 col span_1_of_4" data-image="img/demand/06_Galeria_01_Trabalho_Saveiro_Robust_Volkswagen.jpg" ></div>
+							<div class="item trabalho2 col span_1_of_4" data-image="img/demand/06_Galeria_02_Trabalho_Saveiro_Robust_Volkswagen.jpg" ></div>
+							<div class="item trabalho3 col span_1_of_4" data-image="img/demand/06_Galeria_03_Trabalho_Saveiro_Robust_Volkswagen.jpg" ></div>
+							<div class="item trabalho4 col span_1_of_4" data-image="img/demand/06_Galeria_04_Trabalho_Saveiro_Robust_Volkswagen.jpg" ></div>
+							<div class="item trabalho5 col span_1_of_4" data-image="img/demand/06_Galeria_05_Trabalho_Saveiro_Trend_Volkswagen.jpg" ></div>
+							<div class="item trabalho6 col span_1_of_4" data-image="img/demand/06_Galeria_06_Trabalho_Saveiro_Trend_Volkswagen.jpg" ></div>
+							<div class="item trabalho7 col span_1_of_4" data-image="img/demand/06_Galeria_07_Trabalho_Saveiro_Trend_Volkswagen.jpg" ></div>
+							<div class="item trabalho8 col span_1_of_4" data-image="img/demand/06_Galeria_08_Trabalho_Saveiro_Trend_Volkswagen.jpg" ></div>
+							<div class="item trabalho9 col span_1_of_4" data-image="img/demand/06_Galeria_09_Trabalho_Saveiro_Highline_Volkswagen.jpg" ></div>
+							<div class="item trabalho10 col span_1_of_4" data-image="img/demand/06_Galeria_10_Trabalho_Saveiro_Highline_Volkswagen.jpg" ></div>
+							<div class="item trabalho11 col span_1_of_4" data-image="img/demand/06_Galeria_11_Trabalho_Saveiro_Highline_Volkswagen.jpg" ></div>
+							<div class="item trabalho12 col span_1_of_4" data-image="img/demand/06_Galeria_12_Trabalho_Saveiros_Volkswagen.jpg" ></div>
 						</div>
 				    </div>
 				    <div class="tab" data-tab="aventura">
 				        <div class="gallery group">
-				            <div class="item aventura1 col span_1_of_4" data-image="img/aventura/g/img1.jpg"></div>
-				            <div class="item aventura2 col span_1_of_4" data-image="img/aventura/g/img2.jpg"></div>
-				            <div class="item aventura3 col span_1_of_4" data-image="img/aventura/g/img3.jpg"></div>
-				            <div class="item aventura4 col span_1_of_4" data-image="img/aventura/g/img4.jpg"></div>
-				            <div class="item aventura5 col span_1_of_4" data-image="img/aventura/g/img5.jpg"></div>
-				            <div class="item aventura6 col span_1_of_4" data-image="img/aventura/g/img6.jpg"></div>
-				            <div class="item aventura7 col span_1_of_4" data-image="img/aventura/g/img7.jpg"></div>
-				            <div class="item aventura8 col span_1_of_4" data-image="img/aventura/g/img8.jpg"></div>
-				            <div class="item aventura9 col span_1_of_4" data-image="img/aventura/g/img9.jpg"></div>
-				            <div class="item aventura10 col span_1_of_4" data-image="img/aventura/g/img10.jpg"></div>
-				            <div class="item aventura11 col span_1_of_4" data-image="img/aventura/g/img11.jpg"></div>
-				            <div class="item aventura12 col span_1_of_4" data-image="img/aventura/g/img12.jpg"></div>
+				            <div class="item aventura1 col span_1_of_4" data-image="img/demand/06_Galeria_13_Aventura_Saveiro_Cross_Volkswagen.jpg"></div>
+				            <div class="item aventura2 col span_1_of_4" data-image="img/demand/06_Galeria_14_Aventura_Saveiro_Cross_Volkswagen.jpg"></div>
+				            <div class="item aventura3 col span_1_of_4" data-image="img/demand/06_Galeria_15_Aventura_Saveiro_Cross_Volkswagen.jpg"></div>
+				            <div class="item aventura4 col span_1_of_4" data-image="img/demand/06_Galeria_16_Aventura_Saveiro_Cross_Volkswagen.jpg"></div>
+				            <div class="item aventura5 col span_1_of_4" data-image="img/demand/06_Galeria_17_Aventura_Saveiros_Volkswagen.jpg"></div>
+				            <div class="item aventura6 col span_1_of_4" data-image="img/demand/06_Galeria_18_Aventura_Saveiro_Cross_Volkswagen.jpg"></div>
+				            <div class="item aventura7 col span_1_of_4" data-image="img/demand/06_Galeria_19_Aventura_Saveiro_Cross_Volkswagen.jpg"></div>
+				            <div class="item aventura8 col span_1_of_4" data-image="img/demand/06_Galeria_20_Aventura_Saveiro_Cross_Volkswagen.jpg"></div>
+				            <div class="item aventura9 col span_1_of_4" data-image="img/demand/06_Galeria_21_Aventura_Saveiro_Cross_Volkswagen.jpg"></div>
+				            <div class="item aventura10 col span_1_of_4" data-image="img/demand/06_Galeria_22_Aventura_Saveiro_Cross_Volkswagen.jpg"></div>
+				            <div class="item aventura11 col span_1_of_4" data-image="img/demand/06_Galeria_23_Aventura_Saveiro_Cross_Volkswagen.jpg"></div>
+				            <div class="item aventura12 col span_1_of_4" data-image="img/demand/06_Galeria_24_Aventura_Saveiro_Cross_Volkswagen.jpg"></div>
 				        </div>
 				    </div>
 				    <div class="tab" data-tab="acessorios">
 				        <div class="gallery group">
-				            <div class="item item_small acessorios1 col span_1_of_5" data-image="img/acessorios/g/img1.jpg" data-description="capas de chave em silicone"></div>
-				            <div class="item item_small acessorios2 col span_1_of_5" data-image="img/acessorios/g/img2.jpg" data-description="capas de chave em silicone" data-desc-color="FFF"></div>
-				            <div class="item item_small acessorios3 col span_1_of_5" data-image="img/acessorios/g/img3.jpg" data-description="capas de chave em silicone"></div>
-				            <div class="item item_small acessorios4 col span_1_of_5" data-image="img/acessorios/g/img4.jpg" data-description="capas de chave em silicone"></div>
-				            <div class="item item_small acessorios5 col span_1_of_5" data-image="img/acessorios/g/img5.jpg" data-description="capas de chave em silicone"></div>
-				            <div class="item item_small acessorios6 col span_1_of_5" data-image="img/acessorios/g/img6.jpg" data-description="capas de chave em silicone" data-desc-color="FFF"></div>
-				            <div class="item item_small acessorios7 col span_1_of_5" data-image="img/acessorios/g/img7.jpg" data-description="capas de chave em silicone" data-desc-color="FFF"></div>
-				            <div class="item item_small acessorios8 col span_1_of_5" data-image="img/acessorios/g/img8.jpg" data-description="capas de chave em silicone" data-desc-color="FFF"></div>
-				            <div class="item item_small acessorios9 col span_1_of_5" data-image="img/acessorios/g/img9.jpg" data-description="capas de chave em silicone"></div>
-				            <div class="item item_small acessorios10 col span_1_of_5" data-image="img/acessorios/g/img10.jpg" data-description="capas de chave em silicone"></div>
-				            <div class="item item_small acessorios11 col span_1_of_5" data-image="img/acessorios/g/img11.jpg" data-description="capas de chave em silicone"></div>
-				            <div class="item item_small acessorios12 col span_1_of_5" data-image="img/acessorios/g/img12.jpg" data-description="capas de chave em silicone"></div>
-				            <div class="item item_small acessorios13 col span_1_of_5" data-image="img/acessorios/g/img13.jpg" data-description="capas de chave em silicone"></div>
-				            <div class="item item_small acessorios14 col span_1_of_5" data-image="img/acessorios/g/img14.jpg" data-description="capas de chave em silicone" data-desc-color="FFF"></div>
-				            <div class="item item_small acessorios15 col span_1_of_5" data-image="img/acessorios/g/img15.jpg" data-description="capas de chave em silicone"></div>
-				            <div class="item item_small acessorios16 col span_1_of_5" data-image="img/acessorios/g/img16.jpg" data-description="capas de chave em silicone" data-desc-color="FFF"></div>
-				            <div class="item item_small acessorios17 col span_1_of_5" data-image="img/acessorios/g/img17.jpg" data-description="capas de chave em silicone" data-desc-color="FFF"></div>
-				            <div class="item item_small acessorios18 col span_1_of_5" data-image="img/acessorios/g/img18.jpg" data-description="capas de chave em silicone" data-desc-color="FFF"></div>
+				            <div class="item item_small acessorios1 col span_1_of_5" data-image="img/demand/06_Galeria_25_Chaves_Saveiro_Volkswagen.jpg" data-description="capas de chave em silicone"></div>
+				            <div class="item item_small acessorios2 col span_1_of_5" data-image="img/demand/06_Galeria_26_Organizador_Saveiro_Volkswagen.jpg" data-description="capas de chave em silicone" data-desc-color="FFF"></div>
+				            <div class="item item_small acessorios3 col span_1_of_5" data-image="img/demand/06_Galeria_27_Cabo_USB_Saveiro_Volkswagen.jpg" data-description="capas de chave em silicone"></div>
+				            <div class="item item_small acessorios4 col span_1_of_5" data-image="img/demand/06_Galeria_28_Tapete_Saveiro_Volkswagen.jpg" data-description="capas de chave em silicone"></div>
+				            <div class="item item_small acessorios5 col span_1_of_5" data-image="img/demand/06_Galeria_29_Tapete_Saveiro_Volkswagen.jpg" data-description="capas de chave em silicone"></div>
+				            <div class="item item_small acessorios6 col span_1_of_5" data-image="img/demand/06_Galeria_30_Rack_Saveiro_Volkswagen.jpg" data-description="capas de chave em silicone" data-desc-color="FFF"></div>
+				            <div class="item item_small acessorios7 col span_1_of_5" data-image="img/demand/06_Galeria_31_Rack_Saveiro_Volkswagen.jpg" data-description="capas de chave em silicone" data-desc-color="FFF"></div>
+				            <div class="item item_small acessorios8 col span_1_of_5" data-image="img/demand/06_Galeria_32_Soleira_Saveiro_Volkswagen.jpg" data-description="capas de chave em silicone" data-desc-color="FFF"></div>
+				            <div class="item item_small acessorios9 col span_1_of_5" data-image="img/demand/06_Galeria_33_Tampinhas_Saveiro_Volkswagen.jpg" data-description="capas de chave em silicone"></div>
+				            <div class="item item_small acessorios10 col span_1_of_5" data-image="img/demand/06_Galeria_34_Capota_Saveiro_Volkswagen.jpg" data-description="capas de chave em silicone"></div>
+				            <div class="item item_small acessorios11 col span_1_of_5" data-image="img/demand/06_Galeria_35_Alarme_Saveiro_Volkswagen.jpg" data-description="capas de chave em silicone"></div>
+				            <div class="item item_small acessorios12 col span_1_of_5" data-image="img/demand/06_Galeria_36_AutoFalantes_Saveiro_Volkswagen.jpg" data-description="capas de chave em silicone"></div>
+				            <div class="item item_small acessorios13 col span_1_of_5" data-image="img/demand/06_Galeria_37_Bagageiro_Saveiro_Volkswagen.jpg" data-description="capas de chave em silicone"></div>
+				            <div class="item item_small acessorios14 col span_1_of_5" data-image="img/demand/06_Galeria_38_Calha_Saveiro_Volkswagen.jpg" data-description="capas de chave em silicone" data-desc-color="FFF"></div>
+				            <div class="item item_small acessorios15 col span_1_of_5" data-image="img/demand/06_Galeria_39_Cooler_Saveiro_Volkswagen.jpg" data-description="capas de chave em silicone"></div>
+				            <div class="item item_small acessorios16 col span_1_of_5" data-image="img/demand/06_Galeria_40_Pedais_Saveiro_Volkswagen.jpg" data-description="capas de chave em silicone" data-desc-color="FFF"></div>
+				            <div class="item item_small acessorios17 col span_1_of_5" data-image="img/demand/06_Galeria_41_Banco_Saveiro_Volkswagen.jpg" data-description="capas de chave em silicone" data-desc-color="FFF"></div>
+				            <div class="item item_small acessorios18 col span_1_of_5" data-image="img/demand/06_Galeria_42_Roda_Saveiro_Volkswagen.jpg" data-description="capas de chave em silicone" data-desc-color="FFF"></div>
 				        </div>
 				    </div>
 				</div>
@@ -590,6 +1282,8 @@
 						<div class="back" onclick="window.robustManager.back()"></div>
 						<div class="back-texto">VOLTAR</div>
 					</div>
+					<div class="robust-name"></div>
+					<div class="subtitle">MAIS ALTA, MAIS FORTE, MAIS ROBUSTA. MAIS DO QUE NUNCA, PRONTA PRA TUDO.</div>
 				</div>
 			</div>
 		</section>
@@ -601,9 +1295,42 @@
 						<div class="back" onclick="window.crossManager.back()"></div>
 						<div class="back-texto">VOLTAR</div>
 					</div>
+					<div class="cross-name"></div>
+					<div class="subtitle">MAIS ALTA, MAIS FORTE, MAIS CONECTADA. MAIS DO QUE NUNCA, PRONTA PRA TUDO.</div>
 				</div>
 			</div>
 		</section>
+		<div id="saveiro_trabalho_interno" class="tour_interno_container trabalho_interno" style="display:none;">
+			<div class="tour_interno">
+				<div class="cube">
+		            <div id="trabalho_front" class="front"></div>
+		            <div id="trabalho_right"  class="right"></div>
+		            <div id="trabalho_back" class="back"></div>
+		            <div id="trabalho_left" class="left"></div>
+		            <div id="trabalho_top" class="top"></div>
+		            <div id="trabalho_bottom" class="bottom"></div>
+		        </div>
+			</div>
+			<div class="close" onclick="window.tourManager.stopCube()"></div>
+		</div>
+		<div id="saveiro_aventura_interno" class="tour_interno_container aventura_interno" style="display:none;">
+			<div class="tour_interno">
+				<div class="cube">
+		            <div id="aventura_front" class="front"></div>
+		            <div id="aventura_right"  class="right"></div>
+		            <div id="aventura_back" class="back"></div>
+		            <div id="aventura_left" class="left"></div>
+		            <div id="aventura_top" class="top"></div>
+		            <div id="aventura_bottom" class="bottom"></div>
+		        </div>
+			</div>
+			<div class="close" onclick="window.tourManager.stopCube();"></div>
+		</div>
+		<div class="tour-slider tour-slider-transition">
+			<div class="externo bar">EXTERNO</div>
+			<div class="interno bar">INTERNO</div>
+			<div class="handle"></div>
+		</div>
 	</div>
 	
 	<div id="menu" class="menu">
@@ -631,32 +1358,9 @@
 			--><div class="icon-premios"></div><div class="text">PRÊMIOS</div></div>
 		</div>
 	</div>
-	<div id="saveiro_trabalho_interno" class="tour_interno_container" style="display:none;">
-		<div class="tour_interno">
-			<div class="cube">
-	            <div id="trabalho_front" class="front"></div>
-	            <div id="trabalho_right"  class="right"></div>
-	            <div id="trabalho_back" class="back"></div>
-	            <div id="trabalho_left" class="left"></div>
-	            <div id="trabalho_top" class="top"></div>
-	            <div id="trabalho_bottom" class="bottom"></div>
-	        </div>
-		</div>
-		<div class="close" onclick="window.cubeManager.setActive(false);">close</div>
-	</div>
-	<div id="saveiro_aventura_interno" class="tour_interno_container" style="display:none;">
-		<div class="tour_interno">
-			<div class="cube">
-	            <div id="aventura_front" class="front"></div>
-	            <div id="aventura_right"  class="right"></div>
-	            <div id="aventura_back" class="back"></div>
-	            <div id="aventura_left" class="left"></div>
-	            <div id="aventura_top" class="top"></div>
-	            <div id="aventura_bottom" class="bottom"></div>
-	        </div>
-		</div>
-		<div class="close" onclick="window.cubeManager.setActive(false);">close</div>
-	</div>
+
+	<div class="down-arrow" onclick="window.stateMachine.askMove(window.stateMachine.Trigger.NextButtom)"></div>
+	<div id="premios_button" class="premios_button" onclick="window.stateMachine.move(window.stateMachine.Trigger.Premios)"></div>
 	<div class="load load-transition">
 	  <div class="load-gear">
 	    <svg id="yellow" viewbox="0 0 100 100" fill="#ccc">

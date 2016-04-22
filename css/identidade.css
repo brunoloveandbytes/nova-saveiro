@@ -1,7 +1,4 @@
 .identidade{top:0%;}
-/*
-.identidade{top:100%;background-image:url('../img/02_Identidade_01_Fundo_Volkswagen.jpg');}
-*/
 .identidade_content{
     position: absolute;
     left: -640px;
@@ -47,12 +44,6 @@
     background-position: center;
     background-size: contain;
 }
-/*
-.identidade .car-container .car-02{background-image:url('../img/02_Identidade_02_Saveiro_Robust_Volkswagen.png');}
-.identidade .car-container .car-03{background-image:url('../img/02_Identidade_03_Saveiro_Cross_Volkswagen.png');}
-.identidade .car-container .car-04{background-image:url('../img/02_Identidade_04_Saveiro_Robust_Volkswagen.png');}
-.identidade .car-container .car-05{background-image:url('../img/02_Identidade_05_Saveiro_Cross_Volkswagen.png');}
-*/
 .identidade .description{
     font-family: 'vw_textlight';
     position: absolute;

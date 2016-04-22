@@ -159,7 +159,7 @@ html,body{
 	-webkit-tap-highlight-color: rgba(0,0,0,0);
 	font-family: 'vw_textregular', Arial, sans-serif;
 	-webkit-font-smoothing: antialiased;
-	font-size: 16px;
+	font-size: 17px;
 }
 
 .hide{opacity:0;}
@@ -231,7 +231,22 @@ body div{
     width: 100%;
     height: 130px;
     opacity: 0;
-    background-color: #212121;
+    background-color: #111;
+}
+
+.down-arrow{
+  position: absolute;
+  margin-left: 50%;
+  left:-64px;
+  width: 128px;
+  height: 64px;
+  bottom: 25px;
+  background-position: 0% -200%;
+  background-size: 500% 1000%;
+  cursor: pointer;
+}
+.down-arrow:hover{
+  background-position: -100% -200%;
 }
 
 /*controle de altura*/
@@ -456,35 +471,40 @@ body div{
 	opacity: 0;
 	top:0%;
 }
-.cars-home{
-    top:0%;
-}
+
 .home-content{
     position: absolute;
     left: -640px;
-    overflow: hidden;
     width: 1280px;
     height: 100%;
     margin-left: 50%;
 }
-/*
+
 .premios_button{
     position: absolute;
     background-position: 100% 25%;
     background-size: 500% 500%;
     left:0px;
-    bottom:50px;
+    top:250px;
     width: 128px;
     height: 128px;
-    cursor: pointer;
+    opacity: 0;
 }
-*/
+.premios_button.show{
+    cursor: pointer;
+    opacity: 1; 
+}
+
 .home-content .car-button{
     position: absolute;
-    top: 75%;
+    top: 65%;
     width: 180px;
     height: 54px;
     cursor: pointer;
+    opacity:0;
+}
+.home-content .car-button.show{
+    opacity:1; 
 }
 .home-content .car-button .plus{
     position: absolute;
@@ -527,6 +547,9 @@ body div{
         left: -250px;
         width: 500px;
     }
+    .premios_button{top:150px;}
+    .home-content .robust-button{left:-80px;}
+    .home-content .cross-button{right:-80px;}
 }
 
 

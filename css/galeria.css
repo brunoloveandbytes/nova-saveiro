@@ -1,6 +1,5 @@
 
 /* GALLERY */
-.galeria{background-image: url('../img/bg/bg.jpg');}
 
 body, html,
 #light_cube,
@@ -132,49 +131,6 @@ body, html,
     filter: grayscale(0);
 }
 
-.gallery .item.trabalho1{  background-image: url(../img/trabalho/img1.jpg) }
-.gallery .item.trabalho2{  background-image: url(../img/trabalho/img2.jpg) }
-.gallery .item.trabalho3{  background-image: url(../img/trabalho/img3.jpg) }
-.gallery .item.trabalho4{  background-image: url(../img/trabalho/img4.jpg) }
-.gallery .item.trabalho5{  background-image: url(../img/trabalho/img5.jpg) }
-.gallery .item.trabalho6{  background-image: url(../img/trabalho/img6.jpg) }
-.gallery .item.trabalho7{  background-image: url(../img/trabalho/img7.jpg) }
-.gallery .item.trabalho8{  background-image: url(../img/trabalho/img8.jpg) }
-.gallery .item.trabalho9{  background-image: url(../img/trabalho/img9.jpg) }
-.gallery .item.trabalho10{ background-image: url(../img/trabalho/img10.jpg) }
-.gallery .item.trabalho11{ background-image: url(../img/trabalho/img11.jpg) }
-.gallery .item.aventura1{  background-image: url(../img/aventura/img1.jpg) }
-.gallery .item.aventura2{  background-image: url(../img/aventura/img2.jpg) }
-.gallery .item.aventura3{  background-image: url(../img/aventura/img3.jpg) }
-.gallery .item.aventura4{  background-image: url(../img/aventura/img4.jpg) }
-.gallery .item.aventura5{  background-image: url(../img/aventura/img5.jpg) }
-.gallery .item.aventura6{  background-image: url(../img/aventura/img6.jpg) }
-.gallery .item.aventura7{  background-image: url(../img/aventura/img7.jpg) }
-.gallery .item.aventura8{  background-image: url(../img/aventura/img8.jpg) }
-.gallery .item.aventura9{  background-image: url(../img/aventura/img9.jpg) }
-.gallery .item.aventura10{ background-image: url(../img/aventura/img10.jpg) }
-.gallery .item.aventura11{ background-image: url(../img/aventura/img11.jpg) }
-.gallery .item.aventura12{ background-image: url(../img/aventura/img12.jpg) }
-.gallery .item.acessorios1{  background-image: url(../img/acessorios/img1.jpg) }
-.gallery .item.acessorios2{  background-image: url(../img/acessorios/img2.jpg) }
-.gallery .item.acessorios3{  background-image: url(../img/acessorios/img3.jpg) }
-.gallery .item.acessorios4{  background-image: url(../img/acessorios/img4.jpg) }
-.gallery .item.acessorios5{  background-image: url(../img/acessorios/img5.jpg) }
-.gallery .item.acessorios6{  background-image: url(../img/acessorios/img6.jpg) }
-.gallery .item.acessorios7{  background-image: url(../img/acessorios/img7.jpg) }
-.gallery .item.acessorios8{  background-image: url(../img/acessorios/img8.jpg) }
-.gallery .item.acessorios9{  background-image: url(../img/acessorios/img9.jpg) }
-.gallery .item.acessorios10{ background-image: url(../img/acessorios/img10.jpg) }
-.gallery .item.acessorios11{ background-image: url(../img/acessorios/img11.jpg) }
-.gallery .item.acessorios12{ background-image: url(../img/acessorios/img12.jpg) }
-.gallery .item.acessorios13{ background-image: url(../img/acessorios/img13.jpg) }
-.gallery .item.acessorios14{ background-image: url(../img/acessorios/img14.jpg) }
-.gallery .item.acessorios15{ background-image: url(../img/acessorios/img15.jpg) }
-.gallery .item.acessorios16{ background-image: url(../img/acessorios/img16.jpg) }
-.gallery .item.acessorios17{ background-image: url(../img/acessorios/img17.jpg) }
-.gallery .item.acessorios18{ background-image: url(../img/acessorios/img18.jpg) }
-
-
 #vw-tabs .header .wrap .tab{
     -webkit-transition: all 300ms ease;
     -moz-transition: all 300ms ease;
@@ -265,7 +221,6 @@ body, html,
 #vw-tabs .content .wrap,
 #vw-tabs .header .wrap .tab,
 #vw-tabs .header .wrap .tab.active{
-    background-image: url(../img/misc/fill.png);
     background-repeat: repeat-x;
     background-size: auto;
 }
@@ -282,8 +237,8 @@ body, html,
     top:0; right:0;
     width: 64px;
     height: 64px;
-    background-image: url(../img/tiles2.png);
-    background-position: -128px -384px;
+    background-image: url(../img/large/tiles.png);
+    background-position: 0px -192px;
     background-size: 640px;
     cursor: pointer;
 }

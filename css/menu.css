@@ -36,7 +36,6 @@
     position: absolute;
     width: 64px;
     height: 100%;
-    /*background-image: url('../img/tiles.png');*/
     -webkit-background-size: 1000% 1000%;
        -moz-background-size: 1000% 1000%;
          -o-background-size: 1000% 1000%;

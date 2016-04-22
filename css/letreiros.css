@@ -28,7 +28,6 @@
   margin-left:50%;
   left:0%;
   top:68%;
-  background-image: url('../img/gear.png');
   -webkit-background-size: 100% 100%;
      -moz-background-size: 100% 100%;
        -o-background-size: 100% 100%;
@@ -63,7 +62,6 @@
   left:45%;
   height: 39%;
   width: 39%;
-  background-image: url('../img/gear_big.png');
   
 }
 .gear_small{
@@ -71,7 +69,6 @@
   left:24%;
   height: 22%;
   width: 22%;
-  background-image: url('../img/gear_small.png');
 }
 .letreiro-bar{
   position: absolute;
