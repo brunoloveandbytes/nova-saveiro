@@ -47,6 +47,7 @@ $(document).ready(function() {
 																	new AnimatedProperty({'idName':'premios_button','className':'show','classTransitionName':'default-transition','add':true}),
 																	new AnimatedProperty({'idName':'home','className':'show','classTransitionName':'default-transition','add':true}),
 																	new AnimatedProperty({'idName':'menu','className':'show','classTransitionName':'opacity-transition','add':true, 'duration':500}),
+																	new AnimatedProperty({'idName':'premios_button','className':'show','classTransitionName':'default-transition','add':true}),
 																]
 															}),
 															new Transition({
@@ -55,6 +56,7 @@ $(document).ready(function() {
 																"startFunction":function(){
 																	$('#identidade').addClass('hided');
 																	$('#identidade').addClass('onMiddle');
+																	$('#identidade').removeClass('onBottom');
 																},
 																"endFunction":function(){
 																	$('#slide1').addClass('onTop');
@@ -71,7 +73,8 @@ $(document).ready(function() {
 																},
 																"animatedProperties":[
 																	new AnimatedProperty({'idName':'menu','className':'show','classTransitionName':'opacity-transition','add':true, 'duration':500}),
-																	new AnimatedProperty({'idName':'identidade','className':'hided','classTransitionName':'opacity-transition','remove':true})
+																	new AnimatedProperty({'idName':'identidade','className':'hided','classTransitionName':'opacity-transition','remove':true}),
+																	new AnimatedProperty({'idName':'premios_button','className':'show','classTransitionName':'default-transition','add':true}),
 																]
 															}),
 															new Transition({
@@ -80,6 +83,7 @@ $(document).ready(function() {
 																"startFunction":function(){
 																	$('#fatos').addClass('hided');
 																	$('#fatos').addClass('onMiddle');
+																	$('#fatos').removeClass('onBottom');
 																},
 																"endFunction":function(){
 																	$('#slide1').addClass('onTop');
@@ -98,7 +102,8 @@ $(document).ready(function() {
 																},
 																"animatedProperties":[
 																	new AnimatedProperty({'idName':'menu','className':'show','classTransitionName':'opacity-transition','add':true, 'duration':500}),
-																	new AnimatedProperty({'idName':'fatos','className':'hided','classTransitionName':'opacity-transition','remove':true})
+																	new AnimatedProperty({'idName':'fatos','className':'hided','classTransitionName':'opacity-transition','remove':true}),
+																	new AnimatedProperty({'idName':'premios_button','className':'show','classTransitionName':'default-transition','add':true}),
 																]
 															}),
 															new Transition({
@@ -107,6 +112,7 @@ $(document).ready(function() {
 																"startFunction":function(){
 																	$('#versoes').addClass('hided');
 																	$('#versoes').addClass('onMiddle');
+																	$('#versoes').removeClass('onBottom');
 																},
 																"endFunction":function(){
 																	$('#slide1').addClass('onTop');
@@ -127,7 +133,8 @@ $(document).ready(function() {
 																},
 																"animatedProperties":[
 																	new AnimatedProperty({'idName':'menu','className':'show','classTransitionName':'opacity-transition','add':true, 'duration':500}),
-																	new AnimatedProperty({'idName':'versoes','className':'hided','classTransitionName':'opacity-transition','remove':true})
+																	new AnimatedProperty({'idName':'versoes','className':'hided','classTransitionName':'opacity-transition','remove':true}),
+																	new AnimatedProperty({'idName':'premios_button','className':'show','classTransitionName':'default-transition','add':true}),
 																]
 															}),
 															new Transition({
@@ -154,7 +161,8 @@ $(document).ready(function() {
 																},
 																"animatedProperties":[
 																	new AnimatedProperty({'idName':'menu','className':'show','classTransitionName':'opacity-transition','add':true, 'duration':500}),
-																	new AnimatedProperty({'idName':'tour','className':'hided','classTransitionName':'opacity-transition','remove':true})
+																	new AnimatedProperty({'idName':'tour','className':'hided','classTransitionName':'opacity-transition','remove':true}),
+																	new AnimatedProperty({'idName':'premios_button','className':'show','classTransitionName':'default-transition','add':true}),
 																]
 															}),
 															new Transition({
@@ -181,7 +189,8 @@ $(document).ready(function() {
 																},
 																"animatedProperties":[
 																	new AnimatedProperty({'idName':'menu','className':'show','classTransitionName':'opacity-transition','add':true, 'duration':500}),
-																	new AnimatedProperty({'idName':'galeria','className':'hided','classTransitionName':'opacity-transition','remove':true})
+																	new AnimatedProperty({'idName':'galeria','className':'hided','classTransitionName':'opacity-transition','remove':true}),
+																	new AnimatedProperty({'idName':'premios_button','className':'show','classTransitionName':'default-transition','add':true}),
 																]
 															}),
 															new Transition({
@@ -309,11 +318,11 @@ $(document).ready(function() {
 															new Transition({
 																"endStateName":"home",
 																"trigger":Trigger.Next,
-																"endFunction":function(){if(!oldIE)window.history.pushState("", "", '#home');},
 																"animatedProperties":[
 																						new AnimatedProperty({'idName':'blue_car','className':'zoomCar','classTransitionName':'default-transition','remove':true}),
 																						new AnimatedProperty({'idName':'home','className':'show','classTransitionName':'default-transition','add':true}),
-																						new AnimatedProperty({'idName':'menu','className':'show','classTransitionName':'opacity-transition','add':true, 'delay':500, 'duration':900})
+																						new AnimatedProperty({'idName':'menu','className':'show','classTransitionName':'opacity-transition','add':true, 'delay':500, 'duration':900}),
+																						new AnimatedProperty({'idName':'premios_button','className':'show','classTransitionName':'default-transition','add':true}),
 																						]
 															})
 														]
@@ -331,6 +340,7 @@ $(document).ready(function() {
 												window.tagManager.acessouHome();
 												$('.robust-button').addClass('show');
 												$('.cross-button').addClass('show');
+												window.stateMachine.addHash('home');
 											},
 										"transitions":[
 															/*
@@ -348,7 +358,6 @@ $(document).ready(function() {
 															new Transition({
 																"endStateName":"identidade",
 																"trigger":Trigger.Identidade,
-																"endFunction":function(){if(!oldIE)window.history.pushState("", "", '#identidade');},
 																"animatedProperties":[
 																						new AnimatedProperty({'idName':'identidade','className':'onBottom','classTransitionName':'default-transition','remove':true}),
 																						new AnimatedProperty({'idName':'menu-bar','className':'show','classTransitionName':'default-transition','add':true}),
@@ -358,7 +367,6 @@ $(document).ready(function() {
 															new Transition({
 																"endStateName":"identidade",
 																"trigger":Trigger.Next,
-																"endFunction":function(){if(!oldIE)window.history.pushState("", "", '#identidade');},
 																"animatedProperties":[
 																						new AnimatedProperty({'idName':'identidade','className':'onBottom','classTransitionName':'default-transition','remove':true}),
 																						new AnimatedProperty({'idName':'menu-bar','className':'show','classTransitionName':'default-transition','add':true}),
@@ -369,7 +377,6 @@ $(document).ready(function() {
 																"endStateName":"fatos",
 																"trigger":Trigger.Fatos,
 																"endFunction":function(){
-																						if(!oldIE)window.history.pushState("", "", '#fatos');
 																						stateMachine.upSlides(['identidade']);
 																					},
 																"animatedProperties":[
@@ -382,7 +389,6 @@ $(document).ready(function() {
 																"endStateName":"versoes",
 																"trigger":Trigger.Versoes,
 																"endFunction":function(){
-																						if(!oldIE)window.history.pushState("", "", '#versoes');
 																						stateMachine.upSlides(['identidade','fatos']);
 																					},
 																"animatedProperties":[
@@ -395,7 +401,6 @@ $(document).ready(function() {
 																"endStateName":"tour",
 																"trigger":Trigger.Tour,
 																"endFunction":function(){
-																						if(!oldIE)window.history.pushState("", "", '#360');
 																						stateMachine.upSlides(['identidade','fatos','versoes']);
 																					},
 																"animatedProperties":[
@@ -408,7 +413,6 @@ $(document).ready(function() {
 																"endStateName":"galeria",
 																"trigger":Trigger.Galeria,
 																"endFunction":function(){
-																						if(!oldIE)window.history.pushState("", "", '#galeria');
 																						stateMachine.upSlides(['identidade','fatos','versoes','tour']);
 																					},
 																"animatedProperties":[
@@ -421,7 +425,6 @@ $(document).ready(function() {
 																"endStateName":"premios",
 																"trigger":Trigger.Premios,
 																"endFunction":function(){
-																						if(!oldIE)window.history.pushState("", "", '#premios');
 																						stateMachine.upSlides(['identidade','fatos','versoes','tour','galeria']);
 																					},
 																"animatedProperties":[
@@ -434,7 +437,6 @@ $(document).ready(function() {
 																"endStateName":"robust",
 																"trigger":Trigger.Robust,
 																"endFunction":function(){
-																						if(!oldIE)window.history.pushState("", "", '#robust');
 																						stateMachine.upSlides(['identidade','fatos','versoes','tour','galeria','premios']);
 																					},
 																"animatedProperties":[
@@ -447,7 +449,6 @@ $(document).ready(function() {
 																"endStateName":"cross",
 																"trigger":Trigger.Cross,
 																"endFunction":function(){
-																						if(!oldIE)window.history.pushState("", "", '#cross');
 																						stateMachine.upSlides(['identidade','fatos','versoes','tour','galeria','premios','robust']);
 																					},
 																"animatedProperties":[
@@ -461,14 +462,16 @@ $(document).ready(function() {
 		this.states.push(new State({
 										"stateMachine":this,
 										"name":"identidade",
-										"welcomeFunction":function(){window.identidadeManager.start();window.tagManager.acessouPagina("Identidade");},
+										"welcomeFunction":function(){
+											window.identidadeManager.start();window.tagManager.acessouPagina("Identidade");
+											window.stateMachine.addHash('identidade');
+										},
 										"goodbyeFunction":function(){window.identidadeManager.stop();},
 										"stage":5,
 										"transitions":[
 															new Transition({
 																"endStateName":"home",
 																"trigger":Trigger.Home,
-																"endFunction":function(){if(!oldIE)window.history.pushState("", "", '#home');},
 																"animatedProperties":[
 																						new AnimatedProperty({'idName':'identidade','className':'onMiddle','classTransitionName':'default-transition','remove':true}),
 																						new AnimatedProperty({'idName':'menu-bar','className':'show','classTransitionName':'default-transition','remove':true}),
@@ -478,7 +481,6 @@ $(document).ready(function() {
 															new Transition({
 																"endStateName":"fatos",
 																"trigger":Trigger.Fatos,
-																"endFunction":function(){if(!oldIE)window.history.pushState("", "", '#fatos');},
 																"animatedProperties":[
 																						new AnimatedProperty({'idName':'identidade','className':'onTop','classTransitionName':'default-transition','add':true}),
 																						new AnimatedProperty({'idName':'identidade','className':'onMiddle','classTransitionName':'default-transition','remove':true}),
@@ -489,7 +491,6 @@ $(document).ready(function() {
 															new Transition({
 																"endStateName":"fatos",
 																"trigger":Trigger.Next,
-																"endFunction":function(){if(!oldIE)window.history.pushState("", "", '#fatos');},
 																"animatedProperties":[
 																						new AnimatedProperty({'idName':'identidade','className':'onTop','classTransitionName':'default-transition','add':true}),
 																						new AnimatedProperty({'idName':'identidade','className':'onMiddle','classTransitionName':'default-transition','remove':true}),
@@ -501,7 +502,6 @@ $(document).ready(function() {
 																"endStateName":"versoes",
 																"trigger":Trigger.Versoes,
 																"endFunction":function(){
-																						if(!oldIE)window.history.pushState("", "", '#versoes');
 																						stateMachine.upSlides(['fatos']);
 																					},
 																"animatedProperties":[
@@ -515,7 +515,6 @@ $(document).ready(function() {
 																"endStateName":"tour",
 																"trigger":Trigger.Tour,
 																"endFunction":function(){
-																						if(!oldIE)window.history.pushState("", "", '#tour');
 																						stateMachine.upSlides(['fatos','versoes']);
 																					},
 																"animatedProperties":[
@@ -529,7 +528,6 @@ $(document).ready(function() {
 																"endStateName":"galeria",
 																"trigger":Trigger.Galeria,
 																"endFunction":function(){
-																						if(!oldIE)window.history.pushState("", "", '#galeria');
 																						stateMachine.upSlides(['fatos','versoes','tour']);
 																					},
 																"animatedProperties":[
@@ -543,7 +541,6 @@ $(document).ready(function() {
 																"endStateName":"premios",
 																"trigger":Trigger.Premios,
 																"endFunction":function(){
-																						if(!oldIE)window.history.pushState("", "", '#premios');
 																						stateMachine.upSlides(['fatos','versoes','tour','galeria']);
 																					},
 																"animatedProperties":[
@@ -560,13 +557,15 @@ $(document).ready(function() {
 										"name":"fatos",
 										"stage":6,
 										"goodbyeFunction":function(){setTimeout(function(){ window.fatosManager.stop();},1000);},
-										"welcomeFunction":function(){window.tagManager.acessouPagina("Fatos");},
+										"welcomeFunction":function(){
+											window.tagManager.acessouPagina("Fatos");
+											window.stateMachine.addHash('fatos');
+										},
 										"transitions":[
 															new Transition({
 																"endStateName":"home",
 																"trigger":Trigger.Home,
 																"endFunction":function(){
-																							if(!oldIE)window.history.pushState("", "", '#home');
 																							stateMachine.downSlides(['identidade']);
 																						},
 																"animatedProperties":[
@@ -578,7 +577,6 @@ $(document).ready(function() {
 															new Transition({
 																"endStateName":"identidade",
 																"trigger":Trigger.Identidade,
-																"endFunction":function(){if(!oldIE)window.history.pushState("", "", '#identidade');},
 																"animatedProperties":[
 																						new AnimatedProperty({'idName':'identidade','className':'onTop','classTransitionName':'default-transition','remove':true}),
 																						new AnimatedProperty({'idName':'identidade','className':'onMiddle','classTransitionName':'default-transition','add':true}),
@@ -589,7 +587,6 @@ $(document).ready(function() {
 															new Transition({
 																"endStateName":"versoes",
 																"trigger":Trigger.Versoes,
-																"endFunction":function(){if(!oldIE)window.history.pushState("", "", '#versoes');},
 																"animatedProperties":[
 																						new AnimatedProperty({'idName':'fatos','className':'onTop','classTransitionName':'default-transition','add':true}),
 																						new AnimatedProperty({'idName':'fatos','className':'onMiddle','classTransitionName':'default-transition','remove':true}),
@@ -600,7 +597,6 @@ $(document).ready(function() {
 															new Transition({
 																"endStateName":"versoes",
 																"trigger":Trigger.Next,
-																"endFunction":function(){if(!oldIE)window.history.pushState("", "", '#versoes');},
 																"animatedProperties":[
 																						new AnimatedProperty({'idName':'fatos','className':'onTop','classTransitionName':'default-transition','add':true}),
 																						new AnimatedProperty({'idName':'fatos','className':'onMiddle','classTransitionName':'default-transition','remove':true}),
@@ -612,7 +608,6 @@ $(document).ready(function() {
 																"endStateName":"tour",
 																"trigger":Trigger.Tour,
 																"endFunction":function(){
-																						if(!oldIE)window.history.pushState("", "", '#tour');
 																						stateMachine.upSlides(['versoes']);
 																					},
 																"animatedProperties":[
@@ -626,7 +621,6 @@ $(document).ready(function() {
 																"endStateName":"galeria",
 																"trigger":Trigger.Galeria,
 																"endFunction":function(){
-																						if(!oldIE)window.history.pushState("", "", '#galeria');
 																						stateMachine.upSlides(['versoes','tour']);
 																					},
 																"animatedProperties":[
@@ -640,7 +634,6 @@ $(document).ready(function() {
 																"endStateName":"premios",
 																"trigger":Trigger.Premios,
 																"endFunction":function(){
-																						if(!oldIE)window.history.pushState("", "", '#premios');
 																						stateMachine.upSlides(['versoes','tour','galeria']);
 																					},
 																"animatedProperties":[
@@ -655,7 +648,10 @@ $(document).ready(function() {
 		this.states.push(new State({
 										"stateMachine":this,
 										"name":"versoes",
-										"welcomeFunction":function(){window.tagManager.acessouPagina("Versões");window.tagManager.viuVersoes(1);},
+										"welcomeFunction":function(){
+											window.tagManager.acessouPagina("Versões");window.tagManager.viuVersoes(1);
+											window.stateMachine.addHash('versoes');
+										},
 										"goodbyeFunction":function(){setTimeout(function(){ window.versoesManager.stop();},1000);},
 										"stage":7,
 										"transitions":[
@@ -663,7 +659,6 @@ $(document).ready(function() {
 																"endStateName":"home",
 																"trigger":Trigger.Home,
 																"endFunction":function(){
-																						if(!oldIE)window.history.pushState("", "", '#home');
 																						stateMachine.downSlides(['identidade','fatos']);
 																					},
 																"animatedProperties":[
@@ -676,7 +671,6 @@ $(document).ready(function() {
 																"endStateName":"identidade",
 																"trigger":Trigger.Identidade,
 																"endFunction":function(){
-																						if(!oldIE)window.history.pushState("", "", '#identidade');
 																						stateMachine.downSlides(['fatos']);
 																					},
 																"animatedProperties":[
@@ -689,7 +683,6 @@ $(document).ready(function() {
 															new Transition({
 																"endStateName":"fatos",
 																"trigger":Trigger.Fatos,
-																"endFunction":function(){if(!oldIE)window.history.pushState("", "", '#fatos');},
 																"animatedProperties":[
 																						new AnimatedProperty({'idName':'fatos','className':'onTop','classTransitionName':'default-transition','remove':true}),
 																						new AnimatedProperty({'idName':'fatos','className':'onMiddle','classTransitionName':'default-transition','add':true}),
@@ -700,7 +693,6 @@ $(document).ready(function() {
 															new Transition({
 																"endStateName":"tour",
 																"trigger":Trigger.Tour,
-																"endFunction":function(){if(!oldIE)window.history.pushState("", "", '#tour');},
 																"animatedProperties":[
 																						new AnimatedProperty({'idName':'versoes','className':'onMiddle','classTransitionName':'default-transition','remove':true}),
 																						new AnimatedProperty({'idName':'versoes','className':'onTop','classTransitionName':'default-transition','add':true}),
@@ -711,7 +703,6 @@ $(document).ready(function() {
 															new Transition({
 																"endStateName":"tour",
 																"trigger":Trigger.Next,
-																"endFunction":function(){if(!oldIE)window.history.pushState("", "", '#tour');},
 																"animatedProperties":[
 																						new AnimatedProperty({'idName':'versoes','className':'onMiddle','classTransitionName':'default-transition','remove':true}),
 																						new AnimatedProperty({'idName':'versoes','className':'onTop','classTransitionName':'default-transition','add':true}),
@@ -723,7 +714,6 @@ $(document).ready(function() {
 																"endStateName":"galeria",
 																"trigger":Trigger.Galeria,
 																"endFunction":function(){
-																						if(!oldIE)window.history.pushState("", "", '#galeria');
 																						stateMachine.upSlides(['tour']);
 																					},
 																"animatedProperties":[
@@ -737,7 +727,6 @@ $(document).ready(function() {
 																"endStateName":"premios",
 																"trigger":Trigger.Premios,
 																"endFunction":function(){
-																						if(!oldIE)window.history.pushState("", "", '#premios');
 																						stateMachine.upSlides(['tour','galeria']);
 																					},
 																"animatedProperties":[
@@ -753,7 +742,10 @@ $(document).ready(function() {
 										"stateMachine":this,
 										"name":"tour",
 										"stage":9,
-										"welcomeFunction":function(){window.tagManager.acessouPagina("360°");},
+										"welcomeFunction":function(){
+											window.tagManager.acessouPagina("360°");
+											window.stateMachine.addHash('360');
+										},
 										"goodbyeFunction":function(){window.tourManager.stopCube();setTimeout(function(){ window.tourManager.stop();},1000);},
 										"transitions":[
 															new Transition({
@@ -761,7 +753,6 @@ $(document).ready(function() {
 																"trigger":Trigger.Home,
 																"startFunction":function(){$('.tour_sequence').removeClass('onMiddle');$('.tour_principal').addClass('onMiddle');},
 																"endFunction":function(){
-																						if(!oldIE)window.history.pushState("", "", '#home');
 																						stateMachine.downSlides(['identidade','fatos','versoes']);
 																					},
 																"animatedProperties":[
@@ -774,7 +765,6 @@ $(document).ready(function() {
 																"endStateName":"identidade",
 																"trigger":Trigger.Identidade,
 																"endFunction":function(){
-																						if(!oldIE)window.history.pushState("", "", '#identidade');
 																						stateMachine.downSlides(['fatos','versoes']);
 																					},
 																"animatedProperties":[
@@ -788,7 +778,6 @@ $(document).ready(function() {
 																"endStateName":"fatos",
 																"trigger":Trigger.Fatos,
 																"endFunction":function(){
-																						if(!oldIE)window.history.pushState("", "", '#fatos');
 																						stateMachine.downSlides(['versoes']);
 																					},
 																"animatedProperties":[
@@ -801,7 +790,6 @@ $(document).ready(function() {
 															new Transition({
 																"endStateName":"versoes",
 																"trigger":Trigger.Versoes,
-																"endFunction":function(){if(!oldIE)window.history.pushState("", "", '#versoes');},
 																"animatedProperties":[
 																						new AnimatedProperty({'idName':'versoes','className':'onTop','classTransitionName':'default-transition','remove':true}),
 																						new AnimatedProperty({'idName':'versoes','className':'onMiddle','classTransitionName':'default-transition','add':true}),
@@ -812,7 +800,6 @@ $(document).ready(function() {
 															new Transition({
 																"endStateName":"galeria",
 																"trigger":Trigger.Galeria,
-																"endFunction":function(){if(!oldIE)window.history.pushState("", "", '#galeria');},
 																"animatedProperties":[
 																						new AnimatedProperty({'idName':'tour','className':'onMiddle','classTransitionName':'default-transition','remove':true}),
 																						new AnimatedProperty({'idName':'tour','className':'onTop','classTransitionName':'default-transition','add':true}),
@@ -823,7 +810,6 @@ $(document).ready(function() {
 															new Transition({
 																"endStateName":"galeria",
 																"trigger":Trigger.Next,
-																"endFunction":function(){if(!oldIE)window.history.pushState("", "", '#galeria');},
 																"animatedProperties":[
 																						new AnimatedProperty({'idName':'tour','className':'onMiddle','classTransitionName':'default-transition','remove':true}),
 																						new AnimatedProperty({'idName':'tour','className':'onTop','classTransitionName':'default-transition','add':true}),
@@ -835,7 +821,6 @@ $(document).ready(function() {
 																"endStateName":"premios",
 																"trigger":Trigger.Premios,
 																"endFunction":function(){
-																						if(!oldIE)window.history.pushState("", "", '#premios');
 																						stateMachine.upSlides(['galeria']);
 																					},
 																"animatedProperties":[
@@ -852,13 +837,15 @@ $(document).ready(function() {
 										"name":"galeria",
 										"stage":10,
 										"goodbyeFunction":function(){setTimeout(function(){ $('.down-arrow').css('display','inline');}, 1000);  },
-										"welcomeFunction":function(){window.tagManager.acessouPagina("Galeria");$('.down-arrow').css('display','none')},
+										"welcomeFunction":function(){
+											window.tagManager.acessouPagina("Galeria");$('.down-arrow').css('display','none')
+											window.stateMachine.addHash('galeria');
+										},
 										"transitions":[
 															new Transition({
 																"endStateName":"home",
 																"trigger":Trigger.Home,
 																"endFunction":function(){
-																						if(!oldIE)window.history.pushState("", "", '#home');
 																						stateMachine.downSlides(['identidade','fatos','versoes','tour']);
 																					},
 																"animatedProperties":[
@@ -871,7 +858,6 @@ $(document).ready(function() {
 																"endStateName":"identidade",
 																"trigger":Trigger.Identidade,
 																"endFunction":function(){
-																						if(!oldIE)window.history.pushState("", "", '#identidade');
 																						stateMachine.downSlides(['fatos','versoes','tour']);
 																					},
 																"animatedProperties":[
@@ -885,7 +871,6 @@ $(document).ready(function() {
 																"endStateName":"fatos",
 																"trigger":Trigger.Fatos,
 																"endFunction":function(){
-																						if(!oldIE)window.history.pushState("", "", '#fatos');
 																						stateMachine.downSlides(['versoes','tour']);
 																					},
 																"animatedProperties":[
@@ -899,7 +884,6 @@ $(document).ready(function() {
 																"endStateName":"versoes",
 																"trigger":Trigger.Versoes,
 																"endFunction":function(){
-																						if(!oldIE)window.history.pushState("", "", '#versoes');
 																						stateMachine.downSlides(['tour']);
 																					},
 																"animatedProperties":[
@@ -912,7 +896,6 @@ $(document).ready(function() {
 															new Transition({
 																"endStateName":"tour",
 																"trigger":Trigger.Tour,
-																"endFunction":function(){if(!oldIE)window.history.pushState("", "", '#tour');},
 																"animatedProperties":[
 																						new AnimatedProperty({'idName':'tour','className':'onTop','classTransitionName':'default-transition','remove':true}),
 																						new AnimatedProperty({'idName':'tour','className':'onMiddle','classTransitionName':'default-transition','add':true}),
@@ -923,7 +906,6 @@ $(document).ready(function() {
 															new Transition({
 																"endStateName":"premios",
 																"trigger":Trigger.Premios,
-																"endFunction":function(){if(!oldIE)window.history.pushState("", "", '#premios');},
 																"animatedProperties":[
 																						new AnimatedProperty({'idName':'galeria','className':'onTop','classTransitionName':'default-transition','add':true}),
 																						new AnimatedProperty({'idName':'galeria','className':'onMiddle','classTransitionName':'default-transition','remove':true}),
@@ -943,7 +925,6 @@ $(document).ready(function() {
 																"endStateName":"home",
 																"trigger":Trigger.Home,
 																"endFunction":function(){
-																						if(!oldIE)window.history.pushState("", "", '#home');
 																						stateMachine.downSlides(['galeria','tour','versoes','fatos','identidade']);
 																					},
 																"animatedProperties":[
@@ -956,7 +937,6 @@ $(document).ready(function() {
 																"endStateName":"identidade",
 																"trigger":Trigger.Identidade,
 																"endFunction":function(){
-																						if(!oldIE)window.history.pushState("", "", '#identidade');
 																						stateMachine.downSlides(['galeria','tour','versoes','fatos']);
 																					},
 																"animatedProperties":[
@@ -970,7 +950,6 @@ $(document).ready(function() {
 																"endStateName":"fatos",
 																"trigger":Trigger.Fatos,
 																"endFunction":function(){
-																						if(!oldIE)window.history.pushState("", "", '#fatos');
 																						stateMachine.downSlides(['galeria','tour','versoes']);
 																					},
 																"animatedProperties":[
@@ -984,7 +963,6 @@ $(document).ready(function() {
 																"endStateName":"versoes",
 																"trigger":Trigger.Versoes,
 																"endFunction":function(){
-																						if(!oldIE)window.history.pushState("", "", '#versoes');
 																						stateMachine.downSlides(['galeria','tour']);
 																					},
 																"animatedProperties":[
@@ -998,7 +976,6 @@ $(document).ready(function() {
 																"endStateName":"tour",
 																"trigger":Trigger.Tour,
 																"endFunction":function(){
-																						if(!oldIE)window.history.pushState("", "", '#tour');
 																						stateMachine.downSlides(['galeria']);
 																					},
 																"animatedProperties":[
@@ -1011,7 +988,6 @@ $(document).ready(function() {
 															new Transition({
 																"endStateName":"galeria",
 																"trigger":Trigger.Galeria,
-																"endFunction":function(){if(!oldIE)window.history.pushState("", "", '#galeria');},
 																"animatedProperties":[
 																						new AnimatedProperty({'idName':'galeria','className':'onTop','classTransitionName':'default-transition','remove':true}),
 																						new AnimatedProperty({'idName':'galeria','className':'onMiddle','classTransitionName':'default-transition','add':true}),
@@ -1031,7 +1007,6 @@ $(document).ready(function() {
 																"endStateName":"home",
 																"trigger":Trigger.Home,
 																"endFunction":function(){
-																						if(!oldIE)window.history.pushState("", "", '#home');
 																						stateMachine.downSlides(['premios','galeria','tour','versoes','fatos','identidade']);
 																					},
 																"animatedProperties":[
@@ -1044,7 +1019,6 @@ $(document).ready(function() {
 																"endStateName":"identidade",
 																"trigger":Trigger.Identidade,
 																"endFunction":function(){
-																						if(!oldIE)window.history.pushState("", "", '#identidade');
 																						stateMachine.downSlides(['premios','galeria','tour','versoes','fatos']);
 																					},
 																"animatedProperties":[
@@ -1058,7 +1032,6 @@ $(document).ready(function() {
 																"endStateName":"fatos",
 																"trigger":Trigger.Fatos,
 																"endFunction":function(){
-																						if(!oldIE)window.history.pushState("", "", '#fatos');
 																						stateMachine.downSlides(['premios','galeria','tour','versoes']);
 																					},
 																"animatedProperties":[
@@ -1072,7 +1045,6 @@ $(document).ready(function() {
 																"endStateName":"versoes",
 																"trigger":Trigger.Versoes,
 																"endFunction":function(){
-																						if(!oldIE)window.history.pushState("", "", '#versoes');
 																						stateMachine.downSlides(['premios','galeria','tour']);
 																					},
 																"animatedProperties":[
@@ -1086,7 +1058,6 @@ $(document).ready(function() {
 																"endStateName":"tour",
 																"trigger":Trigger.Tour,
 																"endFunction":function(){
-																						if(!oldIE)window.history.pushState("", "", '#tour');
 																						stateMachine.downSlides(['premios','galeria']);
 																					},
 																"animatedProperties":[
@@ -1100,7 +1071,6 @@ $(document).ready(function() {
 																"endStateName":"galeria",
 																"trigger":Trigger.Galeria,
 																"endFunction":function(){
-																						if(!oldIE)window.history.pushState("", "", '#galeria');
 																						stateMachine.downSlides(['premios']);
 																					},
 																"animatedProperties":[
@@ -1113,7 +1083,6 @@ $(document).ready(function() {
 															new Transition({
 																"endStateName":"premios",
 																"trigger":Trigger.Premios,
-																"endFunction":function(){if(!oldIE)window.history.pushState("", "", '#premios');},
 																"animatedProperties":[
 																						new AnimatedProperty({'idName':'premios','className':'onTop','classTransitionName':'default-transition','remove':true}),
 																						new AnimatedProperty({'idName':'premios','className':'onMiddle','classTransitionName':'default-transition','add':true}),
@@ -1133,7 +1102,6 @@ $(document).ready(function() {
 																"endStateName":"home",
 																"trigger":Trigger.Home,
 																"endFunction":function(){
-																						if(!oldIE)window.history.pushState("", "", '#home');
 																						stateMachine.downSlides(['robust','premios','galeria','tour','versoes','fatos','identidade']);
 																					},
 																"animatedProperties":[
@@ -1146,7 +1114,6 @@ $(document).ready(function() {
 																"endStateName":"identidade",
 																"trigger":Trigger.Identidade,
 																"endFunction":function(){
-																						if(!oldIE)window.history.pushState("", "", '#identidade');
 																						stateMachine.downSlides(['robust-slide','premios','galeria','tour','versoes','fatos']);
 																					},
 																"animatedProperties":[
@@ -1160,7 +1127,6 @@ $(document).ready(function() {
 																"endStateName":"fatos",
 																"trigger":Trigger.Fatos,
 																"endFunction":function(){
-																						if(!oldIE)window.history.pushState("", "", '#fatos');
 																						stateMachine.downSlides(['robust-slide','premios','galeria','tour','versoes']);
 																					},
 																"animatedProperties":[
@@ -1174,7 +1140,6 @@ $(document).ready(function() {
 																"endStateName":"versoes",
 																"trigger":Trigger.Versoes,
 																"endFunction":function(){
-																						if(!oldIE)window.history.pushState("", "", '#versoes');
 																						stateMachine.downSlides(['robust-slide','premios','galeria','tour']);
 																					},
 																"animatedProperties":[
@@ -1188,7 +1153,6 @@ $(document).ready(function() {
 																"endStateName":"tour",
 																"trigger":Trigger.Tour,
 																"endFunction":function(){
-																						if(!oldIE)window.history.pushState("", "", '#tour');
 																						stateMachine.downSlides(['robust-slide','premios','galeria']);
 																					},
 																"animatedProperties":[
@@ -1202,7 +1166,6 @@ $(document).ready(function() {
 																"endStateName":"galeria",
 																"trigger":Trigger.Galeria,
 																"endFunction":function(){
-																						if(!oldIE)window.history.pushState("", "", '#galeria');
 																						stateMachine.downSlides(['robust-slide','premios']);
 																					},
 																"animatedProperties":[
@@ -1216,7 +1179,6 @@ $(document).ready(function() {
 																"endStateName":"premios",
 																"trigger":Trigger.Premios,
 																"endFunction":function(){
-																						if(!oldIE)window.history.pushState("", "", '#premios');
 																						stateMachine.downSlides(['robust-slide']);
 																					},
 																"animatedProperties":[
@@ -1306,36 +1268,37 @@ $(document).ready(function() {
 				this.askMove(transition.trigger);
 			}
 		}
+		this.addHash = function(page){
+			if(!oldIE)window.history.pushState("", "", '#!/'+page);
+		}
 		this.switchEntrance = function(){
-			//var page = window.location.href.substring(window.location.href.indexOf("#")+1);
-			/*
 			var page = window.location.href.substring(window.location.href.indexOf("#")+1);
 		    switch(page){
-		    	case "home":
+		    	case "!/home":
 		    		this.askMove(Trigger.Home);
 		    		break;
-		    	case "identidade":
+		    	case "!/identidade":
 		    		this.askMove(Trigger.Identidade);
 		    		break;
-		    	case "fatos":
+		    	case "!/fatos":
 		    		this.askMove(Trigger.Fatos);
 		    		break;
-		    	case "versoes":
+		    	case "!/versoes":
 		    		this.askMove(Trigger.Versoes);
 		    		break;
-		    	case "tour":
+		    	case "!/360":
 		    		this.askMove(Trigger.Tour);
 		    		break;
-		    	case "galeria":
+		    	case "!/galeria":
 		    		this.askMove(Trigger.Galeria);
 		    		break;
 		    	default:
 		    		this.askMove(Trigger.Entrance);
 		    		break;
 		    }
-		    */
 		    
-		    this.askMove(Trigger.Entrance);
+		    
+		    //this.askMove(Trigger.Entrance);
 		}
 		this.upSlides = function(slides){
 			for(var i=0;i<slides.length;i++){

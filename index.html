@@ -9,9 +9,9 @@
 	<script src="js/gtm.js"></script>
 	<script src="js/ismobile.js"></script>
 	<script type="text/javascript">
-		if (isMobile.apple.phone || isMobile.android.phone || isMobile.seven_inch) {
+		//if (isMobile.apple.phone || isMobile.android.phone || isMobile.seven_inch) {
 			window.location="http://novidades.vw.com.br/";
-		}
+		//}
 	</script>
 	<script src="js/image-loader.js"></script>
 	<script src="js/state-machine.js"></script>
@@ -153,7 +153,7 @@
 						<div class="car-05"></div>
 					</div>
 					<div class="saiba-mais" onclick="window.identidadeManager.showDescription()">SAIBA MAIS</div>
-					<div class="description">Com um milhão de unidade produzidas, a Nova Saveiro ainda consegue se superar. Por fora, você encontra um design único mas isso não quer dizer que é é só mais uma picape bonita. A Nova Saveiro é forte e aguenta o tranco do seu trabalho, qualquer que seja o tamanho da carga. Já por dentro, vai ser difícil encontrar um carro com tanto conforto e tecnologia. Com isso a Nova Saveiro consegue melhorar outro desempenho: o seu.
+					<div class="description">Com um milhão de unidade produzidas, a Nova Saveiro ainda consegue se superar. Por fora, você encontra um design único mas isso não quer dizer que é só mais uma picape bonita. A Nova Saveiro é forte e aguenta o tranco do seu trabalho, qualquer que seja o tamanho da carga. Já por dentro, vai ser difícil encontrar um carro com tanto conforto e tecnologia. Com isso a Nova Saveiro consegue melhorar outro desempenho: o seu.
 					</div>
 					<div class="close basic-icon" onclick="window.identidadeManager.closeDescription()"></div>
 				</div>
@@ -167,8 +167,8 @@
 					<div class="fatos-menu"></div>
 					<div class="frame grid" style="left:0%;"></div>
 					<div class="frame frame0" style="left:0%;">
-						<div class="main-text">TEM MUITA COISA SENDO DITA SOBRE A SAVEIRO POR AÍ.</div>
-						<div class="sub-text">Chegou a hora de você ouvir o que realmente é verdade. Escolha um dos cinco fatos sobre a Saveiro e descubra porque essa é uma das picapes mais vendidas do Brasil.</div>
+						<div class="main-text">TEM MUITA COISA SENDO DITA SOBRE A NOVA SAVEIRO POR AÍ.</div>
+						<div class="sub-text">Chegou a hora de você ouvir o que realmente é verdade. Escolha um dos cinco fatos sobre a Nova Saveiro e descubra porque essa é uma das picapes mais vendidas do Brasil.</div>
 						<div class="middle-bar"></div>
 						<div class="buttons">
 							<div class="suspensao fatos-buttom" onclick="window.fatosManager.goToIdx(1);">
@@ -215,7 +215,7 @@ sistema de suspensão Helicoidal. Suas molas reforçadas fazem cargas pesadas se
 						<div class="frame-title"><span>#3 </span>ABS OFF-ROAD</div>
 						<div class="texto text-lu">
 							Outra inovação do utilitário são os freios ABS com função off-road.
-Esse recurso, que você só encontra na Nova Saveiro, reforça os freios em estradas não pavimentadas.
+Esse recurso reforça os freios em estradas não pavimentadas.
 						</div>
 
 						<div class="texto text-rd">
@@ -226,7 +226,7 @@ Esse recurso, que você só encontra na Nova Saveiro, reforça os freios em estr
 						<div class="frame-title"><span>#4 </span>HDC</div>
 						<div class="texto text-lu">
 							<span class="super-title">CONTROLE DE DESCIDA</span> </br>
-Quem trabalha com transporte de carga, sabe: a picape deve segurar o tranco e manter tudo no lugar. É isso que o HDC faz e a Nova Saveiro é a primeira picape a ter esse recurso no Brasil. Quando estiver descendo em baixa velocidade, um toque no botão off-road e os freios são acionados automaticamente. Sua descida fica mais segura
+Quem trabalha com transporte de carga, sabe: a picape deve segurar o tranco e manter tudo no lugar. É isso que o HDC faz e a Nova Saveiro é a primeira picape compacta a ter esse recurso no Brasil. Quando estiver descendo em baixa velocidade, um toque no botão off-road e os freios são acionados automaticamente. Sua descida fica mais segura
 e controlada, não importando a condição do piso. 
 						</div>
 					</div>
@@ -249,7 +249,7 @@ Com esse sistema de “tração inteligente” automático, você não precisa a
 						<div class="title"><span class="main-title">ROBUST</span><span class="sub-title"> CABINE SIMPLES</span></div>
 						<div class="container">
 							<div class="up-car default-fast-transition">
-								<div class="image-car"></div>
+								<div class="image-car" onclick="$('.versoes_content').toggleClass('on-description');"></div>
 							</div>
 							<div class="down-car default-fast-transition">
 								<div class="images-car">
@@ -350,7 +350,7 @@ Com esse sistema de “tração inteligente” automático, você não precisa a
 						<div class="title"><span class="main-title">TRENDLINE</span><span class="sub-title"> CABINE SIMPLES</span></div>
 						<div class="container">
 							<div class="up-car default-fast-transition">
-								<div class="image-car"></div>
+								<div class="image-car" onclick="$('.versoes_content').toggleClass('on-description');"></div>
 							</div>
 							<div class="down-car default-fast-transition">
 								<div class="images-car">
@@ -453,7 +453,7 @@ Com esse sistema de “tração inteligente” automático, você não precisa a
 						<div class="title"><span class="main-title">TRENDLINE</span><span class="sub-title"> CABINE ESTENDIDA</span></div>
 						<div class="container">
 							<div class="up-car default-fast-transition">
-								<div class="image-car"></div>
+								<div class="image-car" onclick="$('.versoes_content').toggleClass('on-description');"></div>
 							</div>
 							<div class="down-car default-fast-transition">
 								<div class="images-car">
@@ -556,7 +556,7 @@ Com esse sistema de “tração inteligente” automático, você não precisa a
 						<div class="title"><span class="main-title">TRENDLINE</span><span class="sub-title"> CABINE DUPLA</span></div>
 						<div class="container">
 							<div class="up-car default-fast-transition">
-								<div class="image-car"></div>
+								<div class="image-car" onclick="$('.versoes_content').toggleClass('on-description');"></div>
 							</div>
 							<div class="down-car default-fast-transition">
 								<div class="images-car">
@@ -663,7 +663,7 @@ Com esse sistema de “tração inteligente” automático, você não precisa a
 						<div class="title"><span class="main-title">HIGHLINE</span><span class="sub-title"> CABINE DUPLA</span></div>
 						<div class="container">
 							<div class="up-car default-fast-transition">
-								<div class="image-car"></div>
+								<div class="image-car" onclick="$('.versoes_content').toggleClass('on-description');"></div>
 							</div>
 							<div class="down-car default-fast-transition">
 								<div class="images-car">
@@ -789,7 +789,7 @@ Com esse sistema de “tração inteligente” automático, você não precisa a
 						<div class="title"><span class="main-title">CROSS</span><span class="sub-title"> CABINE DUPLA</span></div>
 						<div class="container">
 							<div class="up-car default-fast-transition">
-								<div class="image-car"></div>
+								<div class="image-car" onclick="$('.versoes_content').toggleClass('on-description');"></div>
 							</div>
 							<div class="down-car default-fast-transition">
 								<div class="images-car">
@@ -874,7 +874,7 @@ Com esse sistema de “tração inteligente” automático, você não precisa a
 						<div class="title"><span class="main-title">CROSS</span><span class="sub-title"> CABINE ESTENDIDA</span></div>
 						<div class="container">
 							<div class="up-car default-fast-transition">
-								<div class="image-car"></div>
+								<div class="image-car" onclick="$('.versoes_content').toggleClass('on-description');"></div>
 							</div>
 							<div class="down-car default-fast-transition">
 								<div class="images-car">
@@ -997,7 +997,7 @@ Com esse sistema de “tração inteligente” automático, você não precisa a
 			<div class="tour_desktop">
 				<div class="tour_principal onMiddle default-transition">
 					<div class="tour_title">EXCELÊNCIA EM QUALQUER FINALIDADE.</div>
-					<div class="tour_description">A Saveiro traz a verdadeira combinação entre trabalho e diversão. Se por fora, ela é robusta e forte, é por dentro que seu design exclusivo agrega conforto e praticidade. Um dia cansativo fica um pouco melhor quando você volta pra casa num interior como esse. Escolha a versão e veja por si mesmo.</div>
+					<div class="tour_description">A Nova Saveiro traz a verdadeira combinação entre trabalho e diversão. Se por fora, ela é robusta e forte, é por dentro que seu design exclusivo agrega conforto e praticidade. Um dia cansativo fica um pouco melhor quando você volta pra casa num interior como esse. Escolha a versão e veja por si mesmo.</div>
 					<div class="tour_cars">
 						<div class="tour_left_car" onclick="window.tourManager.goToSequence(window.tourManager.Car.Trabalho);window.tagManager.viu360('TRABALHO');"></div>
 						<div class="tour_right_car" onclick="window.tourManager.goToSequence(window.tourManager.Car.Aventura);window.tagManager.viu360('AVENTURA');"></div>
@@ -1183,56 +1183,56 @@ Com esse sistema de “tração inteligente” automático, você não precisa a
 				<div id="vw-tabs">
 				    <div class="tab" data-tab="trabalho">
 				    	<div class="gallery group">
-							<div class="item trabalho1 col span_1_of_4" data-image="img/demand/06_Galeria_01_Trabalho_Saveiro_Robust_Volkswagen.jpg" ></div>
-							<div class="item trabalho2 col span_1_of_4" data-image="img/demand/06_Galeria_02_Trabalho_Saveiro_Robust_Volkswagen.jpg" ></div>
-							<div class="item trabalho3 col span_1_of_4" data-image="img/demand/06_Galeria_03_Trabalho_Saveiro_Robust_Volkswagen.jpg" ></div>
-							<div class="item trabalho4 col span_1_of_4" data-image="img/demand/06_Galeria_04_Trabalho_Saveiro_Robust_Volkswagen.jpg" ></div>
-							<div class="item trabalho5 col span_1_of_4" data-image="img/demand/06_Galeria_05_Trabalho_Saveiro_Trend_Volkswagen.jpg" ></div>
-							<div class="item trabalho6 col span_1_of_4" data-image="img/demand/06_Galeria_06_Trabalho_Saveiro_Trend_Volkswagen.jpg" ></div>
-							<div class="item trabalho7 col span_1_of_4" data-image="img/demand/06_Galeria_07_Trabalho_Saveiro_Trend_Volkswagen.jpg" ></div>
-							<div class="item trabalho8 col span_1_of_4" data-image="img/demand/06_Galeria_08_Trabalho_Saveiro_Trend_Volkswagen.jpg" ></div>
-							<div class="item trabalho9 col span_1_of_4" data-image="img/demand/06_Galeria_09_Trabalho_Saveiro_Highline_Volkswagen.jpg" ></div>
-							<div class="item trabalho10 col span_1_of_4" data-image="img/demand/06_Galeria_10_Trabalho_Saveiro_Highline_Volkswagen.jpg" ></div>
-							<div class="item trabalho11 col span_1_of_4" data-image="img/demand/06_Galeria_11_Trabalho_Saveiro_Highline_Volkswagen.jpg" ></div>
-							<div class="item trabalho12 col span_1_of_4" data-image="img/demand/06_Galeria_12_Trabalho_Saveiros_Volkswagen.jpg" ></div>
+							<div class="item trabalho1 col span_1_of_4" data-image="img/large/06_Galeria_01_Trabalho_Saveiro_Robust_Volkswagen.jpg" ></div>
+							<div class="item trabalho2 col span_1_of_4" data-image="img/large/06_Galeria_02_Trabalho_Saveiro_Robust_Volkswagen.jpg" ></div>
+							<div class="item trabalho3 col span_1_of_4" data-image="img/large/06_Galeria_03_Trabalho_Saveiro_Robust_Volkswagen.jpg" ></div>
+							<div class="item trabalho4 col span_1_of_4" data-image="img/large/06_Galeria_04_Trabalho_Saveiro_Robust_Volkswagen.jpg" ></div>
+							<div class="item trabalho5 col span_1_of_4" data-image="img/large/06_Galeria_05_Trabalho_Saveiro_Trend_Volkswagen.jpg" ></div>
+							<div class="item trabalho6 col span_1_of_4" data-image="img/large/06_Galeria_06_Trabalho_Saveiro_Trend_Volkswagen.jpg" ></div>
+							<div class="item trabalho7 col span_1_of_4" data-image="img/large/06_Galeria_07_Trabalho_Saveiro_Trend_Volkswagen.jpg" ></div>
+							<div class="item trabalho8 col span_1_of_4" data-image="img/large/06_Galeria_08_Trabalho_Saveiro_Trend_Volkswagen.jpg" ></div>
+							<div class="item trabalho9 col span_1_of_4" data-image="img/large/06_Galeria_09_Trabalho_Saveiro_Highline_Volkswagen.jpg" ></div>
+							<div class="item trabalho10 col span_1_of_4" data-image="img/large/06_Galeria_10_Trabalho_Saveiro_Highline_Volkswagen.jpg" ></div>
+							<div class="item trabalho11 col span_1_of_4" data-image="img/large/06_Galeria_11_Trabalho_Saveiro_Highline_Volkswagen.jpg" ></div>
+							<div class="item trabalho12 col span_1_of_4" data-image="img/large/06_Galeria_12_Trabalho_Saveiros_Volkswagen.jpg" ></div>
 						</div>
 				    </div>
 				    <div class="tab" data-tab="aventura">
 				        <div class="gallery group">
-				            <div class="item aventura1 col span_1_of_4" data-image="img/demand/06_Galeria_13_Aventura_Saveiro_Cross_Volkswagen.jpg"></div>
-				            <div class="item aventura2 col span_1_of_4" data-image="img/demand/06_Galeria_14_Aventura_Saveiro_Cross_Volkswagen.jpg"></div>
-				            <div class="item aventura3 col span_1_of_4" data-image="img/demand/06_Galeria_15_Aventura_Saveiro_Cross_Volkswagen.jpg"></div>
-				            <div class="item aventura4 col span_1_of_4" data-image="img/demand/06_Galeria_16_Aventura_Saveiro_Cross_Volkswagen.jpg"></div>
-				            <div class="item aventura5 col span_1_of_4" data-image="img/demand/06_Galeria_17_Aventura_Saveiros_Volkswagen.jpg"></div>
-				            <div class="item aventura6 col span_1_of_4" data-image="img/demand/06_Galeria_18_Aventura_Saveiro_Cross_Volkswagen.jpg"></div>
-				            <div class="item aventura7 col span_1_of_4" data-image="img/demand/06_Galeria_19_Aventura_Saveiro_Cross_Volkswagen.jpg"></div>
-				            <div class="item aventura8 col span_1_of_4" data-image="img/demand/06_Galeria_20_Aventura_Saveiro_Cross_Volkswagen.jpg"></div>
-				            <div class="item aventura9 col span_1_of_4" data-image="img/demand/06_Galeria_21_Aventura_Saveiro_Cross_Volkswagen.jpg"></div>
-				            <div class="item aventura10 col span_1_of_4" data-image="img/demand/06_Galeria_22_Aventura_Saveiro_Cross_Volkswagen.jpg"></div>
-				            <div class="item aventura11 col span_1_of_4" data-image="img/demand/06_Galeria_23_Aventura_Saveiro_Cross_Volkswagen.jpg"></div>
-				            <div class="item aventura12 col span_1_of_4" data-image="img/demand/06_Galeria_24_Aventura_Saveiro_Cross_Volkswagen.jpg"></div>
+				            <div class="item aventura1 col span_1_of_4" data-image="img/large/06_Galeria_13_Aventura_Saveiro_Cross_Volkswagen.jpg"></div>
+				            <div class="item aventura2 col span_1_of_4" data-image="img/large/06_Galeria_14_Aventura_Saveiro_Cross_Volkswagen.jpg"></div>
+				            <div class="item aventura3 col span_1_of_4" data-image="img/large/06_Galeria_15_Aventura_Saveiro_Cross_Volkswagen.jpg"></div>
+				            <div class="item aventura4 col span_1_of_4" data-image="img/large/06_Galeria_16_Aventura_Saveiro_Cross_Volkswagen.jpg"></div>
+				            <div class="item aventura5 col span_1_of_4" data-image="img/large/06_Galeria_17_Aventura_Saveiros_Volkswagen.jpg"></div>
+				            <div class="item aventura6 col span_1_of_4" data-image="img/large/06_Galeria_18_Aventura_Saveiro_Cross_Volkswagen.jpg"></div>
+				            <div class="item aventura7 col span_1_of_4" data-image="img/large/06_Galeria_19_Aventura_Saveiro_Cross_Volkswagen.jpg"></div>
+				            <div class="item aventura8 col span_1_of_4" data-image="img/large/06_Galeria_20_Aventura_Saveiro_Cross_Volkswagen.jpg"></div>
+				            <div class="item aventura9 col span_1_of_4" data-image="img/large/06_Galeria_21_Aventura_Saveiro_Cross_Volkswagen.jpg"></div>
+				            <div class="item aventura10 col span_1_of_4" data-image="img/large/06_Galeria_22_Aventura_Saveiro_Cross_Volkswagen.jpg"></div>
+				            <div class="item aventura11 col span_1_of_4" data-image="img/large/06_Galeria_23_Aventura_Saveiro_Cross_Volkswagen.jpg"></div>
+				            <div class="item aventura12 col span_1_of_4" data-image="img/large/06_Galeria_24_Aventura_Saveiro_Cross_Volkswagen.jpg"></div>
 				        </div>
 				    </div>
 				    <div class="tab" data-tab="acessorios">
 				        <div class="gallery group">
-				            <div class="item item_small acessorios1 col span_1_of_5" data-image="img/demand/06_Galeria_25_Chaves_Saveiro_Volkswagen.jpg" data-description="capas de chave em silicone"></div>
-				            <div class="item item_small acessorios2 col span_1_of_5" data-image="img/demand/06_Galeria_26_Organizador_Saveiro_Volkswagen.jpg" data-description="capas de chave em silicone" data-desc-color="FFF"></div>
-				            <div class="item item_small acessorios3 col span_1_of_5" data-image="img/demand/06_Galeria_27_Cabo_USB_Saveiro_Volkswagen.jpg" data-description="capas de chave em silicone"></div>
-				            <div class="item item_small acessorios4 col span_1_of_5" data-image="img/demand/06_Galeria_28_Tapete_Saveiro_Volkswagen.jpg" data-description="capas de chave em silicone"></div>
-				            <div class="item item_small acessorios5 col span_1_of_5" data-image="img/demand/06_Galeria_29_Tapete_Saveiro_Volkswagen.jpg" data-description="capas de chave em silicone"></div>
-				            <div class="item item_small acessorios6 col span_1_of_5" data-image="img/demand/06_Galeria_30_Rack_Saveiro_Volkswagen.jpg" data-description="capas de chave em silicone" data-desc-color="FFF"></div>
-				            <div class="item item_small acessorios7 col span_1_of_5" data-image="img/demand/06_Galeria_31_Rack_Saveiro_Volkswagen.jpg" data-description="capas de chave em silicone" data-desc-color="FFF"></div>
-				            <div class="item item_small acessorios8 col span_1_of_5" data-image="img/demand/06_Galeria_32_Soleira_Saveiro_Volkswagen.jpg" data-description="capas de chave em silicone" data-desc-color="FFF"></div>
-				            <div class="item item_small acessorios9 col span_1_of_5" data-image="img/demand/06_Galeria_33_Tampinhas_Saveiro_Volkswagen.jpg" data-description="capas de chave em silicone"></div>
-				            <div class="item item_small acessorios10 col span_1_of_5" data-image="img/demand/06_Galeria_34_Capota_Saveiro_Volkswagen.jpg" data-description="capas de chave em silicone"></div>
-				            <div class="item item_small acessorios11 col span_1_of_5" data-image="img/demand/06_Galeria_35_Alarme_Saveiro_Volkswagen.jpg" data-description="capas de chave em silicone"></div>
-				            <div class="item item_small acessorios12 col span_1_of_5" data-image="img/demand/06_Galeria_36_AutoFalantes_Saveiro_Volkswagen.jpg" data-description="capas de chave em silicone"></div>
-				            <div class="item item_small acessorios13 col span_1_of_5" data-image="img/demand/06_Galeria_37_Bagageiro_Saveiro_Volkswagen.jpg" data-description="capas de chave em silicone"></div>
-				            <div class="item item_small acessorios14 col span_1_of_5" data-image="img/demand/06_Galeria_38_Calha_Saveiro_Volkswagen.jpg" data-description="capas de chave em silicone" data-desc-color="FFF"></div>
-				            <div class="item item_small acessorios15 col span_1_of_5" data-image="img/demand/06_Galeria_39_Cooler_Saveiro_Volkswagen.jpg" data-description="capas de chave em silicone"></div>
-				            <div class="item item_small acessorios16 col span_1_of_5" data-image="img/demand/06_Galeria_40_Pedais_Saveiro_Volkswagen.jpg" data-description="capas de chave em silicone" data-desc-color="FFF"></div>
-				            <div class="item item_small acessorios17 col span_1_of_5" data-image="img/demand/06_Galeria_41_Banco_Saveiro_Volkswagen.jpg" data-description="capas de chave em silicone" data-desc-color="FFF"></div>
-				            <div class="item item_small acessorios18 col span_1_of_5" data-image="img/demand/06_Galeria_42_Roda_Saveiro_Volkswagen.jpg" data-description="capas de chave em silicone" data-desc-color="FFF"></div>
+				            <div class="item item_small acessorios1 col span_1_of_5" data-image="img/large/06_Galeria_25_Chaves_Saveiro_Volkswagen.jpg" data-description="Capas de chave em silicone"></div>
+				            <div class="item item_small acessorios2 col span_1_of_5" data-image="img/large/06_Galeria_26_Organizador_Saveiro_Volkswagen.jpg" data-description="Bolsa organizadora" data-desc-color="FFF"></div>
+				            <div data-desc-color="00a3e2" class="item item_small acessorios3 col span_1_of_5" data-image="img/large/06_Galeria_27_Cabo_USB_Saveiro_Volkswagen.jpg" data-description="Cabo flat Mini USB de sincronismo e carregamento para dispositivos android"></div>
+				            <div data-desc-color="00a3e2" class="item item_small acessorios4 col span_1_of_5" data-image="img/large/06_Galeria_28_Tapete_Saveiro_Volkswagen.jpg" data-description="Tapete de carpete"></div>
+				            <div data-desc-color="00a3e2" class="item item_small acessorios5 col span_1_of_5" data-image="img/large/06_Galeria_29_Tapete_Saveiro_Volkswagen.jpg" data-description="Tapete de PVC reciclado"></div>
+				            <div class="item item_small acessorios6 col span_1_of_5" data-image="img/large/06_Galeria_30_Rack_Saveiro_Volkswagen.jpg" data-description="Porta Prancha. Aplicável em conjunto com Travessa de Teto" data-desc-color="FFF"></div>
+				            <div data-desc-color="00a3e2" class="item item_small acessorios7 col span_1_of_5" data-image="img/large/06_Galeria_31_Rack_Saveiro_Volkswagen.jpg" data-description="Porta-bicicleta com chave de travamento. Aplicável em conjunto com Travessa de Teto" data-desc-color="FFF"></div>
+				            <div class="item item_small acessorios8 col span_1_of_5" data-image="img/large/06_Galeria_32_Soleira_Saveiro_Volkswagen.jpg" data-description="Adesivo de soleira em alumínio"></div>
+				            <div class="item item_small acessorios9 col span_1_of_5" data-image="img/large/06_Galeria_33_Tampinhas_Saveiro_Volkswagen.jpg" data-description="Tampa de válvulas"></div>
+				            <div data-desc-color="00a3e2" class="item item_small acessorios10 col span_1_of_5" data-image="img/large/06_Galeria_34_Capota_Saveiro_Volkswagen.jpg" data-description="Capota marítima"></div>
+				            <div class="item item_small acessorios11 col span_1_of_5" data-image="img/large/06_Galeria_35_Alarme_Saveiro_Volkswagen.jpg" data-description="Alarmes"></div>
+				            <div class="item item_small acessorios12 col span_1_of_5" data-image="img/large/06_Galeria_36_AutoFalantes_Saveiro_Volkswagen.jpg" data-description="Alto-falantes 50WRMS"></div>
+				            <div class="item item_small acessorios13 col span_1_of_5" data-image="img/large/06_Galeria_37_Bagageiro_Saveiro_Volkswagen.jpg" data-description="Baú de teto capacidade de 370 litros"></div>
+				            <div data-desc-color="00a3e2" class="item item_small acessorios14 col span_1_of_5" data-image="img/large/06_Galeria_38_Calha_Saveiro_Volkswagen.jpg" data-description="Calhas de chuva" data-desc-color="FFF"></div>
+				            <div class="item item_small acessorios15 col span_1_of_5" data-image="img/large/06_Galeria_39_Cooler_Saveiro_Volkswagen.jpg" data-description="Cooler térmico quente e frio"></div>
+				            <div class="item item_small acessorios16 col span_1_of_5" data-image="img/large/06_Galeria_40_Pedais_Saveiro_Volkswagen.jpg" data-description="Jogo de pedais de aço escovado e borracha antiderrapante" data-desc-color="FFF"></div>
+				            <div class="item item_small acessorios17 col span_1_of_5" data-image="img/large/06_Galeria_41_Banco_Saveiro_Volkswagen.jpg" data-description="Bancos de Couro"></div>
+				            <div class="item item_small acessorios18 col span_1_of_5" data-image="img/large/06_Galeria_42_Roda_Saveiro_Volkswagen.jpg" data-description="Roda de liga leve aro 15" data-desc-color="FFF"></div>
 				        </div>
 				    </div>
 				</div>
