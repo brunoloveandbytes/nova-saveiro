@@ -38,6 +38,17 @@ $(document).ready(function() {
 		lastMousePosition.x = null;
 	});
 
+	$('.tour-vinheta').mousemove(function(e){
+		if(mousedown > 0){
+		  if(lastMousePosition.x != null){
+		    drag.x += e.clientX - lastMousePosition.x;
+		    drag.verify();
+		  }else{
+		  	drag.x = e.clientX;
+		  }
+		  lastMousePosition.x = e.clientX;
+		}
+	});
 	$('.tour-slider').mousemove(function(e){
 		if(mousedown > 0){
 		  if(lastMousePosition.x != null){
@@ -50,10 +61,12 @@ $(document).ready(function() {
 		}
 	});
 
-	$('.tour-slider').mouseleave(function() {
-		mousedown=0;
-		lastMousePosition.x = null;
+
+	$('.tour-vinheta').mouseleave(function() {
+	 	mousedown=0;
+	 	lastMousePosition.x = null;
 	});
+	
 	$('.tour-slider').mouseup(function(){
 		mousedown=0;
 		lastMousePosition.x = null;
@@ -74,6 +87,18 @@ $(document).ready(function() {
 				$('#tour_trabalho_sequence').addClass('from-side');
 			}
 		}
+		this.backFromSequence = function(car){
+			$('.tour_principal').addClass('onMiddle');
+			setTimeout(function(){ $('.tour_sequence').removeClass('onMiddle'); }, 1000);
+			$('.tour-slider').removeClass('show-slider');
+			if(car == this.Car.Aventura){
+				$('#tour_aventura_sequence').removeClass('from-side');
+			}else{
+				$('#tour_trabalho_sequence').removeClass('from-side');
+			}
+			setTimeout(function(){ this.restartSlider(); }, 1000);
+			
+		}
 		this.setIndex = function(idx){
 			if(idx>totalImgs){
 				if(!window.cubeManager.isActive()){
@@ -86,7 +111,6 @@ $(document).ready(function() {
 					window.cubeManager.setCubeName('saveiro_trabalho_interno');
 					$('#saveiro_trabalho_interno').css('display','inline');
 				}
-				
 			}else{
 				if(window.cubeManager.isActive()){
 					window.cubeManager.setActive(false);
@@ -109,6 +133,11 @@ $(document).ready(function() {
 				}else{
 					$('.trabalho_car_item'+this.currentIdx).css('left','0%');
 				}	
+			}
+
+			if(idx<=1){
+				//this.backFromSequence(this.currentCar);
+				//this.restartSlider();
 			}
 		}
 		this.restartSlider = function(){

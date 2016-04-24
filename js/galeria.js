@@ -1,3 +1,42 @@
+
+$(document).ready(function() {
+
+	var GalleryManager = function(){
+		this.stop = function(){
+			var $header  = $("#vw-tabs .header");
+			var $content  = $("#vw-tabs .content");
+			//alert($header.length);
+			$header.find('.tab').removeClass('active');
+			$header.find('.tab:nth-child(' + tab + ')').addClass('active');
+			$content.children('.wrap').removeClass('visible');
+			$content.children('.wrap:nth-child(' + tab + ')').addClass('visible');
+		}
+		this.setTab = function(){
+			function setTab(tab){
+				if(tab == 3){
+					$('.up-arrow').addClass('show');
+				}else{
+					$('.up-arrow').removeClass('show');
+				}
+				$('.gallery > .item').animateOneByOne({css:{ opacity:'0' }, duration: 0, interval: 0});
+				$content.children('.wrap').removeClass('visible');
+				$content.children('.wrap:nth-child(' + tab + ')').addClass('visible');
+				$header.find('.tab').removeClass('active');
+				$header.find('.tab:nth-child(' + tab + ')').addClass('active');
+				$('.visible .gallery > .item').animateOneByOne({
+			        css:{ opacity:'1' },
+		            duration: 500,
+		            interval:-440
+			    });
+			}
+		}
+		
+	}
+	var galleryManager = new GalleryManager();
+	window.galleryManager = galleryManager;
+});
+
+
 /*
  * Jquery AnimateOneByOne
  * Author:             Devlart (Louis Frayard)
@@ -44,6 +83,11 @@ $.fn.tabs = function(options){
 	var $tab  = $this.children(".header").find(".tab");
 
 	function setTab(tab){
+		if(tab == 3){
+			$('.up-arrow').addClass('show');
+		}else{
+			$('.up-arrow').removeClass('show');
+		}
 		$('.gallery > .item').animateOneByOne({css:{ opacity:'0' }, duration: 0, interval: 0});
 		$content.children('.wrap').removeClass('visible');
 		$content.children('.wrap:nth-child(' + tab + ')').addClass('visible');
@@ -64,14 +108,16 @@ $.fn.tabs = function(options){
 };
 
 $('#vw-tabs').tabs({tab:1});
-
+var currentGalleryIdx= 0;
+var currentGalleryParent = null;
 // GALLERY
 $.fn.lightbox = function(){
 	var html = '';
 	var dataImage = $(this).attr('data-image');
-
+	currentGalleryIdx = $(this).index();
+	currentGalleryParent = $(this).parent();
 	html += '<div class="lightbox lightbox_bg">';
-	html += '<div class="wrap"><div class="close"></div></div>';
+	html += '<div class="wrap"><div class="arrow left-arrow"></div><div class="close"></div><div class="arrow right-arrow"></div></div>';
 	html += '</div>';
 
 	$('#vw-tabs').parent().append(html);
@@ -83,6 +129,26 @@ $.fn.lightbox = function(){
 		if($(e.target).is('div.lightbox') || $(e.target).is('div.close')){
 			$(".lightbox").remove();
 		}
+	});
+
+	$('.lightbox .left-arrow').on("click", function(e){
+		var total = currentGalleryParent.children().length;
+		currentGalleryIdx--;
+		if(currentGalleryIdx < 0){
+			currentGalleryIdx = total - 1;
+		}
+		var imageName = $(currentGalleryParent.children()[currentGalleryIdx]).attr('data-image');
+		$(".lightbox").css("background-image", "url(" + imageName + ")");
+	});
+
+	$('.lightbox .right-arrow').on("click", function(e){
+		var total = currentGalleryParent.children().length;
+		currentGalleryIdx++;
+		if(currentGalleryIdx >= total){
+			currentGalleryIdx = 0;
+		}
+		var imageName = $(currentGalleryParent.children()[currentGalleryIdx]).attr('data-image');
+		$(".lightbox").css("background-image", "url(" + imageName + ")");
 	});
 
 	return this;
@@ -99,7 +165,13 @@ $(".gallery .item:not(.item_small)").on("click", function(){
 
 $(window).resize(function(){
 	$(".lightbox").remove();
-	var marginBottom = Math.ceil(parseFloat($(currentView).css("marginBottom").replace("px","")));
+	var marginBottom;
+	var marginLeft;
+	if($(currentView)){
+		marginBottom = Math.ceil(parseFloat($(currentView).css("marginBottom").replace("px","")));
+	    marginLeft = Math.ceil(parseFloat($(currentView).css("marginLeft").replace("px","")));
+	}
+	//marginBottom = Math.ceil(parseFloat($(currentView).css("marginBottom").replace("px","")));
 	var marginLeft = Math.ceil(parseFloat($(currentView).css("marginLeft").replace("px","")));
 	var x = $(currentView).position().left + marginLeft;
 	var y = $(currentView).position().top;

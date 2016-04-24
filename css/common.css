@@ -233,20 +233,59 @@ body div{
     opacity: 0;
     background-color: #111;
 }
+.menu-bar-fix{
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 100px;
+  opacity: 1;
+  background: -moz-linear-gradient(top,  #111111 0%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  #111111 0%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  #111111 0%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FF111111', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+}
 
-.down-arrow{
+.vertical-arrow{
   position: absolute;
   margin-left: 50%;
   left:-64px;
   width: 128px;
   height: 64px;
   bottom: 25px;
-  background-position: 0% -200%;
   background-size: 500% 1000%;
   cursor: pointer;
 }
+.down-arrow{
+  background-position: 0% -200%;
+  visibility: hidden;
+  opacity:0;
+}
 .down-arrow:hover{
   background-position: -100% -200%;
+}
+.down-arrow.show{
+  opacity: 1;
+  visibility: visible;
+}
+.up-arrow{
+  background-position: 0% -700%;
+  visibility: hidden;
+  opacity:0;
+  bottom: 75px;
+}
+.up-arrow:hover{
+  background-position: -100% -700%;
+}
+.up-arrow.show{
+  opacity: 1;
+  visibility: visible;
+}
+
+.arrow-transition{
+  -webkit-transition: visibility 500ms, opacity 500ms linear;
+   -moz-transition: visibility 500ms, opacity 500ms linear;
+     -o-transition: visibility 500ms, opacity 500ms linear;
+        transition: visibility 500ms, opacity 500ms linear;
 }
 
 /*controle de altura*/

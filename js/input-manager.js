@@ -72,10 +72,15 @@ $(document).ready(function() {
 			if(!window.stateMachine.onAnimation){
 				if(delta > 0){
 					//goToPrev();
-					window.stateMachine.askMove(window.stateMachine.Trigger.Previews);
+					if(!$('.versoes_content').hasClass('on-description')){
+						window.stateMachine.askMove(window.stateMachine.Trigger.Previews);	
+					}
+					
 				}else if(delta < 0){
 					//goToNext();
-					window.stateMachine.askMove(window.stateMachine.Trigger.Next);
+					if(!$('.versoes_content').hasClass('on-description')){
+						window.stateMachine.askMove(window.stateMachine.Trigger.Next);
+					}
 				}
 			}
 			lastScrollRefresh = Date.now();

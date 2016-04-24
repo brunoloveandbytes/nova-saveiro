@@ -84,6 +84,7 @@ $(document).ready(function() {
 		stages = new StagesCreator({'imageLoader':this, 'readyFunction':function(){}, 'classes':[
 																		{'className':'slide1','imgName':'00_Intro_01_Colheita_Volkswagen.jpg','sizes':{'ll': 48,'lm': 36,'ls': 20,'lmi':140,'hl':224,'hm':160,'hs': 84,'hmi':140}},
 																		{'className':'down-arrow','imgName':'tiles.png','sizes':{'ll':140,'lm':140,'ls':140,'lmi':140,'hl':140,'hm':140,'hs':140,'hmi':140}},
+																		{'className':'up-arrow','imgName':'tiles.png','sizes':{'ll':140,'lm':140,'ls':140,'lmi':140,'hl':140,'hm':140,'hs':140,'hmi':140}},
 																		{'className':'letreiro .gear','imgName':'gear.png','sizes':{'ll': 48,'lm': 36,'ls': 20,'lmi':140,'hl':224,'hm':160,'hs': 84,'hmi':140}},
 																		{'className':'gear_big','imgName':'gear_big.png','sizes':{'ll': 48,'lm': 36,'ls': 20,'lmi':140,'hl':224,'hm':160,'hs': 84,'hmi':140}},
 																		{'className':'gear_small','imgName':'gear_small.png','sizes':{'ll': 48,'lm': 36,'ls': 20,'lmi':140,'hl':224,'hm':160,'hs': 84,'hmi':140}},
@@ -109,7 +110,28 @@ $(document).ready(function() {
 																		{'className':'premios_button','imgName':'tiles.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}}
 																	]});
 		this.microStages.push(stages.micro);this.smallStages.push(stages.small);this.mediumStages.push(stages.medium);this.largeStages.push(stages.large);
+
 		//Stage 05
+		stages = new StagesCreator({'imageLoader':this, 'readyFunction':function(){}, 'classes':[
+																		{'className':'robust-slide','imgName':'robust_screen.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'robust-slide .robust-name','imgName':'saveiro_robust_name.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'robust-slide .back','imgName':'tiles.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'cross-slide','imgName':'cross_screen.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'cross-slide .cross-name','imgName':'saveiro_cross_name.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'cross-slide .back','imgName':'tiles.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																	]});
+		this.microStages.push(stages.micro);this.smallStages.push(stages.small);this.mediumStages.push(stages.medium);this.largeStages.push(stages.large);
+		//Stage 06
+		stages = new StagesCreator({'imageLoader':this, 'readyFunction':function(){}, 'classes':[
+																		{'className':'premios','imgName':'02_Identidade_01_Fundo_Volkswagen.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'premios .back','imgName':'tiles.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'premio-auto .left-image','imgName':'premios_auto_esporte.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'premio-quatro .left-image','imgName':'premios_quatro_rodas.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'premio-auto .tabela','imgName':'tabela_auto_esporte.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'premio-quatro .tabela','imgName':'tabela_quatro_rodas.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																	]});
+
+		//Stage 07
 		stages = new StagesCreator({'imageLoader':this, 'readyFunction':function(){}, 'classes':[
 																		{'className':'identidade','imgName':'02_Identidade_01_Fundo_Volkswagen.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
 																		{'className':'identidade .car-02','imgName':'02_Identidade_02_Saveiro_Robust_Volkswagen.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
@@ -118,16 +140,16 @@ $(document).ready(function() {
 																		{'className':'identidade .car-05','imgName':'02_Identidade_05_Saveiro_Cross_Volkswagen.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}}
 																	]});
 		this.microStages.push(stages.micro);this.smallStages.push(stages.small);this.mediumStages.push(stages.medium);this.largeStages.push(stages.large);
-		//Stage 06
+		//Stage 08
 		stages = new StagesCreator({'imageLoader':this, 'readyFunction':function(){}, 'classes':[
 																		{'className':'fatos','imgName':'02_Identidade_01_Fundo_Volkswagen.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
 																		{'className':'fatos .arrow','imgName':'tiles.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
 																		{'className':'fatos .grid','imgName':'fatos_grid.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
-																		{'className':'fatos .frame1','imgName':'fatos_frame_1.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
-																		{'className':'fatos .frame2','imgName':'fatos_frame_2.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
-																		{'className':'fatos .frame3','imgName':'fatos_frame_3.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
-																		{'className':'fatos .frame4','imgName':'fatos_frame_4.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
-																		{'className':'fatos .frame5','imgName':'fatos_frame_5.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'fatos .frame1 .car-image','imgName':'fatos_frame_1.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'fatos .frame2 .car-image','imgName':'fatos_frame_2.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'fatos .frame3 .car-image','imgName':'fatos_frame_3.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'fatos .frame4 .car-image','imgName':'fatos_frame_4.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'fatos .frame5 .car-image','imgName':'fatos_frame_5.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
 																		{'className':'fatos .suspensao .icon','imgName':'fatos_suspensao.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
 																		{'className':'fatos .desempenho .icon','imgName':'fatos_desempenho.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
 																		{'className':'fatos .abs .icon','imgName':'fatos_abs.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
@@ -135,7 +157,7 @@ $(document).ready(function() {
 																		{'className':'fatos .eds .icon','imgName':'fatos_eds.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
 																	]});
 		this.microStages.push(stages.micro);this.smallStages.push(stages.small);this.mediumStages.push(stages.medium);this.largeStages.push(stages.large);
-		//Stage 07
+		//Stage 09
 		stages = new StagesCreator({'imageLoader':this, 'readyFunction':function(){}, 'classes':[
 																		{'className':'versoes','imgName':'02_Identidade_01_Fundo_Volkswagen.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
 																		{'className':'versoes .plus','imgName':'tiles.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
@@ -160,7 +182,6 @@ $(document).ready(function() {
 																		{'className':'car2 .image-left-car','imgName':'04_Versoes_21_Saveiro_Trend_CS_Volkswagen.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
 																		{'className':'car2 .image-middle-car','imgName':'04_Versoes_22_Saveiro_Trend_CS_Volkswagen.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
 																		{'className':'car2 .image-right-car','imgName':'04_Versoes_23_Saveiro_Trend_CS_Volkswagen.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
-																		
 																		{'className':'car3 .image-left-car','imgName':'04_Versoes_24_Saveiro_Trend_CE_Volkswagen.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
 																		{'className':'car3 .image-middle-car','imgName':'04_Versoes_25_Saveiro_Trend_CE_Volkswagen.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
 																		{'className':'car3 .image-right-car','imgName':'04_Versoes_26_Saveiro_Trend_CE_Volkswagen.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
@@ -170,17 +191,19 @@ $(document).ready(function() {
 																		{'className':'car5 .image-left-car','imgName':'04_Versoes_15_Saveiro_Highline_Volkswagen.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
 																		{'className':'car5 .image-middle-car','imgName':'04_Versoes_16_Saveiro_Highline_Volkswagen.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
 																		{'className':'car5 .image-right-car','imgName':'04_Versoes_17_Saveiro_Highline_Volkswagen.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
-																		{'className':'car6 .image-left-car','imgName':'04_Versoes_29_Saveiro_Cross_Volkswagen.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
-																		{'className':'car6 .image-middle-car','imgName':'04_Versoes_19_Saveiro_Cross_Volkswagen.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
-																		{'className':'car6 .image-right-car','imgName':'04_Versoes_20_Saveiro_Cross_Volkswagen.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
-																		{'className':'car7 .image-left-car','imgName':'04_Versoes_18_Saveiro_Cross_Volkswagen.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
-																		{'className':'car7 .image-middle-car','imgName':'04_Versoes_27_Saveiro_Cross_Volkswagen.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
-																		{'className':'car7 .image-right-car','imgName':'04_Versoes_28_Saveiro_Cross_Volkswagen.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'car6 .image-left-car','imgName':'04_Versoes_18_Saveiro_Cross_Volkswagen.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'car6 .image-middle-car','imgName':'04_Versoes_27_Saveiro_Cross_Volkswagen.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'car6 .image-right-car','imgName':'04_Versoes_28_Saveiro_Cross_Volkswagen.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'car7 .image-left-car','imgName':'04_Versoes_29_Saveiro_Cross_Volkswagen.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'car7 .image-middle-car','imgName':'04_Versoes_19_Saveiro_Cross_Volkswagen.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'car7 .image-right-car','imgName':'04_Versoes_20_Saveiro_Cross_Volkswagen.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
 																	]});
 		this.microStages.push(stages.micro);this.smallStages.push(stages.small);this.mediumStages.push(stages.medium);this.largeStages.push(stages.large);
-		//Stage 08
+		//Stage 10
 		stages = new StagesCreator({'imageLoader':this, 'readyFunction':function(){}, 'classes':[
 																		{'className':'tour','imgName':'05_360_01_Fundo.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'tour-vinheta','imgName':'05_360_01_Fundo.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'tour_sequence .back','imgName':'tiles.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
 																		{'className':'tour_left_car','imgName':'car_trabalho.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
 																		{'className':'tour_right_car','imgName':'car_aventura.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
 																		{'className':'trabalho_car_item1','imgName':'05_360_02_Saveiro_Trend_Volkswagen_00000.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
@@ -339,7 +362,7 @@ $(document).ready(function() {
 																		{'className':'tour-slider .handle','imgName':'tiles.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
 																	]});
 		this.microStages.push(stages.micro);this.smallStages.push(stages.small);this.mediumStages.push(stages.medium);this.largeStages.push(stages.large);
-		//Stage 09
+		//Stage 11
 		stages = new StagesCreator({'imageLoader':this, 'readyFunction':function(){}, 'classes':[
 																		
 																		{'className':'tour_interno_container .close','imgName':'tiles.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
@@ -357,7 +380,7 @@ $(document).ready(function() {
 																		{'className':'trabalho_interno .cube .bottom','imgName':'05_360_05_Saveiro_Trend_Volkswagen_Down.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
 																	]});
 		this.microStages.push(stages.micro);this.smallStages.push(stages.small);this.mediumStages.push(stages.medium);this.largeStages.push(stages.large);
-		//Stage 10
+		//Stage 12
 		stages = new StagesCreator({'imageLoader':this, 'readyFunction':function(){}, 'classes':[
 																		{'className':'galeria','imgName':'02_Identidade_01_Fundo_Volkswagen.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
 																		{'className':'header .wrap .tab.active','imgName':'fill.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
@@ -408,25 +431,7 @@ $(document).ready(function() {
 																	]});
 		this.microStages.push(stages.micro);this.smallStages.push(stages.small);this.mediumStages.push(stages.medium);this.largeStages.push(stages.large);
 		
-		//Stage 11
-		stages = new StagesCreator({'imageLoader':this, 'readyFunction':function(){}, 'classes':[
-																		{'className':'robust-slide','imgName':'robust_screen.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
-																		{'className':'robust-slide .robust-name','imgName':'saveiro_robust_name.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
-																		{'className':'robust-slide .back','imgName':'tiles.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
-																		{'className':'cross-slide','imgName':'cross_screen.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
-																		{'className':'cross-slide .cross-name','imgName':'saveiro_cross_name.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
-																		{'className':'cross-slide .back','imgName':'tiles.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
-																	]});
-		this.microStages.push(stages.micro);this.smallStages.push(stages.small);this.mediumStages.push(stages.medium);this.largeStages.push(stages.large);
-		//Stage 12
-		stages = new StagesCreator({'imageLoader':this, 'readyFunction':function(){}, 'classes':[
-																		{'className':'premios','imgName':'02_Identidade_01_Fundo_Volkswagen.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
-																		{'className':'premios .back','imgName':'tiles.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
-																		{'className':'premio-auto .left-image','imgName':'premios_auto_esporte.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
-																		{'className':'premio-quatro .left-image','imgName':'premios_quatro_rodas.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
-																		{'className':'premio-auto .tabela','imgName':'tabela_auto_esporte.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
-																		{'className':'premio-quatro .tabela','imgName':'tabela_quatro_rodas.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
-																	]});
+		
 		this.microStages.push(stages.micro);this.smallStages.push(stages.small);this.mediumStages.push(stages.medium);this.largeStages.push(stages.large);
 		
 		switch(size){

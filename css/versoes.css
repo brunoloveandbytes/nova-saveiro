@@ -326,6 +326,11 @@
     letter-spacing: 3px;
     border: 2px solid #fff;
 }
+.versoes .interessado:hover{
+    color: #00a4e3;
+    border: 2px solid #00a4e3;
+}
+
 .versoes .versoes_content.on-description .ruler{visibility: hidden;opacity:0;}
 .versoes .versoes_content.on-description .arrow{visibility: hidden;opacity:0;}
 .versoes .versoes_content.on-description .up-car{top:-100%;}

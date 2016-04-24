@@ -28,7 +28,8 @@ body, html,
     position: relative;
     display: table;
     max-width: 1200px;
-    height: 100%;
+    top:0px;
+    bottom:60px;
     width: 100%;
     overflow: hidden;
     margin: 0 auto;
@@ -37,6 +38,9 @@ body, html,
 #vw-tabs .content{
     height: 80%;
 }
+
+
+
 #vw-tabs .content .wrap,
 #vw-tabs .content .wrap .gallery{
     height: 100%;
@@ -48,6 +52,7 @@ body, html,
     top:0;left:0;
     cursor: pointer;
     background-position: center;
+    background-color: #111;
 }
 #vw-tabs .content .wrap .alpha_b{
     position: absolute;
@@ -246,6 +251,22 @@ body, html,
     top:20px;
     right:20px;
 }
+
+.lightbox .wrap .arrow{
+    position: absolute;
+    width: 64px;
+    height: 192px;
+    background-image: url(../img/large/tiles.png);
+    background-size: 640px 640px;
+    cursor: pointer;
+    top: 50%;
+    transform: translate(0px,-96px);
+}
+.lightbox .wrap .left-arrow{left: 0px;background-position: 0px -256px;}
+.lightbox .wrap .left-arrow:hover{background-position: -64px -256px;}
+.lightbox .wrap .right-arrow{right: 0px;background-position: -128px -256px;}
+.lightbox .wrap .right-arrow:hover{background-position: -192px -256px;}
+
 #vw-tabs .content .desc_cube{
     position: absolute;
     width: 100%;
@@ -253,6 +274,9 @@ body, html,
     left: 0; bottom: 0;
     font-size: 0.8em;
     padding: 10px;
+    background-color: rgba(0,0,0,0.5);
+    text-align: center;
+    color:#fff;
 }
 
 @media only screen and (max-width: 960px){
@@ -326,3 +350,61 @@ body, html,
     #vw-tabs .header{ font-size: 56px }
     #vw-tabs .content{ overflow: scroll;width: 100%; }
 }
+
+.list-social{
+    position: absolute;
+    right: 10px;
+    bottom: 14px;
+    padding: 0;
+    margin: 0;
+}
+.list-social li{
+    float: left;
+    display: inline;
+    margin-left: 10px;
+}
+.list-social li a {
+    width: 25px;
+    height: 26px;
+    display: block;
+    text-indent: -999999px;
+    background-image: url(../img/large/sprite-social.jpg);
+    background-repeat: no-repeat;
+}
+.list-social li a.lnk-twitter{background-position: 0 0;}
+.list-social li a.lnk-youtube{background-position: -25px 0;}
+.list-social li a.lnk-facebook{background-position: -50px 0;}
+.list-social li a.lnk-instagram{background-position: -75px 0;}
+.list-social li a.lnk-linkedin{background-position: -100px 0;}
+.list-social li a.lnk-googleplus{background-position: -125px 0;}
+.list-social li a.lnk-snapchat{background-position: -150px 0;width:75px;}
+
+ul.list-link{
+    padding-left: 0px;
+}
+ul.list-link.copy{
+    padding-left: 5px;
+}
+
+.list-link li{
+    display: inline-block;
+    display: inline;
+    margin: 0 5px;
+    font-family: 'vw_headregular';
+    font-size: 11px;
+    color: #65646d;
+}
+.list-link li a{
+    color: #65646d;
+    text-decoration: none;
+    padding: 0 0 0 10px;
+    border-left: 1px solid #3d3d3d;
+}
+.list-link {
+    display: inline-block;
+}
+
+
+.footer{position: absolute;bottom: 0px;
+    min-height: 54px;width: 100%;background-color:#fff;}
+    

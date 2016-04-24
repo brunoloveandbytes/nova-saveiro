@@ -12,7 +12,7 @@ $(document).ready(function() {
 			currentIdx = idx;
 			$('.fatos .frame'+currentIdx).css('left','0%');
 			this.setArrows();
-			if(currentIdx > 0) tagManager.viuFatos(currentIdx);
+			if(currentIdx > 0)tagManager.viuFatos(currentIdx);
 		}
 		this.goToRight = function(){
 			$('.fatos .frame'+currentIdx).css('left','100%');
@@ -35,6 +35,7 @@ $(document).ready(function() {
 			if(currentIdx > 0) tagManager.viuFatos(currentIdx);
 		}
 		this.setArrows = function(){
+
 			if(currentIdx == 0){
 				$('.fatos .left-arrow').css('display','none');
 			}else{
@@ -45,6 +46,13 @@ $(document).ready(function() {
 			}else{
 				$('.fatos .right-arrow').css('display','inline');
 			}
+
+			if(currentIdx == 0 || currentIdx == 5){
+				$('.down-arrow').addClass('show');
+			}else{
+				$('.down-arrow').removeClass('show');
+			}
+
 		}
 		this.stop = function(){
 			this.goToIdx(0);

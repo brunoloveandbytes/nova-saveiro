@@ -1,6 +1,12 @@
 
 $(document).ready(function() {
-
+	var mouseCubeDown = 0;
+	document.body.onmousedown = function() { 
+	  ++mouseCubeDown;
+	}
+	document.body.onmouseup = function() {
+	  --mouseCubeDown;
+	}
 	var CubeManager = function(){
 		this.enabled = false;
 		this.cubeName=null;
@@ -57,13 +63,15 @@ $(document).ready(function() {
 	function handleMouseMove(event) {
 		event = event || window.event; // IE-ism
 		var deltaX,deltaY;
-		
-		if(lastPosition){
-			deltaX = event.pageX - lastPosition.pageX;
-			deltaY = event.pageY - lastPosition.pageY;
-			rotation3d.y += velocity*deltaX;
-			rotation3d.x -= velocity*deltaY;
+		if(mouseCubeDown){
+			if(lastPosition){
+				deltaX = event.pageX - lastPosition.pageX;
+				deltaY = event.pageY - lastPosition.pageY;
+				rotation3d.y += velocity*deltaX;
+				rotation3d.x -= velocity*deltaY;
+			}
 		}
+		
 		if(rotation3d.x > 45) rotation3d.x = 45;
 		if(rotation3d.x < -45) rotation3d.x = -45;
 		lastPosition = event;

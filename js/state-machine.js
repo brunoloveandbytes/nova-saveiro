@@ -81,9 +81,10 @@ $(document).ready(function() {
 																"endStateName":"fatos",
 																"trigger":Trigger.Fatos,
 																"startFunction":function(){
-																	$('#fatos').addClass('hided');
+																	$('#fatos').addClass('hide');
 																	$('#fatos').addClass('onMiddle');
 																	$('#fatos').removeClass('onBottom');
+																	$('#menu-bar').addClass('show');
 																},
 																"endFunction":function(){
 																	$('#slide1').addClass('onTop');
@@ -96,13 +97,12 @@ $(document).ready(function() {
 																	$('#rotational').addClass('rotate');
 																	$('#blue_car').removeClass('zoomCar');
 																	$('#home').addClass('show');
-																	$('#menu-bar').addClass('show');
 																	$('#identidade').removeClass('onBottom');
 																	$('#identidade').addClass('onTop');
 																},
 																"animatedProperties":[
 																	new AnimatedProperty({'idName':'menu','className':'show','classTransitionName':'opacity-transition','add':true, 'duration':500}),
-																	new AnimatedProperty({'idName':'fatos','className':'hided','classTransitionName':'opacity-transition','remove':true}),
+																	new AnimatedProperty({'idName':'fatos','className':'hide','classTransitionName':'opacity-transition','remove':true}),
 																	new AnimatedProperty({'idName':'premios_button','className':'show','classTransitionName':'default-transition','add':true}),
 																]
 															}),
@@ -110,7 +110,7 @@ $(document).ready(function() {
 																"endStateName":"versoes",
 																"trigger":Trigger.Versoes,
 																"startFunction":function(){
-																	$('#versoes').addClass('hided');
+																	$('#versoes').addClass('hide');
 																	$('#versoes').addClass('onMiddle');
 																	$('#versoes').removeClass('onBottom');
 																},
@@ -133,7 +133,7 @@ $(document).ready(function() {
 																},
 																"animatedProperties":[
 																	new AnimatedProperty({'idName':'menu','className':'show','classTransitionName':'opacity-transition','add':true, 'duration':500}),
-																	new AnimatedProperty({'idName':'versoes','className':'hided','classTransitionName':'opacity-transition','remove':true}),
+																	new AnimatedProperty({'idName':'versoes','className':'hide','classTransitionName':'opacity-transition','remove':true}),
 																	new AnimatedProperty({'idName':'premios_button','className':'show','classTransitionName':'default-transition','add':true}),
 																]
 															}),
@@ -141,7 +141,7 @@ $(document).ready(function() {
 																"endStateName":"tour",
 																"trigger":Trigger.Tour,
 																"startFunction":function(){
-																	$('#tour').addClass('hided');
+																	$('#tour').addClass('hide');
 																	$('#tour').addClass('onMiddle');
 																	$('#tour').removeClass('onBottom');
 																},
@@ -161,7 +161,7 @@ $(document).ready(function() {
 																},
 																"animatedProperties":[
 																	new AnimatedProperty({'idName':'menu','className':'show','classTransitionName':'opacity-transition','add':true, 'duration':500}),
-																	new AnimatedProperty({'idName':'tour','className':'hided','classTransitionName':'opacity-transition','remove':true}),
+																	new AnimatedProperty({'idName':'tour','className':'hide','classTransitionName':'opacity-transition','remove':true}),
 																	new AnimatedProperty({'idName':'premios_button','className':'show','classTransitionName':'default-transition','add':true}),
 																]
 															}),
@@ -335,12 +335,14 @@ $(document).ready(function() {
 										"goodbyeFunction":function(){
 												$('.robust-button').removeClass('show');
 												$('.cross-button').removeClass('show');
+												$(".icon-home").parent().removeClass('selected');
 											},
 										"welcomeFunction":function(){
 												window.tagManager.acessouHome();
 												$('.robust-button').addClass('show');
 												$('.cross-button').addClass('show');
 												window.stateMachine.addHash('home');
+												$(".icon-home").parent().addClass('selected');
 											},
 										"transitions":[
 															/*
@@ -465,13 +467,26 @@ $(document).ready(function() {
 										"welcomeFunction":function(){
 											window.identidadeManager.start();window.tagManager.acessouPagina("Identidade");
 											window.stateMachine.addHash('identidade');
+											$(".icon-identidade").parent().addClass('selected');
 										},
-										"goodbyeFunction":function(){window.identidadeManager.stop();},
-										"stage":5,
+										"goodbyeFunction":function(){
+											window.identidadeManager.stop();
+											$(".icon-identidade").parent().removeClass('selected');
+										},
+										"stage":7,
 										"transitions":[
 															new Transition({
 																"endStateName":"home",
 																"trigger":Trigger.Home,
+																"animatedProperties":[
+																						new AnimatedProperty({'idName':'identidade','className':'onMiddle','classTransitionName':'default-transition','remove':true}),
+																						new AnimatedProperty({'idName':'menu-bar','className':'show','classTransitionName':'default-transition','remove':true}),
+																						new AnimatedProperty({'idName':'identidade','className':'onBottom','classTransitionName':'default-transition','add':true})
+																						]
+															}),
+															new Transition({
+																"endStateName":"home",
+																"trigger":Trigger.Previews,
 																"animatedProperties":[
 																						new AnimatedProperty({'idName':'identidade','className':'onMiddle','classTransitionName':'default-transition','remove':true}),
 																						new AnimatedProperty({'idName':'menu-bar','className':'show','classTransitionName':'default-transition','remove':true}),
@@ -555,11 +570,15 @@ $(document).ready(function() {
 		this.states.push(new State({
 										"stateMachine":this,
 										"name":"fatos",
-										"stage":6,
-										"goodbyeFunction":function(){setTimeout(function(){ window.fatosManager.stop();},1000);},
+										"stage":8,
+										"goodbyeFunction":function(){
+											setTimeout(function(){ window.fatosManager.stop();},1000);
+											$(".icon-fatos").parent().removeClass('selected');
+										},
 										"welcomeFunction":function(){
 											window.tagManager.acessouPagina("Fatos");
 											window.stateMachine.addHash('fatos');
+											$(".icon-fatos").parent().addClass('selected');
 										},
 										"transitions":[
 															new Transition({
@@ -577,6 +596,16 @@ $(document).ready(function() {
 															new Transition({
 																"endStateName":"identidade",
 																"trigger":Trigger.Identidade,
+																"animatedProperties":[
+																						new AnimatedProperty({'idName':'identidade','className':'onTop','classTransitionName':'default-transition','remove':true}),
+																						new AnimatedProperty({'idName':'identidade','className':'onMiddle','classTransitionName':'default-transition','add':true}),
+																						new AnimatedProperty({'idName':'fatos','className':'onMiddle','classTransitionName':'default-transition','remove':true}),
+																						new AnimatedProperty({'idName':'fatos','className':'onBottom','classTransitionName':'default-transition','add':true})
+																						]
+															}),
+															new Transition({
+																"endStateName":"identidade",
+																"trigger":Trigger.Previews,
 																"animatedProperties":[
 																						new AnimatedProperty({'idName':'identidade','className':'onTop','classTransitionName':'default-transition','remove':true}),
 																						new AnimatedProperty({'idName':'identidade','className':'onMiddle','classTransitionName':'default-transition','add':true}),
@@ -651,9 +680,16 @@ $(document).ready(function() {
 										"welcomeFunction":function(){
 											window.tagManager.acessouPagina("Versões");window.tagManager.viuVersoes(1);
 											window.stateMachine.addHash('versoes');
+											$(".icon-versoes").parent().addClass('selected');
+											$('.down-arrow').removeClass('show');
+
 										},
-										"goodbyeFunction":function(){setTimeout(function(){ window.versoesManager.stop();},1000);},
-										"stage":7,
+										"goodbyeFunction":function(){
+											setTimeout(function(){ window.versoesManager.stop();},1000);
+											$(".icon-versoes").parent().removeClass('selected');
+											$('.down-arrow').addClass('show');
+										},
+										"stage":9,
 										"transitions":[
 															new Transition({
 																"endStateName":"home",
@@ -683,6 +719,16 @@ $(document).ready(function() {
 															new Transition({
 																"endStateName":"fatos",
 																"trigger":Trigger.Fatos,
+																"animatedProperties":[
+																						new AnimatedProperty({'idName':'fatos','className':'onTop','classTransitionName':'default-transition','remove':true}),
+																						new AnimatedProperty({'idName':'fatos','className':'onMiddle','classTransitionName':'default-transition','add':true}),
+																						new AnimatedProperty({'idName':'versoes','className':'onMiddle','classTransitionName':'default-transition','remove':true}),
+																						new AnimatedProperty({'idName':'versoes','className':'onBottom','classTransitionName':'default-transition','add':true})
+																						]
+															}),
+															new Transition({
+																"endStateName":"fatos",
+																"trigger":Trigger.Previews,
 																"animatedProperties":[
 																						new AnimatedProperty({'idName':'fatos','className':'onTop','classTransitionName':'default-transition','remove':true}),
 																						new AnimatedProperty({'idName':'fatos','className':'onMiddle','classTransitionName':'default-transition','add':true}),
@@ -741,12 +787,16 @@ $(document).ready(function() {
 		this.states.push(new State({
 										"stateMachine":this,
 										"name":"tour",
-										"stage":9,
+										"stage":11,
 										"welcomeFunction":function(){
 											window.tagManager.acessouPagina("360°");
 											window.stateMachine.addHash('360');
+											$(".icon-360").parent().addClass('selected');
 										},
-										"goodbyeFunction":function(){window.tourManager.stopCube();setTimeout(function(){ window.tourManager.stop();},1000);},
+										"goodbyeFunction":function(){
+											window.tourManager.stopCube();setTimeout(function(){ window.tourManager.stop();},1000);
+											$(".icon-360").parent().removeClass('selected');
+										},
 										"transitions":[
 															new Transition({
 																"endStateName":"home",
@@ -798,6 +848,16 @@ $(document).ready(function() {
 																						]
 															}),
 															new Transition({
+																"endStateName":"versoes",
+																"trigger":Trigger.Previews,
+																"animatedProperties":[
+																						new AnimatedProperty({'idName':'versoes','className':'onTop','classTransitionName':'default-transition','remove':true}),
+																						new AnimatedProperty({'idName':'versoes','className':'onMiddle','classTransitionName':'default-transition','add':true}),
+																						new AnimatedProperty({'idName':'tour','className':'onMiddle','classTransitionName':'default-transition','remove':true}),
+																						new AnimatedProperty({'idName':'tour','className':'onBottom','classTransitionName':'default-transition','add':true})
+																						]
+															}),
+															new Transition({
 																"endStateName":"galeria",
 																"trigger":Trigger.Galeria,
 																"animatedProperties":[
@@ -835,11 +895,17 @@ $(document).ready(function() {
 		this.states.push(new State({
 										"stateMachine":this,
 										"name":"galeria",
-										"stage":10,
-										"goodbyeFunction":function(){setTimeout(function(){ $('.down-arrow').css('display','inline');}, 1000);  },
+										"stage":12,
+										"goodbyeFunction":function(){
+											setTimeout(function(){ $('.down-arrow').css('display','inline');}, 1000);  
+											$(".icon-galeria").parent().removeClass('selected');
+											$('.up-arrow').removeClass('show');
+											window.galleryManager.stop();
+										},
 										"welcomeFunction":function(){
 											window.tagManager.acessouPagina("Galeria");$('.down-arrow').css('display','none')
 											window.stateMachine.addHash('galeria');
+											$(".icon-galeria").parent().addClass('selected');
 										},
 										"transitions":[
 															new Transition({
@@ -904,6 +970,16 @@ $(document).ready(function() {
 																						]
 															}),
 															new Transition({
+																"endStateName":"tour",
+																"trigger":Trigger.Previews,
+																"animatedProperties":[
+																						new AnimatedProperty({'idName':'tour','className':'onTop','classTransitionName':'default-transition','remove':true}),
+																						new AnimatedProperty({'idName':'tour','className':'onMiddle','classTransitionName':'default-transition','add':true}),
+																						new AnimatedProperty({'idName':'galeria','className':'onMiddle','classTransitionName':'default-transition','remove':true}),
+																						new AnimatedProperty({'idName':'galeria','className':'onBottom','classTransitionName':'default-transition','add':true})
+																						]
+															}),
+															new Transition({
 																"endStateName":"premios",
 																"trigger":Trigger.Premios,
 																"animatedProperties":[
@@ -918,7 +994,7 @@ $(document).ready(function() {
 		this.states.push(new State({
 										"stateMachine":this,
 										"name":"premios",
-										"stage":12,
+										"stage":6,
 										"welcomeFunction":function(){window.premiosManager.setLastState(stateMachine.state);window.tagManager.acessouPagina("Prêmios");},
 										"transitions":[
 															new Transition({
@@ -1000,8 +1076,14 @@ $(document).ready(function() {
 		this.states.push(new State({
 										"stateMachine":this,
 										"name":"robust",
-										"stage":11,
-										"welcomeFunction":function(){window.robustManager.setLastState(stateMachine.state);window.tagManager.acessouModelo("SAVEIRO ROBUST");},
+										"stage":5,
+										"welcomeFunction":function(){
+											window.robustManager.setLastState(stateMachine.state);window.tagManager.acessouModelo("SAVEIRO ROBUST");
+											$('.down-arrow').removeClass('show');
+										},
+										"goodbyeFunction":function(){
+											$('.down-arrow').addClass('show');
+										},
 										"transitions":[
 															new Transition({
 																"endStateName":"home",
@@ -1095,7 +1177,7 @@ $(document).ready(function() {
 		this.states.push(new State({
 										"stateMachine":this,
 										"name":"cross",
-										"stage":11,
+										"stage":5,
 										"welcomeFunction":function(){window.crossManager.setLastState(stateMachine.state);window.tagManager.acessouModelo("SAVEIRO CROSS");},
 										"transitions":[
 															new Transition({
@@ -1296,9 +1378,7 @@ $(document).ready(function() {
 		    		this.askMove(Trigger.Entrance);
 		    		break;
 		    }
-		    
-		    
-		    //this.askMove(Trigger.Entrance);
+			//this.askMove(Trigger.Entrance);
 		}
 		this.upSlides = function(slides){
 			for(var i=0;i<slides.length;i++){

@@ -63,7 +63,7 @@ $(document).ready(function() {
 		}
 	});
 
-	$('.versoes .ruler').mousemove(function(e){
+	$('.sub-slide').mousemove(function(e){
 		if(mousedown > 0){
 		  if(lastMousePosition.x != null){
 		  	//console.log('X: '+ (e.clientX - lastMousePosition.x));
@@ -73,10 +73,12 @@ $(document).ready(function() {
 		  	drag.x = e.clientX;
 		  }
 		  lastMousePosition.x = e.clientX;
+
+		  var y = 1-e.clientY/$(window).height(); 
 		}
 	});
 
-	$('.versoes .ruler').mouseleave(function() {
+	$('.sub-slide').mouseleave(function() {
 		mousedown=0;
 		if(timerId==null){
 			timerId = setInterval(function () {
@@ -84,7 +86,8 @@ $(document).ready(function() {
 		    }, 20);	
 		}
 	});
-	$('.versoes .ruler').mouseup(function(){
+	
+	$('.sub-slide').mouseup(function(){
 		mousedown=0;
 		lastMousePosition.x = null;
 		if(timerId==null){
@@ -102,21 +105,32 @@ $(document).ready(function() {
 		this.getCurrentIdx = function(){
 			return currentIdx;
 		}
-		this.goToRight = function(){
+		this.goToRight = function(rotation){
+			rotation = typeof rotation !== 'undefined' ? rotation : true;
 			$('.car'+currentIdx).css('left','100%');
 			currentIdx++;
 			if(currentIdx > maxIdx){
-				currentIdx = 1;
+				if(rotation){
+					currentIdx = 1;
+				}else{
+					currentIdx = maxIdx;
+				}
 			}
 			$('.car'+currentIdx).css('left','0%');
 			window.tagManager.viuVersoes(currentIdx);
 			drag.snapOnce();
 		}
-		this.goToLeft = function(){
+		this.goToLeft = function(rotation){
+			rotation = typeof rotation !== 'undefined' ? rotation : true;
 			$('.car'+currentIdx).css('left','100%');
 			currentIdx--;
 			if(currentIdx < 1){
 				currentIdx = maxIdx;
+				if(rotation){
+					currentIdx = maxIdx;
+				}else{
+					currentIdx = 1;
+				}
 			}
 			window.tagManager.viuVersoes(currentIdx);
 			$('.car'+currentIdx).css('left','0%');
