@@ -131,6 +131,7 @@ $(document).ready(function() {
 																		{'className':'premio-quatro .tabela','imgName':'tabela_quatro_rodas.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
 																	]});
 
+		this.microStages.push(stages.micro);this.smallStages.push(stages.small);this.mediumStages.push(stages.medium);this.largeStages.push(stages.large);
 		//Stage 07
 		stages = new StagesCreator({'imageLoader':this, 'readyFunction':function(){}, 'classes':[
 																		{'className':'identidade','imgName':'02_Identidade_01_Fundo_Volkswagen.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
@@ -432,7 +433,7 @@ $(document).ready(function() {
 		this.microStages.push(stages.micro);this.smallStages.push(stages.small);this.mediumStages.push(stages.medium);this.largeStages.push(stages.large);
 		
 		
-		this.microStages.push(stages.micro);this.smallStages.push(stages.small);this.mediumStages.push(stages.medium);this.largeStages.push(stages.large);
+		
 		
 		switch(size){
 			case Size.Micro:
