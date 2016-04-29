@@ -407,7 +407,7 @@
 
 }
 /*Mobile landscape*/
-@media only screen and (orientation:landscape) and (max-device-width: 500px){
+@media only screen and (orientation:landscape) and (max-device-width: 750px){
   
 }
 @media screen and (max-height: 900px){

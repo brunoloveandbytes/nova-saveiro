@@ -1,4 +1,3 @@
-
 $(document).ready(function() {
 	var mousedown = 0;
 	var quickFix = 42;
@@ -71,7 +70,6 @@ $(document).ready(function() {
 		mousedown=0;
 		lastMousePosition.x = null;
 	});
-
 	var TourManager = function(){
 		this.Car = {Aventura:0,Trabalho:1};
 		this.currentCar;
@@ -86,7 +84,43 @@ $(document).ready(function() {
 			}else{
 				$('#tour_trabalho_sequence').addClass('from-side');
 			}
+/*------------------------------------Adiocionado------------------------------------*/
+			this.setCarContainer(0);
+/*--------------------------------------END------------------------------------------*/
 		}
+/*------------------------------------Adiocionado------------------------------------*/
+		this.setCarContainer = function(pct){
+			var visibleHeight = $(window).height()-$('.tour_sequence').offset().top-100;
+			var aspect = $('.tour_sequence').width()/$('.tour_sequence').height();
+			var containHeight,coverHeight;
+			var containWidth,coverWidth;
+			var containLeft,coverLeft;
+			var containTop,coverTop;
+			if(aspect > 1920/1080){
+				containHeight = visibleHeight;
+				containWidth = visibleHeight*1920/1080;
+				containLeft = ($('.tour_sequence').width() - containWidth)/2;
+				containTop = 0;
+				coverWidth = $('.tour_sequence').width();
+				coverHeight = $('.tour_sequence').width()*1080/1920;
+				coverLeft = 0;
+				coverTop = (visibleHeight - coverHeight)/2;
+			}else{
+				containHeight = $('.tour_sequence').width()*1080/1920;
+				containWidth = $('.tour_sequence').width();
+				containLeft = 0;
+				containTop = (visibleHeight - containHeight)/2;
+				coverWidth = visibleHeight*1920/1080;
+				coverHeight = visibleHeight;
+				coverLeft = ($('.tour_sequence').width() - coverWidth)/2;
+				coverTop = 0;
+			}
+			$('.tour_car_sequence').height(containHeight*(1-pct)+pct*coverHeight);
+			$('.tour_car_sequence').width(containWidth*(1-pct)+pct*coverWidth);
+			$('.tour_car_sequence').css('left',containLeft*(1-pct)+pct*coverLeft+'px');
+			$('.tour_car_sequence').css('top',containTop*(1-pct)+pct*coverTop+'px');
+		}
+/*--------------------------------------END------------------------------------------*/
 		this.backFromSequence = function(car){
 			$('.tour_principal').addClass('onMiddle');
 			setTimeout(function(){ $('.tour_sequence').removeClass('onMiddle'); }, 1000);
@@ -97,7 +131,6 @@ $(document).ready(function() {
 				$('#tour_trabalho_sequence').removeClass('from-side');
 			}
 			setTimeout(function(){ this.restartSlider(); }, 1000);
-			
 		}
 		this.setIndex = function(idx){
 			if(idx>totalImgs){
@@ -128,16 +161,14 @@ $(document).ready(function() {
 					$('.trabalho_car_item'+this.currentIdx).css('left','100%');
 				}
 				this.currentIdx = idx;
+/*------------------------------------Adiocionado------------------------------------*/
+				this.setCarContainer(window.tourManager.currentIdx/75);
+/*--------------------------------------END------------------------------------------*/		
 				if(this.currentCar == this.Car.Aventura){
 					$('.aventura_car_item'+this.currentIdx).css('left','0%');
 				}else{
 					$('.trabalho_car_item'+this.currentIdx).css('left','0%');
 				}	
-			}
-
-			if(idx<=1){
-				//this.backFromSequence(this.currentCar);
-				//this.restartSlider();
 			}
 		}
 		this.restartSlider = function(){
@@ -155,8 +186,19 @@ $(document).ready(function() {
 			$('.tour-slider').removeClass('show-slider');
 			$('#tour_aventura_sequence').removeClass('from-side');
 			$('#tour_trabalho_sequence').removeClass('from-side');
+			this.currentCar = null;
 		}
 	}
 	var tourManager = new TourManager();
 	window.tourManager = tourManager;
 });
+
+/*------------------------------------Adiocionado------------------------------------*/
+$(window).resize(function() {
+	if(window.tourManager.currentCar!=null){
+		tourManager.setCarContainer(window.tourManager.currentIdx/75);
+	}
+});
+/*--------------------------------------END------------------------------------------*/
+
+

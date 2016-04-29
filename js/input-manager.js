@@ -26,7 +26,6 @@ $(document).ready(function() {
 	var inputManager = new InputManager();
 	window.inputManager = inputManager;
 
-
 	(function($) {
 	  $.fn.nodoubletapzoom = function() {
 	      $(this).bind('touchstart', function preventZoom(e) {
@@ -45,7 +44,6 @@ $(document).ready(function() {
 	})(jQuery);
 
 	$('#menus').nodoubletapzoom();
-
 
 	$(document).keydown(function(e) {
 	    // ESCAPE key pressed
@@ -87,7 +85,7 @@ $(document).ready(function() {
 		}
 	}
 	document.body.addEventListener('touchstart', function(e){
-        window.stateMachine.askMove(window.stateMachine.Trigger.Next);
+        //window.stateMachine.askMove(window.stateMachine.Trigger.Next);
     }, false)
 
 

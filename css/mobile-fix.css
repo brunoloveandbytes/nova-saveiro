@@ -1,0 +1,81 @@
+
+#premios_button{
+    display:none;
+}
+.menu .primary .open{
+    display: none;
+}
+
+.menu .secondary{
+    display: none;
+}
+.down-arrow{
+    display: none;
+}
+.robust-button{
+    display: none;
+}
+.cross-button{
+    display: none;
+}
+
+.versoes .up-bar .plus{
+    display:none;
+}
+
+.versoes .right-arrow:hover{
+    background-position: -200% -800%;
+}
+.versoes .left-arrow:hover{
+    background-position: 0% -800%;
+}
+
+.versoes .title .sub-title{
+    font-size: 38px;
+}
+
+.mobile-arrow{
+    position: absolute;
+    background-image: url('../img/large/tiles.png');
+    margin-left: 50%;
+    left:-128px;
+    width: 256px;
+    height: 128px;
+    bottom: 25px;
+    background-size: 500% 1000%;
+    cursor: pointer;
+    background-position: 0% -200%;
+    bottom: 75px;
+}
+
+.mobile-arrow.up{
+    background-position: 0% -700%;
+}
+
+
+
+@media only screen and (orientation:portrait) and (max-device-width: 500px){
+    .versoes .ruler{
+        bottom: 200px;
+    }
+}
+
+
+@media only screen and (orientation:landscape) and (max-device-width: 750px){
+    .versoes .ruler{
+        bottom: 65px;
+    }
+    .menu .primary .interessado{
+        top:40px;
+    }
+
+    .mobile-arrow{
+        left:-64px;
+        width: 128px;
+        height: 64px;
+        bottom: 5px;
+    }
+
+}
+
+

@@ -1355,29 +1355,36 @@ $(document).ready(function() {
 		}
 		this.switchEntrance = function(){
 			var page = window.location.href.substring(window.location.href.indexOf("#")+1);
-		    switch(page){
-		    	case "!/home":
-		    		this.askMove(Trigger.Home);
-		    		break;
-		    	case "!/identidade":
-		    		this.askMove(Trigger.Identidade);
-		    		break;
-		    	case "!/fatos":
-		    		this.askMove(Trigger.Fatos);
-		    		break;
-		    	case "!/versoes":
-		    		this.askMove(Trigger.Versoes);
-		    		break;
-		    	case "!/360":
-		    		this.askMove(Trigger.Tour);
-		    		break;
-		    	case "!/galeria":
-		    		this.askMove(Trigger.Galeria);
-		    		break;
-		    	default:
-		    		this.askMove(Trigger.Entrance);
-		    		break;
-		    }
+
+
+			if (isMobile.apple.phone || isMobile.android.phone || isMobile.seven_inch) {
+				this.askMove(Trigger.Home);
+			}else{
+				switch(page){
+			    	case "!/home":
+			    		this.askMove(Trigger.Home);
+			    		break;
+			    	case "!/identidade":
+			    		this.askMove(Trigger.Identidade);
+			    		break;
+			    	case "!/fatos":
+			    		this.askMove(Trigger.Fatos);
+			    		break;
+			    	case "!/versoes":
+			    		this.askMove(Trigger.Versoes);
+			    		break;
+			    	case "!/360":
+			    		this.askMove(Trigger.Tour);
+			    		break;
+			    	case "!/galeria":
+			    		this.askMove(Trigger.Galeria);
+			    		break;
+			    	default:
+			    		this.askMove(Trigger.Entrance);
+			    		break;
+			    }
+			}
+		    
 			//this.askMove(Trigger.Entrance);
 		}
 		this.upSlides = function(slides){

@@ -7,7 +7,7 @@ $(document).ready(function() {
 			if(timerId==null){
 				timerId = setInterval(function (){
 			      window.identidadeManager.changeImage();
-			    }, 1500);	
+			    }, 1500);
 			}
 		}
 		this.stopAnimation = function(){

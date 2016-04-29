@@ -352,7 +352,7 @@ body div{
 	.main-content{top:150px;}
 }
 /*Mobile landscape*/
-@media screen and (orientation:landscape) and (max-device-width: 500px){
+@media screen and (orientation:landscape) and (max-device-width: 750px){
 	.main-header{min-height: 65px;}
 	.content-header{min-height: 65px;}
 	.vw-logo{
@@ -403,7 +403,7 @@ body div{
     .sub-slide{width:980px;}
 }
 /*Mobile landscape*/
-@media screen and (orientation:landscape) and (max-device-width: 500px){
+@media screen and (orientation:landscape) and (max-device-width: 750px){
     .sub-slide{top:0px;}
 }
 
@@ -597,5 +597,5 @@ body div{
 }
 
 /*Mobile landscape*/
-@media screen and (orientation:landscape) and (max-device-width: 500px){
+@media screen and (orientation:landscape) and (max-device-width: 750px){
 }

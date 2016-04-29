@@ -10,7 +10,7 @@
 	<script src="js/ismobile.js"></script>
 	<script type="text/javascript">
 		if (isMobile.apple.phone || isMobile.android.phone || isMobile.seven_inch) {
-			window.location="http://novidades.vw.com.br/";
+			//window.location="http://novidades.vw.com.br/";
 		}
 	</script>
 	<script src="js/image-loader.js"></script>
@@ -74,7 +74,7 @@
 				<div class="letreiro-bar underline-transition"></div>
 				<div class="gear gear-transition">
 					<div class="gear_big"></div>
-				<div class="gear_small"></div>
+					<div class="gear_small"></div>
 				</div>
 			</div>
 		</section>
@@ -125,19 +125,19 @@
 
 	<div class="general-content main-content">
 		<div class="sub-slide">
-				<div class="home-content">
-					<div class="robust-button car-button opacity-fast-transition" onclick="window.stateMachine.askMove(window.stateMachine.Trigger.Robust)">
-						<div class="plus"></div>
-						<div class="bar"></div>
-						<div class="texto">SAVEIRO ROBUST</div>
-					</div>
-					<div class="cross-button car-button opacity-fast-transition" onclick="window.stateMachine.askMove(window.stateMachine.Trigger.Cross)">
-						<div class="plus"></div>
-						<div class="bar"></div>
-						<div class="texto">SAVEIRO CROSS</div>
-					</div>
+			<div class="home-content">
+				<div class="robust-button car-button opacity-fast-transition" onclick="window.stateMachine.askMove(window.stateMachine.Trigger.Robust)">
+					<div class="plus"></div>
+					<div class="bar"></div>
+					<div class="texto">SAVEIRO ROBUST</div>
+				</div>
+				<div class="cross-button car-button opacity-fast-transition" onclick="window.stateMachine.askMove(window.stateMachine.Trigger.Cross)">
+					<div class="plus"></div>
+					<div class="bar"></div>
+					<div class="texto">SAVEIRO CROSS</div>
 				</div>
 			</div>
+		</div>
 		<section id="identidade" class="slide identidade onBottom">
 			<div class="sub-slide">
 				<div class="menu-bar-fix"></div>
@@ -263,7 +263,7 @@ Com esse sistema de “tração inteligente” automático, você não precisa a
 						<div class="title"><span class="main-title">ROBUST</span><span class="sub-title"> CABINE SIMPLES</span></div>
 						<div class="container">
 							<div class="up-car default-fast-transition">
-								<div class="image-car" onclick="$('.versoes_content').toggleClass('on-description');"></div>
+								<div class="image-car" onclick="versoesCarClick()"></div>
 							</div>
 							<div class="down-car default-fast-transition">
 								<div class="images-car">
@@ -364,7 +364,7 @@ Com esse sistema de “tração inteligente” automático, você não precisa a
 						<div class="title"><span class="main-title">TRENDLINE</span><span class="sub-title"> CABINE SIMPLES</span></div>
 						<div class="container">
 							<div class="up-car default-fast-transition">
-								<div class="image-car" onclick="$('.versoes_content').toggleClass('on-description');"></div>
+								<div class="image-car" onclick="versoesCarClick()"></div>
 							</div>
 							<div class="down-car default-fast-transition">
 								<div class="images-car">
@@ -467,7 +467,7 @@ Com esse sistema de “tração inteligente” automático, você não precisa a
 						<div class="title"><span class="main-title">TRENDLINE</span><span class="sub-title"> CABINE ESTENDIDA</span></div>
 						<div class="container">
 							<div class="up-car default-fast-transition">
-								<div class="image-car" onclick="$('.versoes_content').toggleClass('on-description');"></div>
+								<div class="image-car" onclick="versoesCarClick()"></div>
 							</div>
 							<div class="down-car default-fast-transition">
 								<div class="images-car">
@@ -570,7 +570,7 @@ Com esse sistema de “tração inteligente” automático, você não precisa a
 						<div class="title"><span class="main-title">TRENDLINE</span><span class="sub-title"> CABINE DUPLA</span></div>
 						<div class="container">
 							<div class="up-car default-fast-transition">
-								<div class="image-car" onclick="$('.versoes_content').toggleClass('on-description');"></div>
+								<div class="image-car" onclick="versoesCarClick()"></div>
 							</div>
 							<div class="down-car default-fast-transition">
 								<div class="images-car">
@@ -677,7 +677,7 @@ Com esse sistema de “tração inteligente” automático, você não precisa a
 						<div class="title"><span class="main-title">HIGHLINE</span><span class="sub-title"> CABINE DUPLA</span></div>
 						<div class="container">
 							<div class="up-car default-fast-transition">
-								<div class="image-car" onclick="$('.versoes_content').toggleClass('on-description');"></div>
+								<div class="image-car" onclick="versoesCarClick()"></div>
 							</div>
 							<div class="down-car default-fast-transition">
 								<div class="images-car">
@@ -803,7 +803,7 @@ Com esse sistema de “tração inteligente” automático, você não precisa a
 						<div class="title"><span class="main-title">CROSS</span><span class="sub-title"> CABINE ESTENDIDA</span></div>
 						<div class="container">
 							<div class="up-car default-fast-transition">
-								<div class="image-car" onclick="$('.versoes_content').toggleClass('on-description');"></div>
+								<div class="image-car" onclick="versoesCarClick()"></div>
 							</div>
 							<div class="down-car default-fast-transition">
 								<div class="images-car">
@@ -892,7 +892,7 @@ Com esse sistema de “tração inteligente” automático, você não precisa a
 						<div class="title"><span class="main-title">CROSS</span><span class="sub-title"> CABINE DUPLA</span></div>
 						<div class="container">
 							<div class="up-car default-fast-transition">
-								<div class="image-car" onclick="$('.versoes_content').toggleClass('on-description');"></div>
+								<div class="image-car" onclick="versoesCarClick()"></div>
 							</div>
 							<div class="down-car default-fast-transition">
 								<div class="images-car">
@@ -995,8 +995,8 @@ Com esse sistema de “tração inteligente” automático, você não precisa a
 						</div>
 						<div class="basic-icon image-trabalho" onclick="versoesManager.goToLeft(false)"></div>
 						<div class="basic-icon image-aventura" onclick="versoesManager.goToRight(false)"></div>
-						<div class="texto-trabalho noselect">TRABALHO PESADO</div>
-						<div class="texto-aventura">AVENTURA DE VERDADE</div>
+						<div class="texto-trabalho noselect" onclick="versoesManager.goToLeft(false)">TRABALHO PESADO</div>
+						<div class="texto-aventura" onclick="versoesManager.goToRight(false)">AVENTURA DE VERDADE</div>
 						<div class="handle"></div>
 					</div>
 					<div class="up-bar">
@@ -1412,12 +1412,131 @@ Com esse sistema de “tração inteligente” automático, você não precisa a
 <script src="js/galeria.js"></script>
 <script type="text/javascript">
     $(document).ready(function(){ $(".gallery .item").append('<div class="alpha_b" />') });
+
+    function versoesCarClick(){
+    	if (isMobile.apple.phone || isMobile.android.phone || isMobile.seven_inch) {
+    		window.versoesManager.goToRight();
+    	}else{
+    		$('.versoes_content').toggleClass('on-description');
+    	}
+    }
+
+    function setaClick(){
+    	if(window.stateMachine.state.name == "home"){
+    		$('.mobile-arrow').addClass("up");	
+    		window.stateMachine.askMove(window.stateMachine.Trigger.Versoes);
+    	}else{
+    		$('.mobile-arrow').removeClass("up");	
+    		window.stateMachine.askMove(window.stateMachine.Trigger.Home);
+    	}
+		
+	}
+	function restartGyro(){
+
+	}
+
+    $(document).ready(function() {
+    	if (isMobile.apple.phone || isMobile.android.phone || isMobile.seven_inch) {
+			var head  = document.getElementsByTagName('head')[0];
+		    var link  = document.createElement('link');
+		    link.rel  = 'stylesheet';
+		    link.type = 'text/css';
+		    link.href = 'css/mobile-fix.css';
+		    link.media = 'all';
+		    head.appendChild(link);
+		    var width = $('#home').height()*1920/1100;
+		    if(window.orientation == 90 || window.orientation == -90){
+
+		    }else{
+		    	$('#home').width(width);
+			    $('#home').css('left',(980-width)+'px');
+			    	
+		    }
+		    window.addEventListener("deviceorientation", deviceParallaxListener);
+		    window.addEventListener('orientationchange', doOnOrientationChange);
+		    $('#body').append('<div class="mobile-arrow" onclick="setaClick();;"></div>');
+		    setInterval(function(){restartGyro=true}, 5000);
+		}
+		var position = (980-$('#home').height()*1920/1100)/2;
+		var rotation3d = {x:0, y:0};
+		var speed = 15;
+		var lastAlpha = 0;
+		var currentAlpha = 0;
+		var pxValue = position;
+		var restartGyro=false;
+
+		function deviceParallaxListener(event){
+			//console.log(event.alpha);
+			if(window.orientation == 0 || window.orientation == 180){
+				var width = $('#home').height()*1920/1100;
+				var maxLeft = 0;
+				var minLeft = 980-width;
+		        if((lastAlpha < 180 && event.alpha > 180)||(lastAlpha > 180 && event.alpha < 180)){
+			    	//inverting...
+			    }else{
+			    	var delta = event.alpha-lastAlpha;
+			    	//if(Math.abs(delta)<10)
+			    	position+=speed*delta;
+			    }
+			    if(position < minLeft){position = minLeft;}
+			    if(position > maxLeft){position = maxLeft;}
+
+			    pxValue = 0.95*pxValue + 0.05*position;
+			    //pxValue = position;
+
+			    $('#home').css('left',pxValue+'px');
+			    if(restartGyro){
+			    	position = 0.97*position + 0.03*(minLeft/2);
+			    	if(Math.abs(position-minLeft/2)<10){
+			    		restartGyro = false;
+			    	}
+			    }
+				lastAlpha = event.alpha;
+			}
+		}
+
+		function doOnOrientationChange(event){
+			if(window.orientation == 90 || window.orientation == -90){
+			    $('#home').css('left','0px');
+			    $('#home').css('width','100%');
+			}else{
+				$('#home').width(width);
+			    $('#home').css('left',(980-width)+'px');
+			}
+			position = (980-$('#home').height()*1920/1100)/2;
+		}
+
+		var init = 0;
+		document.body.addEventListener('touchstart', function(e){
+	        init = e.changedTouches[0].pageY;
+	    }, false)
+
+		document.body.addEventListener('touchend', function(e){
+			lastXTouch = null;
+			var deltaY = (e.changedTouches[0].pageY-init)/$(window).height();
+			if(deltaY < -0.15){
+				//alert('Versões');
+				window.stateMachine.askMove(window.stateMachine.Trigger.Versoes);
+			}
+			if(deltaY > 0.15){
+				//alert('Versões');
+				window.stateMachine.askMove(window.stateMachine.Trigger.Home);
+			}
+	        //alert((e.changedTouches[0].pageY-init)/$(window).height());
+	    }, false)
+
+		var lastXTouch = null;
+	    document.body.addEventListener('touchmove', function(e){
+
+	    	if(lastXTouch != null){
+	    		position += 2*(e.changedTouches[0].pageX - lastXTouch);
+	    	}
+	    	lastXTouch = e.changedTouches[0].pageX;
+	        //alert((e.changedTouches[0].pageY-init)/$(window).height());
+	    }, false)
+
+	    //setInterval(function(){ console.log(lastAlpha);}, 500);
+
+   	});
 </script>
-
-
-
-
-
-
-
 </html>
