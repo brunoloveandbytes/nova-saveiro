@@ -32,7 +32,7 @@
 .identidade .car-container{
     position: absolute;
     top: 105px;
-    bottom: 190px;
+    bottom: 140px;
     width: 100%;
 }
 .identidade .car-container > div{
@@ -48,19 +48,19 @@
     font-family: 'vw_textlight';
     position: absolute;
     bottom: 100px;
-    left: -300px;
-    width: 600px;
+    left: -420px;
+    width: 840px;
     margin-left: 50%;
     text-align: justify;
 }
 .identidade .close{display: none;}
 /*Small*/
-@media screen and (max-width: 960px){
-	.identidade_content{left:0;width:100%;min-width:500px;margin-left:0;}
-	.identidade .description{left:-225px;width:450px;}
-	.identidade .text{left:-225px;width:450px;margin-left:50%;text-align:center;letter-spacing:3px;}
-	.identidade .under-text{top:120px;}
-	.identidade .car-container{top:180px;bottom:225px;}
+@media screen and (max-width: 1050px){
+	.identidade_content{left:0;width:100%;min-width:500px;margin-left:0;top:80px;}
+	.identidade .description{left:-225px;width:450px;bottom:140px;}
+	.identidade .text{left:-225px;width:450px;margin-left:50%;text-align:center;letter-spacing:3px;top:45px;}
+	.identidade .under-text{top:105px;}
+	.identidade .car-container{top:170px;bottom:280px;}
 }
 /*Mobiles*/
 @media screen and (max-device-width: 500px){
@@ -116,7 +116,7 @@
 .identidade .close{width:96px;height:96px;right:25px;top:30px;}
 }
 /*Mobile landscape*/
-@media screen and (orientation:landscape) and (max-device-width: 500px){
+@media screen and (orientation:landscape) and (max-device-width: 750px){
 	.identidade .title{
 	    font-family: 'vw_headextrabold';
 	    font-size: 40px;

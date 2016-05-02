@@ -92,18 +92,22 @@ $(document).ready(function() {
 		this.microStages.push(stages.micro);this.smallStages.push(stages.small);this.mediumStages.push(stages.medium);this.largeStages.push(stages.large);
 		//Stage 02
 		stages = new StagesCreator({'imageLoader':this, 'readyFunction':function(){}, 'classes':[
-																		{'className':'slide2','imgName':'00_Intro_02_Surf_Volkswagen.jpg','sizes':{'ll': 16,'lm': 12,'ls':8.0,'lmi':140,'hl': 48,'hm': 36,'hs': 20,'hmi':140}}
+																		{'className':'slide2','imgName':'00_Intro_02_Surf_Volkswagen.jpg','sizes':{'ll': 16,'lm': 12,'ls':8.0,'lmi':140,'hl': 48,'hm': 36,'hs': 20,'hmi':140}},
+																		{'className':'compass-out','imgName':'compass_out.png','sizes':{'ll': 16,'lm': 12,'ls':8.0,'lmi':140,'hl': 48,'hm': 36,'hs': 20,'hmi':140}},
+																		{'className':'compass-in','imgName':'compass_in.png','sizes':{'ll': 16,'lm': 12,'ls':8.0,'lmi':140,'hl': 48,'hm': 36,'hs': 20,'hmi':140}},
 																	]});
 		this.microStages.push(stages.micro);this.smallStages.push(stages.small);this.mediumStages.push(stages.medium);this.largeStages.push(stages.large);
 		//Stage 03
 		stages = new StagesCreator({'imageLoader':this, 'readyFunction':function(){}, 'classes':[
 																		{'className':'black_car','imgName':'00_Intro_03_Saveiro_Robust_Volkswagen.jpg','sizes':{'ll': 16,'lm': 12,'ls':8.0,'lmi':140,'hl': 36,'hm': 28,'hs': 16,'hmi':140}},
-																		{'className':'blue_car','imgName':'00_Intro_04_Saveiro_Cross_Volkswagen.jpg','sizes':{'ll': 12,'lm':8.0,'ls':8.0,'lmi':140,'hl': 32,'hm': 24,'hs': 16,'hmi':140}}
+																		{'className':'blue_car','imgName':'00_Intro_04_Saveiro_Cross_Volkswagen.jpg','sizes':{'ll': 12,'lm':8.0,'ls':8.0,'lmi':140,'hl': 32,'hm': 24,'hs': 16,'hmi':140}},
+																		{'className':'inspired-man','imgName':'inspired.png','sizes':{'ll': 12,'lm':8.0,'ls':8.0,'lmi':140,'hl': 32,'hm': 24,'hs': 16,'hmi':140}},
 																	]});
 		this.microStages.push(stages.micro);this.smallStages.push(stages.small);this.mediumStages.push(stages.medium);this.largeStages.push(stages.large);
 		//Stage 04
 		stages = new StagesCreator({'imageLoader':this, 'readyFunction':function(){}, 'classes':[
-																		{'className':'home','imgName':'01_Home_01_Saveiros_Volkswagen.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'home','imgName':'01_Home_01_Fundo_Volkswagen.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'home-content .car-logo','imgName':'01_Home_02_logo_Volkswagen.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
 																		{'className':'basic-icon','imgName':'tiles.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
 																		{'className':'home-content .car-button .plus','imgName':'tiles.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
 																		{'className':'menu .item :nth-child(1)','imgName':'tiles.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
@@ -144,12 +148,18 @@ $(document).ready(function() {
 		stages = new StagesCreator({'imageLoader':this, 'readyFunction':function(){}, 'classes':[
 																		{'className':'fatos','imgName':'02_Identidade_01_Fundo_Volkswagen.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
 																		{'className':'fatos .arrow','imgName':'tiles.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		
 																		{'className':'fatos .grid','imgName':'fatos_grid.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
-																		{'className':'fatos .frame1 .car-image','imgName':'fatos_frame_1.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
-																		{'className':'fatos .frame2 .car-image','imgName':'fatos_frame_2.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
-																		{'className':'fatos .frame3 .car-image','imgName':'fatos_frame_3.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
-																		{'className':'fatos .frame4 .car-image','imgName':'fatos_frame_4.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
-																		{'className':'fatos .frame5 .car-image','imgName':'fatos_frame_5.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'fatos .frame1 .car-image','imgName':'fatos_suspensao_carro.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'fatos .frame1 .bar-image','imgName':'fatos_suspensao_barra.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+
+																		{'className':'fatos .frame2 .car-image','imgName':'fatos_desempenho_carro.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+
+																		{'className':'fatos .frame3 .car-image','imgName':'fatos_off_road_carro.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'fatos .frame3 .bar-image','imgName':'fatos_off_road_barra.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+
+																		{'className':'fatos .frame4 .car-image','imgName':'fatos_hdc_carro.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'fatos .frame5 .car-image','imgName':'fatos_eds_carro.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
 																		{'className':'fatos .suspensao .icon','imgName':'fatos_suspensao.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
 																		{'className':'fatos .desempenho .icon','imgName':'fatos_desempenho.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
 																		{'className':'fatos .abs .icon','imgName':'fatos_abs.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},

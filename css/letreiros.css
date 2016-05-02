@@ -70,6 +70,24 @@
   height: 22%;
   width: 22%;
 }
+
+.inspired-man{
+  top:0%;
+  width: 100%;
+  height: 100%;
+}
+.compass-out{
+  top:0%;
+  width: 100%;
+  height: 100%;
+}
+.compass-in{
+  top:3%;
+  width: 100%;
+  height: 100%;
+}
+
+
 .letreiro-bar{
   position: absolute;
   left: 18%;
@@ -87,7 +105,7 @@
 .slide3.showWord .letreiro-bar{width:16%;}
 
 /*Small*/
-@media screen and (max-width: 960px){
+@media screen and (max-width: 1050px){
 
 }
 /*Mobile portrait*/

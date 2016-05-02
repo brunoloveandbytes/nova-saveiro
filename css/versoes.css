@@ -373,7 +373,7 @@
 }
 
 /*Small*/
-@media screen and (max-width: 960px){
+@media screen and (max-width: 1050px){
     .versoes_content{left:-50%;width:100%;min-width:560px;}
     .versoes .container{left:10%;width:80%;}
     .versoes .down-car .images-car{height:130px;}
@@ -396,7 +396,7 @@
 }
 
 /*Medium*/
-@media screen and (min-width: 960px) and (max-width: 1280px){
+@media screen and (min-width: 1050px) and (max-width: 1450px){
     .versoes_content{left:-480px;width:960px;}
     .versoes .container{left:30px;width:900px;}
     .versoes .down-car .images-car{height:175px;}

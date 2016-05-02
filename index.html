@@ -89,8 +89,8 @@
 				</p>
 				<div class="letreiro-bar underline-transition"></div>
 				<div class="gear gear-transition">
-					<div class="gear_big"></div>
-				<div class="gear_small"></div>
+					<div class="compass-out"></div>
+					<div class="compass-in"></div>
 				</div>
 			</div>
 		</section>
@@ -109,15 +109,13 @@
 				</p>
 				<div class="letreiro-bar underline-transition"></div>
 				<div class="gear gear-transition">
-					<div class="gear_big"></div>
-				<div class="gear_small"></div>
+					<div class="inspired-man"></div>
 				</div>
 			</div>
 		</section>
 		<section id="home" class="slide home">
 			<div class="sub-slide">
-				<div class="home-content">
-				</div>
+				<div class="home-content"></div>
 			</div>
 		</section>
 	</div>
@@ -126,6 +124,7 @@
 	<div class="general-content main-content">
 		<div class="sub-slide">
 			<div class="home-content">
+				<div id="car-logo" class="car-logo"></div>
 				<div class="robust-button car-button opacity-fast-transition" onclick="window.stateMachine.askMove(window.stateMachine.Trigger.Robust)">
 					<div class="plus"></div>
 					<div class="bar"></div>
@@ -146,8 +145,8 @@
 					<div class="center-bar"></div>
 					<div class="left-bar"></div>
 					<div class="right-bar"></div>
-					<div class="text upper-text">A VOLKSWAGEN SABE O QUANTO VOCÊ SE DEDICA AO TRABALHO.</div>
-					<div class="text under-text">E JÁ QUE O <span>TRABALHO</span> É PESADO, SUA <span>DIVERSÃO</span> TAMBÉM TEM QUE SER.</div>
+					<div class="text upper-text">A VOLKSWAGEN SABE O QUANTO VOCÊ SE DEDICA A SEU TRABALHO.</div>
+					<div class="text under-text">E, JÁ QUE O <span>TRABALHO</span> É PESADO, SUA <span>DIVERSÃO</span> TEM QUE SER AINDA MAIS INTENSA.</div>
 					<div class="car-container">
 						<div class="car-02" style="left:0%;"></div>
 						<div class="car-03"></div>
@@ -155,7 +154,7 @@
 						<div class="car-05"></div>
 					</div>
 					<div class="saiba-mais" onclick="window.identidadeManager.showDescription()">SAIBA MAIS</div>
-					<div class="description">Com mais de um milhão de unidade vendidas, a Nova Saveiro supera todas as expectativas. Por fora, você encontra um design único mas isso não quer dizer que é só mais uma picape bonita. A Nova Saveiro é forte e aguenta o tranco do seu trabalho, qualquer que seja o tamanho da carga. Já por dentro, vai ser difícil encontrar uma picape com tanto conforto e tecnologia. Com isso a Nova Saveiro consegue melhorar outro desempenho: o seu.
+					<div class="description">Com mais de um milhão de unidades vendidas, a nova Saveiro supera todas as expectativas. Por fora, você encontra um design único. Mas isso não quer dizer que ela é só mais uma pick-up bonita: a nova Saveiro é forte e aguenta o tranco do seu trabalho, seja qual for o tamanho da carga. Por dentro, vai ser difícil encontrar uma pick-up com tanto conforto e tecnologia. Com isso, a nova Saveiro consegue melhorar outro desempenho: o seu.
 					</div>
 					<div class="close basic-icon" onclick="window.identidadeManager.closeDescription()"></div>
 				</div>
@@ -171,7 +170,7 @@
 					
 					<div class="frame frame0" style="left:0%;">
 						<div class="main-text">TEM MUITA COISA BOA SENDO DITA SOBRE A NOVA SAVEIRO POR AÍ.</div>
-						<div class="sub-text">Chegou a hora de você entender os fatos que fazem a Nova Saveiro a picape mais premiada e campeã em sua categoria. Escolha um dos cinco itens sobre a Nova Saveiro e descubra porque essa é uma das picapes mais vendidas do Brasil.</div>
+						<div class="sub-text">Chegou a hora de você entender os fatos que fazem da nova Saveiro a pick-up mais premiada em sua categoria. Escolha um dos cinco itens sobre a nova Saveiro e descubra por que ela é uma das pick-ups mais vendidas do Brasil.</div>
 						<div class="middle-bar"></div>
 						<div class="buttons">
 							<div class="suspensao fatos-buttom" onclick="window.fatosManager.goToIdx(1);">
@@ -200,13 +199,15 @@
 						<div class="frame-title"><span>#1 </span>SUSPENSÃO</div>
 						<div class="grid"></div>
 						<div class="car-image"></div>
-						<div class="texto">
-							<span class="super-title">PROCURANDO POR ROBUSTEZ EM UM VEÍCULO DE CARGA COM A DIRIGIBILIDADE DE UM AUTOMÓVEL? ENTÃO VOCÊ ACABOU DE ACHAR.</span> </br>
+						<div class="bar-image"></div>
+						<div class="texto texto1">
+							<span class="super-title">PROCURANDO POR ROBUSTEZ DE UM VEÍCULO DE CARGA COM A DIRIGIBILIDADE DE UM AUTOMÓVEL? ENTÃO, VOCÊ ACABOU DE ACHAR.</span> </br>
 						</div>
-						<div class="texto">
+						<div class="texto texto2">
 							A Nova Saveiro é a picape com o melhor desempenho, não importa qual seja
-o terreno ou a carga. Ela passa por cima tranquilamente. Isso graças ao seu
-sistema de suspensão Helicoidal. Suas molas reforçadas fazem cargas pesadas serem transportadas como se fossem leves, e sua flexibilidade e amortecimento garantem confiança na hora de transportar as cargas mais delicadas.
+o terreno ou a carga. Ela passa por cima, tranquilamente. Isso, graças ao seu
+sistema de suspensão helicoidal. Suas molas reforçadas fazem cargas pesadas serem transportadas como se fossem leves, e sua flexibilidade e amortecimento garantem confiança na hora de transportar as cargas mais delicadas.
+
 						</div>
 					</div>
 					<div class="frame frame2">
@@ -214,19 +215,19 @@ sistema de suspensão Helicoidal. Suas molas reforçadas fazem cargas pesadas se
 						<div class="grid"></div>
 						<div class="car-image"></div>
 						<div class="texto">
-							A Nova Saveiro Cross possui o melhor desempenho de seu segmento. Seu novo motor 1.6l 16V não te deixa não mão e faz a aceleração dela ir de 0 a 100 Km/h em mais ou menos o tempo que demora para ler esse texto: 10,6 segundos com gasolina e 10,1 segundos com etanol. Chegou até aqui? Então a Nova Saveiro já estaria a 100 km/h.
+							A Nova Saveiro Cross possui o melhor desempenho de seu segmento. Seu novo motor 1.6l 16V não te deixa não mão e faz a aceleração dela ir de 0 a 100 km/h em mais ou menos o tempo que você demora para ler este texto: 10,6 segundos com gasolina e 10,1 segundos com etanol. Chegou até aqui? Então, a Nova Saveiro já estaria a 100 km/h.
 						</div>
 					</div>
 					<div class="frame frame3">
 						<div class="frame-title"><span>#3 </span>ABS OFF-ROAD</div>
 						<div class="grid"></div>
 						<div class="car-image"></div>
-						<div class="texto">
-							Outra inovação do utilitário são os freios ABS com função off-road.
-Esse recurso reforça os freios em estradas não pavimentadas.
+						<div class="bar-image"></div>
+						<div class="texto texto1">
+							Outra inovação do utilitário são os freios ABS com função off-road. Esse recurso reforça os freios em estradas não pavimentadas.
 						</div>
 
-						<div class="texto">
+						<div class="texto texto2">
 							A estrada em que você anda pode mudar, mas a confiança no freio do seu carro, não. Essa tecnologia reduz o espaço de frenagem em condições de piso “solto”, para você sempre frear de maneira mais rápida e segura.
 						</div>
 					</div>
@@ -236,8 +237,7 @@ Esse recurso reforça os freios em estradas não pavimentadas.
 						<div class="car-image"></div>
 						<div class="texto">
 							<span class="super-title">CONTROLE DE DESCIDA</span> </br>
-Quem trabalha com transporte de carga, sabe: a picape deve segurar o tranco e manter tudo no lugar. É isso que o HDC faz e a Nova Saveiro é a primeira picape compacta a ter esse recurso no Brasil. Quando estiver descendo em baixa velocidade, um toque no botão off-road e os freios são acionados automaticamente. Sua descida fica mais segura
-e controlada, não importando a condição do piso. 
+Quem trabalha com transporte de carga, sabe: a picape deve segurar o tranco e manter tudo no lugar. É isso que o HDC faz e a Nova Saveiro é a primeira picape a ter esse recurso no Brasil. Quando estiver descendo em baixa velocidade, um toque no botão off-road e os freios são acionados automaticamente. Sua descida fica mais segura e controlada, não importando a condição do piso.
 						</div>
 					</div>
 					<div class="frame frame5">
@@ -246,7 +246,8 @@ e controlada, não importando a condição do piso.
 						<div class="car-image"></div>
 						<div class="texto">
 							<span class="super-title">BLOQUEIO ELETRÔNICO DO DIFERENCIAL</span> </br>
-Com esse sistema de “tração inteligente” automático, você não precisa apertar nenhum botão pra ele funcionar. Assim que você entrar na sua Nova Saveiro, quando for preciso, ele ativa o freio da roda com menor tração, transferindo o torque para a roda com maior tração. Você não vai querer sair do caminho, né?
+O bloqueio eletrônico do diferencial é um sistema de “tração inteligente” automático, você não precisa apertar nenhum botão pra ele funcionar. Sempre que você estiver na sua Nova Saveiro: quando for preciso, será ativado o freio da roda com menor tração, transferindo o torque para
+a roda com maior tração. Você não vai querer ficar parado no meio do caminho, né?
 						</div>
 					</div>
 					<div class="arrow left-arrow" onclick="window.fatosManager.goToLeft();" style="display:none;"></div>
@@ -355,7 +356,7 @@ Com esse sistema de “tração inteligente” automático, você não precisa a
 										<div class="description-switch" onclick="window.versoesManager.switchDescription(this)"></div>
 									</div>
 								</div>
-								<div class="interessado" onclick="window.inputManager.interessadoVersoes(1);"><div>ESTOU INTERESSADO</div></div>
+								<div class="interessado" onclick="window.inputManager.interessadoVersoes(1);"><div>TENHO INTERESSE</div></div>
 							</div>
 						</div>
 					</div>
@@ -459,7 +460,7 @@ Com esse sistema de “tração inteligente” automático, você não precisa a
 										<div class="description-switch" onclick="window.versoesManager.switchDescription(this)"></div>
 									</div>
 								</div>
-								<div class="interessado" onclick="window.inputManager.interessadoVersoes(2);"><div>ESTOU INTERESSADO</div></div>
+								<div class="interessado" onclick="window.inputManager.interessadoVersoes(2);"><div>TENHO INTERESSE</div></div>
 							</div>
 						</div>
 					</div>
@@ -562,7 +563,7 @@ Com esse sistema de “tração inteligente” automático, você não precisa a
 										<div class="description-switch" onclick="window.versoesManager.switchDescription(this)"></div>
 									</div>
 								</div>
-								<div class="interessado" onclick="window.inputManager.interessadoVersoes(4);"><div>ESTOU INTERESSADO</div></div>
+								<div class="interessado" onclick="window.inputManager.interessadoVersoes(4);"><div>TENHO INTERESSE</div></div>
 							</div>
 						</div>
 					</div>
@@ -669,7 +670,7 @@ Com esse sistema de “tração inteligente” automático, você não precisa a
 										<div class="description-switch" onclick="window.versoesManager.switchDescription(this)"></div>
 									</div>
 								</div>
-								<div class="interessado" onclick="window.inputManager.interessadoVersoes(3);"><div>ESTOU INTERESSADO</div></div>
+								<div class="interessado" onclick="window.inputManager.interessadoVersoes(3);"><div>TENHO INTERESSE</div></div>
 							</div>
 						</div>
 					</div>
@@ -795,7 +796,7 @@ Com esse sistema de “tração inteligente” automático, você não precisa a
 										<div class="description-switch" onclick="window.versoesManager.switchDescription(this)"></div>
 									</div>
 								</div>
-								<div class="interessado" onclick="window.inputManager.interessadoVersoes(5);"><div>ESTOU INTERESSADO</div></div>
+								<div class="interessado" onclick="window.inputManager.interessadoVersoes(5);"><div>TENHO INTERESSE</div></div>
 							</div>
 						</div>
 					</div>
@@ -884,7 +885,7 @@ Com esse sistema de “tração inteligente” automático, você não precisa a
 										<div class="description-switch" onclick="window.versoesManager.switchDescription(this)"></div>
 									</div>
 								</div>
-								<div class="interessado" onclick="window.inputManager.interessadoVersoes(7);"><div>ESTOU INTERESSADO</div></div>
+								<div class="interessado" onclick="window.inputManager.interessadoVersoes(7);"><div>TENHO INTERESSE</div></div>
 							</div>
 						</div>
 					</div>
@@ -969,7 +970,7 @@ Com esse sistema de “tração inteligente” automático, você não precisa a
 										<div class="description-switch" onclick="window.versoesManager.switchDescription(this)"></div>
 									</div>
 								</div>
-								<div class="interessado" onclick="window.inputManager.interessadoVersoes(6);"><div>ESTOU INTERESSADO</div></div>
+								<div class="interessado" onclick="window.inputManager.interessadoVersoes(6);"><div>TENHO INTERESSE</div></div>
 							</div>
 						</div>
 					</div>
@@ -1013,8 +1014,8 @@ Com esse sistema de “tração inteligente” automático, você não precisa a
 				<div class="menu-bar-fix"></div>
 				<div class="tour_principal onMiddle default-transition">
 
-					<div class="tour_title">EXCELÊNCIA EM QUALQUER FINALIDADE.</div>
-					<div class="tour_description">A Nova Saveiro traz a verdadeira combinação entre trabalho e diversão. Se por fora, ela é robusta e forte, é por dentro que seu design exclusivo traz conforto e praticidade. Um dia cansativo fica um pouco melhor quando você volta pra casa num interior como esse. Escolha a versão e veja por si mesmo.</div>
+					<div class="tour_title">EXCELÊNCIA PARA QUALQUER FINALIDADE.</div>
+					<div class="tour_description">A Nova Saveiro traz a verdadeira combinação entre trabalho e diversão. Se por fora, ela é robusta e forte, por dentro seu design exclusivo traz conforto e praticidade. Um dia cansativo fica um pouco melhor quando você volta pra casa num conforto como esse. Escolha a versão e veja você mesmo.</div>
 					<div class="tour_cars">
 						<div class="tour_left_car" onclick="window.tourManager.goToSequence(window.tourManager.Car.Trabalho);window.tagManager.viu360('TRABALHO');"></div>
 						<div class="tour_right_car" onclick="window.tourManager.goToSequence(window.tourManager.Car.Aventura);window.tagManager.viu360('AVENTURA');"></div>
@@ -1290,7 +1291,7 @@ Com esse sistema de “tração inteligente” automático, você não precisa a
 								<br/>
 								<span class="source">Revista Auto Esporte - Edição Abril de 2016</span> 
 								<br/>
-								<span class="corpo">Antes mesmo de seu lançamento, a Revista Auto Esporte fez um comparativo detalhado entre as principais picapes do país. O resultado? A Nova Saveiro chegou na frente. Detalhes deste comparativo estão na edição de Abril da Revista Auto Esporte, dando a largada para os prêmios e comparativos que ainda estão por vir.</span>
+								<span class="corpo">Antes mesmo de seu lançamento, a revista Auto Esporte fez um comparativo detalhado entre as principais picapes do País nos quesitos Conforto, Dinâmica e Mercado. O resultado? A Nova Saveiro chegou na frente com folga. Detalhes deste comparativo estão na edição de abril da revista Auto Esporte, dando a largada para os prêmios que ainda estão por vir.</span>
 							</div>
 							<div class="tabela"></div>
 							<div class="separation-bar"></div>
@@ -1302,7 +1303,7 @@ Com esse sistema de “tração inteligente” automático, você não precisa a
 								<br/>
 								<span class="source">Revista Quatro Rodas - Edição Abril de 2016</span> 
 								<br/>
-								<span class="corpo">No comparativo da Quatro Rodas entre a Nova Saveiro e a Fiat Strada, novamente a picape da Volkswagen ficou em primeiro lugar em todos os quesitos. A matéria também ressalta atrativos como o design robusto e conectvidade da vencedora. O comparativo completo está na edição de Abril da Revista Quatro Rodas.</span>
+								<span class="corpo">No comparativo da Quatro Rodas entre a nova Saveiro e a Fiat Strada, novamente a pick-up da Volkswagen ficou em primeiro lugar em todos os quesitos. A matéria também ressalta atrativos como design robusto e conectividade da vencedora. O comparativo completo está na edição de abril da revista Quatro Rodas.</span>
 							</div>
 							<div class="tabela"></div>
 							<div class="separation-bar"></div>
@@ -1377,7 +1378,7 @@ Com esse sistema de “tração inteligente” automático, você não precisa a
 				<div class="icon"></div>
 				<div class="text">MENU</div>
 			</div>
-			<div class="interessado" onclick="window.inputManager.interessado()">ESTOU INTERESSADO</div>
+			<div class="interessado" onclick="window.inputManager.interessado()">TENHO INTERESSE</div>
 		</div>
 		<div class="secondary menu-mobile-transition">
 			<div class="item" onclick="window.stateMachine.askMove(window.stateMachine.Trigger.Home)"><!--
@@ -1425,14 +1426,14 @@ Com esse sistema de “tração inteligente” automático, você não precisa a
     	if(window.stateMachine.state.name == "home"){
     		$('.mobile-arrow').addClass("up");	
     		window.stateMachine.askMove(window.stateMachine.Trigger.Versoes);
+    		setTimeout(function(){$('.primary .interessado').addClass('versoes');}, 1000);
+    		
     	}else{
     		$('.mobile-arrow').removeClass("up");	
     		window.stateMachine.askMove(window.stateMachine.Trigger.Home);
+    		setTimeout(function(){$('.primary .interessado').removeClass('versoes');}, 1000);
     	}
 		
-	}
-	function restartGyro(){
-
 	}
 
     $(document).ready(function() {
@@ -1538,5 +1539,8 @@ Com esse sistema de “tração inteligente” automático, você não precisa a
 	    //setInterval(function(){ console.log(lastAlpha);}, 500);
 
    	});
+
+	
+
 </script>
 </html>

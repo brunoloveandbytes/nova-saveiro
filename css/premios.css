@@ -58,7 +58,7 @@
 .premios .tabela{background-repeat:no-repeat;background-position:right;}
 
 /*Medium*/
-@media screen and (min-width: 960px) and (max-width: 1280px){
+@media screen and (min-width: 1050px) and (max-width: 1450px){
   .premios_content{left:-480px;width:960px;}
   .premios .sub-title{left:40px;width:880px;}
   .premios .super-container{left:30px;width:900px;}
@@ -68,7 +68,7 @@
   .premios .tabela{background-size:contain;}
 }
 /*Small*/
-@media screen and (max-width: 960px){
+@media screen and (max-width: 1050px){
   .premios_content{left:-250px;width:500px;}
   .premios .title{font-size:25px;top:60px;}
   .premios .sub-title{left:50px;width:400px;}
@@ -78,6 +78,7 @@
   .premios .container .texto{left:32%;width:65%;top:20%;}
   .premios .tabela{display:none;}
   .premios .left-image{background-size:contain;}
+  .premios .separation-bar{top:230px;}
 }
 /*Mobile portrait and landscape*/
 @media screen and (max-device-width: 500px){

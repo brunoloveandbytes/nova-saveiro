@@ -184,7 +184,7 @@ body div{
 /*Default*/
 .main-header{
 	position:absolute;
-	min-height: 100px;
+	min-height: 75px;
 	min-width: 500px;
 	width:100%;
 	background-color: #fff;
@@ -200,9 +200,9 @@ body div{
 	float:left;
 	background-size: 1000% 1000%;
 	left:30px;
-	top:18px;
-	width: 64px;
-	height: 64px;
+	top:11px;
+	width: 54px;
+	height: 54px;
 }
 
 .vwCarName{
@@ -210,7 +210,7 @@ body div{
 	float:right;
 	right:30px;
 	font-family: 'vw_headextrabold';
-	top:39px;
+	top:27px;
 	color:#000;
 }
 .vwCarName p{margin: 0;font-size: 18px;}
@@ -223,11 +223,11 @@ body div{
     overflow: hidden;
     z-index: 0;
 }
-.intro-content{top:100px;}
-.general-content{top:230px;}
+.intro-content{top:75px;}
+.general-content{top:205px;}
 .menu-bar{
     position: absolute;
-    top: 100px;
+    top: 75px;
     width: 100%;
     height: 130px;
     opacity: 0;
@@ -288,6 +288,21 @@ body div{
         transition: visibility 500ms, opacity 500ms linear;
 }
 
+.home-content .car-logo{
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: -15%;
+  left: 0;
+  opacity: 0;
+}
+.home-content .car-logo.show{
+  opacity: 1;
+}
+
 /*controle de altura*/
 @media screen and (max-height: 700px){
     .main-header{min-height: 50px;}
@@ -305,20 +320,21 @@ body div{
 }
 
 /*Medium*/
-@media screen and (min-width: 960px) and (max-width: 1280px){
-    .main-content{top:210px;}
-    .intro-content{top:100px;}
+@media screen and (min-width: 1050px) and (max-width: 1450px){
+    .main-content{top:185px;}
+    .intro-content{top:75px;}
     .menu-bar{height:110px;}
+    .home-content .car-logo {top: -20%;}
 }
 
 /*controle de altura para medium*/
-@media screen and (max-height: 700px) and (min-width: 960px) and (max-width: 1280px){
+@media screen and (max-height: 700px) and (min-width: 1050px) and (max-width: 1450px){
     .main-content{top:160px;}
     .intro-content{top:50px;}
 }
 
 /*Small*/
-@media screen and (max-width: 960px){
+@media screen and (max-width: 1050px){
 	.main-header{min-height: 50px;}
 	.content-header{min-height: 50px;}
 	.vw-logo{
@@ -329,8 +345,18 @@ body div{
 	.vwCarName{top:17px;}
 	.vwCarName p{font-size: 14px;}
 	.main-content{top:148px;}
-    .menu-bar{top:50px;height:98px;}
-    .intro-content{top:50px;}
+  .menu-bar{top:50px;height:98px;}
+  .intro-content{top:50px;}
+  .home-content .car-logo {top: -13%;}
+
+  .vertical-arrow{
+    left:-32px;
+    width: 64px;
+    height: 32px;
+    bottom: 32px;
+  }
+
+
 }
 /*Mobiles*/
 @media screen and (max-device-width: 500px){
@@ -377,12 +403,14 @@ body div{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    background-color: #000;
 }
 .sub-slide{
     position: absolute;
     width: 100%;
     top: 0px;
     bottom: 0px;
+
 }
 .slide1{top:0%;opacity: 0;}
 .slide3{background-color: #000;}
@@ -390,11 +418,11 @@ body div{
 
 
 /*Medium*/
-@media screen and (min-width: 960px) and (max-width: 1280px){
+@media screen and (min-width: 1050px) and (max-width: 1450px){
     .sub-slide{top:0px;}
 }
 /*Small*/
-@media screen and (max-width: 960px){
+@media screen and (max-width: 1050px){
     .sub-slide{top:0px;}
 }
 
@@ -536,7 +564,7 @@ body div{
 
 .home-content .car-button{
     position: absolute;
-    top: 65%;
+    top: 75%;
     width: 180px;
     height: 54px;
     cursor: pointer;
@@ -574,21 +602,22 @@ body div{
 .home-content .cross-button .texto{left:22px;top:10px;}
 
 /*Medium*/
-@media screen and (min-width: 960px) and (max-width: 1280px){
+@media screen and (min-width: 1050px) and (max-width: 1450px){
     .home-content{
         left: -480px;
         width: 960px;
     }
+    .premios_button{width:96px;height:96px;}
 }
 /*Small*/
-@media screen and (max-width: 960px){
+@media screen and (max-width: 1050px){
     .home-content{
         left: -250px;
         width: 500px;
     }
-    .premios_button{top:150px;}
-    .home-content .robust-button{left:-80px;}
-    .home-content .cross-button{right:-80px;}
+    .home-content .robust-button{left:0px;top:80%;}
+    .home-content .cross-button{right:0px;top:80%;}
+    .premios_button{width:96px;height:96px;top:150px;}
 }
 
 

@@ -52,11 +52,13 @@
     background-position: 0% -700%;
 }
 
-
-
 @media only screen and (orientation:portrait) and (max-device-width: 500px){
     .versoes .ruler{
         bottom: 200px;
+    }
+    .home-content .car-logo{
+        width: 800px;
+        left:-150px;
     }
 }
 
@@ -66,7 +68,10 @@
         bottom: 65px;
     }
     .menu .primary .interessado{
-        top:40px;
+        top:75px;
+    }
+    .menu .primary .interessado.versoes{
+        top:0px;
     }
 
     .mobile-arrow{
@@ -75,7 +80,9 @@
         height: 64px;
         bottom: 5px;
     }
-
+    .identidade_content{display:none;}
+    .fatos{display:none;}
+    .versoes_content .container{top:75px;}
 }
 
 

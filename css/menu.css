@@ -4,7 +4,7 @@
     font-size: 16px;
     line-height: 64px;
     position: absolute;
-    top: 134px;
+    top: 109px;
     left: -640px;
     width: 1280px;
     height: 64px;
@@ -103,7 +103,7 @@
 
 
 /*Small and Medium*/
-@media screen and (max-width: 1280px){
+@media screen and (max-width: 1450px){
   .menu{
       line-height: 48px;
       position: absolute;
@@ -126,7 +126,7 @@
 }
 
 /*Medium*/
-@media screen and (min-width: 960px) and (max-width: 1280px){
+@media screen and (min-width: 1050px) and (max-width: 1450px){
 .menu{left:-480px;width:960px;}
 .menu .secondary{width:725px;}
 .menu .item .text{left:52px;}
@@ -138,7 +138,7 @@
 .menu .secondary :nth-child(6).item{left:590px;width:140px;}
 }
 /*Small*/
-@media screen and (max-width: 960px){
+@media screen and (max-width: 1050px){
 .menu{line-height:48px;position:absolute;top:75px;left:-250px;width:500px;height:48px;}
 .menu .secondary{width:265px;}
 .menu .item .text{display:none;}

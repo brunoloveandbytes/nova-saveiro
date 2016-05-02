@@ -46,6 +46,7 @@ $(document).ready(function() {
 																"animatedProperties":[
 																	new AnimatedProperty({'idName':'premios_button','className':'show','classTransitionName':'default-transition','add':true}),
 																	new AnimatedProperty({'idName':'home','className':'show','classTransitionName':'default-transition','add':true}),
+																	new AnimatedProperty({'idName':'car-logo','className':'show','classTransitionName':'default-transition','add':true}),
 																	new AnimatedProperty({'idName':'menu','className':'show','classTransitionName':'opacity-transition','add':true, 'duration':500}),
 																	new AnimatedProperty({'idName':'premios_button','className':'show','classTransitionName':'default-transition','add':true}),
 																]
@@ -69,6 +70,7 @@ $(document).ready(function() {
 																	$('#rotational').addClass('rotate');
 																	$('#blue_car').removeClass('zoomCar');
 																	$('#home').addClass('show');
+																	$('#car-logo').addClass('show');
 																	$('#menu-bar').addClass('show');
 																},
 																"animatedProperties":[
@@ -97,6 +99,7 @@ $(document).ready(function() {
 																	$('#rotational').addClass('rotate');
 																	$('#blue_car').removeClass('zoomCar');
 																	$('#home').addClass('show');
+																	$('#car-logo').addClass('show');
 																	$('#identidade').removeClass('onBottom');
 																	$('#identidade').addClass('onTop');
 																},
@@ -125,6 +128,7 @@ $(document).ready(function() {
 																	$('#rotational').addClass('rotate');
 																	$('#blue_car').removeClass('zoomCar');
 																	$('#home').addClass('show');
+																	$('#car-logo').addClass('show');
 																	$('#menu-bar').addClass('show');
 																	$('#identidade').removeClass('onBottom');
 																	$('#identidade').addClass('onTop');
@@ -156,6 +160,7 @@ $(document).ready(function() {
 																	$('#rotational').addClass('rotate');
 																	$('#blue_car').removeClass('zoomCar');
 																	$('#home').addClass('show');
+																	$('#car-logo').addClass('show');
 																	$('#menu-bar').addClass('show');
 																	stateMachine.upSlides(['identidade','fatos','versoes']);
 																},
@@ -184,6 +189,7 @@ $(document).ready(function() {
 																	$('#rotational').addClass('rotate');
 																	$('#blue_car').removeClass('zoomCar');
 																	$('#home').addClass('show');
+																	$('#car-logo').addClass('show');
 																	$('#menu-bar').addClass('show');
 																	stateMachine.upSlides(['identidade','fatos','versoes','tour']);
 																},
@@ -321,6 +327,7 @@ $(document).ready(function() {
 																"animatedProperties":[
 																						new AnimatedProperty({'idName':'blue_car','className':'zoomCar','classTransitionName':'default-transition','remove':true}),
 																						new AnimatedProperty({'idName':'home','className':'show','classTransitionName':'default-transition','add':true}),
+																						new AnimatedProperty({'idName':'car-logo','className':'show','classTransitionName':'default-transition','add':true}),
 																						new AnimatedProperty({'idName':'menu','className':'show','classTransitionName':'opacity-transition','add':true, 'delay':500, 'duration':900}),
 																						new AnimatedProperty({'idName':'premios_button','className':'show','classTransitionName':'default-transition','add':true}),
 																						]
@@ -1460,6 +1467,7 @@ $(document).ready(function() {
 		setTimeout(function(){
 			$('#'+slide+' .gear_big').addClass('rotating');
 			$('#'+slide+' .gear_small').addClass('rotating-inverted');
+			$('#'+slide+' .compass-in').addClass('rotating');
 		}, 900);
 	}
 });
