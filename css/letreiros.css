@@ -109,7 +109,7 @@
 
 }
 /*Mobile portrait*/
-@media screen and (orientation:portrait) and (max-device-width: 500px){
+@media screen and (orientation:portrait) and (max-device-width: 750px){
 
 }
 /*Mobile landscape*/

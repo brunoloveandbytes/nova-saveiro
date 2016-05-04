@@ -2,10 +2,10 @@
 $(document).ready(function() {
 	var mouseCubeDown = 0;
 	document.body.onmousedown = function() { 
-	  ++mouseCubeDown;
+	  mouseCubeDown=1;
 	}
 	document.body.onmouseup = function() {
-	  --mouseCubeDown;
+	  mouseCubeDown=0;
 	}
 	var CubeManager = function(){
 		this.enabled = false;
@@ -139,21 +139,25 @@ $(document).ready(function() {
 			lastX = newX;
 			lastY = newY;
 
-			var newOrientation;
-			if($(window).width() > 2000){
-				newOrientation = "translate3d(0px,0px,1250px) rotateX(" + newX + "deg) rotateY(" + newY + "deg)";
-			}else if($(window).width() > 1280){
-				newOrientation = "translate3d(0px,0px,1000px) rotateX(" + newX + "deg) rotateY(" + newY + "deg)";
+			if(!isie()){
+				var newOrientation;
+				if($(window).width() > 2000){
+					newOrientation = "translate3d(0px,0px,1250px) rotateX(" + newX + "deg) rotateY(" + newY + "deg)";
+				}else if($(window).width() > 1280){
+					newOrientation = "translate3d(0px,0px,1000px) rotateX(" + newX + "deg) rotateY(" + newY + "deg)";
+				}else{
+					newOrientation = "translate3d(0px,0px,640px) rotateX(" + newX + "deg) rotateY(" + newY + "deg)";
+				}
+				$('#'+cubeManager.cubeName+' .cube').css({
+			        'transform': newOrientation,
+			        '-webkit-transform': newOrientation,
+			        '-moz-transform': newOrientation,
+			        '-ms-transform': newOrientation,
+			        '-o-transform:rotate': newOrientation
+			    });
 			}else{
-				newOrientation = "translate3d(0px,0px,640px) rotateX(" + newX + "deg) rotateY(" + newY + "deg)";
+				window.tourManager.setIePosition(newX,newY);
 			}
-			$('#'+cubeManager.cubeName+' .cube').css({
-		        'transform': newOrientation,
-		        '-webkit-transform': newOrientation,
-		        '-moz-transform': newOrientation,
-		        '-ms-transform': newOrientation,
-		        '-o-transform:rotate': newOrientation
-		    });
 		}
 	}
 	window.setInterval(refresh,40);

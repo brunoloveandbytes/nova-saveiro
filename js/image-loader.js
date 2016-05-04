@@ -84,7 +84,6 @@ $(document).ready(function() {
 		stages = new StagesCreator({'imageLoader':this, 'readyFunction':function(){}, 'classes':[
 																		{'className':'slide1','imgName':'00_Intro_01_Colheita_Volkswagen.jpg','sizes':{'ll': 48,'lm': 36,'ls': 20,'lmi':140,'hl':224,'hm':160,'hs': 84,'hmi':140}},
 																		{'className':'down-arrow','imgName':'tiles.png','sizes':{'ll':140,'lm':140,'ls':140,'lmi':140,'hl':140,'hm':140,'hs':140,'hmi':140}},
-																		{'className':'up-arrow','imgName':'tiles.png','sizes':{'ll':140,'lm':140,'ls':140,'lmi':140,'hl':140,'hm':140,'hs':140,'hmi':140}},
 																		{'className':'letreiro .gear','imgName':'gear.png','sizes':{'ll': 48,'lm': 36,'ls': 20,'lmi':140,'hl':224,'hm':160,'hs': 84,'hmi':140}},
 																		{'className':'gear_big','imgName':'gear_big.png','sizes':{'ll': 48,'lm': 36,'ls': 20,'lmi':140,'hl':224,'hm':160,'hs': 84,'hmi':140}},
 																		{'className':'gear_small','imgName':'gear_small.png','sizes':{'ll': 48,'lm': 36,'ls': 20,'lmi':140,'hl':224,'hm':160,'hs': 84,'hmi':140}},
@@ -148,18 +147,22 @@ $(document).ready(function() {
 		stages = new StagesCreator({'imageLoader':this, 'readyFunction':function(){}, 'classes':[
 																		{'className':'fatos','imgName':'02_Identidade_01_Fundo_Volkswagen.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
 																		{'className':'fatos .arrow','imgName':'tiles.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
-																		
 																		{'className':'fatos .grid','imgName':'fatos_grid.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
 																		{'className':'fatos .frame1 .car-image','imgName':'fatos_suspensao_carro.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
 																		{'className':'fatos .frame1 .bar-image','imgName':'fatos_suspensao_barra.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
-
+																		{'className':'fatos .frame1 .icon','imgName':'fatos_suspensao_icon.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
 																		{'className':'fatos .frame2 .car-image','imgName':'fatos_desempenho_carro.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
-
+																		{'className':'fatos .frame2 .bar-image','imgName':'fatos_desempenho_barra.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'fatos .frame2 .icon','imgName':'fatos_desempenho_icon.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
 																		{'className':'fatos .frame3 .car-image','imgName':'fatos_off_road_carro.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
 																		{'className':'fatos .frame3 .bar-image','imgName':'fatos_off_road_barra.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
-
+																		{'className':'fatos .frame3 .icon','imgName':'fatos_off_road_icon.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
 																		{'className':'fatos .frame4 .car-image','imgName':'fatos_hdc_carro.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'fatos .frame4 .bar-image','imgName':'fatos_hdc_barra.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'fatos .frame4 .icon','imgName':'fatos_hdc_icon.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
 																		{'className':'fatos .frame5 .car-image','imgName':'fatos_eds_carro.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'fatos .frame5 .bar-image','imgName':'fatos_eds_barra.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'fatos .frame5 .icon','imgName':'fatos_eds_icon.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
 																		{'className':'fatos .suspensao .icon','imgName':'fatos_suspensao.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
 																		{'className':'fatos .desempenho .icon','imgName':'fatos_desempenho.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
 																		{'className':'fatos .abs .icon','imgName':'fatos_abs.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
@@ -210,9 +213,9 @@ $(document).ready(function() {
 																	]});
 		this.microStages.push(stages.micro);this.smallStages.push(stages.small);this.mediumStages.push(stages.medium);this.largeStages.push(stages.large);
 		//Stage 10
-		stages = new StagesCreator({'imageLoader':this, 'readyFunction':function(){}, 'classes':[
+		if(!isie()){
+			stages = new StagesCreator({'imageLoader':this, 'readyFunction':function(){}, 'classes':[
 																		{'className':'tour','imgName':'05_360_01_Fundo.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
-																		{'className':'tour-vinheta','imgName':'05_360_01_Fundo.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
 																		{'className':'tour_sequence .back','imgName':'tiles.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
 																		{'className':'tour_left_car','imgName':'car_trabalho.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
 																		{'className':'tour_right_car','imgName':'car_aventura.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
@@ -371,10 +374,173 @@ $(document).ready(function() {
 																		{'className':'tour_handle_sequence','imgName':'tiles.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
 																		{'className':'tour-slider .handle','imgName':'tiles.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
 																	]});
+		}else{
+			stages = new StagesCreator({'imageLoader':this, 'readyFunction':function(){}, 'classes':[
+																		{'className':'tour','imgName':'05_360_01_Fundo.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'tour_sequence .back','imgName':'tiles.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'tour_left_car','imgName':'car_trabalho.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'tour_right_car','imgName':'car_aventura.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'trabalho_car_item1','imgName':'05_360_02_Saveiro_Trend_Volkswagen_00000.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'trabalho_car_item2','imgName':'05_360_02_Saveiro_Trend_Volkswagen_00000.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'trabalho_car_item3','imgName':'05_360_02_Saveiro_Trend_Volkswagen_00002.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'trabalho_car_item4','imgName':'05_360_02_Saveiro_Trend_Volkswagen_00002.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'trabalho_car_item5','imgName':'05_360_02_Saveiro_Trend_Volkswagen_00004.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'trabalho_car_item6','imgName':'05_360_02_Saveiro_Trend_Volkswagen_00004.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'trabalho_car_item7','imgName':'05_360_02_Saveiro_Trend_Volkswagen_00006.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'trabalho_car_item8','imgName':'05_360_02_Saveiro_Trend_Volkswagen_00006.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'trabalho_car_item9','imgName':'05_360_02_Saveiro_Trend_Volkswagen_00008.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'trabalho_car_item10','imgName':'05_360_02_Saveiro_Trend_Volkswagen_00008.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'trabalho_car_item11','imgName':'05_360_02_Saveiro_Trend_Volkswagen_00010.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'trabalho_car_item12','imgName':'05_360_02_Saveiro_Trend_Volkswagen_00010.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'trabalho_car_item13','imgName':'05_360_02_Saveiro_Trend_Volkswagen_00012.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'trabalho_car_item14','imgName':'05_360_02_Saveiro_Trend_Volkswagen_00012.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'trabalho_car_item15','imgName':'05_360_02_Saveiro_Trend_Volkswagen_00014.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'trabalho_car_item16','imgName':'05_360_02_Saveiro_Trend_Volkswagen_00014.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'trabalho_car_item17','imgName':'05_360_02_Saveiro_Trend_Volkswagen_00016.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'trabalho_car_item18','imgName':'05_360_02_Saveiro_Trend_Volkswagen_00016.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'trabalho_car_item19','imgName':'05_360_02_Saveiro_Trend_Volkswagen_00018.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'trabalho_car_item20','imgName':'05_360_02_Saveiro_Trend_Volkswagen_00018.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'trabalho_car_item21','imgName':'05_360_02_Saveiro_Trend_Volkswagen_00020.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'trabalho_car_item22','imgName':'05_360_02_Saveiro_Trend_Volkswagen_00020.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'trabalho_car_item23','imgName':'05_360_02_Saveiro_Trend_Volkswagen_00022.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'trabalho_car_item24','imgName':'05_360_02_Saveiro_Trend_Volkswagen_00022.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'trabalho_car_item25','imgName':'05_360_02_Saveiro_Trend_Volkswagen_00024.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'trabalho_car_item26','imgName':'05_360_02_Saveiro_Trend_Volkswagen_00024.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'trabalho_car_item27','imgName':'05_360_02_Saveiro_Trend_Volkswagen_00026.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'trabalho_car_item28','imgName':'05_360_02_Saveiro_Trend_Volkswagen_00026.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'trabalho_car_item29','imgName':'05_360_02_Saveiro_Trend_Volkswagen_00028.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'trabalho_car_item30','imgName':'05_360_02_Saveiro_Trend_Volkswagen_00028.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'trabalho_car_item31','imgName':'05_360_02_Saveiro_Trend_Volkswagen_00030.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'trabalho_car_item32','imgName':'05_360_02_Saveiro_Trend_Volkswagen_00030.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'trabalho_car_item33','imgName':'05_360_02_Saveiro_Trend_Volkswagen_00032.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'trabalho_car_item34','imgName':'05_360_02_Saveiro_Trend_Volkswagen_00032.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'trabalho_car_item35','imgName':'05_360_02_Saveiro_Trend_Volkswagen_00034.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'trabalho_car_item36','imgName':'05_360_02_Saveiro_Trend_Volkswagen_00034.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'trabalho_car_item37','imgName':'05_360_02_Saveiro_Trend_Volkswagen_00036.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'trabalho_car_item38','imgName':'05_360_02_Saveiro_Trend_Volkswagen_00036.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'trabalho_car_item39','imgName':'05_360_02_Saveiro_Trend_Volkswagen_00038.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'trabalho_car_item40','imgName':'05_360_02_Saveiro_Trend_Volkswagen_00038.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'trabalho_car_item41','imgName':'05_360_02_Saveiro_Trend_Volkswagen_00040.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'trabalho_car_item42','imgName':'05_360_02_Saveiro_Trend_Volkswagen_00040.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'trabalho_car_item43','imgName':'05_360_02_Saveiro_Trend_Volkswagen_00042.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'trabalho_car_item44','imgName':'05_360_02_Saveiro_Trend_Volkswagen_00042.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'trabalho_car_item45','imgName':'05_360_02_Saveiro_Trend_Volkswagen_00044.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'trabalho_car_item46','imgName':'05_360_02_Saveiro_Trend_Volkswagen_00044.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'trabalho_car_item47','imgName':'05_360_02_Saveiro_Trend_Volkswagen_00046.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'trabalho_car_item48','imgName':'05_360_02_Saveiro_Trend_Volkswagen_00046.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'trabalho_car_item49','imgName':'05_360_02_Saveiro_Trend_Volkswagen_00048.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'trabalho_car_item50','imgName':'05_360_02_Saveiro_Trend_Volkswagen_00048.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'trabalho_car_item51','imgName':'05_360_02_Saveiro_Trend_Volkswagen_00050.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'trabalho_car_item52','imgName':'05_360_02_Saveiro_Trend_Volkswagen_00050.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'trabalho_car_item53','imgName':'05_360_02_Saveiro_Trend_Volkswagen_00052.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'trabalho_car_item54','imgName':'05_360_02_Saveiro_Trend_Volkswagen_00052.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'trabalho_car_item55','imgName':'05_360_02_Saveiro_Trend_Volkswagen_00054.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'trabalho_car_item56','imgName':'05_360_02_Saveiro_Trend_Volkswagen_00054.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'trabalho_car_item57','imgName':'05_360_02_Saveiro_Trend_Volkswagen_00056.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'trabalho_car_item58','imgName':'05_360_02_Saveiro_Trend_Volkswagen_00056.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'trabalho_car_item59','imgName':'05_360_02_Saveiro_Trend_Volkswagen_00058.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'trabalho_car_item60','imgName':'05_360_02_Saveiro_Trend_Volkswagen_00058.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'trabalho_car_item61','imgName':'05_360_02_Saveiro_Trend_Volkswagen_00060.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'trabalho_car_item62','imgName':'05_360_02_Saveiro_Trend_Volkswagen_00060.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'trabalho_car_item63','imgName':'05_360_02_Saveiro_Trend_Volkswagen_00062.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'trabalho_car_item64','imgName':'05_360_02_Saveiro_Trend_Volkswagen_00062.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'trabalho_car_item65','imgName':'05_360_02_Saveiro_Trend_Volkswagen_00064.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'trabalho_car_item66','imgName':'05_360_02_Saveiro_Trend_Volkswagen_00064.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'trabalho_car_item67','imgName':'05_360_02_Saveiro_Trend_Volkswagen_00066.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'trabalho_car_item68','imgName':'05_360_02_Saveiro_Trend_Volkswagen_00066.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'trabalho_car_item69','imgName':'05_360_02_Saveiro_Trend_Volkswagen_00068.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'trabalho_car_item70','imgName':'05_360_02_Saveiro_Trend_Volkswagen_00068.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'trabalho_car_item71','imgName':'05_360_02_Saveiro_Trend_Volkswagen_00070.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'trabalho_car_item72','imgName':'05_360_02_Saveiro_Trend_Volkswagen_00070.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'trabalho_car_item73','imgName':'05_360_02_Saveiro_Trend_Volkswagen_00072.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'trabalho_car_item74','imgName':'05_360_02_Saveiro_Trend_Volkswagen_00072.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'trabalho_car_item75','imgName':'05_360_02_Saveiro_Trend_Volkswagen_00074.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'trabalho_car_item76','imgName':'05_360_02_Saveiro_Trend_Volkswagen_00074.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'aventura_car_item1','imgName':'05_360_03_Saveiro_Cross_Volkswagen_00000.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'aventura_car_item2','imgName':'05_360_03_Saveiro_Cross_Volkswagen_00000.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'aventura_car_item3','imgName':'05_360_03_Saveiro_Cross_Volkswagen_00002.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'aventura_car_item4','imgName':'05_360_03_Saveiro_Cross_Volkswagen_00002.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'aventura_car_item5','imgName':'05_360_03_Saveiro_Cross_Volkswagen_00004.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'aventura_car_item6','imgName':'05_360_03_Saveiro_Cross_Volkswagen_00004.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'aventura_car_item7','imgName':'05_360_03_Saveiro_Cross_Volkswagen_00006.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'aventura_car_item8','imgName':'05_360_03_Saveiro_Cross_Volkswagen_00006.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'aventura_car_item9','imgName':'05_360_03_Saveiro_Cross_Volkswagen_00008.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'aventura_car_item10','imgName':'05_360_03_Saveiro_Cross_Volkswagen_00008.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'aventura_car_item11','imgName':'05_360_03_Saveiro_Cross_Volkswagen_00010.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'aventura_car_item12','imgName':'05_360_03_Saveiro_Cross_Volkswagen_00010.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'aventura_car_item13','imgName':'05_360_03_Saveiro_Cross_Volkswagen_00012.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'aventura_car_item14','imgName':'05_360_03_Saveiro_Cross_Volkswagen_00012.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'aventura_car_item15','imgName':'05_360_03_Saveiro_Cross_Volkswagen_00014.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'aventura_car_item16','imgName':'05_360_03_Saveiro_Cross_Volkswagen_00014.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'aventura_car_item17','imgName':'05_360_03_Saveiro_Cross_Volkswagen_00016.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'aventura_car_item18','imgName':'05_360_03_Saveiro_Cross_Volkswagen_00016.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'aventura_car_item19','imgName':'05_360_03_Saveiro_Cross_Volkswagen_00018.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'aventura_car_item20','imgName':'05_360_03_Saveiro_Cross_Volkswagen_00018.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'aventura_car_item21','imgName':'05_360_03_Saveiro_Cross_Volkswagen_00020.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'aventura_car_item22','imgName':'05_360_03_Saveiro_Cross_Volkswagen_00020.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'aventura_car_item23','imgName':'05_360_03_Saveiro_Cross_Volkswagen_00022.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'aventura_car_item24','imgName':'05_360_03_Saveiro_Cross_Volkswagen_00022.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'aventura_car_item25','imgName':'05_360_03_Saveiro_Cross_Volkswagen_00024.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'aventura_car_item26','imgName':'05_360_03_Saveiro_Cross_Volkswagen_00024.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'aventura_car_item27','imgName':'05_360_03_Saveiro_Cross_Volkswagen_00026.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'aventura_car_item28','imgName':'05_360_03_Saveiro_Cross_Volkswagen_00026.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'aventura_car_item29','imgName':'05_360_03_Saveiro_Cross_Volkswagen_00028.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'aventura_car_item30','imgName':'05_360_03_Saveiro_Cross_Volkswagen_00028.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'aventura_car_item31','imgName':'05_360_03_Saveiro_Cross_Volkswagen_00030.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'aventura_car_item32','imgName':'05_360_03_Saveiro_Cross_Volkswagen_00030.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'aventura_car_item33','imgName':'05_360_03_Saveiro_Cross_Volkswagen_00032.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'aventura_car_item34','imgName':'05_360_03_Saveiro_Cross_Volkswagen_00032.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'aventura_car_item35','imgName':'05_360_03_Saveiro_Cross_Volkswagen_00034.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'aventura_car_item36','imgName':'05_360_03_Saveiro_Cross_Volkswagen_00034.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'aventura_car_item37','imgName':'05_360_03_Saveiro_Cross_Volkswagen_00036.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'aventura_car_item38','imgName':'05_360_03_Saveiro_Cross_Volkswagen_00036.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'aventura_car_item39','imgName':'05_360_03_Saveiro_Cross_Volkswagen_00038.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'aventura_car_item40','imgName':'05_360_03_Saveiro_Cross_Volkswagen_00038.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'aventura_car_item41','imgName':'05_360_03_Saveiro_Cross_Volkswagen_00040.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'aventura_car_item42','imgName':'05_360_03_Saveiro_Cross_Volkswagen_00040.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'aventura_car_item43','imgName':'05_360_03_Saveiro_Cross_Volkswagen_00042.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'aventura_car_item44','imgName':'05_360_03_Saveiro_Cross_Volkswagen_00042.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'aventura_car_item45','imgName':'05_360_03_Saveiro_Cross_Volkswagen_00044.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'aventura_car_item46','imgName':'05_360_03_Saveiro_Cross_Volkswagen_00044.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'aventura_car_item47','imgName':'05_360_03_Saveiro_Cross_Volkswagen_00046.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'aventura_car_item48','imgName':'05_360_03_Saveiro_Cross_Volkswagen_00046.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'aventura_car_item49','imgName':'05_360_03_Saveiro_Cross_Volkswagen_00048.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'aventura_car_item50','imgName':'05_360_03_Saveiro_Cross_Volkswagen_00048.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'aventura_car_item51','imgName':'05_360_03_Saveiro_Cross_Volkswagen_00050.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'aventura_car_item52','imgName':'05_360_03_Saveiro_Cross_Volkswagen_00050.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'aventura_car_item53','imgName':'05_360_03_Saveiro_Cross_Volkswagen_00052.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'aventura_car_item54','imgName':'05_360_03_Saveiro_Cross_Volkswagen_00052.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'aventura_car_item55','imgName':'05_360_03_Saveiro_Cross_Volkswagen_00054.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'aventura_car_item56','imgName':'05_360_03_Saveiro_Cross_Volkswagen_00054.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'aventura_car_item57','imgName':'05_360_03_Saveiro_Cross_Volkswagen_00056.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'aventura_car_item58','imgName':'05_360_03_Saveiro_Cross_Volkswagen_00056.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'aventura_car_item59','imgName':'05_360_03_Saveiro_Cross_Volkswagen_00058.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'aventura_car_item60','imgName':'05_360_03_Saveiro_Cross_Volkswagen_00058.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'aventura_car_item61','imgName':'05_360_03_Saveiro_Cross_Volkswagen_00060.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'aventura_car_item62','imgName':'05_360_03_Saveiro_Cross_Volkswagen_00060.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'aventura_car_item63','imgName':'05_360_03_Saveiro_Cross_Volkswagen_00062.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'aventura_car_item64','imgName':'05_360_03_Saveiro_Cross_Volkswagen_00062.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'aventura_car_item65','imgName':'05_360_03_Saveiro_Cross_Volkswagen_00064.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'aventura_car_item66','imgName':'05_360_03_Saveiro_Cross_Volkswagen_00064.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'aventura_car_item67','imgName':'05_360_03_Saveiro_Cross_Volkswagen_00066.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'aventura_car_item68','imgName':'05_360_03_Saveiro_Cross_Volkswagen_00066.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'aventura_car_item69','imgName':'05_360_03_Saveiro_Cross_Volkswagen_00068.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'aventura_car_item70','imgName':'05_360_03_Saveiro_Cross_Volkswagen_00068.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'aventura_car_item71','imgName':'05_360_03_Saveiro_Cross_Volkswagen_00070.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'aventura_car_item72','imgName':'05_360_03_Saveiro_Cross_Volkswagen_00070.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'aventura_car_item73','imgName':'05_360_03_Saveiro_Cross_Volkswagen_00072.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'aventura_car_item74','imgName':'05_360_03_Saveiro_Cross_Volkswagen_00072.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'aventura_car_item75','imgName':'05_360_03_Saveiro_Cross_Volkswagen_00074.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'aventura_car_item76','imgName':'05_360_03_Saveiro_Cross_Volkswagen_00074.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'tour_handle_sequence','imgName':'tiles.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'tour-slider .handle','imgName':'tiles.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																	]});
+		}
 		this.microStages.push(stages.micro);this.smallStages.push(stages.small);this.mediumStages.push(stages.medium);this.largeStages.push(stages.large);
+		
 		//Stage 11
-		stages = new StagesCreator({'imageLoader':this, 'readyFunction':function(){}, 'classes':[
-																		
+		if(!isie()){
+			stages = new StagesCreator({'imageLoader':this, 'readyFunction':function(){}, 'classes':[
 																		{'className':'tour_interno_container .close','imgName':'tiles.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
 																		{'className':'aventura_interno .cube .back','imgName':'05_360_04_Saveiro_Cross_Volkswagen_Rear.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
 																		{'className':'aventura_interno .cube .front','imgName':'05_360_04_Saveiro_Cross_Volkswagen_Front.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
@@ -389,6 +555,84 @@ $(document).ready(function() {
 																		{'className':'trabalho_interno .cube .top','imgName':'05_360_05_Saveiro_Trend_Volkswagen_Top.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
 																		{'className':'trabalho_interno .cube .bottom','imgName':'05_360_05_Saveiro_Trend_Volkswagen_Down.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
 																	]});
+		}else{
+			stages = new StagesCreator({'imageLoader':this, 'readyFunction':function(){}, 'classes':[
+																		{'className':'tour_interno_container .close','imgName':'tiles.png','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'ie-aventura .ie_interno_item1','imgName':'Saveiro_Cross_CD_B_00000.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'ie-aventura .ie_interno_item2','imgName':'Saveiro_Cross_CD_B_00001.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'ie-aventura .ie_interno_item3','imgName':'Saveiro_Cross_CD_B_00002.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'ie-aventura .ie_interno_item4','imgName':'Saveiro_Cross_CD_B_00003.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'ie-aventura .ie_interno_item5','imgName':'Saveiro_Cross_CD_B_00004.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'ie-aventura .ie_interno_item6','imgName':'Saveiro_Cross_CD_B_00005.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'ie-aventura .ie_interno_item7','imgName':'Saveiro_Cross_CD_B_00006.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'ie-aventura .ie_interno_item8','imgName':'Saveiro_Cross_CD_B_00007.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'ie-aventura .ie_interno_item9','imgName':'Saveiro_Cross_CD_B_00008.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'ie-aventura .ie_interno_item10','imgName':'Saveiro_Cross_CD_B_00009.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'ie-aventura .ie_interno_item11','imgName':'Saveiro_Cross_CD_B_00010.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'ie-aventura .ie_interno_item12','imgName':'Saveiro_Cross_CD_B_00011.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'ie-aventura .ie_interno_item13','imgName':'Saveiro_Cross_CD_B_00012.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'ie-aventura .ie_interno_item14','imgName':'Saveiro_Cross_CD_B_00013.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'ie-aventura .ie_interno_item15','imgName':'Saveiro_Cross_CD_B_00014.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'ie-aventura .ie_interno_item16','imgName':'Saveiro_Cross_CD_B_00015.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'ie-aventura .ie_interno_item17','imgName':'Saveiro_Cross_CD_B_00016.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'ie-aventura .ie_interno_item18','imgName':'Saveiro_Cross_CD_B_00017.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'ie-aventura .ie_interno_item19','imgName':'Saveiro_Cross_CD_B_00018.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'ie-aventura .ie_interno_item20','imgName':'Saveiro_Cross_CD_B_00019.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'ie-aventura .ie_interno_item21','imgName':'Saveiro_Cross_CD_B_00020.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'ie-aventura .ie_interno_item22','imgName':'Saveiro_Cross_CD_B_00021.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'ie-aventura .ie_interno_item23','imgName':'Saveiro_Cross_CD_B_00022.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'ie-aventura .ie_interno_item24','imgName':'Saveiro_Cross_CD_B_00023.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'ie-aventura .ie_interno_item25','imgName':'Saveiro_Cross_CD_B_00024.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'ie-aventura .ie_interno_item26','imgName':'Saveiro_Cross_CD_B_00025.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'ie-aventura .ie_interno_item27','imgName':'Saveiro_Cross_CD_B_00026.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'ie-aventura .ie_interno_item28','imgName':'Saveiro_Cross_CD_B_00027.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'ie-aventura .ie_interno_item29','imgName':'Saveiro_Cross_CD_B_00028.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'ie-aventura .ie_interno_item30','imgName':'Saveiro_Cross_CD_B_00029.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'ie-aventura .ie_interno_item31','imgName':'Saveiro_Cross_CD_B_00030.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'ie-aventura .ie_interno_item32','imgName':'Saveiro_Cross_CD_B_00031.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'ie-aventura .ie_interno_item33','imgName':'Saveiro_Cross_CD_B_00032.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'ie-aventura .ie_interno_item34','imgName':'Saveiro_Cross_CD_B_00033.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'ie-aventura .ie_interno_item35','imgName':'Saveiro_Cross_CD_B_00034.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'ie-aventura .ie_interno_item36','imgName':'Saveiro_Cross_CD_B_00035.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'ie-trabalho .ie_interno_item1','imgName':'Saveiro_Trend_CE_B_B_00000.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'ie-trabalho .ie_interno_item2','imgName':'Saveiro_Trend_CE_B_B_00001.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'ie-trabalho .ie_interno_item3','imgName':'Saveiro_Trend_CE_B_B_00002.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'ie-trabalho .ie_interno_item4','imgName':'Saveiro_Trend_CE_B_B_00003.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'ie-trabalho .ie_interno_item5','imgName':'Saveiro_Trend_CE_B_B_00004.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'ie-trabalho .ie_interno_item6','imgName':'Saveiro_Trend_CE_B_B_00005.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'ie-trabalho .ie_interno_item7','imgName':'Saveiro_Trend_CE_B_B_00006.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'ie-trabalho .ie_interno_item8','imgName':'Saveiro_Trend_CE_B_B_00007.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'ie-trabalho .ie_interno_item9','imgName':'Saveiro_Trend_CE_B_B_00008.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'ie-trabalho .ie_interno_item10','imgName':'Saveiro_Trend_CE_B_B_00009.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'ie-trabalho .ie_interno_item11','imgName':'Saveiro_Trend_CE_B_B_00010.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'ie-trabalho .ie_interno_item12','imgName':'Saveiro_Trend_CE_B_B_00011.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'ie-trabalho .ie_interno_item13','imgName':'Saveiro_Trend_CE_B_B_00012.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'ie-trabalho .ie_interno_item14','imgName':'Saveiro_Trend_CE_B_B_00013.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'ie-trabalho .ie_interno_item15','imgName':'Saveiro_Trend_CE_B_B_00014.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'ie-trabalho .ie_interno_item16','imgName':'Saveiro_Trend_CE_B_B_00015.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'ie-trabalho .ie_interno_item17','imgName':'Saveiro_Trend_CE_B_B_00016.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'ie-trabalho .ie_interno_item18','imgName':'Saveiro_Trend_CE_B_B_00017.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'ie-trabalho .ie_interno_item19','imgName':'Saveiro_Trend_CE_B_B_00018.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'ie-trabalho .ie_interno_item20','imgName':'Saveiro_Trend_CE_B_B_00019.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'ie-trabalho .ie_interno_item21','imgName':'Saveiro_Trend_CE_B_B_00020.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'ie-trabalho .ie_interno_item22','imgName':'Saveiro_Trend_CE_B_B_00021.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'ie-trabalho .ie_interno_item23','imgName':'Saveiro_Trend_CE_B_B_00022.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'ie-trabalho .ie_interno_item24','imgName':'Saveiro_Trend_CE_B_B_00023.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'ie-trabalho .ie_interno_item25','imgName':'Saveiro_Trend_CE_B_B_00024.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'ie-trabalho .ie_interno_item26','imgName':'Saveiro_Trend_CE_B_B_00025.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'ie-trabalho .ie_interno_item27','imgName':'Saveiro_Trend_CE_B_B_00026.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'ie-trabalho .ie_interno_item28','imgName':'Saveiro_Trend_CE_B_B_00027.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'ie-trabalho .ie_interno_item29','imgName':'Saveiro_Trend_CE_B_B_00028.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'ie-trabalho .ie_interno_item30','imgName':'Saveiro_Trend_CE_B_B_00029.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'ie-trabalho .ie_interno_item31','imgName':'Saveiro_Trend_CE_B_B_00030.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'ie-trabalho .ie_interno_item32','imgName':'Saveiro_Trend_CE_B_B_00031.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'ie-trabalho .ie_interno_item33','imgName':'Saveiro_Trend_CE_B_B_00032.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'ie-trabalho .ie_interno_item34','imgName':'Saveiro_Trend_CE_B_B_00033.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'ie-trabalho .ie_interno_item35','imgName':'Saveiro_Trend_CE_B_B_00034.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'ie-trabalho .ie_interno_item36','imgName':'Saveiro_Trend_CE_B_B_00035.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																	]});
+		}
+		
 		this.microStages.push(stages.micro);this.smallStages.push(stages.small);this.mediumStages.push(stages.medium);this.largeStages.push(stages.large);
 		//Stage 12
 		stages = new StagesCreator({'imageLoader':this, 'readyFunction':function(){}, 'classes':[
@@ -437,6 +681,7 @@ $(document).ready(function() {
 																		{'className':'gallery .item.acessorios16','imgName':'thumb/06_Galeria_40_Pedais_Saveiro_Volkswagen.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
 																		{'className':'gallery .item.acessorios17','imgName':'thumb/06_Galeria_41_Banco_Saveiro_Volkswagen.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
 																		{'className':'gallery .item.acessorios18','imgName':'thumb/06_Galeria_42_Roda_Saveiro_Volkswagen.jpg','sizes':{'ll': 56,'lm': 40,'ls': 20,'lmi':140,'hl':232,'hm':160,'hs': 80,'hmi':140}},
+																		{'className':'up-arrow','imgName':'tiles.png','sizes':{'ll':140,'lm':140,'ls':140,'lmi':140,'hl':140,'hm':140,'hs':140,'hmi':140}},
 
 																	]});
 		this.microStages.push(stages.micro);this.smallStages.push(stages.small);this.mediumStages.push(stages.medium);this.largeStages.push(stages.large);
@@ -789,7 +1034,7 @@ $(document).ready(function() {
 	var loadState = LoadState.Loading;
 
 	if (window.matchMedia) {
-	  var mqSmall = window.matchMedia("(min-width: 960px)");
+	  var mqSmall = window.matchMedia("(min-width: 1050px)");
 
 	  mqSmall.addListener(function(mq){
 	  	if (mq.matches) {
@@ -798,8 +1043,9 @@ $(document).ready(function() {
 	  		imageLoader.askToChangeStage(ChangeStage.Small);
 	  	}
 	  	window.versoesManager.sizeWasChanged();
+	  	window.tourManager.setSlider();
 	  });
-	  var mqLarge = window.matchMedia("(min-width: 1280px)");
+	  var mqLarge = window.matchMedia("(min-width: 1450px)");
 	  mqLarge.addListener(function(mq){
 	  	if (mq.matches) {
 	  		imageLoader.askToChangeStage(ChangeStage.Large);
@@ -809,8 +1055,6 @@ $(document).ready(function() {
 	  	window.versoesManager.sizeWasChanged();
 	  });
 	}
-
-
 	setInterval(function(){ imageLoader.unleashStage(); }, 1000);
 
 	$(function () {

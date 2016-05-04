@@ -81,11 +81,11 @@
   .premios .separation-bar{top:230px;}
 }
 /*Mobile portrait and landscape*/
-@media screen and (max-device-width: 500px){
+@media screen and (max-device-width: 750px){
 
 }
 /*Mobile portrait*/
-@media screen and (orientation:portrait) and (max-device-width: 500px){
+@media screen and (orientation:portrait) and (max-device-width: 750px){
 
 }
 /*Mobile landscape*/

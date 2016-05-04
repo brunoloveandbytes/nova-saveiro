@@ -87,6 +87,7 @@ $(document).ready(function() {
 																	$('#fatos').addClass('onMiddle');
 																	$('#fatos').removeClass('onBottom');
 																	$('#menu-bar').addClass('show');
+																	window.fatosManager.start();
 																},
 																"endFunction":function(){
 																	$('#slide1').addClass('onTop');
@@ -385,6 +386,7 @@ $(document).ready(function() {
 															new Transition({
 																"endStateName":"fatos",
 																"trigger":Trigger.Fatos,
+																"startFunction":function(){window.fatosManager.start();},
 																"endFunction":function(){
 																						stateMachine.upSlides(['identidade']);
 																					},
@@ -503,6 +505,7 @@ $(document).ready(function() {
 															new Transition({
 																"endStateName":"fatos",
 																"trigger":Trigger.Fatos,
+																"startFunction":function(){window.fatosManager.start();},
 																"animatedProperties":[
 																						new AnimatedProperty({'idName':'identidade','className':'onTop','classTransitionName':'default-transition','add':true}),
 																						new AnimatedProperty({'idName':'identidade','className':'onMiddle','classTransitionName':'default-transition','remove':true}),
@@ -513,6 +516,7 @@ $(document).ready(function() {
 															new Transition({
 																"endStateName":"fatos",
 																"trigger":Trigger.Next,
+																"startFunction":function(){window.fatosManager.start();},
 																"animatedProperties":[
 																						new AnimatedProperty({'idName':'identidade','className':'onTop','classTransitionName':'default-transition','add':true}),
 																						new AnimatedProperty({'idName':'identidade','className':'onMiddle','classTransitionName':'default-transition','remove':true}),
@@ -585,6 +589,7 @@ $(document).ready(function() {
 										"welcomeFunction":function(){
 											window.tagManager.acessouPagina("Fatos");
 											window.stateMachine.addHash('fatos');
+											window.fatosManager.start();
 											$(".icon-fatos").parent().addClass('selected');
 										},
 										"transitions":[
@@ -726,6 +731,7 @@ $(document).ready(function() {
 															new Transition({
 																"endStateName":"fatos",
 																"trigger":Trigger.Fatos,
+																"startFunction":function(){window.fatosManager.start();},
 																"animatedProperties":[
 																						new AnimatedProperty({'idName':'fatos','className':'onTop','classTransitionName':'default-transition','remove':true}),
 																						new AnimatedProperty({'idName':'fatos','className':'onMiddle','classTransitionName':'default-transition','add':true}),
@@ -736,6 +742,7 @@ $(document).ready(function() {
 															new Transition({
 																"endStateName":"fatos",
 																"trigger":Trigger.Previews,
+																"startFunction":function(){window.fatosManager.start();},
 																"animatedProperties":[
 																						new AnimatedProperty({'idName':'fatos','className':'onTop','classTransitionName':'default-transition','remove':true}),
 																						new AnimatedProperty({'idName':'fatos','className':'onMiddle','classTransitionName':'default-transition','add':true}),
@@ -834,6 +841,7 @@ $(document).ready(function() {
 															new Transition({
 																"endStateName":"fatos",
 																"trigger":Trigger.Fatos,
+																"startFunction":function(){window.fatosManager.start();},
 																"endFunction":function(){
 																						stateMachine.downSlides(['versoes']);
 																					},
@@ -943,6 +951,7 @@ $(document).ready(function() {
 															new Transition({
 																"endStateName":"fatos",
 																"trigger":Trigger.Fatos,
+																"startFunction":function(){window.fatosManager.start();},
 																"endFunction":function(){
 																						stateMachine.downSlides(['versoes','tour']);
 																					},
@@ -1032,6 +1041,7 @@ $(document).ready(function() {
 															new Transition({
 																"endStateName":"fatos",
 																"trigger":Trigger.Fatos,
+																"startFunction":function(){window.fatosManager.start();},
 																"endFunction":function(){
 																						stateMachine.downSlides(['galeria','tour','versoes']);
 																					},
@@ -1120,6 +1130,7 @@ $(document).ready(function() {
 															new Transition({
 																"endStateName":"fatos",
 																"trigger":Trigger.Fatos,
+																"startFunction":function(){window.fatosManager.start();},
 																"endFunction":function(){
 																						stateMachine.downSlides(['premios','galeria','tour','versoes']);
 																					},
@@ -1215,6 +1226,7 @@ $(document).ready(function() {
 															new Transition({
 																"endStateName":"fatos",
 																"trigger":Trigger.Fatos,
+																"startFunction":function(){window.fatosManager.start();},
 																"endFunction":function(){
 																						stateMachine.downSlides(['robust-slide','premios','galeria','tour','versoes']);
 																					},

@@ -403,7 +403,7 @@
     .versoes .descriptions{top:210px;}
 }
 /*Mobile portrait*/
-@media only screen and (orientation:portrait) and (max-device-width: 500px){
+@media only screen and (orientation:portrait) and (max-device-width: 750px){
 
 }
 /*Mobile landscape*/

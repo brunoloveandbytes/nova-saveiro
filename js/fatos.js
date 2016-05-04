@@ -53,9 +53,30 @@ $(document).ready(function() {
 				$('.down-arrow').removeClass('show');
 			}
 
+			if (isMobile.apple.phone || isMobile.android.phone || isMobile.seven_inch) {
+				if(currentIdx == 1){
+					$('.fatos .left-arrow').css('display','none');
+				}else{
+					$('.fatos .left-arrow').css('display','inline');
+				}
+			}			
+
 		}
 		this.stop = function(){
-			this.goToIdx(0);
+			if (isMobile.apple.phone || isMobile.android.phone || isMobile.seven_inch) {
+				this.goToIdx(1);
+			}else{
+				this.goToIdx(0);		
+			}
+		}
+		this.start = function(){
+			if (isMobile.apple.phone || isMobile.android.phone || isMobile.seven_inch) {
+				this.goToIdx(1);
+				$('.down-arrow').removeClass('show');
+			}else{
+				this.goToIdx(0);
+				$('.down-arrow').addClass('show');		
+			}
 		}
 		
 	}

@@ -52,7 +52,17 @@
     background-position: 0% -700%;
 }
 
-@media only screen and (orientation:portrait) and (max-device-width: 500px){
+.versoes .ruler .robust{top:-45px}
+.versoes .ruler .trendline-cs{top:10px}
+.versoes .ruler .trendline-cd{top:-45px}
+.versoes .ruler .trendline-ce{top:10px}
+.versoes .ruler .highline{top:-45px}
+.versoes .ruler .cross-ce{top:10px}
+.versoes .ruler .cross-cd{top:-45px}
+
+
+
+@media only screen and (orientation:portrait) and (max-device-width: 750px){
     .versoes .ruler{
         bottom: 200px;
     }

@@ -4,7 +4,7 @@
     font-size: 16px;
     line-height: 64px;
     position: absolute;
-    top: 109px;
+    top: 94px;
     left: -640px;
     width: 1280px;
     height: 64px;
@@ -97,7 +97,7 @@
 
 /*controle de altura*/
 @media screen and (max-height: 700px){
-    .menu{top:84px;}
+    .menu{top:69px;}
 }
 
 
@@ -139,7 +139,7 @@
 }
 /*Small*/
 @media screen and (max-width: 1050px){
-.menu{line-height:48px;position:absolute;top:75px;left:-250px;width:500px;height:48px;}
+.menu{line-height:48px;position:absolute;top:64px;left:-250px;width:500px;height:48px;}
 .menu .secondary{width:265px;}
 .menu .item .text{display:none;}
 .menu .secondary :nth-child(1).item{left:0;width:44px;}
@@ -150,8 +150,8 @@
 .menu .secondary :nth-child(6).item{left:220px;width:44px;}
 }
 
-/*Mobile portrait and landscape*/
-@media screen and (max-device-width: 500px){
+/*Mobiles*/
+@media screen and (max-device-width: 750px){
   .menu{left:-50%;width:100%;height:150px;}
   .menu .secondary{left:-50%;position:fixed;bottom:0px;background-color: #232323;}
   .menu .secondary :nth-child(7).item{display:inline;}
@@ -164,11 +164,7 @@
   .menu .secondary .item:hover .icon-360{background-position: -500% 0%;}
   .menu .secondary .item:hover .icon-galeria{background-position: -600% 0%;}
   .menu .secondary .item:hover .icon-premios{background-position: -700% 0%;}
-
-  .menu .secondary.visible{
-    left:0%;
-  }
-  
+  .menu .secondary.visible{left:0%;}
   .menu .secondary .item.selected .icon-home{background-position: -100% 0%;}
   .menu .secondary .item.selected .icon-identidade{background-position: -200% 0%;}
   .menu .secondary .item.selected .icon-fatos{background-position: -300% 0%;}
@@ -177,13 +173,9 @@
   .menu .secondary .item.selected .icon-galeria{background-position: -600% 0%;}
   .menu .secondary .item.selected .icon-premios{background-position: -700% 0%;}
   .menu .secondary .item.selected > .text{color:#fff;}
-  
-
-
   .menu .primary .open{top:25px;left:32px;width:96px;height:96px;display:inline;}
   .menu .primary .open .icon{width:100%;}
   .menu .primary .open div{display:inline;background-position:0 -100%;}
-
   .menu .primary .item .text{line-height:100px;left:120%;}
   .menu .primary .interessado{
       font-size:32px;
@@ -196,10 +188,11 @@
       border: 2px solid #fff;
   }
   .menu .primary .interessado:hover{border: 2px solid #fff;color:#fff;}
+  .menu .item .text{display:inline;}
 }
 
 /*Mobile portrait*/
-@media screen and (orientation:portrait) and (max-device-width: 500px){
+@media screen and (orientation:portrait) and (max-device-width: 750px){
   .menu{top:170px;}
   .menu .secondary{top:150px;}
   .menu .item{height:96px;}

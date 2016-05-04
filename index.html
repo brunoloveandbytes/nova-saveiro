@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!--[if lt IE 11]> <html class="lt-ie11"> <![endif]-->
 <!--[if lt IE 10]> <html class="lt-ie10"> <![endif]-->
 <!--[if gt IE 9]><!--> <html> <!--<![endif]-->    
 <head>
@@ -8,6 +9,7 @@
 	<script src="js/jquery.js"></script>
 	<script src="js/gtm.js"></script>
 	<script src="js/ismobile.js"></script>
+	<script src="js/browser-detect.js"></script>
 	<script type="text/javascript">
 		if (isMobile.apple.phone || isMobile.android.phone || isMobile.seven_inch) {
 			//window.location="http://novidades.vw.com.br/";
@@ -196,10 +198,14 @@
 						</div>
 					</div>
 					<div class="frame frame1">
-						<div class="frame-title"><span>#1 </span>SUSPENSÃO</div>
 						<div class="grid"></div>
 						<div class="car-image"></div>
+						<div class="frame-title"><span>#1 </span>SUSPENSÃO</div>
 						<div class="bar-image"></div>
+						<div class="icons">
+							<div class="bar-icon"></div>
+							<div class="icon"></div>
+						</div>
 						<div class="texto texto1">
 							<span class="super-title">PROCURANDO POR ROBUSTEZ DE UM VEÍCULO DE CARGA COM A DIRIGIBILIDADE DE UM AUTOMÓVEL? ENTÃO, VOCÊ ACABOU DE ACHAR.</span> </br>
 						</div>
@@ -211,18 +217,27 @@ sistema de suspensão helicoidal. Suas molas reforçadas fazem cargas pesadas se
 						</div>
 					</div>
 					<div class="frame frame2">
-						<div class="frame-title"><span>#2 </span>DESEMPENHO</div>
 						<div class="grid"></div>
 						<div class="car-image"></div>
+						<div class="frame-title"><span>#2 </span>DESEMPENHO</div>
+						<div class="bar-image"></div>
+						<div class="icons">
+							<div class="bar-icon"></div>
+							<div class="icon"></div>
+						</div>
 						<div class="texto">
 							A Nova Saveiro Cross possui o melhor desempenho de seu segmento. Seu novo motor 1.6l 16V não te deixa na mão e faz a aceleração dela ir de 0 a 100 km/h em mais ou menos o tempo que você demora para ler este texto: 10,6 segundos com gasolina e 10,1 segundos com etanol. Chegou até aqui? Então, a Nova Saveiro já estaria a 100 km/h.
 						</div>
 					</div>
 					<div class="frame frame3">
-						<div class="frame-title"><span>#3 </span>ABS OFF-ROAD</div>
 						<div class="grid"></div>
 						<div class="car-image"></div>
+						<div class="frame-title"><span>#3 </span>ABS OFF-ROAD</div>
 						<div class="bar-image"></div>
+						<div class="icons">
+							<div class="bar-icon"></div>
+							<div class="icon"></div>
+						</div>
 						<div class="texto texto1">
 							Outra inovação do utilitário são os freios ABS com função off-road. Esse recurso reforça os freios em estradas não pavimentadas.
 						</div>
@@ -232,18 +247,28 @@ sistema de suspensão helicoidal. Suas molas reforçadas fazem cargas pesadas se
 						</div>
 					</div>
 					<div class="frame frame4">
-						<div class="frame-title"><span>#4 </span>HDC</div>
 						<div class="grid"></div>
 						<div class="car-image"></div>
+						<div class="frame-title"><span>#4 </span>HDC</div>
+						<div class="bar-image"></div>
+						<div class="icons">
+							<div class="bar-icon"></div>
+							<div class="icon"></div>
+						</div>
 						<div class="texto">
 							<span class="super-title">CONTROLE DE DESCIDA</span> </br>
 Quem trabalha com transporte de carga, sabe: a picape deve segurar o tranco e manter tudo no lugar. É isso que o HDC faz e a Nova Saveiro é a primeira picape a ter esse recurso no Brasil. Quando estiver descendo em baixa velocidade, um toque no botão off-road e os freios são acionados automaticamente. Sua descida fica mais segura e controlada, não importando a condição do piso.
 						</div>
 					</div>
 					<div class="frame frame5">
-						<div class="frame-title"><span>#5 </span>EDS</div>
 						<div class="grid"></div>
 						<div class="car-image"></div>
+						<div class="frame-title"><span>#5 </span>EDS</div>
+						<div class="bar-image"></div>
+						<div class="icons">
+							<div class="bar-icon"></div>
+							<div class="icon"></div>
+						</div>
 						<div class="texto">
 							<span class="super-title">BLOQUEIO ELETRÔNICO DO DIFERENCIAL</span> </br>
 O bloqueio eletrônico do diferencial é um sistema de “tração inteligente” automático, você não precisa apertar nenhum botão pra ele funcionar. Sempre que você estiver na sua Nova Saveiro: quando for preciso, será ativado o freio da roda com menor tração, transferindo o torque para
@@ -1012,8 +1037,7 @@ a roda com maior tração. Você não vai querer ficar parado no meio do caminho
 		<section id="tour" class="slide tour onBottom">
 			<div class="tour_desktop">
 				<div class="menu-bar-fix"></div>
-				<div class="tour_principal onMiddle default-transition">
-
+				<div class="tour_principal onMiddle tour-principal-transition">
 					<div class="tour_title">EXCELÊNCIA PARA QUALQUER FINALIDADE.</div>
 					<div class="tour_description">A Nova Saveiro traz a verdadeira combinação entre trabalho e diversão. Se por fora, ela é robusta e forte, por dentro seu design exclusivo traz conforto e praticidade. Um dia cansativo fica um pouco melhor quando você volta pra casa num conforto como esse. Escolha a versão e veja você mesmo.</div>
 					<div class="tour_cars">
@@ -1102,7 +1126,6 @@ a roda com maior tração. Você não vai querer ficar parado no meio do caminho
 							<div class="trabalho_car_item75"></div>
 							<div class="trabalho_car_item76"></div>
 						</div>
-						<div class="tour-vinheta"></div>
 						<div class="menu-bar-fix"></div>
 						<div class="back" onclick="window.tourManager.backFromSequence(window.tourManager.Car.Trabalho);"></div>
 					</div>
@@ -1185,7 +1208,6 @@ a roda com maior tração. Você não vai querer ficar parado no meio do caminho
 							<div class="aventura_car_item75"></div>
 							<div class="aventura_car_item76"></div>
 						</div>
-						<div class="tour-vinheta"></div>
 						<div class="menu-bar-fix"></div>
 						<div class="back" onclick="window.tourManager.backFromSequence(window.tourManager.Car.Aventura);"></div>
 					</div>
@@ -1340,7 +1362,7 @@ a roda com maior tração. Você não vai querer ficar parado no meio do caminho
 				</div>
 			</div>
 		</section>
-		<div id="saveiro_trabalho_interno" class="tour_interno_container trabalho_interno" style="display:none;">
+		<div id="saveiro_trabalho_interno" class="tour_interno_container trabalho_interno">
 			<div class="tour_interno">
 				<div class="cube">
 		            <div id="trabalho_front" class="front"></div>
@@ -1351,9 +1373,9 @@ a roda com maior tração. Você não vai querer ficar parado no meio do caminho
 		            <div id="trabalho_bottom" class="bottom"></div>
 		        </div>
 			</div>
-			<div class="close" onclick="window.tourManager.stopCube()"></div>
+			<div class="close" onclick="window.tourManager.goToExtern()"></div>
 		</div>
-		<div id="saveiro_aventura_interno" class="tour_interno_container aventura_interno" style="display:none;">
+		<div id="saveiro_aventura_interno" class="tour_interno_container aventura_interno">
 			<div class="tour_interno">
 				<div class="cube">
 		            <div id="aventura_front" class="front"></div>
@@ -1364,12 +1386,94 @@ a roda com maior tração. Você não vai querer ficar parado no meio do caminho
 		            <div id="aventura_bottom" class="bottom"></div>
 		        </div>
 			</div>
-			<div class="close" onclick="window.tourManager.stopCube();"></div>
+			<div class="close" onclick="window.tourManager.goToExtern();"></div>
+		</div>
+		<div id="saveiro-trabalho-ie-interno" class="tour_interno_container ie-interno ie-trabalho">
+			<div class="ie-frame">
+				<div class="ie_interno_item1" style="left:0%;"></div>
+				<div class="ie_interno_item2"></div>
+				<div class="ie_interno_item3"></div>
+				<div class="ie_interno_item4"></div>
+				<div class="ie_interno_item5"></div>
+				<div class="ie_interno_item6"></div>
+				<div class="ie_interno_item7"></div>
+				<div class="ie_interno_item8"></div>
+				<div class="ie_interno_item9"></div>
+				<div class="ie_interno_item10"></div>
+				<div class="ie_interno_item11"></div>
+				<div class="ie_interno_item12"></div>
+				<div class="ie_interno_item13"></div>
+				<div class="ie_interno_item14"></div>
+				<div class="ie_interno_item15"></div>
+				<div class="ie_interno_item16"></div>
+				<div class="ie_interno_item17"></div>
+				<div class="ie_interno_item18"></div>
+				<div class="ie_interno_item19"></div>
+				<div class="ie_interno_item20"></div>
+				<div class="ie_interno_item21"></div>
+				<div class="ie_interno_item22"></div>
+				<div class="ie_interno_item23"></div>
+				<div class="ie_interno_item24"></div>
+				<div class="ie_interno_item25"></div>
+				<div class="ie_interno_item26"></div>
+				<div class="ie_interno_item27"></div>
+				<div class="ie_interno_item28"></div>
+				<div class="ie_interno_item29"></div>
+				<div class="ie_interno_item30"></div>
+				<div class="ie_interno_item31"></div>
+				<div class="ie_interno_item32"></div>
+				<div class="ie_interno_item33"></div>
+				<div class="ie_interno_item34"></div>
+				<div class="ie_interno_item35"></div>
+				<div class="ie_interno_item36"></div>
+			</div>
+			<div class="close" onclick="window.tourManager.goToExtern();"></div>
+		</div>
+		<div id="saveiro-aventura-ie-interno" class="tour_interno_container ie-interno ie-aventura">
+			<div class="ie-frame">
+				<div class="ie_interno_item1" style="left:0%;"></div>
+				<div class="ie_interno_item2"></div>
+				<div class="ie_interno_item3"></div>
+				<div class="ie_interno_item4"></div>
+				<div class="ie_interno_item5"></div>
+				<div class="ie_interno_item6"></div>
+				<div class="ie_interno_item7"></div>
+				<div class="ie_interno_item8"></div>
+				<div class="ie_interno_item9"></div>
+				<div class="ie_interno_item10"></div>
+				<div class="ie_interno_item11"></div>
+				<div class="ie_interno_item12"></div>
+				<div class="ie_interno_item13"></div>
+				<div class="ie_interno_item14"></div>
+				<div class="ie_interno_item15"></div>
+				<div class="ie_interno_item16"></div>
+				<div class="ie_interno_item17"></div>
+				<div class="ie_interno_item18"></div>
+				<div class="ie_interno_item19"></div>
+				<div class="ie_interno_item20"></div>
+				<div class="ie_interno_item21"></div>
+				<div class="ie_interno_item22"></div>
+				<div class="ie_interno_item23"></div>
+				<div class="ie_interno_item24"></div>
+				<div class="ie_interno_item25"></div>
+				<div class="ie_interno_item26"></div>
+				<div class="ie_interno_item27"></div>
+				<div class="ie_interno_item28"></div>
+				<div class="ie_interno_item29"></div>
+				<div class="ie_interno_item30"></div>
+				<div class="ie_interno_item31"></div>
+				<div class="ie_interno_item32"></div>
+				<div class="ie_interno_item33"></div>
+				<div class="ie_interno_item34"></div>
+				<div class="ie_interno_item35"></div>
+				<div class="ie_interno_item36"></div>
+			</div>
+			<div class="close" onclick="window.tourManager.goToExtern();"></div>
 		</div>
 		<div class="tour-slider tour-slider-transition">
-			<div class="externo bar">EXTERNO</div>
-			<div class="interno bar">INTERNO</div>
-			<div class="handle"></div>
+			<div class="externo bar active" onclick="window.tourManager.goToExtern(event)">EXTERNO</div>
+			<div class="interno bar" onclick="window.tourManager.goToIntern()">INTERNO</div>
+			<div class="handle" onclick="window.tourManager.goToExtern()"></div>
 		</div>
 	</div>
 	<div id="menu" class="menu">
@@ -1435,6 +1539,7 @@ a roda com maior tração. Você não vai querer ficar parado no meio do caminho
     	}
 		
 	}
+
 
     $(document).ready(function() {
     	if (isMobile.apple.phone || isMobile.android.phone || isMobile.seven_inch) {

@@ -224,12 +224,12 @@ body div{
     z-index: 0;
 }
 .intro-content{top:75px;}
-.general-content{top:205px;}
+.general-content{top:175px;}
 .menu-bar{
     position: absolute;
     top: 75px;
     width: 100%;
-    height: 130px;
+    height: 100px;
     opacity: 0;
     background-color: #111;
 }
@@ -314,22 +314,22 @@ body div{
     }
     .vwCarName{top:17px;}
     .vwCarName p{font-size: 14px;}
-    .main-content{top:180px;}
+    .main-content{top:150px;}
     .intro-content{top:50px;}
     .menu-bar{top:50px;}
 }
 
 /*Medium*/
 @media screen and (min-width: 1050px) and (max-width: 1450px){
-    .main-content{top:185px;}
+    .main-content{top:155px;}
     .intro-content{top:75px;}
-    .menu-bar{height:110px;}
+    .menu-bar{height:80px;}
     .home-content .car-logo {top: -20%;}
 }
 
 /*controle de altura para medium*/
 @media screen and (max-height: 700px) and (min-width: 1050px) and (max-width: 1450px){
-    .main-content{top:160px;}
+    .main-content{top:130px;}
     .intro-content{top:50px;}
 }
 
@@ -344,28 +344,24 @@ body div{
 	}
 	.vwCarName{top:17px;}
 	.vwCarName p{font-size: 14px;}
-	.main-content{top:148px;}
-  .menu-bar{top:50px;height:98px;}
+	.main-content{top:124px;}
+  .menu-bar{top:50px;height:74px;}
   .intro-content{top:50px;}
   .home-content .car-logo {top: -13%;}
-
-  .vertical-arrow{
-    left:-32px;
-    width: 64px;
-    height: 32px;
-    bottom: 32px;
-  }
-
-
+  .vertical-arrow{left:-32px;width:64px;height:32px;bottom:32px;}
 }
 /*Mobiles*/
-@media screen and (max-device-width: 500px){
+@media screen and (max-device-width: 750px){
+    body{font-size: 32px;line-height: 50px;}
     .main-header{width:980px;}
     .content-header{width:980px;}
     .menu-bar{display:none;}
+    .home-content .car-logo{width: 800px;left:-150px;}
+    .vertical-arrow{left:-96px;width:192px;height:96px;bottom:64px;}
+    .menu-bar-fix{height: 400px;}
 }
 /*Mobile portrait*/
-@media screen and (orientation:portrait) and (max-device-width: 500px){
+@media screen and (orientation:portrait) and (max-device-width: 750px){
 	.main-header{min-height: 150px;}
 	.content-header{min-height: 150px;}
 	.vw-logo{
@@ -427,7 +423,7 @@ body div{
 }
 
 /*Mobiles*/
-@media screen and (max-device-width: 500px){
+@media screen and (max-device-width: 750px){
     .sub-slide{width:980px;}
 }
 /*Mobile landscape*/
@@ -436,7 +432,7 @@ body div{
 }
 
 /*Mobile portrait*/
-@media screen and (orientation:portrait) and (max-device-width: 500px){
+@media screen and (orientation:portrait) and (max-device-width: 750px){
     .sub-slide{top:140px;}
 }
 
@@ -470,6 +466,9 @@ body div{
 .hide-load{
     visibility: hidden;
     opacity:0;
+}
+.load.hide-load .load-gear{
+    visibility: hidden;
 }
 
 
@@ -552,7 +551,7 @@ body div{
     background-position: 100% 25%;
     background-size: 500% 500%;
     left:0px;
-    top:250px;
+    top:220px;
     width: 128px;
     height: 128px;
     opacity: 0;
@@ -607,7 +606,7 @@ body div{
         left: -480px;
         width: 960px;
     }
-    .premios_button{width:96px;height:96px;}
+    .premios_button{width:96px;height:96px;top:170px;}
 }
 /*Small*/
 @media screen and (max-width: 1050px){
@@ -617,14 +616,19 @@ body div{
     }
     .home-content .robust-button{left:0px;top:80%;}
     .home-content .cross-button{right:0px;top:80%;}
-    .premios_button{width:96px;height:96px;top:150px;}
+    .premios_button{width:96px;height:96px;top:120px;}
 }
 
 
+/*Mobiles*/
+@media screen and (max-device-width:750px){
+  .premios_button{display:none;}
+}
+
 /*Mobile portrait*/
-@media screen and (orientation:portrait) and (max-device-width: 500px){
+@media screen and (orientation:portrait) and (max-device-width:750px){
 }
 
 /*Mobile landscape*/
-@media screen and (orientation:landscape) and (max-device-width: 750px){
+@media screen and (orientation:landscape) and (max-device-width:750px){
 }

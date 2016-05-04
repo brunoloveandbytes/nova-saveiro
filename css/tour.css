@@ -18,6 +18,15 @@
 .tour_principal{
   top:100%;
 }
+
+.tour-principal-transition{
+-webkit-transition: top 1400ms cubic-bezier(0.800, 0.000, 0.200, 1.000); 
+   -moz-transition: top 1400ms cubic-bezier(0.800, 0.000, 0.200, 1.000); 
+     -o-transition: top 1400ms cubic-bezier(0.800, 0.000, 0.200, 1.000); 
+        transition: top 1400ms cubic-bezier(0.800, 0.000, 0.200, 1.000); /* custom */
+}
+
+
 .tour_title{
     font-family: 'vw_textregular';
     font-size: 22px;
@@ -41,9 +50,17 @@
 .tour_cars{
     position: absolute;
     top: 180px;
-    bottom: 100px;
     width: 100%;
 }
+@media screen and (min-width:1050px) and (max-width:10000px) and (min-device-width:1050px){
+    .tour_cars{bottom: 120px;}
+}
+@media screen and (min-width:1450px) and (max-height:900px){
+    .tour_cars{width: 70%; left:15%;}
+}
+
+
+
 
 .tour_cars > div{
     position: absolute;
@@ -63,11 +80,13 @@
 }
 .tour_down_bar{
     position: absolute;
-    bottom: 100px;
     left: -200px;
     width: 400px;
     margin-left: 50%;
     border-bottom: 1px solid #fff;
+}
+@media screen and (min-width:1050px) and (max-width:10000px) and (min-device-width:1050px){
+    .tour_down_bar{bottom: 100px;}
 }
 .tour_sequence{
   position: absolute;
@@ -84,10 +103,11 @@
   width: 100%;
   height: 100%;
 }
-.tour_sequence .tour_car_container_sequence .tour_car_sequence,.tour_sequence .tour_car_container_sequence .tour-vinheta{
+.tour_sequence .tour_car_container_sequence .tour_car_sequence{
   position: absolute;
   width: 100%;
   height: 100%;
+  cursor: pointer;
 }
 
 .tour_car_sequence{
@@ -105,11 +125,6 @@
   background-size: cover;
 }
 
-.tour_sequence .tour-vinheta{
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
 
 .tour_sequence .back{
   position: absolute;
@@ -133,6 +148,8 @@
   visibility: hidden;
   opacity:0;
 }
+
+
 .show-slider{
   visibility: visible;
   opacity:1;
@@ -156,14 +173,29 @@
   font-family: 'vw_textregular_italic';
   font-size: 10px;
   letter-spacing: 2px;
+  cursor: pointer;
 }
 .tour-slider .externo{
   width: 560px;
   left: 60px;
 }
+
+.tour-slider .externo.active,.tour-slider .externo:hover{
+  border: 2px solid #00a3e2;
+  color:#00a3e2;
+  top:18px;
+  left:59px;
+}
+.tour-slider .interno.active,.tour-slider .interno:hover{
+  border: 2px solid #00a3e2;
+  color:#00a3e2;
+  top:18px;
+  left:625px;
+}
+
 .tour-slider .interno{
   width: 120px;
-  left:620px;
+  left:626px;
 }
 .tour-slider .handle{
   position: absolute;
@@ -176,27 +208,85 @@
 }
 
 /*Small*/
-@media screen and (max-width: 1050px){
+@media screen and (max-width: 1049px){
   .tour_desktop .tour_principal{left:-250px;width:500px;}
   .tour_title{
       font-size: 14px;
-      top: 40px;
+      top: 70px;
       width: 100%;
       min-width: 500px;
       letter-spacing: 7px;
   }
   .tour_description{
       font-size: 16px;
-      top: 70px;
+      top: 120px;
       left: -250px;
       width: 500px;
+      text-align: justify;
   }
-  .tour_cars{top:130px;}
-  .tour_down_bar{left:-100px;width:200px;}
+  .tour_cars{top:225px;height:200px;}
+  .tour_down_bar{left:-100px;width:200px;top:450px;}
   .tour_sequence .back{left:190px;}
+
+
+
+.tour-slider{
+  left:-200px;
+  width:400px;
+  height:64px;
+}
+
+
+.tour-slider .bar{
+  position: absolute;
+  height: 25px;
+  top: 19px;
+  border: 1px solid #fff;
+  text-align: center;
+  line-height: 25px;
+  font-family: 'vw_textregular_italic';
+  font-size: 10px;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+.tour-slider .externo{
+  width: 280px;
+  left: 30px;
+}
+
+.tour-slider .externo.active,.tour-slider .externo:hover{
+  border: 2px solid #00a3e2;
+  color:#00a3e2;
+  top:18px;
+  left:29px;
+}
+.tour-slider .interno.active,.tour-slider .interno:hover{
+  border: 2px solid #00a3e2;
+  color:#00a3e2;
+  top:18px;
+  left:314px;
+}
+
+.tour-slider .interno{
+  width: 60px;
+  left:315px;
+}
+.tour-slider .handle{
+  position: absolute;
+  height: 64px;
+  width: 64px;
+  left:42px;
+  background-position: -800% 0%;
+  background-size: 1000% 1000%;
+  cursor: pointer
+}
+
+
+
+
 }
 /*Medium*/
-@media screen and (min-width: 1050px) and (max-width: 1450px){
+@media screen and (min-width: 1050px) and (max-width: 1449px){
   .tour_desktop .tour_principal{left:-480px;width:960px;}
   .tour_title{width:960px;top:40px;}
   .tour_description{top:90px;}
@@ -205,7 +295,7 @@
 }
 
 /*Mobile portrait*/
-@media screen and (orientation:portrait) and (max-device-width: 500px){
+@media screen and (orientation:portrait) and (max-device-width: 750px){
   .tour_desktop{display: none;}
   .tour_mobile{
     position: absolute;
@@ -249,16 +339,7 @@
   }
 
 }
-/*Small*/
-@media screen and (max-width: 1050px){
-/*------------------------------------Apagado----------------------------------------*/
-	/*
-  .tour_car_sequence > div{
-	  background-size: 120%;
-	}
-  */
-/*--------------------------------------END------------------------------------------*/  
-}
-/*Mobile landscape*/
-@media screen and (orientation:landscape) and (max-device-width: 750px){
-}
+
+
+
+
