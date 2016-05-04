@@ -3,11 +3,11 @@ function isie() {
     var msie = ua.indexOf("MSIE ");
     if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./))  // If Internet Explorer, return version number
     {
-        return false;
+        return true;
     }
     else  // If another browser, return 0
     {
-        return true;
+        return false;
     }
-    return true;
+    return false;
 }
