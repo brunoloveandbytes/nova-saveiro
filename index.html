@@ -14,6 +14,7 @@
 		if (isMobile.apple.phone || isMobile.android.phone || isMobile.seven_inch) {
 			//window.location="http://novidades.vw.com.br/";
 		}
+		setTimeout(function(){ if(window.stateMachine.state.name=="empty")window.location.reload(); }, 5000);
 	</script>
 	<script src="js/image-loader.js"></script>
 	<script src="js/state-machine.js"></script>
