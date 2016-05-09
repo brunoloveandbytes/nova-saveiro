@@ -83,13 +83,9 @@ $(document).ready(function() {
 																		{'className':'basic-icon','imgName':'tiles.png','sizes':{}},
 																		{'className':'home-content .car-button .plus','imgName':'tiles.png','sizes':{}},
 																		{'className':'menu .item :nth-child(1)','imgName':'tiles.png','sizes':{}},
-<<<<<<< Updated upstream
-																		{'className':'premios_button','imgName':'tiles.png','sizes':{}}
-=======
 																		{'className':'premios_button','imgName':'tiles.png','sizes':{}},
 																		{'className':'mobile-rotate-vertical-fix > div','imgName':'rotate_horizontal.png','sizes':{}},
 																		{'className':'mobile-rotate-fix > div','imgName':'rotate_vertical.png','sizes':{}}
->>>>>>> Stashed changes
 																	]});
 		this.microStages.push(stages.micro);this.smallStages.push(stages.small);this.mediumStages.push(stages.medium);this.largeStages.push(stages.large);
 
@@ -163,10 +159,7 @@ $(document).ready(function() {
 																		{'className':'versoes .cross_dupla .image-car','imgName':'04_Versoes_08_Saveiro_Cross_CD_Volkswagen.png','sizes':{}},
 																		{'className':'versoes .cross_estendida .image-car','imgName':'04_Versoes_07_Saveiro_Cross_CE_Volkswagen.png','sizes':{}},
 																		{'className':'versoes .description-container .description-switch','imgName':'tiles.png','sizes':{}},
-<<<<<<< Updated upstream
-=======
 																		{'className':'versoes .descriptions-mobile .mobile-cor','imgName':'cores.png','sizes':{}},
->>>>>>> Stashed changes
 																		{'className':'cores-simples .cores-solidas .cores-img','imgName':'cores_solidas.png','sizes':{}},
 																		{'className':'cores-simples .cores-metalizadas .cores-img','imgName':'cores_simples_metalizadas.png','sizes':{}},
 																		{'className':'cores-complexas .cores-solidas .cores-img','imgName':'cores_solidas.png','sizes':{}},
