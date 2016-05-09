@@ -42,16 +42,45 @@ $(document).ready(function() {
 	      });
 	  };
 	})(jQuery);
-
 	$('#menus').nodoubletapzoom();
-
 	$(document).keydown(function(e) {
 	    // ESCAPE key pressed
 	    if (e.keyCode == 27) {
 	        window.cubeManager.setActive(false);
 	    }
 	});
-	document.addEventListener("touchmove", function(e) { e.preventDefault() });
+	document.addEventListener("touchmove", function(e) {e.preventDefault()});
+	
+	var lastYPosition = null;
+	
+
+	$('body').on('touchmove', '.scrollable', function(e) {
+		$elem = $(event.target).closest('.scrollable')
+		if(lastYPosition != null){
+			var parentTop = $elem.parent().offset().top;
+			var parentHeight = $elem.parent().height();
+			var top = $elem.offset().top;
+			var height = $elem.height();
+			var newValue = top - parentTop+e.originalEvent.touches[0].pageY-lastYPosition;
+			if(newValue>0) newValue=0;
+			if(newValue<parentHeight-height){
+				if(parentHeight-height < 0){
+					newValue=parentHeight-height;	
+				}else{
+					newValue = 0;
+				}
+				
+			}
+			$elem.css('top',newValue+'px');
+		}
+		lastYPosition = e.originalEvent.touches[0].pageY;
+	});
+	
+	$('body').on('touchend', '.scrollable', function(e) {
+		lastYPosition=null;
+	});
+	
+
 
 	//Main events
 	var lastScrollRefresh = 0;

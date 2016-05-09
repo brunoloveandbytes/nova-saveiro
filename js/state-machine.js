@@ -806,6 +806,10 @@ $(document).ready(function() {
 											window.tagManager.acessouPagina("360°");
 											window.stateMachine.addHash('360');
 											$(".icon-360").parent().addClass('selected');
+											if (isMobile.apple.phone || isMobile.android.phone || isMobile.seven_inch) {
+												$('.down-arrow').removeClass('show');
+											}
+
 										},
 										"goodbyeFunction":function(){
 											window.tourManager.stopCube();setTimeout(function(){ window.tourManager.stop();},1000);
@@ -1376,9 +1380,9 @@ $(document).ready(function() {
 			var page = window.location.href.substring(window.location.href.indexOf("#")+1);
 
 
-			if (isMobile.apple.phone || isMobile.android.phone || isMobile.seven_inch) {
-				this.askMove(Trigger.Home);
-			}else{
+			// if (isMobile.apple.phone || isMobile.android.phone || isMobile.seven_inch) {
+			// 	this.askMove(Trigger.Home);
+			// }else{
 				switch(page){
 			    	case "!/home":
 			    		this.askMove(Trigger.Home);
@@ -1402,7 +1406,7 @@ $(document).ready(function() {
 			    		this.askMove(Trigger.Entrance);
 			    		break;
 			    }
-			}
+			// }
 		    
 			//this.askMove(Trigger.Entrance);
 		}

@@ -623,12 +623,48 @@ body div{
 /*Mobiles*/
 @media screen and (max-device-width:750px){
   .premios_button{display:none;}
+  .menu .secondary :nth-child(6).item{display: none;}
+  .menu .secondary :nth-child(7).item{display: none;}
+  .car-button{display: none;}
 }
 
 /*Mobile portrait*/
 @media screen and (orientation:portrait) and (max-device-width:750px){
+  .mobile-rotate-vertical-fix{
+    position: absolute;
+    width: 100%;
+    top:0px;
+    bottom: 0px;
+    background-color: #161616;
+    z-index:5;
+  }
+  .mobile-rotate-vertical-fix > div{
+    position: absolute;
+    top:50%;
+    left:50%;
+    width: 148px;
+    height: 89px;
+    transform:translate(-74px,-44px);
+    background-image: url('../img/large/rotate_horizontal.png')
+  }
 }
 
 /*Mobile landscape*/
 @media screen and (orientation:landscape) and (max-device-width:750px){
+  .mobile-rotate-fix{
+    position: absolute;
+    width: 100%;
+    top:65px;
+    bottom: 0px;
+    background-color: #161616;
+  }
+  .mobile-rotate-fix > div{
+    position: absolute;
+    top:50%;
+    left:50%;
+    width: 148px;
+    height: 89px;
+    transform:translate(-74px,-44px);
+    background-image: url('../img/large/rotate_vertical.png')
+  }
 }

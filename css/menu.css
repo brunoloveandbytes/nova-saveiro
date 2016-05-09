@@ -154,7 +154,7 @@
 @media screen and (max-device-width: 750px){
   .menu{left:-50%;width:100%;height:150px;}
   .menu .secondary{left:-50%;position:fixed;bottom:0px;background-color: #232323;}
-  .menu .secondary :nth-child(7).item{display:inline;}
+  /*.menu .secondary :nth-child(7).item{display:inline;}*/
   .menu .secondary :nth-child(1) .text{display:inline;}
   .menu .secondary .item:hover > .text{color:#fff;}
   .menu .secondary .item:hover .icon-home{background-position: -100% 0%;}
@@ -212,7 +212,7 @@
 }
 /*Mobile landscape*/
 @media screen and (orientation:landscape) and (max-device-width: 750px){
-  .menu{top:80px;}
+  .menu{top:80px;height:50px;}
   .menu .secondary{top:65px;}
   .menu .item{height:64px;}
   .menu .item :nth-child(1){width:64px;}

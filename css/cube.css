@@ -251,10 +251,29 @@
   }
 }
 
+
+
 /*Mobile portrait*/
 @media screen and (orientation:portrait) and (max-device-width: 750px){
+  .tour_interno_container .close{
+    top:175px;
+    left:100%;
+    margin-left:0%;
+    transform:translate(-150px,0px);
+    height: 128px;
+    width: 128px;
+    z-index:5;
+  }
 }
 /*Mobile landscape*/
 @media screen and (orientation:landscape) and (max-device-width: 750px){
-
+  .tour_interno_container .close{
+    top:96px;
+    left:100%;
+    margin-left:0%;
+    transform:translate(-96px,0px);
+    height: 64px;
+    width: 64px;
+    z-index:5;
+  }
 }

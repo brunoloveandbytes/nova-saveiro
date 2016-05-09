@@ -119,6 +119,7 @@ $(document).ready(function() {
 			$('.car'+currentIdx).css('left','0%');
 			window.tagManager.viuVersoes(currentIdx);
 			drag.snapOnce();
+			if (isMobile.apple.phone || isMobile.android.phone || isMobile.seven_inch) {this.refreshArrows();}
 		}
 		this.goToLeft = function(rotation){
 			rotation = typeof rotation !== 'undefined' ? rotation : true;
@@ -135,6 +136,7 @@ $(document).ready(function() {
 			window.tagManager.viuVersoes(currentIdx);
 			$('.car'+currentIdx).css('left','0%');
 			drag.snapOnce();
+			if (isMobile.apple.phone || isMobile.android.phone || isMobile.seven_inch) {this.refreshArrows();}
 		}
 		this.goToIdx = function(idx){
 			if(currentIdx!=idx){
@@ -144,37 +146,99 @@ $(document).ready(function() {
 				window.tagManager.viuVersoes(currentIdx);
 				$('.car'+currentIdx).css('left','0%');
 			}
+			if (isMobile.apple.phone || isMobile.android.phone || isMobile.seven_inch) {this.refreshArrows();}
 		}
+		this.refreshArrows = function(){
+			if(currentIdx == 1){
+				$('.versoes .left-arrow').css('display','none');
+				$('.versoes .left-mobile').css('display','none');
+			}else{
+				$('.versoes .left-arrow').css('display','inline');
+				$('.versoes .left-mobile').css('display','inline');
+			}
+			if(currentIdx == 7){
+				$('.versoes .right-arrow').css('display','none');
+				$('.versoes .right-mobile').css('display','none');
+			}else{
+				$('.versoes .right-arrow').css('display','inline');
+				$('.versoes .right-mobile').css('display','inline');
+			}
+		}
+
 		this.switchDescription = function(elem){
 			$father = $(elem).parent().parent();
 			if($(elem).parent().hasClass('itens')){
-				if(!$father.find('.itens').hasClass('open')){
-					$father.find('.itens').addClass('open');
-					$father.find('.opcionais').removeClass('open');
-					$father.find('.opcionais').removeClass('closed-cores');
-					$father.find('.opcionais').addClass('closed-serie');
-					$father.find('.cores').removeClass('open');
+				$father.find('.itens').toggleClass('open');
+				if($father.find('.itens').hasClass('open')){
+					$father.find('.opcionais').addClass('top');
+					if($father.find('.opcionais').hasClass('open')){
+						$father.find('.cores').addClass('top-2');
+						$father.find('.cores').removeClass('top-1');
+					}else{
+						$father.find('.cores').removeClass('top-2');
+						$father.find('.cores').addClass('top-1');
+					}
+				}else{
+					$father.find('.opcionais').removeClass('top');
+					if($father.find('.opcionais').hasClass('open')){
+						$father.find('.cores').removeClass('top-2');
+						$father.find('.cores').addClass('top-1');
+					}else{
+						$father.find('.cores').removeClass('top-1');
+						$father.find('.cores').removeClass('top-2');
+					}
 				}
 			}
 			if($(elem).parent().hasClass('opcionais')){
-				if(!$father.find('.opcionais').hasClass('open')){
-					$father.find('.itens').removeClass('open');
-					$father.find('.opcionais').removeClass('closed-serie');
-					$father.find('.opcionais').removeClass('closed-cores');
-					$father.find('.opcionais').addClass('open');
-					$father.find('.cores').removeClass('open');
+				$father.find('.opcionais').toggleClass('open');
+				if($father.find('.opcionais').hasClass('open')){
+					if($father.find('.opcionais').hasClass('top')){
+						$father.find('.cores').removeClass('top-1');
+						$father.find('.cores').addClass('top-2');
+					}else{
+						$father.find('.cores').addClass('top-1');
+						$father.find('.cores').removeClass('top-2');
+					}
+				}else{
+					if($father.find('.opcionais').hasClass('top')){
+						$father.find('.cores').addClass('top-1');
+						$father.find('.cores').removeClass('top-2');
+					}else{
+						$father.find('.cores').removeClass('top-1');
+						$father.find('.cores').removeClass('top-2');
+					}
 				}
 			}
 			if($(elem).parent().hasClass('cores')){
-				if(!$father.find('.cores').hasClass('open')){
-					$father.find('.itens').removeClass('open');
-					$father.find('.opcionais').addClass('closed-cores');
-					$father.find('.opcionais').removeClass('closed-serie');
-					$father.find('.opcionais').removeClass('open');
-					$father.find('.cores').addClass('open');
-				}
+				$father.find('.cores').toggleClass('open');
 			}
 		}
+		this.showItens = function(elem){
+			$('.versoes .descriptions-mobile').addClass('show');
+			$('.versoes .descriptions-mobile .itens').addClass('show');
+		}
+		this.showOpcionais = function(elem){
+			$('.versoes .descriptions-mobile').addClass('show');
+			$('.versoes .descriptions-mobile .opcionais').addClass('show');
+		}
+		this.showCores = function(elem){
+			$('.versoes .descriptions-mobile').addClass('show');
+			$('.versoes .descriptions-mobile .cores').addClass('show');
+		}
+		this.closeDescription = function(){
+			$('.versoes .descriptions-mobile').removeClass('show');
+			$('.versoes .descriptions-mobile .itens').removeClass('show');
+			$('.versoes .descriptions-mobile .opcionais').removeClass('show');
+			$('.versoes .descriptions-mobile .cores').removeClass('show');
+		}
+		this.versoesCarClick = function(){
+	    	if (isMobile.apple.phone || isMobile.android.phone || isMobile.seven_inch) {
+	    		//window.versoesManager.goToRight();
+	    	}else{
+	    		$('.versoes_content').toggleClass('on-description');
+	    	}
+	    }
+
 		this.sizeWasChanged = function(){
 			drag.snapOnce();
 		}
@@ -182,6 +246,8 @@ $(document).ready(function() {
 			this.goToIdx(1);
 			drag.snapOnce();
 			$('.versoes_content').removeClass('on-description');
+			$('.versoes .descriptions-mobile').removeClass('show');
+			$('.versoes .descriptions-mobile').find('show').removeClass('show');
 		}
 	}
 	var versoesManager = new VersoesManager();

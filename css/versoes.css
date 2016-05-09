@@ -4,7 +4,8 @@
     left: -640px;
     overflow: hidden;
     width: 1280px;
-    height: 100%;
+    top:0px;
+    bottom: 0px;
     margin-left: 50%;
 }
 .versoes .car{
@@ -15,11 +16,12 @@
 }
 .versoes .title{
     position: absolute;
-    top: 20px;
     left: 40px;
     width: 100%;
     height: 100px;
+    transform:translate(0px,20px);
 }
+
 .versoes .title .main-title{font-family:'vw_headextrabold';font-size:64px;}
 .versoes .title .sub-title{
     font-family: 'vw_headregular_italic';
@@ -203,11 +205,19 @@
     height: 100%;
 }
 
+.versoes .description-main-container{
+    position: absolute;
+    top:25px;
+    bottom:175px;
+    width: 80%;
+    left:10%;
+    overflow-y: scroll;
+}
+
 .versoes .down-car .images-car{
     position: absolute;
-    top: 25px;
-    left: 10%;
-    width: 80%;
+    top: 0px;
+    width: 100%;
     height: 206px;
 }
 .versoes .down-car .images-car > div{
@@ -225,8 +235,7 @@
     position: absolute;
     top: 235px;
     bottom: 150px;
-    left: 10%;
-    width: 80%;
+    width: 100%;
 }
 .versoes .description-container{
     position: absolute;
@@ -243,6 +252,8 @@
     background-position: -400% -200%;
     background-size: 1000% 1000%;
 }
+
+/*
 .versoes .description-container.itens{top:0px;}
 .versoes .description-container.itens.open{top:0px;bottom:100px;}
 .versoes .description-container.cores{bottom:50px;}
@@ -250,13 +261,15 @@
 .versoes .description-container.opcionais.closed-serie{height:50px;bottom:50px;}
 .versoes .description-container.opcionais.closed-cores{top:50px;height:50px;}
 .versoes .description-container.opcionais.open{top:50px;bottom:50px;}
+*/
 
-.versoes .description-container.open .description-body{
-    top: 54px;
-    bottom: 2px;
-    left: -1px;
-    border-right: 1px solid #717171;
-}
+
+.versoes .description-container.itens{top:0px;}
+.versoes .description-container.opcionais{top:50px;}
+.versoes .description-container.opcionais.top{top:200px;}
+.versoes .description-container.cores{top:100px;}
+.versoes .description-container.cores.top-1{top:250px;}
+.versoes .description-container.cores.top-2{top:400px;}
 
 
 .versoes .description-container.open .description-switch{background-position: -600% -200%;}
@@ -287,6 +300,16 @@
     overflow-y: scroll; 
     width: 100%;
 }
+.versoes .description-container.open .description-body{
+    top: 54px;
+    height: 145px;
+    left: -1px;
+}
+
+.versoes .description-container.cores.open .description-body{
+    height: 100px;
+    overflow-y: hidden;
+}
 
 .versoes .description-body .description-left{
     position: absolute;
@@ -312,6 +335,10 @@
 }
 .versoes .description-body .description-center span{font-family: 'vw_textbold';}
 
+
+.versoes .description-body ul{
+    margin: 8px 0px;
+}
 .versoes .interessado{
     font-family: 'vw_headregular';
     line-height: 50px;
@@ -344,20 +371,19 @@
 }
 .versoes .cores-description{position:absolute;width:100%;min-height:100px;}
 .versoes .cores-description > div{position:absolute;height:100%;}
-.versoes .cores-description.cores-simples > div{width:50%;}
-.versoes .cores-description.cores-complexas .cores-solidas{width:50%;}
-.versoes .cores-description.cores-complexas .cores-metalizadas{width:35%;}
-.versoes .cores-description.cores-complexas .cores-especiais{width:15%;}
-.versoes .cores-simples .cores-metalizadas{left:50%;}
-.versoes .cores-complexas .cores-metalizadas{left:48%;}
-.versoes .cores-complexas .cores-especiais{left:83%;}
+.versoes .cores-description.cores-simples > div{width:49%;}
+.versoes .cores-description.cores-complexas .cores-solidas{width:38%;}
+.versoes .cores-description.cores-complexas .cores-metalizadas{width:48%;}
+.versoes .cores-description.cores-complexas .cores-especiais{width:11%;}
+.versoes .cores-simples .cores-metalizadas{left:51%;}
+.versoes .cores-complexas .cores-metalizadas{left:39%;}
+.versoes .cores-complexas .cores-especiais{left:88%;}
 .versoes .cores-title{
     font-family: 'vw_headbold';
     font-size: 12px;
     line-height: 29px;
     position: absolute;
-    left: 5%;
-    width: 90%;
+    width: 100%;
     height: 30px;
     text-align: center;
     letter-spacing: 2px;
@@ -366,15 +392,16 @@
 .versoes .cores-description .cores-img{
     position: absolute;
     top: 37px;
-    left: 5%;
-    width: 90%;
+    width: 100%;
     height: 30px;
     background-size: 100% 100%;
 }
-
+.versoes .mobile-buttom{display:none;}
+.versoes .mobile-arrow-text{display:none;}
+.versoes .descriptions-mobile{display:none;}
 /*Small*/
 @media screen and (max-width: 1050px){
-    .versoes_content{left:-50%;width:100%;min-width:560px;}
+    .versoes_content{left:-50%;width:100%;min-width:560px;top:40px;}
     .versoes .container{left:10%;width:80%;}
     .versoes .down-car .images-car{height:130px;}
     .versoes .down-car .descriptions{top:155px;}
@@ -402,15 +429,148 @@
     .versoes .down-car .images-car{height:175px;}
     .versoes .descriptions{top:210px;}
 }
+/*Mobiles*/
+@media only screen and (max-device-width: 750px){
+    .versoes .ruler{display: none;}
+    .versoes .up-bar{display: none;}
+    .versoes .container{top: 0px;left:-5%;width:110%;}
+    .versoes .mobile-buttom{
+        position: absolute;
+        display:inline;
+        width:250px;
+        height: 65px;
+        line-height: 65px;
+        text-align: center;
+        border: 2px solid #00a4e3;
+        bottom: 175px;
+        color:#00a4e3;
+    }
+    .versoes .description-left{display:none;}
+    .versoes .description-right{display:none;}
+    .versoes .description-center{display:none;}
+    .versoes .mobile-buttom.ficha-buttom{left:45px;width:330px;}
+    .versoes .mobile-buttom.opcionais-buttom{left:405px;width:260px;}
+    .versoes .mobile-buttom.cores-buttom{left:693px;width:247px;}
+    .versoes .left-arrow{background-position:-100% -800%;}
+    .versoes .right-arrow{background-position:-300% -800%;}
+    .versoes .left-arrow{display:none;}
+    .versoes .mobile-arrow-text.right-mobile{display:inline;}
+    .versoes .descriptions-mobile{
+        position: absolute;
+        width: 930px;
+        left:25px;
+        top:0px;
+        bottom: 25px;
+        background-color:#161616;
+        z-index:1;
+        display: none;
+    }
+    .versoes .descriptions-mobile .itens{display: none;}
+    .versoes .descriptions-mobile .opcionais{display: none;}
+    .versoes .descriptions-mobile .cores{display: none;}
+    .versoes .descriptions-mobile.show{display: inline;}
+    .versoes .descriptions-mobile .itens.show{display: inline;}
+    .versoes .descriptions-mobile .opcionais.show{display: inline;}
+    .versoes .descriptions-mobile .cores.show{display: inline;}
+    .versoes .close{background-position:-700% -200%;}
+    .versoes .descriptions-mobile .mobile-content{
+        position: absolute;
+        width: 100%;
+        top:0px;
+    }
+}
 /*Mobile portrait*/
 @media only screen and (orientation:portrait) and (max-device-width: 750px){
+    .versoes .left-arrow,.versoes .right-arrow{top:80px;}
+    .versoes .title{bottom: 250px;transform:translate(0px,0px);}
+    .versoes .title .main-title{font-size: 76px;}
+    .versoes .title .sub-title{font-size: 48px;}
+    .versoes .mobile-arrow-text{
+        position: absolute;
+        top:47px;
+        text-align:center;
+        height:100px;
+        font-family: 'vw_headbold';
+        color: #00a4e3;
+        font-size: 26px;
+        line-height: 32px;
+    }
+    .versoes .mobile-arrow-text.left-mobile{left:80px;width: 160px;}
+    .versoes .mobile-arrow-text.right-mobile{right:80px;width: 200px;}
+    .versoes .close{top:25px;right:25px;width:96px;height: 96px;}
+   
+    .versoes .descriptions-mobile .mobile-container{
+        position: absolute;
+        
+        top:146px;
+        bottom: 50px;
+        width: 90%;
+        left:5%;
+        overflow: hidden;
+    }
+     .versoes .descriptions-mobile .mobile-title{
+        position: absolute;
+        font-size: 50px;
+        color: #00a4e3;
+        line-height: 146px;
+        letter-spacing: 5px;
+        left:50px;
+    }
+    .versoes .descriptions-mobile .mobile-cores-title{
+        position: absolute;
+        height: 50px;
+        width: 100%;
+        font-family: 'vw_textbold';
+        font-size: 38px;
+        letter-spacing: 2px;
+        border-bottom: 2px solid #fff;
+    }
+    .versoes .descriptions-mobile .mobile-cores-title.solidas-title{top:0px;}
+    .versoes .descriptions-mobile .mobile-cores-title.metalizadas-title{top:250px;}
+    .versoes .descriptions-mobile .mobile-cores-title.especias-title{top:500px;}
+
+    .versoes .descriptions-mobile .mobile-cores-block{
+        position: absolute;
+        height: 120px;
+        width: 100%;
+        
+    }
+    .versoes .descriptions-mobile .mobile-cores-block.solidas-block{top:80px;}
+    .versoes .descriptions-mobile .mobile-cores-block.metalizadas-block{top:330px;}
+    .versoes .descriptions-mobile .mobile-cores-block.especias-block{top:580px;}
+
+    .versoes .descriptions-mobile .mobile-cor{
+        position: absolute;
+        width: 240px;
+        height: 100%;
+        background-image: url(../img/large/cores.png);
+        background-size: 3840px 100%;
+    
+    }
+    .versoes .descriptions-mobile .mobile-cor div{
+        position: absolute;
+        height: 50%;
+        width: 100%;
+        bottom: 0px;
+        line-height: 60px;
+        font-size: 24px;
+        font-family: 'vw_headbold';
+        text-align: center;
+    }
+    .versoes .descriptions-mobile .mobile-cor.mobile-branco-cristal{background-position: -240px 0px;color:#000;}
+    .versoes .descriptions-mobile .mobile-cor.mobile-preto-ninja{left:298px; background-position: -720px 0px;}
+    .versoes .descriptions-mobile .mobile-cor.mobile-vermelho-flash{left:597px; background-position: -1100px 0px;}
+
+    .versoes .descriptions-mobile .mobile-cor.mobile-prata-sirius{background-position: -1480px 0px;color:#000;}
+    .versoes .descriptions-mobile .mobile-cor.mobile-azul-night{left:298px; background-position: -2160px 0px;}
+    .versoes .descriptions-mobile .mobile-cor.mobile-cinza-platinum{left:597px; background-position: -2640px 0px;}
+    
+    .versoes .descriptions-mobile .mobile-cor.mobile-azul-ravena{background-position: -3120px 0px;}
+    .versoes .descriptions-mobile .mobile-cor.mobile-laranja-canyon{left:298px; background-position: -3600px 0px;}
 
 }
+
 /*Mobile landscape*/
 @media only screen and (orientation:landscape) and (max-device-width: 750px){
   
-}
-@media screen and (max-height: 900px){
-    .versoes .down-car .images-car{height: 128px;}
-    .versoes .descriptions{top:155px;}
 }

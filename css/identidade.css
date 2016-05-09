@@ -95,8 +95,8 @@
 }
 .identidade .left-bar{position:absolute;top:70px;left:36px;width:175px;height:5px;border-bottom:4px solid #fff;}
 .identidade .right-bar{position:absolute;top:70px;right:36px;width:175px;height:5px;border-bottom:4px solid #fff;}
-.identidade .description{top:20px;font-size:45px;padding:250px 80px;}
-.identidade .text{top:150px;width:650px;margin-left:50%;left:-325px;font-size:28px;line-height:45px;}
+.identidade .description{top:0px;font-size:45px;padding:200px 100px;}
+.identidade .text{top:150px;width:800px;margin-left:50%;left:-400px;font-size:28px;line-height:45px;}
 .identidade .under-text{top:260px;}
 .identidade .car-container{top:525px;bottom:50px;}
 .saiba-mais{

@@ -123,17 +123,21 @@ $(document).ready(function() {
 			}
 		}
 		this.goToExtern = function(){
-			if(ambient == Ambient.Intern){
-				ambient = Ambient.Extern;
-				$('.tour-slider .externo.bar').addClass('active');
-				$('.tour-slider .interno.bar').removeClass('active');
-				window.cubeManager.setActive(false);
-				if(!isie()){
-					$('#saveiro_trabalho_interno').css('display','none');
-					$('#saveiro_aventura_interno').css('display','none');
-				}else{
-					$('#saveiro-trabalho-ie-interno').css('display','none');
-					$('#saveiro-aventura-ie-interno').css('display','none');
+			if(isMobile.apple.phone || isMobile.android.phone || isMobile.seven_inch){
+				window.tourMobileManager.goToExtern();	
+			}else{
+				if(ambient == Ambient.Intern){
+					ambient = Ambient.Extern;
+					$('.tour-slider .externo.bar').addClass('active');
+					$('.tour-slider .interno.bar').removeClass('active');
+					window.cubeManager.setActive(false);
+					if(!isie()){
+						$('#saveiro_trabalho_interno').css('display','none');
+						$('#saveiro_aventura_interno').css('display','none');
+					}else{
+						$('#saveiro-trabalho-ie-interno').css('display','none');
+						$('#saveiro-aventura-ie-interno').css('display','none');
+					}
 				}
 			}
 		}
@@ -271,8 +275,57 @@ $(document).ready(function() {
 			//window.cubeManager.setActive(false);
 		}
 	}
+	var TourMobileManager = function(){
+		this.goToAventura = function(){
+			$('.tour_mobile .mobile-externo-trabalho').css('display','none');
+			$('.tour_mobile .mobile-externo-aventura').css('display','inline');
+			$('.tour_mobile .mobile-arrow-text.left-mobile').css('display','inline');
+			$('.tour_mobile .mobile-arrow-text.right-mobile').css('display','none');
+			$('.tour_mobile .left-arrow').css('display','inline');
+			$('.tour_mobile .right-arrow').css('display','none');
+		}
+		this.goToTrabalho = function(){
+			$('.tour_mobile .mobile-externo-trabalho').css('display','inline');
+			$('.tour_mobile .mobile-externo-aventura').css('display','none');
+			$('.tour_mobile .mobile-arrow-text.left-mobile').css('display','none');
+			$('.tour_mobile .mobile-arrow-text.right-mobile').css('display','inline');
+			$('.tour_mobile .left-arrow').css('display','none');
+			$('.tour_mobile .right-arrow').css('display','inline');
+		}
+		this.goToIntern = function(car){
+			this.currentCar = car;
+			if(ambient == Ambient.Extern){
+				$('.mobile-rotate-fix').css('display','none');
+				ambient = Ambient.Intern;
+				if(!window.cubeManager.isActive()){
+					window.cubeManager.setActive(true);
+				}
+				if(this.currentCar == window.tourManager.Car.Aventura){
+					window.cubeManager.setCubeName('saveiro_aventura_interno');
+					$('#saveiro_aventura_interno').css('display','inline');
+				}else{
+					window.cubeManager.setCubeName('saveiro_trabalho_interno');
+					$('#saveiro_trabalho_interno').css('display','inline');
+				}
+			}
+		}
+		this.goToExtern = function(){
+			if(ambient == Ambient.Intern){
+				$('.mobile-rotate-fix').css('display','inline');
+				ambient = Ambient.Extern;
+				window.cubeManager.setActive(false);
+				$('#saveiro-trabalho-ie-interno').css('display','none');
+				$('#saveiro-aventura-ie-interno').css('display','none');
+			}
+		}
+	}
 	var tourManager = new TourManager();
 	window.tourManager = tourManager;
+	var tourMobileManager = new TourMobileManager();
+	window.tourMobileManager = tourMobileManager;
+	if (isMobile.apple.phone || isMobile.android.phone || isMobile.seven_inch) {
+		ambient = Ambient.Extern;
+	}
 });	
 
 

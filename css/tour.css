@@ -294,52 +294,116 @@
   .tour_sequence .back{left:420px;}
 }
 
+/*Mobiles*/
+@media screen and (orientation:portrait) and (max-device-width: 750px){
+  .tour_mobile .arrow{
+      position: absolute;
+      
+      width: 64px;
+      height: 192px;
+      -webkit-transform: translate(0px,-96px);
+         -moz-transform: translate(0px,-96px);
+          -ms-transform: translate(0px,-96px);
+           -o-transform: translate(0px,-96px);
+              transform: translate(0px,-96px);
+      background-size: 1000% 333%;
+  }
+  .tour_mobile .left-arrow{background-position:-100% -800%;}
+  .tour_mobile .right-arrow{background-position:-300% -800%;}
+  .tour_mobile .mobile-arrow-text{
+    position: absolute;
+    text-align:center;
+    height:100px;
+    font-family: 'vw_headbold';
+    color: #00a4e3;
+    font-size: 26px;
+    line-height: 32px;
+  }
+}
+
 /*Mobile portrait*/
 @media screen and (orientation:portrait) and (max-device-width: 750px){
   .tour_desktop{display: none;}
   .tour_mobile{
     position: absolute;
     display: inline;
-    background-color: #000;
-    width: 100%;
-    height: 100%;
-  }
-  .tour_mobile > div{
-    position: absolute;
     width: 100%;
     height: 100%;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: contain;
+    background-size: cover;
   }
-  .tour_mobile_externo_trabalho{
+  .tour_mobile .mobile-externo-trabalho,.tour_mobile .mobile-externo-aventura{
+    position: absolute;
+    width: 100%;
+    height: 100%;
   }
-  .tour_mobile_externo_aventura{
+  .tour_mobile .mobile-externo-aventura{
     display: none;
   }
-  .tour_mobile_arrow{
-    position: absolute;
-    margin-left: 50%;
-    width: 200px;
-    height: 50px;
-    left:-100px;
-    top:400px;
-    font-size: 40px;
-    border: 1px solid #fff;
+  .tour_mobile .arrow{
+    top: 250px;
   }
-  .tour_mobile_botao_interno{
+  .tour_mobile .mobile-arrow-text{
+    top: 220px;
+  }
+  .tour_mobile .mobile-arrow-text.left-mobile{left:80px;width: 160px;display:none;}
+  .tour_mobile .mobile-arrow-text.right-mobile{right:80px;width: 200px;}
+
+  .tour_mobile .left-arrow{left:15px;display:none;}
+  .tour_mobile .right-arrow{right:15px;}
+
+  .tour_mobile .trabalho-nome{
     position: absolute;
-    margin-left: 50%;
-    width: 200px;
-    height: 50px;
+    left:42px;
+    width: 895px;
+    height: 202px;
+    top:325px;
+    background-size: 100% 100%;
+  }
+  .tour_mobile .aventura-nome{
+    position: absolute;
+    left:42px;
+    width: 895px;
+    height: 204px;
+    top:325px;
+    background-size: 100% 100%;
+  }
+  .tour_mobile .intern-button{
+    position: absolute;
+    text-align:center;
+    top:485px;
+    right: 42px;
+    width: 240px;
+    height: 64px;
+    border: 2px solid #fff;
+    font-family: 'vw_headbold';
+    font-size: 24px;
+    line-height: 64px;
+    letter-spacing: 3px;
+  }
+  .tour_mobile .tour-arrow{
+    position: absolute;
+    bottom: 50px;
+    width: 890px;
+    height: 33px;
+    left: 45px;
+  }
+  .tour_mobile .extern-container{
+    position: absolute;
+    top:470px;
+    bottom: 130px;
+    width: 1372px;
     left:-100px;
-    top:900px;
-    font-size: 40px;
-    border: 1px solid #fff;
+  }
+  .tour_mobile .extern-container > div{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left:100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
   }
 
 }
-
-
-
-
