@@ -14,7 +14,7 @@
 		if (isMobile.apple.phone || isMobile.android.phone || isMobile.seven_inch){
 			//window.location="http://novidades.vw.com.br/";
 		}
-		setTimeout(function(){ if(window.stateMachine.state.name=="empty")window.location.reload(); }, 5000);
+		setTimeout(function(){ if(window.stateMachine.state.name=="empty")window.location.reload(); }, 7500);
 	</script>
 	<script src="js/image-loader.js"></script>
 	<script src="js/state-machine.js"></script>
@@ -2323,6 +2323,56 @@ O bloqueio eletrônico do diferencial é um sistema de “tração inteligente�
 <script type="text/javascript">
     $(document).ready(function(){ $(".gallery .item").append('<div class="alpha_b" />') });
 
+<<<<<<< Updated upstream
+=======
+    $.fn.translateWithGyro = function(params){
+    	var defaultWidth = params.width;
+    	var defaultHeight = params.height;
+
+    	var elem = this;
+    	var position = (980-this.height()*defaultWidth/defaultHeight)/2;
+		var rotation3d = {x:0, y:0};
+		var speed = 15;
+		var lastAlpha = 0;
+		var pxValue = position;
+		var restartGyro=false;
+
+		this.width(this.height()*defaultWidth/defaultHeight);
+
+	    window.addEventListener("deviceorientation", gyroRefresh);
+	    function gyroRefresh(event){
+	    	if(window.orientation == 0 || window.orientation == 180){
+				var width = elem.height()*defaultWidth/defaultHeight;
+				var maxLeft = 0;
+				var minLeft = 980-width;
+		        if((lastAlpha < 180 && event.alpha > 180)||(lastAlpha > 180 && event.alpha < 180)){
+			    	//inverting...
+			    }else{
+			    	var delta = event.alpha-lastAlpha;
+			    	//if(Math.abs(delta)<10)
+			    	position+=speed*delta;
+			    }
+			    if(position < minLeft){position = minLeft;}
+			    if(position > maxLeft){position = maxLeft;}
+
+			    pxValue = 0.95*pxValue + 0.05*position;
+			    //pxValue = position;
+
+			   elem.css('left',pxValue+'px');
+			    if(restartGyro){
+			    	position = 0.97*position + 0.03*(minLeft/2);
+			    	if(Math.abs(position-minLeft/2)<10){
+			    		restartGyro = false;
+			    	}
+			    }
+				lastAlpha = event.alpha;
+			}
+	    }
+	    return this;
+	}
+    
+    $('#home').translateWithGyro({'width':1920,'height':1200});
+>>>>>>> Stashed changes
 
     /*
     function versoesCarClick(){
@@ -2363,11 +2413,10 @@ O bloqueio eletrônico do diferencial é um sistema de “tração inteligente�
 		    }else{
 		    	$('#home').width(width);
 			    $('#home').css('left',(980-width)+'px');
-			    	
 		    }
 		    window.addEventListener("deviceorientation", deviceParallaxListener);
 		    window.addEventListener('orientationchange', doOnOrientationChange);
-		    $('#body').append('<div class="mobile-arrow" onclick="setaClick();;"></div>');
+		    $('#body').append('<div class="mobile-arrow" onclick="setaClick()"></div>');
 		    setInterval(function(){restartGyro=true}, 5000);
 		}
 		var position = (980-$('#home').height()*1920/1100)/2;
@@ -2452,7 +2501,11 @@ O bloqueio eletrônico do diferencial é um sistema de “tração inteligente�
 
    	});
 	*/
+<<<<<<< Updated upstream
 	
+=======
+
+>>>>>>> Stashed changes
 
 </script>
 </html>

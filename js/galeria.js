@@ -30,7 +30,6 @@ $(document).ready(function() {
 			    });
 			}
 		}
-		
 	}
 	var galleryManager = new GalleryManager();
 	window.galleryManager = galleryManager;

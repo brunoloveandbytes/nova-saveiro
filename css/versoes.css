@@ -543,9 +543,13 @@
         position: absolute;
         width: 240px;
         height: 100%;
+<<<<<<< Updated upstream
         background-image: url(../img/large/cores.png);
         background-size: 3840px 100%;
     
+=======
+        background-size: 3840px 100%;
+>>>>>>> Stashed changes
     }
     .versoes .descriptions-mobile .mobile-cor div{
         position: absolute;

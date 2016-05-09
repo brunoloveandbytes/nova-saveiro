@@ -645,7 +645,10 @@ body div{
     width: 148px;
     height: 89px;
     transform:translate(-74px,-44px);
+<<<<<<< Updated upstream
     background-image: url('../img/large/rotate_horizontal.png')
+=======
+>>>>>>> Stashed changes
   }
 }
 
@@ -665,6 +668,9 @@ body div{
     width: 148px;
     height: 89px;
     transform:translate(-74px,-44px);
+<<<<<<< Updated upstream
     background-image: url('../img/large/rotate_vertical.png')
+=======
+>>>>>>> Stashed changes
   }
 }
