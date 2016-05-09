@@ -84,8 +84,8 @@ $(document).ready(function() {
 																		{'className':'home-content .car-button .plus','imgName':'tiles.png','sizes':{}},
 																		{'className':'menu .item :nth-child(1)','imgName':'tiles.png','sizes':{}},
 																		{'className':'premios_button','imgName':'tiles.png','sizes':{}},
-																		{'className':'mobile-rotate-vertical-fix > div','imgName':'rotate_horizontal.png','sizes':{}},
-																		{'className':'mobile-rotate-fix > div','imgName':'rotate_vertical.png','sizes':{}}
+																		{'className':'mobile-rotate-vertical-fix > .rotate-logo','imgName':'rotate_horizontal.png','sizes':{}},
+																		{'className':'mobile-rotate-fix > .rotate-logo','imgName':'rotate_vertical.png','sizes':{}}
 																	]});
 		this.microStages.push(stages.micro);this.smallStages.push(stages.small);this.mediumStages.push(stages.medium);this.largeStages.push(stages.large);
 

@@ -620,12 +620,17 @@ body div{
 }
 
 
+.mobile-rotate-vertical-fix{display:none;}
+.mobile-rotate-fix{display:none;}
+
 /*Mobiles*/
 @media screen and (max-device-width:750px){
   .premios_button{display:none;}
   .menu .secondary :nth-child(6).item{display: none;}
   .menu .secondary :nth-child(7).item{display: none;}
   .car-button{display: none;}
+  .mobile-rotate-vertical-fix{display:inline;}
+  .mobile-rotate-fix{display:inline;}
 }
 
 /*Mobile portrait*/
@@ -638,18 +643,26 @@ body div{
     background-color: #161616;
     z-index:5;
   }
-  .mobile-rotate-vertical-fix > div{
+  .mobile-rotate-vertical-fix > .rotate-logo{
     position: absolute;
     top:50%;
     left:50%;
-    width: 148px;
-    height: 89px;
-    transform:translate(-74px,-44px);
-<<<<<<< Updated upstream
-    background-image: url('../img/large/rotate_horizontal.png')
-=======
->>>>>>> Stashed changes
+    width: 222px;
+    height: 133px;
+    transform:translate(-111px,-150px);
+    background-size: 100% 100%;
   }
+  .mobile-rotate-vertical-fix > .rotate-text{
+    position: absolute;
+    font-family: 'vw_headlight';
+    left: 50%;
+    top: 50%;
+    width: 900px;
+    font-size: 46px;
+    transform: translate(-450px, 50px);
+    text-align: center;
+  }
+  .mobile-rotate-fix{display:none;}
 }
 
 /*Mobile landscape*/
@@ -661,16 +674,24 @@ body div{
     bottom: 0px;
     background-color: #161616;
   }
-  .mobile-rotate-fix > div{
+  .mobile-rotate-fix > .rotate-logo{
     position: absolute;
     top:50%;
     left:50%;
     width: 148px;
     height: 89px;
-    transform:translate(-74px,-44px);
-<<<<<<< Updated upstream
-    background-image: url('../img/large/rotate_vertical.png')
-=======
->>>>>>> Stashed changes
+    transform:translate(-74px,-90px);
   }
+  .mobile-rotate-fix > .rotate-text{
+    position: absolute;
+    font-family: 'vw_headlight';
+    left: 50%;
+    top: 50%;
+    width: 300px;
+    font-size: 28px;
+    transform: translate(-150px, 20px);
+    text-align: center;
+    line-height: 36px;
+  }
+  .mobile-rotate-vertical-fix{display:none;}
 }

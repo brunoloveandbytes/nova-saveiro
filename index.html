@@ -2176,7 +2176,8 @@ O bloqueio eletrônico do diferencial é um sistema de “tração inteligente�
 		        </div>
 			</div>
 			<div class="close" onclick="window.tourManager.goToExtern()"></div>
-			<div class="mobile-rotate-vertical-fix"><div></div></div>
+			<div class="mobile-rotate-vertical-fix"><div class="rotate-logo"></div><div class="rotate-text">O seu smartphone precisa estar na
+posição horizontal para essa experiência.</div></div>
 		</div>
 		<div id="saveiro_aventura_interno" class="tour_interno_container aventura_interno">
 			<div class="tour_interno">
@@ -2190,7 +2191,8 @@ O bloqueio eletrônico do diferencial é um sistema de “tração inteligente�
 		        </div>
 			</div>
 			<div class="close" onclick="window.tourManager.goToExtern();"></div>
-			<div class="mobile-rotate-vertical-fix"><div></div></div>
+			<div class="mobile-rotate-vertical-fix"><div class="rotate-logo"></div><div class="rotate-text">O seu smartphone precisa estar na
+posição horizontal para essa experiência.</div></div>
 		</div>
 		<div id="saveiro-trabalho-ie-interno" class="tour_interno_container ie-interno ie-trabalho">
 			<div class="ie-frame">
@@ -2317,7 +2319,8 @@ O bloqueio eletrônico do diferencial é um sistema de “tração inteligente�
 	  </div>
 	</div>
 	<div class="vw-leads-global"></div>
-	<div class="mobile-rotate-fix"><div></div></div>
+	<div class="mobile-rotate-fix"><div class="rotate-logo"></div><div class="rotate-text">Seu smartphone precisa
+estar na posição vertical.</div></div>
 </body>
 <script src="js/galeria.js"></script>
 <script type="text/javascript">
@@ -2335,6 +2338,8 @@ O bloqueio eletrônico do diferencial é um sistema de “tração inteligente�
 		var pxValue = position;
 		var restartGyro=false;
 
+		setInterval(function(){restartGyro=true}, 5000);
+
 		this.width(this.height()*defaultWidth/defaultHeight);
 
 	    window.addEventListener("deviceorientation", gyroRefresh);
@@ -2347,16 +2352,14 @@ O bloqueio eletrônico do diferencial é um sistema de “tração inteligente�
 			    	//inverting...
 			    }else{
 			    	var delta = event.alpha-lastAlpha;
-			    	//if(Math.abs(delta)<10)
 			    	position+=speed*delta;
 			    }
 			    if(position < minLeft){position = minLeft;}
 			    if(position > maxLeft){position = maxLeft;}
 
 			    pxValue = 0.95*pxValue + 0.05*position;
-			    //pxValue = position;
 
-			   elem.css('left',pxValue+'px');
+			   	elem.css('left',pxValue+'px');
 			    if(restartGyro){
 			    	position = 0.97*position + 0.03*(minLeft/2);
 			    	if(Math.abs(position-minLeft/2)<10){
@@ -2368,138 +2371,53 @@ O bloqueio eletrônico do diferencial é um sistema de “tração inteligente�
 	    }
 	    return this;
 	}
-    
-    if (isMobile.apple.phone || isMobile.android.phone || isMobile.seven_inch) {
-	    $('#home').translateWithGyro({'width':1920,'height':1200});
-	}
 
-    /*
-    function versoesCarClick(){
-    	if (isMobile.apple.phone || isMobile.android.phone || isMobile.seven_inch) {
-    		window.versoesManager.goToRight();
-    	}else{
-    		$('.versoes_content').toggleClass('on-description');
-    	}
-    }
-
-    function setaClick(){
-    	if(window.stateMachine.state.name == "home"){
-    		$('.mobile-arrow').addClass("up");	
-    		window.stateMachine.askMove(window.stateMachine.Trigger.Versoes);
-    		setTimeout(function(){$('.primary .interessado').addClass('versoes');}, 1000);
-    		
-    	}else{
-    		$('.mobile-arrow').removeClass("up");	
-    		window.stateMachine.askMove(window.stateMachine.Trigger.Home);
-    		setTimeout(function(){$('.primary .interessado').removeClass('versoes');}, 1000);
-    	}
-		
-	}
-
-
-    $(document).ready(function() {
-    	if (isMobile.apple.phone || isMobile.android.phone || isMobile.seven_inch) {
-			var head  = document.getElementsByTagName('head')[0];
-		    var link  = document.createElement('link');
-		    link.rel  = 'stylesheet';
-		    link.type = 'text/css';
-		    link.href = 'css/mobile-fix.css';
-		    link.media = 'all';
-		    head.appendChild(link);
-		    var width = $('#home').height()*1920/1100;
-		    if(window.orientation == 90 || window.orientation == -90){
-
-		    }else{
-		    	$('#home').width(width);
-			    $('#home').css('left',(980-width)+'px');
-		    }
-		    window.addEventListener("deviceorientation", deviceParallaxListener);
-		    window.addEventListener('orientationchange', doOnOrientationChange);
-		    $('#body').append('<div class="mobile-arrow" onclick="setaClick()"></div>');
-		    setInterval(function(){restartGyro=true}, 5000);
-		}
-		var position = (980-$('#home').height()*1920/1100)/2;
+	$.fn.changeFrameWithGyro = function(params){
+    	var numberOfImages = params.numberOfImages;
+    	var elem = this;
+    	var currentIdx = 1;
+    	var intIdx = 1;
+    	var targetIdx = 1;
 		var rotation3d = {x:0, y:0};
-		var speed = 15;
+		var speed = 0.5;
 		var lastAlpha = 0;
-		var currentAlpha = 0;
-		var pxValue = position;
 		var restartGyro=false;
-
-		function deviceParallaxListener(event){
-			//console.log(event.alpha);
-			if(window.orientation == 0 || window.orientation == 180){
-				var width = $('#home').height()*1920/1100;
-				var maxLeft = 0;
-				var minLeft = 980-width;
+		var threshold = 2;
+		var left = -100;
+	    window.addEventListener("deviceorientation", gyroRefresh);
+	    function gyroRefresh(event){
+	    	if(window.orientation == 0 || window.orientation == 180){
+				var minIdx = 1;
+				var maxIdx = numberOfImages;
 		        if((lastAlpha < 180 && event.alpha > 180)||(lastAlpha > 180 && event.alpha < 180)){
 			    	//inverting...
 			    }else{
 			    	var delta = event.alpha-lastAlpha;
-			    	//if(Math.abs(delta)<10)
-			    	position+=speed*delta;
+			    	targetIdx+=speed*delta;
 			    }
-			    if(position < minLeft){position = minLeft;}
-			    if(position > maxLeft){position = maxLeft;}
+			    if(targetIdx < minIdx){targetIdx = minIdx;}
+			    if(targetIdx > maxIdx){targetIdx = maxIdx;}
 
-			    pxValue = 0.95*pxValue + 0.05*position;
-			    //pxValue = position;
-
-			    $('#home').css('left',pxValue+'px');
-			    if(restartGyro){
-			    	position = 0.97*position + 0.03*(minLeft/2);
-			    	if(Math.abs(position-minLeft/2)<10){
-			    		restartGyro = false;
-			    	}
+			    $(elem).find(':nth-child('+intIdx+')').css('left','100%');
+			    if(Math.abs(currentIdx - targetIdx) > threshold){
+			    	currentIdx = 0.7*currentIdx + 0.3*targetIdx;
 			    }
+			    intIdx = parseInt(currentIdx);
+			    left = -100 - intIdx*85/numberOfImages;
+			    $(elem).find(':nth-child('+intIdx+')').css('left','0%');
+			    $(elem).css('left',left+'px');
 				lastAlpha = event.alpha;
 			}
-		}
+	    }
+	    return this;
+	}
 
-		function doOnOrientationChange(event){
-			if(window.orientation == 90 || window.orientation == -90){
-			    $('#home').css('left','0px');
-			    $('#home').css('width','100%');
-			}else{
-				$('#home').width(width);
-			    $('#home').css('left',(980-width)+'px');
-			}
-			position = (980-$('#home').height()*1920/1100)/2;
-		}
-
-		var init = 0;
-		document.body.addEventListener('touchstart', function(e){
-	        init = e.changedTouches[0].pageY;
-	    }, false)
-
-		document.body.addEventListener('touchend', function(e){
-			lastXTouch = null;
-			var deltaY = (e.changedTouches[0].pageY-init)/$(window).height();
-			if(deltaY < -0.15){
-				//alert('Versões');
-				window.stateMachine.askMove(window.stateMachine.Trigger.Versoes);
-			}
-			if(deltaY > 0.15){
-				//alert('Versões');
-				window.stateMachine.askMove(window.stateMachine.Trigger.Home);
-			}
-	        //alert((e.changedTouches[0].pageY-init)/$(window).height());
-	    }, false)
-
-		var lastXTouch = null;
-	    document.body.addEventListener('touchmove', function(e){
-
-	    	if(lastXTouch != null){
-	    		position += 2*(e.changedTouches[0].pageX - lastXTouch);
-	    	}
-	    	lastXTouch = e.changedTouches[0].pageX;
-	        //alert((e.changedTouches[0].pageY-init)/$(window).height());
-	    }, false)
-
-	    //setInterval(function(){ console.log(lastAlpha);}, 500);
-
-   	});
-	*/
+    
+    if (isMobile.apple.phone || isMobile.android.phone || isMobile.seven_inch) {
+	    $('#home').translateWithGyro({'width':1920,'height':1200});
+	    $('.mobile-externo-trabalho .extern-container').changeFrameWithGyro({'numberOfImages':76});
+	    $('.mobile-externo-aventura .extern-container').changeFrameWithGyro({'numberOfImages':76});
+	}
 
 
 </script>

@@ -154,6 +154,7 @@ $.fn.lightbox = function(){
 };
 
 $(".gallery .item:not(.item_small)").on("click", function(){ 
+	//currentView = null;
 	$(this).lightbox();
 	if($(this).attr('data-image').search('trabalho')!=-1){
 		window.tagManager.viuFotos("TRABALHO","TRABALHO",$(this).index()+1);
@@ -163,50 +164,44 @@ $(".gallery .item:not(.item_small)").on("click", function(){
 });
 
 $(window).resize(function(){
-	$(".lightbox").remove();
-	var marginBottom;
-	var marginLeft;
-	if($(currentView)){
-		marginBottom = Math.ceil(parseFloat($(currentView).css("marginBottom").replace("px","")));
-	    marginLeft = Math.ceil(parseFloat($(currentView).css("marginLeft").replace("px","")));
+	if($("#light_cube").length > 0){
+		$(".lightbox").remove();
+		var marginBottom = Math.ceil(parseFloat($(currentView).css("marginBottom").replace("px","")));
+	    var marginLeft = Math.ceil(parseFloat($(currentView).css("marginLeft").replace("px","")));
+		var x = $(currentView).position().left + marginLeft;
+		var y = $(currentView).position().top;
+		var width = $(currentView).outerWidth();
+		var height = $(currentView).outerHeight();
+		var wrap_width = $(currentView).parent().outerWidth();
+		var wrap_height = $(currentView).parent().outerHeight();
+		var inner_width = $(currentView).innerWidth();
+		var inner_height = $(currentView).innerHeight();
+		var descColor = $(currentView).attr("data-desc-color");
+		var quant_x = wrap_width/width;
+		var quant_y = wrap_height/height;
+		if(marginLeft==0){ marginLeft = Math.ceil(parseFloat($(currentView).next().css("marginLeft").replace("px",""))) }
+
+		var cubeWidth  = (inner_width*2) + marginLeft;
+		var cubeHeight = (inner_height*2) + marginBottom;
+
+
+		if($("#light_cube").length==0){
+			$(".item_small").parent().append('<span id="light_cube" style="display:block;position:absolute;padding:5px;z-index:10"><div class="close_cube"></div><div class="desc_cube upper"></div></span>');
+		}
+
+		$("#light_cube").css('background-image','url(' + $(currentView).attr('data-image') + ')');
+		$(".desc_cube").html($(this).attr("data-description"));
+		if(typeof descColor=="undefined"){ descColor = "000" }
+
+		if((x+width)>(wrap_width-(width/2))){  x -= (width + marginLeft) }  // VERIFICA LEFT
+		if((y+height)>(wrap_height-(height*0.2))){ y -= (height + marginBottom) } // VERIFICA HEIGHT
+
+		$('#light_cube').css({ top: y, left: x, width: cubeWidth, height: cubeHeight, color: "#"+descColor });
+
+		$('.close_cube').on("click", function(){ $('#light_cube').remove() });
 	}
-	//marginBottom = Math.ceil(parseFloat($(currentView).css("marginBottom").replace("px","")));
-	var marginLeft = Math.ceil(parseFloat($(currentView).css("marginLeft").replace("px","")));
-	var x = $(currentView).position().left + marginLeft;
-	var y = $(currentView).position().top;
-	var width = $(currentView).outerWidth();
-	var height = $(currentView).outerHeight();
-	var wrap_width = $(currentView).parent().outerWidth();
-	var wrap_height = $(currentView).parent().outerHeight();
-	var inner_width = $(currentView).innerWidth();
-	var inner_height = $(currentView).innerHeight();
-
-	var descColor = $(currentView).attr("data-desc-color");
-
-	var quant_x = wrap_width/width;
-	var quant_y = wrap_height/height;
-
-	if(marginLeft==0){ marginLeft = Math.ceil(parseFloat($(currentView).next().css("marginLeft").replace("px",""))) }
-
-	var cubeWidth  = (inner_width*2) + marginLeft;
-	var cubeHeight = (inner_height*2) + marginBottom;
-
-
-	if($("#light_cube").length==0){
-		$(".item_small").parent().append('<span id="light_cube" style="display:block;position:absolute;padding:5px;z-index:10"><div class="close_cube"></div><div class="desc_cube upper"></div></span>');
-	}
-
-	$("#light_cube").css('background-image','url(' + $(currentView).attr('data-image') + ')');
-	$(".desc_cube").html($(this).attr("data-description"));
-	if(typeof descColor=="undefined"){ descColor = "000" }
-
-	if((x+width)>(wrap_width-(width/2))){  x -= (width + marginLeft) }  // VERIFICA LEFT
-	if((y+height)>(wrap_height-(height*0.2))){ y -= (height + marginBottom) } // VERIFICA HEIGHT
-
-	$('#light_cube').css({ top: y, left: x, width: cubeWidth, height: cubeHeight, color: "#"+descColor });
-
-	$('.close_cube').on("click", function(){ $('#light_cube').remove() });
 });
+
 var currentView = null;
 $(".gallery .item_small").on("click", function(){
 	window.tagManager.viuFotos('ACESSORIOS','ACESSORIO',$(this).index()+1);
