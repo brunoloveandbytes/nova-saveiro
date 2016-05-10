@@ -925,6 +925,9 @@ $(document).ready(function() {
 											window.tagManager.acessouPagina("Galeria");$('.down-arrow').css('display','none')
 											window.stateMachine.addHash('galeria');
 											$(".icon-galeria").parent().addClass('selected');
+											if (isMobile.apple.phone || isMobile.android.phone || isMobile.seven_inch) {
+												$('.up-arrow').addClass('show');
+											}
 										},
 										"transitions":[
 															new Transition({

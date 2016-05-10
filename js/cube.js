@@ -120,6 +120,38 @@ $(document).ready(function() {
 			}
 	    }
 	}
+
+	var lastTouchX,lastTouchY = null;
+
+	if (!window.DeviceOrientationEvent) {
+
+		document.body.addEventListener('touchstart', function(e){
+	        lastTouchX = e.changedTouches[0].pageX;
+	        lastTouchY = e.changedTouches[0].pageY;
+	    }, false)
+		document.body.addEventListener('touchmove', function(e){
+			if(lastTouchX != null){
+				var deltaX = (e.changedTouches[0].pageX-lastTouchX);
+				rotation3d.y += deltaX/5;
+				lastTouchX = e.changedTouches[0].pageX;	
+			}
+			if(lastTouchY != null){
+				var deltaY = (e.changedTouches[0].pageY-lastTouchY);
+				rotation3d.x -= deltaY/5;
+				if(rotation3d.x > 45) rotation3d.x = 45;
+				if(rotation3d.x < -45) rotation3d.x = -45;
+				lastTouchY = e.changedTouches[0].pageY;	
+			}
+	    }, false)
+
+		document.body.addEventListener('touchend', function(e){
+			lastTouchX = null;
+			lastTouchY = null;
+		}, false)
+
+	}
+	
+
 	function refresh(){
 		if(cubeManager.enabled){
 			var smooth = 0.1;

@@ -3,6 +3,7 @@ $(document).ready(function() {
 
 	var GalleryManager = function(){
 		this.stop = function(){
+			/*
 			var $header  = $("#vw-tabs .header");
 			var $content  = $("#vw-tabs .content");
 			//alert($header.length);
@@ -10,24 +11,35 @@ $(document).ready(function() {
 			$header.find('.tab:nth-child(' + tab + ')').addClass('active');
 			$content.children('.wrap').removeClass('visible');
 			$content.children('.wrap:nth-child(' + tab + ')').addClass('visible');
+			*/
 		}
 		this.setTab = function(){
 			function setTab(tab){
-				if(tab == 3){
+				/*
+				if (isMobile.apple.phone || isMobile.android.phone || isMobile.seven_inch) {
 					$('.up-arrow').addClass('show');
 				}else{
-					$('.up-arrow').removeClass('show');
+					if(tab == 3){
+						$('.up-arrow').addClass('show');
+					}else{
+						$('.up-arrow').removeClass('show');
+					}
 				}
+				*/
+
+				
+
 				$('.gallery > .item').animateOneByOne({css:{ opacity:'0' }, duration: 0, interval: 0});
 				$content.children('.wrap').removeClass('visible');
 				$content.children('.wrap:nth-child(' + tab + ')').addClass('visible');
 				$header.find('.tab').removeClass('active');
 				$header.find('.tab:nth-child(' + tab + ')').addClass('active');
-				$('.visible .gallery > .item').animateOneByOne({
-			        css:{ opacity:'1' },
-		            duration: 500,
-		            interval:-440
-			    });
+				$('.visible .gallery > .item').css('opacity',1);
+				// $('.visible .gallery > .item').animateOneByOne({
+			 //        css:{ opacity:'1' },
+		  //           duration: 500,
+		  //           interval:-440
+			 //    });
 			}
 		}
 	}
@@ -47,12 +59,12 @@ $.fn.animateOneByOne = function(params) {
     params = $.extend( {css:'', duration: 700, interval:300, order:'ASC', callback:''}, params);
     var elements = null;
     if(params.order == 'ASC'){ elements = $(this) }
-    else{ elements = $(this).get().reverse() }
+    else{ elements = $(this).get().reverse()}
     var count = $(this).length - 1;
-    $(elements).each(function(id) {
-        setTimeout(function(element) {
-            if(id == count){ $(element).animate(params.css,params.duration,params.callback) }
-            else{ $(element).animate(params.css,params.duration) }
+    $(elements).each(function(id){
+        setTimeout(function(element){
+            if(id == count){ $(element).animate(params.css,params.duration,params.callback)}
+            else{ $(element).animate(params.css,params.duration)}
      }, id * (params.interval + params.duration), $(this));
    });
 };
@@ -66,12 +78,21 @@ $.fn.tabs = function(options){
             tab: 1
         }, options );
 
+	
 	// CONSTRUCTION - DON'T CHANGE
-	$this.children('.tab').each(function(e){ n_tabs.push($(this).attr("data-tab")) });
+	$this.children('.tab').each(function(e){ 
+		if($(this).attr("data-tab")!="acessórios" || !((isMobile.apple.phone || isMobile.android.phone || isMobile.seven_inch))){
+			n_tabs.push($(this).attr("data-tab"));	
+		}
+	});
 	html += '<div class="header upper head_extrabold">galeria<div class="wrap text_bold">';
 	for(n=0;n<n_tabs.length;n++){ html += '<div class="tab spaced">' + n_tabs[n] + '</div>' }
 	html += '</div></div>';
-	html += '<div class="content">';
+	if(n_tabs.length == 0){
+		html += '<div class="content scrollable" data-limit="600">';	
+	}
+	html += '<div class="content scrollable" data-limit="1000">';	
+
 	for(n=1;n<=n_tabs.length;n++){ html += '<div class="wrap">' + $this.children('.tab:nth-child('+n+')').html() + '</div>' }
 	html += '</div>';
 	$this.html('').html(html);
@@ -81,12 +102,54 @@ $.fn.tabs = function(options){
 	var $header  = $this.children(".header");
 	var $tab  = $this.children(".header").find(".tab");
 
-	function setTab(tab){
-		if(tab == 3){
-			$('.up-arrow').addClass('show');
+	var lastYPosition = null;
+	var scrollTop = 0;
+	$('body').on('touchmove', '.content', function(e) {
+
+		$elem = $(event.target).closest('.content');
+		var limit = parseInt($elem.attr('data-limit'));
+		if(lastYPosition != null){
+			var parentTop = $elem.parent().offset().top;
+			var parentHeight = $elem.parent().height();
+			var top = $elem.offset().top;
+			var height = $elem.height();
+			var newValue = top - parentTop+e.originalEvent.touches[0].pageY-lastYPosition;
+			
+			scrollTop = $elem.scrollTop();
+
+			scrollTop += parseInt(lastYPosition-e.originalEvent.touches[0].pageY);
+		
+			if(scrollTop < 0) scrollTop = 0;
+			if(scrollTop > limit) scrollTop = limit;
+
+			//console.log(scrollTop);
+			$elem.scrollTop(scrollTop);
+			//$elem.css('top',newValue+'px');
 		}else{
-			$('.up-arrow').removeClass('show');
+
 		}
+		lastYPosition = e.originalEvent.touches[0].pageY;
+	});
+
+	$('body').on('touchend', '.content', function(e){
+		lastYPosition=null;
+	});
+
+	function setTab(tab){
+		if (isMobile.apple.phone || isMobile.android.phone || isMobile.seven_inch) {
+			if(window.stateMachine){
+				//if(window.stateMachine.state == "galeria"){
+					$('.up-arrow').addClass('show');		
+				//}
+			}
+		}else{
+			if(tab == 3){
+				$('.up-arrow').addClass('show');
+			}else{
+				$('.up-arrow').removeClass('show');
+			}
+		}
+
 		$('.gallery > .item').animateOneByOne({css:{ opacity:'0' }, duration: 0, interval: 0});
 		$content.children('.wrap').removeClass('visible');
 		$content.children('.wrap:nth-child(' + tab + ')').addClass('visible');
@@ -115,22 +178,42 @@ $.fn.lightbox = function(){
 	var dataImage = $(this).attr('data-image');
 	currentGalleryIdx = $(this).index();
 	currentGalleryParent = $(this).parent();
-	html += '<div class="lightbox lightbox_bg">';
-	html += '<div class="wrap"><div class="arrow left-arrow"></div><div class="close"></div><div class="arrow right-arrow"></div></div>';
-	html += '</div>';
+	if (isMobile.apple.phone || isMobile.android.phone || isMobile.seven_inch) {
+		html += '<div class="lightbox lightbox_bg"></div>';
+		html += '<div class="wrap"><div class="arrow left-arrow"></div><div class="close"></div><div class="arrow right-arrow"></div></div>';
+		$('.up-arrow').removeClass('show');
+	}else{
+		html += '<div class="lightbox lightbox_bg">';
+		html += '<div class="wrap"><div class="arrow left-arrow"></div><div class="close"></div><div class="arrow right-arrow"></div></div>';
+		html += '</div>';
+	}
 
 	$('#vw-tabs').parent().append(html);
 
 	$(".lightbox").css("background-image", "url(" + dataImage + ")");
 
+	if (isMobile.apple.phone || isMobile.android.phone || isMobile.seven_inch) {
+		$('.lightbox').translateWithGyro({'width':1920,'height':1200});
+	}
+
 	// BIND EVENTS
-	$('.lightbox, .lightbox .close').on("click", function(e){
-		if($(e.target).is('div.lightbox') || $(e.target).is('div.close')){
-			$(".lightbox").remove();
+	$('.lightbox, .wrap .close').on("click", function(e){
+		if (isMobile.apple.phone || isMobile.android.phone || isMobile.seven_inch) {
+			if($(e.target).is('div.close')){
+				$(".lightbox").remove();
+				$(".sub-slide > .wrap").remove();
+				$('.up-arrow').addClass('show');
+			}	
+		}else{
+			if($(e.target).is('div.lightbox') || $(e.target).is('div.close')){
+				$(".lightbox").remove();
+				$(".sub-slide > .wrap").remove();
+			}
 		}
+		
 	});
 
-	$('.lightbox .left-arrow').on("click", function(e){
+	$('.wrap .left-arrow').on("click", function(e){
 		var total = currentGalleryParent.children().length;
 		currentGalleryIdx--;
 		if(currentGalleryIdx < 0){
@@ -140,7 +223,7 @@ $.fn.lightbox = function(){
 		$(".lightbox").css("background-image", "url(" + imageName + ")");
 	});
 
-	$('.lightbox .right-arrow').on("click", function(e){
+	$('.wrap .right-arrow').on("click", function(e){
 		var total = currentGalleryParent.children().length;
 		currentGalleryIdx++;
 		if(currentGalleryIdx >= total){
@@ -148,6 +231,7 @@ $.fn.lightbox = function(){
 		}
 		var imageName = $(currentGalleryParent.children()[currentGalleryIdx]).attr('data-image');
 		$(".lightbox").css("background-image", "url(" + imageName + ")");
+		
 	});
 
 	return this;

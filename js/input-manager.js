@@ -79,6 +79,26 @@ $(document).ready(function() {
 	$('body').on('touchend', '.scrollable', function(e) {
 		lastYPosition=null;
 	});
+
+
+	var init = 0;
+	document.body.addEventListener('touchstart', function(e){
+        init = e.changedTouches[0].pageY;
+    }, false)
+
+	document.body.addEventListener('touchend', function(e){
+		var deltaY = (e.changedTouches[0].pageY-init)/$(window).height();
+		if(deltaY < -0.15){
+			if(!window.cubeManager.enabled){
+				window.stateMachine.askMove(window.stateMachine.Trigger.Next);
+			}
+		}
+		if(deltaY > 0.15){
+			if(window.stateMachine.state.name != 'galeria' && !window.cubeManager.enabled){
+				window.stateMachine.askMove(window.stateMachine.Trigger.Previews);	
+			}
+		}
+    }, false)
 	
 
 

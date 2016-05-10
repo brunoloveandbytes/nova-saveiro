@@ -159,9 +159,15 @@ $(document).ready(function() {
 			if(currentIdx == 7){
 				$('.versoes .right-arrow').css('display','none');
 				$('.versoes .right-mobile').css('display','none');
+				if (isMobile.apple.phone || isMobile.android.phone || isMobile.seven_inch) {
+					$('.down-arrow').addClass('show');
+				}
 			}else{
 				$('.versoes .right-arrow').css('display','inline');
 				$('.versoes .right-mobile').css('display','inline');
+				if (isMobile.apple.phone || isMobile.android.phone || isMobile.seven_inch) {
+					$('.down-arrow').removeClass('show');
+				}
 			}
 		}
 

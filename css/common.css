@@ -358,6 +358,7 @@ body div{
     .menu-bar{display:none;}
     .home-content .car-logo{width: 800px;left:-150px;}
     .vertical-arrow{left:-96px;width:192px;height:96px;bottom:64px;}
+    .up-arrow{bottom: 120px;}
     .menu-bar-fix{height: 400px;}
 }
 /*Mobile portrait*/
@@ -626,7 +627,6 @@ body div{
 /*Mobiles*/
 @media screen and (max-device-width:750px){
   .premios_button{display:none;}
-  .menu .secondary :nth-child(6).item{display: none;}
   .menu .secondary :nth-child(7).item{display: none;}
   .car-button{display: none;}
   .mobile-rotate-vertical-fix{display:inline;}

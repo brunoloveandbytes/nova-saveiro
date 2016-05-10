@@ -624,7 +624,6 @@ $(document).ready(function() {
 		stages = new StagesCreator({'imageLoader':this, 'readyFunction':function(){}, 'classes':[
 																		{'className':'galeria','imgName':'02_Identidade_01_Fundo_Volkswagen.jpg','sizes':{}},
 																		{'className':'header .wrap .tab.active','imgName':'fill.png','sizes':{}},
-																		{'className':'lightbox .wrap .close','imgName':'tiles.png','sizes':{}},
 																		{'className':'gallery .item.trabalho1','imgName':'thumb/06_Galeria_01_Trabalho_Saveiro_Robust_Volkswagen.jpg','sizes':{}},
 																		{'className':'gallery .item.trabalho2','imgName':'thumb/06_Galeria_02_Trabalho_Saveiro_Robust_Volkswagen.jpg','sizes':{}},
 																		{'className':'gallery .item.trabalho3','imgName':'thumb/06_Galeria_03_Trabalho_Saveiro_Robust_Volkswagen.jpg','sizes':{}},
@@ -666,7 +665,8 @@ $(document).ready(function() {
 																		{'className':'gallery .item.acessorios15','imgName':'thumb/06_Galeria_39_Cooler_Saveiro_Volkswagen.jpg','sizes':{}},
 																		{'className':'gallery .item.acessorios16','imgName':'thumb/06_Galeria_40_Pedais_Saveiro_Volkswagen.jpg','sizes':{}},
 																		{'className':'gallery .item.acessorios17','imgName':'thumb/06_Galeria_41_Banco_Saveiro_Volkswagen.jpg','sizes':{}},
-																		{'className':'gallery .item.acessorios18','imgName':'thumb/06_Galeria_42_Roda_Saveiro_Volkswagen.jpg','sizes':{}},
+																		{'className':'gallery .item.acessorios18','imgName':'thumb/06_Galeria_42_Multimedia_Saveiro_Volkswagen.jpg','sizes':{}},
+																		{'className':'gallery .item.acessorios19','imgName':'thumb/06_Galeria_43_Bicicleta_Saveiro_Volkswagen.jpg','sizes':{}},
 																		{'className':'up-arrow','imgName':'tiles.png','sizes':{'ll':140,'lm':140,'ls':140,'lmi':140,'hl':140,'hm':140,'hs':140,'hmi':140}},
 
 																	]});

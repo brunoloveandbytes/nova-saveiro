@@ -4,7 +4,7 @@
 body, html,
 #light_cube,
 .lightbox,
-.lightbox .wrap .close{
+.wrap .close{
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -20,7 +20,7 @@ body, html,
 }
 #light_cube,
 .lightbox,
-.lightbox .wrap .close{
+.wrap .close{
     background-repeat: no-repeat;
     background-position: top center;
 }
@@ -60,6 +60,7 @@ body, html,
     height: 100%;
     top:0;left:0;
     cursor: pointer;
+    z-index: 0;
 }
 .gallery .item .alpha_b{ background-color: rgba(0,0,0,0.20); z-index: 5; }
 .gallery .item .alpha_b:hover{ background-color: rgba(0,0,0,0); }
@@ -158,7 +159,7 @@ body, html,
     margin:0 auto;
     /*max-width: 1200px;*/
 }
-.lightbox .wrap img{
+.wrap img{
     display: inline-block;
     user-drag: none;
     user-select: none;
@@ -237,7 +238,7 @@ body, html,
     background-position: center;
 }
 #vw-tabs .content .close_cube,
-.lightbox .wrap .close{
+.wrap .close{
     position: absolute;
     top:0; right:0;
     width: 64px;
@@ -247,12 +248,13 @@ body, html,
     background-size: 640px;
     cursor: pointer;
 }
-.lightbox .wrap .close{
+.wrap .close{
     top:20px;
     right:20px;
+    z-index: 10;
 }
 
-.lightbox .wrap .arrow{
+.wrap .arrow{
     position: absolute;
     width: 64px;
     height: 192px;
@@ -260,12 +262,13 @@ body, html,
     background-size: 640px 640px;
     cursor: pointer;
     top: 50%;
+     z-index: 10;
     transform: translate(0px,-96px);
 }
-.lightbox .wrap .left-arrow{left: 0px;background-position: 0px -256px;}
-.lightbox .wrap .left-arrow:hover{background-position: -64px -256px;}
-.lightbox .wrap .right-arrow{right: 0px;background-position: -128px -256px;}
-.lightbox .wrap .right-arrow:hover{background-position: -192px -256px;}
+.wrap .left-arrow{left: 0px;background-position: 0px -256px;}
+.wrap .left-arrow:hover{background-position: -64px -256px;}
+.wrap .right-arrow{right: 0px;background-position: -128px -256px;}
+.wrap .right-arrow:hover{background-position: -192px -256px;}
 
 #vw-tabs .content .desc_cube{
     position: absolute;
@@ -316,7 +319,7 @@ body, html,
     #vw-tabs .header .wrap .tab{ width: 33.5% }
 
     #vw-tabs .content .close_cube,
-    .lightbox .wrap .close{ width: 128px;height: 128px;background-position: -256px -768px;background-size: 1280px; }
+    .wrap .close{ width: 128px;height: 128px;background-position: -896px -256px;background-size: 1280px; }
     #vw-tabs .content .desc_cube{ font-size: 2em;padding: 20px; }
 }
 /* DESKTOP & MOBILE */
@@ -331,13 +334,20 @@ body, html,
 
     .span_1_of_4.col{ margin: 0 0 1.8% 1.8%; }
     .span_1_of_4{ width: 49%;max-height: 270px; }
-    .span_1_of_4:nth-child(2n+1){ clear:left; margin-left: 0; }
+    .span_1_of_4:nth-child(2n+1){ clear:left; margin-left: 0; z-index: 0;}
 }
 
 @media screen and (max-width: 1050px){
     #vw-tabs .content{ overflow: scroll;width: 100%; }
     #vw-tabs .header .wrap{ width: 100%;display: block;position: relative; }
     #vw-tabs .header .wrap .tab{ width: 33.5%;font-size: 20px;margin-bottom:10px;padding-top:20px;padding-bottom:20px; }
+    ul.list-link{display: none;}
+    ul.list-link.copy{display:inline;position: absolute;}
+}
+
+
+@media only screen and (max-device-width: 750px){
+    #vw-tabs .header .wrap .tab{ width: 50%; }
 }
 
 /*Mobile portrait*/
@@ -394,17 +404,50 @@ ul.list-link.copy{
     font-size: 11px;
     color: #65646d;
 }
+
 .list-link li a{
     color: #65646d;
     text-decoration: none;
     padding: 0 0 0 10px;
     border-left: 1px solid #3d3d3d;
 }
-.list-link {
+
+.list-link{
     display: inline-block;
 }
 
 
-.footer{position: absolute;bottom: 0px;
-    min-height: 54px;width: 100%;background-color:#fff;}
+.footer{position: absolute;bottom: 0px;min-height: 54px;width: 100%;background-color:#fff;}
     
+
+/*Mobile portrait*/
+@media only screen and (orientation:portrait) and (max-device-width: 750px){
+    .footer{min-height: 108px;}
+    .list-link li{font-size: 25px;}
+    .list-social li a {
+        width: 50px;
+        height: 52px;
+        background-size: 432px 52px;
+    }
+    .list-social li a.lnk-twitter{background-position: 0px 0;}
+    .list-social li a.lnk-youtube{background-position: -50px 0;}
+    .list-social li a.lnk-facebook{background-position: -100px 0;}
+    .list-social li a.lnk-instagram{background-position: -150px 0;}
+    .list-social li a.lnk-linkedin{background-position: -200px 0;}
+    .list-social li a.lnk-googleplus{background-position: -250px 0;}
+    .list-social li a.lnk-snapchat{background-position: -300px 0;width:150px;}
+    .list-social{bottom: 25px;}
+
+
+    .wrap .arrow{
+        width: 96px;
+        height: 288px;
+        background-size: 960px 960px;
+        transform: translate(0px,-144px);
+    }
+    .wrap .left-arrow{left: 30px;background-position: -96px -384px;}
+    .wrap .left-arrow:hover{background-position: -96px -384px;}
+    .wrap .right-arrow{right: 30px;background-position: -288px -384px;}
+    .wrap .right-arrow:hover{background-position: -288px -384px;}
+    div#vw-tabs{height: 80%;}
+}
