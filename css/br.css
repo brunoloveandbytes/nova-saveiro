@@ -1,0 +1,14 @@
+.br{display: inline;}
+.en{display: none;}
+.menu .primary .lang-en{cursor:pointer;}
+.menu .primary .lang-en:hover{color: #00a4e3;}
+.tour_interno_container{cursor: url('../img/large/cursor_click.png') 60 36, move;}
+.tour_interno_container:active{cursor: url('../img/large/cursor_drag.png') 60 36, move;}
+@media screen and (max-device-width: 750px){
+	.premios_button.br{
+		display: none;
+	}
+	.menu .item .text.en,.identidade .title.en,.mobile-buttom.en,.versoes .mobile-arrow-text.right-mobile.en,.versoes .mobile-arrow-text.left-mobile.en,.identidade .saiba-mais.en{
+		display: none;
+	}
+}
