@@ -79,7 +79,9 @@ $(document).ready(function() {
 																		{'className':'premios_button.br','imgName':'tiles.png','sizes':{}},
 																		{'className':'premios_button.en','imgName':'tiles_en.png','sizes':{}},
 																		{'className':'mobile-rotate-vertical-fix > .rotate-logo','imgName':'rotate_horizontal.png','sizes':{}},
-																		{'className':'mobile-rotate-fix > .rotate-logo','imgName':'rotate_vertical.png','sizes':{}}
+																		{'className':'mobile-rotate-fix > .rotate-logo','imgName':'rotate_vertical.png','sizes':{}},
+																		{'className':'lang-br','imgName':'br.png','sizes':{}},
+																		{'className':'lang-en','imgName':'us.png','sizes':{}}
 																	]});
 		this.microStages.push(stages.micro);this.smallStages.push(stages.small);this.mediumStages.push(stages.medium);this.largeStages.push(stages.large);
 

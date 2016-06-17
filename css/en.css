@@ -1,7 +1,6 @@
 .br{display: none;}
 .en{display: inline;}
-.menu .primary .lang-br{cursor:pointer;}
-.menu .primary .lang-br:hover{color: #00a4e3;}
+.menu .lang-br{cursor:pointer;}
 .robust-slide .back-texto.en{right:47px;}
 .cross-slide .back-texto.en{right:47px;}
 .premios .back-texto.en{right:47px;}
