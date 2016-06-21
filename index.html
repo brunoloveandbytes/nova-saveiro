@@ -7,45 +7,45 @@
 	<meta name="apple-mobile-web-app-capable" content="yes"/>
 	<meta name="viewport" content="width=980,user-scalable=no"/>
 	<script src="js/jquery-2.1.1.min.js"></script>
-	<script src="js/gtm.js"></script>
-	<script src="js/ismobile.js"></script>
-	<script src="js/browser-detect.js"></script>
+	<script src="js/gtm.min.js"></script>
+	<script src="js/ismobile.min.js"></script>
+	<script src="js/browser-detect.min.js"></script>
 	<script type="text/javascript">
 		setTimeout(function(){if(!window.imageLoader.currentStages[0].ready)window.location.reload();}, 5000);
 	</script>
-	<script src="js/image-loader.js"></script>
-	<script src="js/state-machine.js"></script>
-	<script src="js/input-manager.js"></script>
-	<script src="js/identidade.js"></script>
-	<script src="js/fatos.js"></script>
-	<script src="js/versoes.js"></script>
-	<script src="js/tour.js"></script>
-	<script src="js/cube.js"></script>
-	<script src="js/premios.js"></script>
-	<script src="js/robust.js"></script>
-	<script src="js/cross.js"></script>
-	<link rel="stylesheet" media="screen" href="css/normalize.css"/>
-	<link rel="stylesheet" media="screen" href="css/common.css"/>
-	<link rel="stylesheet" media="screen" href="css/letreiros.css"/>
-	<link rel="stylesheet" media="screen" href="css/tour.css"/>
-	<link rel="stylesheet" media="screen" href="css/cube.css"/>
-	<link rel="stylesheet" media="screen" href="css/menu.css"/>
-	<link rel="stylesheet" media="screen" href="css/identidade.css"/>
-	<link rel="stylesheet" media="screen" href="css/fatos.css"/>
-	<link rel="stylesheet" media="screen" href="css/versoes.css"/>
-	<link rel="stylesheet" media="screen" href="css/galeria.css"/>
-	<link rel="stylesheet" media="screen" href="css/premios.css"/>
-	<link rel="stylesheet" media="screen" href="css/robust.css"/>
-	<link rel="stylesheet" media="screen" href="css/cross.css"/>
-	<link rel="stylesheet" type="text/css" href="css/animations.css">
-	<link rel="stylesheet" type="text/css" href="css/br.css">
+	<script src="js/image-loader.min.js"></script>
+	<script src="js/state-machine.min.js"></script>
+	<script src="js/input-manager.min.js"></script>
+	<script src="js/identidade.min.js"></script>
+	<script src="js/fatos.min.js"></script>
+	<script src="js/versoes.min.js"></script>
+	<script src="js/tour.min.js"></script>
+	<script src="js/cube.min.js"></script>
+	<script src="js/premios.min.js"></script>
+	<script src="js/robust.min.js"></script>
+	<script src="js/cross.min.js"></script>
+	<link rel="stylesheet" media="screen" href="css/normalize.min.css"/>
+	<link rel="stylesheet" media="screen" href="css/common.min.css"/>
+	<link rel="stylesheet" media="screen" href="css/letreiros.min.css"/>
+	<link rel="stylesheet" media="screen" href="css/tour.min.css"/>
+	<link rel="stylesheet" media="screen" href="css/cube.min.css"/>
+	<link rel="stylesheet" media="screen" href="css/menu.min.css"/>
+	<link rel="stylesheet" media="screen" href="css/identidade.min.css"/>
+	<link rel="stylesheet" media="screen" href="css/fatos.min.css"/>
+	<link rel="stylesheet" media="screen" href="css/versoes.min.css"/>
+	<link rel="stylesheet" media="screen" href="css/galeria.min.css"/>
+	<link rel="stylesheet" media="screen" href="css/premios.min.css"/>
+	<link rel="stylesheet" media="screen" href="css/robust.min.css"/>
+	<link rel="stylesheet" media="screen" href="css/cross.min.css"/>
+	<link rel="stylesheet" type="text/css" href="css/animations.min.css">
+	<link rel="stylesheet" type="text/css" href="css/br.min.css">
 	<script type="text/javascript">
 		var lang = window.location.href.substring(window.location.href.indexOf("#")+1);
 		lang = lang.substring(lang.indexOf('-')+1);
 		if(lang == 'en' || lang == 'br'){
 			window.lang = lang;
 			if(lang == 'en'){
-				replacejscssfile("br.css", "css/en.css", "css");
+				replacejscssfile("br.min.css", "css/en.min.css", "css");
 				$( document ).ready(function() {
 					$('.premios_button.br').remove();
 					$('.car-logo.br').remove();
@@ -67,7 +67,7 @@
 		 		window.lang = data.address.country.toLowerCase();
 			    if(data.address.country.toLowerCase() != 'brazil' && data.address.country.toLowerCase() != '' && data.address.country.toLowerCase() != null){
 			    	window.lang = 'en';
-			    	replacejscssfile("br.css", "css/en.css", "css");
+			    	replacejscssfile("br.min.css", "css/en.min.css", "css");
 			    	$('.premios_button.br').remove();
 			    	$('.car-logo.br').remove();
 			    	$('.robust-slide.br').remove();
@@ -2340,7 +2340,7 @@ posição horizontal para essa experiência.</div><div class="rotate-text en">Pl
 	<!-- <div class="mobile-rotate-fix"><div class="rotate-logo"></div><div class="rotate-text">Seu smartphone precisa
 estar na posição vertical.</div></div> -->
 </body>
-<script src="js/galeria.js"></script>
+<script src="js/galeria.min.js"></script>
 <script type="text/javascript">
     $(document).ready(function(){ $(".gallery .item").append('<div class="alpha_b" />') });
 </script>
